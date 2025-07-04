@@ -4,13 +4,13 @@ build:
 	pdflatex preprint.tex
 	bibtex preprint 
 	pdflatex preprint.tex 
+	bibtex preprint 
+	pdflatex preprint.tex 
 	rm preprint.bbl 
 	rm preprint.blg 
 	rm preprintNotes.bib
 
 run:
-	open preprint.pdf
-
 	rm *.aux 
 	rm *.log 
 	rm *.out 
