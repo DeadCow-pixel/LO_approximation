@@ -1600,7 +1600,7 @@ In the GG02 protocol, Alice prepares an ensemble of coherent states whose amplit
 where we used the relation $2\hat{a}=\hat{q}+i\hat{p}$, which implies $4V(\alpha)\equiv 4\tilde V_{\ind{mod}}=V(\hat{q})=V(\hat{p})\equiv V_{\ind{mod}}$. After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$. The quadratures are then measured by Bob. The resulting quadrature distribution is:
 \begin{align}
 \label{eq:pB}
-    &p_{\ind{B}}=\int\mathop{\dd q\dd p }p(\hat{q},\hat{p})\Tr\ket{\tilde \alpha}\bra{\tilde \alpha}\hat{\Pi}=\frac{1}{T}\int\mathop{\dd \tilde\alpha }p(\tilde\alpha)\bra{\tilde\alpha}\hat{\Pi}\ket{\tilde\alpha}\notag\\&=\frac{1}{T}\int\mathop{\dd\tilde\alpha}p(\tilde\alpha)Q_{\Pi}(\tilde\alpha),
+    &p_{\ind{B}}=\int\mathop{\dd q\dd p }p(\hat{q}|\hat{p})\Tr\ket{\tilde \alpha}\bra{\tilde \alpha}\hat{\Pi}=\frac{1}{T}\int\mathop{\dd \tilde\alpha }p(\tilde\alpha)\bra{\tilde\alpha}\hat{\Pi}\ket{\tilde\alpha}\notag\\&=\frac{1}{T}\int\mathop{\dd\tilde\alpha}p(\tilde\alpha)Q_{\Pi}(\tilde\alpha),
 \end{align}
 where $\hat{\Pi}$ is the POVM describing the measurements, and $Q_{\Pi}(\alpha)$ is its' corresponding $Q$-function. Note that the variance $p(\tilde \alpha)$ is $TV_{\ind{mod}}$.
 
