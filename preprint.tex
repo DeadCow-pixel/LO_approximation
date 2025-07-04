@@ -1595,20 +1595,19 @@ In this section, we apply our results on asymmetric measurements to analyze the 
 In the GG02 protocol, Alice prepares an ensemble of coherent states whose amplitudes $\alpha$ are drawn from a zero-mean Gaussian distribution, denoted by $G(0; \tilde V_{\ind{mod}})$, where $\tilde V_{\ind{mod}}$ is the modulation variance. The probability distributions of the quadrature operators $\hat{q}$ and $\hat{p}$ are then given by
 \begin{align}
 \label{eq:p(Vmod)}
-    p(\hat{q})=p(\hat{p})\equiv p(\hat{q},\hat{p})=G(0;  V_{\ind{mod}}=4\tilde V_\ind{mod})
+    p(\hat{q})=p(\hat{p})\equiv p(\hat{q}|\hat{p})=G(0;  V_{\ind{mod}}=4\tilde V_\ind{mod})
 \end{align}
-% to-do ???
 where we used the relation $2\hat{a}=\hat{q}+i\hat{p}$, which implies $4V(\alpha)\equiv 4\tilde V_{\ind{mod}}=V(\hat{q})=V(\hat{p})\equiv V_{\ind{mod}}$. After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$. The quadratures are then measured by Bob. The resulting quadrature distribution is:
 \begin{align}
 \label{eq:pB}
     &p_{\ind{B}}=\int\mathop{\dd q\dd p }p(\hat{q},\hat{p})\Tr\ket{\tilde \alpha}\bra{\tilde \alpha}\hat{\Pi}=\frac{1}{T}\int\mathop{\dd \tilde\alpha }p(\tilde\alpha)\bra{\tilde\alpha}\hat{\Pi}\ket{\tilde\alpha}\notag\\&=\frac{1}{T}\int\mathop{\dd\tilde\alpha}p(\tilde\alpha)Q_{\Pi}(\tilde\alpha),
 \end{align}
-where $\hat{\Pi}$ is the POVM describing the measurements, and $Q_{\Pi}(\alpha)$ is its corresponding $Q$-function. Note that the variance $p(\tilde \alpha)$ is $TV_{\ind{mod}}$.
+where $\hat{\Pi}$ is the POVM describing the measurements, and $Q_{\Pi}(\alpha)$ is its' corresponding $Q$-function. Note that the variance $p(\tilde \alpha)$ is $TV_{\ind{mod}}$.
 
 Assuming that Bob performs homodyne detection, the variance of the distribution $p_{\ind{B}}$ in Eq.~\eqref{eq:pB} is given by
 \begin{equation}
 \label{eq:VB_HOM_nonoise}
-    V_{\ind{B}}(\hat q, \hat p)\equiv V_{\ind{B}}^{\ind{HOM}}=%{T} V_{\ind{mod}}+\sigma_N+1=
+    V_{\ind{B}}(\hat q|\hat p)\equiv V_{\ind{B}}^{\ind{HOM}}=%{T} V_{\ind{mod}}+\sigma_N+1=
     {T} V_{\ind{mod}}+\sigma_x.
 \end{equation}
 Analogously, adding any stochastic noise (e.g., channel excess noise) with variance $\xi$ modifies the total variance $V_{\ind{B}}^{\ind{HOM}}$ as
@@ -1638,8 +1637,11 @@ Mathematically, the GG02 protocol is equivalent to Alice preparing a two-mode sq
         c\sigma_Z&b\mathbb{I}
     \end{pmatrix}
 \end{align}
-% to-do прояснить, откуда взялась +1
-where $V=V_{\ind{mod}}+1$ is the quadrature operator variance in shot-noise units (SNU). Here, the shot noise variance is normalized to unity and added to the modulation variance due to the uncertainty relation and their mutual stochastic independence. The identity matrix is $\mathbb{I}=\ind{diag}(1,1)$, and $\sigma_Z=\ind{diag}(1,-1)$.
+where $V=V_{\ind{mod}}+1$ is the quadrature operator variance in shot-noise units (SNU). 
+Here, the shot noise variance is normalized to 
+unity and added to the modulation variance due to the uncertainty relation and their mutual 
+stochastic independence. The identity matrix is $\mathbb{I}=\ind{diag}(1,1)$, 
+and $\sigma_Z=\ind{diag}(1,-1)$.
 
 To calculate the Holevo information, we assume a purification attack. In the untrusted noise scenario, the asymmetric noise is accessible to Eve and modifies the covariance matrix $\Sigma_{\ind{AB}}$ as $b\mapsto b+\sigma_N= V_{\ind{B}}^{\ind{HOM}}$, yielding
 \begin{align}
