@@ -1,6 +1,6 @@
-PWD c:\Users\Ася\LO\LO_approximation-1
+PWD c:\LO_approximation-1
 INPUT C:\Users\Ася\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Ася\LO\LO_approximation-1\preprint.tex
+INPUT c:\LO_approximation-1\preprint.tex
 OUTPUT preprint.log
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex\latex\revtex\revtex4-2.cls
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex\latex\revtex\revtex4-2.cls
@@ -345,6 +345,7 @@ INPUT .\pics\appendix\app_2.pdf
 INPUT .\preprint.bbl
 INPUT .\preprint.bbl
 INPUT preprint.bbl
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0900.tfm
 INPUT preprint.aux
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
@@ -416,3 +417,5 @@ INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfti0900.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfti1000.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfti1000.pfb
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sftt0900.pfb
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sftt0900.pfb
