@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.10)  18 JUL 2025 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.10)  18 JUL 2025 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -852,106 +852,11 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 152
  (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-Package natbib Warning: Citation `PhysRevLett.88.057902' on page 1 undefined on input line 162.
-
-
-Package natbib Warning: Citation `PhysRevLett.93.170504' on page 1 undefined on input line 162.
-
-
-Package natbib Warning: Citation `RevModPhys.84.621' on page 1 undefined on input line 162.
-
-
-Package natbib Warning: Citation `e17096072' on page 1 undefined on input line 162.
-
-
-Package natbib Warning: Citation `opt3040030' on page 1 undefined on input line 162.
-
-
-Package natbib Warning: Citation `Zhang:apr:2024' on page 1 undefined on input line 162.
-
-
 Underfull \hbox (badness 3503) in paragraph at lines 160--170
 []\T1/cmr/m/n/10 Homodyne mea-sure-ment is an im-por-tant ex-am-
  []
 
-
-Package natbib Warning: Citation `PhysRevA.51.4160' on page 1 undefined on input line 208.
-
-
-Package natbib Warning: Citation `Schumaker:84' on page 1 undefined on input line 208.
-
-
-Package natbib Warning: Citation `Yuen:83' on page 1 undefined on input line 208.
-
-
-Package natbib Warning: Citation `Abbas:83' on page 1 undefined on input line 208.
-
-
-Package natbib Warning: Citation `PhysRevA.53.4528' on page 1 undefined on input line 230.
-
-
-Package natbib Warning: Citation `PhysRevA.53.4528' on page 1 undefined on input line 230.
-
-
-Package natbib Warning: Citation `PhysRevA.101.031801' on page 1 undefined on input line 230.
-
-
-Package natbib Warning: Citation `PhysRevA.85.023820' on page 1 undefined on input line 230.
-
-
-Package natbib Warning: Citation `PhysRevA.92.053835' on page 1 undefined on input line 230.
-
 [1{C:/Users/Ася/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-
-Package natbib Warning: Citation `Cives_Esclop_2000' on page 2 undefined on input line 244.
-
-
-Package natbib Warning: Citation `combes2022homodyne' on page 2 undefined on input line 251.
-
-
-Package natbib Warning: Citation `haw2015maximization' on page 2 undefined on input line 264.
-
-
-Package natbib Warning: Citation `hajomer2025finite' on page 2 undefined on input line 279.
-
-
-Package natbib Warning: Citation `len2022realistic' on page 2 undefined on input line 279.
-
-
-Package natbib Warning: Citation `yeremenko2024realistic' on page 2 undefined on input line 279.
-
-
-Package natbib Warning: Citation `len2022realistic' on page 2 undefined on input line 279.
-
-
-Package natbib Warning: Citation `reutov2021photon' on page 2 undefined on input line 279.
-
-
-Package natbib Warning: Citation `PhysRevA.53.4528' on page 2 undefined on input line 303.
-
-
-Package natbib Warning: Citation `PhysRevA.53.4528' on page 2 undefined on input line 303.
-
-
-Package natbib Warning: Citation `PhysRevA.101.031801' on page 2 undefined on input line 303.
-
-
-Package natbib Warning: Citation `PhysRevA.85.023820' on page 2 undefined on input line 303.
-
-
-Package natbib Warning: Citation `PhysRevA.92.053835' on page 2 undefined on input line 303.
-
-
-Package natbib Warning: Citation `freyberger1993photon' on page 2 undefined on input line 318.
-
-
-Package natbib Warning: Citation `OLIVARES2020126354' on page 2 undefined on input line 318.
-
-
-Package natbib Warning: Citation `ruiz2023effects' on page 2 undefined on input line 320.
-
-
 Underfull \hbox (badness 4886) in paragraph at lines 320--321
 [][]\T1/cmr/m/n/10 Device im-per-fec-tions play a sig-nif-i-cant role in
  []
@@ -961,35 +866,13 @@ Underfull \hbox (badness 3449) in paragraph at lines 320--321
 \T1/cmr/m/n/10 continuous-variable quan-tum key dis-tri-bu-tion (CV-
  []
 
-
-Package natbib Warning: Citation `Pirandola:20' on page 2 undefined on input line 330.
-
-
-Package natbib Warning: Citation `opt3040030' on page 2 undefined on input line 330.
-
-
-Package natbib Warning: Citation `Zhang:apr:2024' on page 2 undefined on input line 330.
-
 [2]
 <pics/schemes/homodyne.pdf, id=21, 245.5815pt x 242.24803pt>
 File: pics/schemes/homodyne.pdf Graphic file (type pdf)
 <use pics/schemes/homodyne.pdf>
 Package pdftex.def Info: pics/schemes/homodyne.pdf  used on input line 352.
 (pdftex.def)             Requested size: 221.3985pt x 218.39455pt.
-
-
-Package natbib Warning: Citation `Kelley:pr:1964' on page 3 undefined on input line 405.
-
-
-Package natbib Warning: Citation `Vogel:pra:1993' on page 3 undefined on input line 406.
-
-
-Package natbib Warning: Citation `skellam1946frequency' on page 3 undefined on input line 459.
-
-
-Package natbib Warning: Citation `NIST:hndbk:2010' on page 3 undefined on input line 471.
-
-[3 <./pics/schemes/homodyne.pdf>]
+ [3 <./pics/schemes/homodyne.pdf>]
 <pics/homodyne/ED = ED(a)_eta.pdf, id=57, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(a)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(a)_eta.pdf>
@@ -1000,25 +883,17 @@ File: pics/homodyne/ED = ED(aL)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(aL)_eta.pdf>
 Package pdftex.def Info: pics/homodyne/ED = ED(aL)_eta.pdf  used on input line 583.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-
-
-Package natbib Warning: Citation `Vogel:bk:2006' on page 4 undefined on input line 623.
-
-[4]
-<pics/homodyne/ed(eta2).pdf, id=62, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta2).pdf, id=59, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta2).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta2).pdf>
 Package pdftex.def Info: pics/homodyne/ed(eta2).pdf  used on input line 708.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-<pics/homodyne/ed(eta1).pdf, id=63, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta1).pdf, id=60, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta1).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta1).pdf>
 Package pdftex.def Info: pics/homodyne/ed(eta1).pdf  used on input line 713.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-
-
-Package natbib Warning: Citation `NIST:hndbk:2010' on page 5 undefined on input line 771.
-
+ [4]
 <pics/homodyne/coherent_distributions.pdf, id=64, 807.97862pt x 650.01266pt>
 File: pics/homodyne/coherent_distributions.pdf Graphic file (type pdf)
 <use pics/homodyne/coherent_distributions.pdf>
@@ -1039,31 +914,15 @@ File: pics/homodyne/full_fock.pdf Graphic file (type pdf)
 <use pics/homodyne/full_fock.pdf>
 Package pdftex.def Info: pics/homodyne/full_fock.pdf  used on input line 831.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-[5 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf>] [6 <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf> <./pics/homodyne/coherent_distributions.pdf> <./pics/homodyne/fock_distributions.pdf>]
+ [5 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf>] [6 <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf> <./pics/homodyne/coherent_distributions.pdf> <./pics/homodyne/fock_distributions.pdf>]
 <pics/schemes/double_homodyne.pdf, id=170, 458.97673pt x 455.64427pt>
 File: pics/schemes/double_homodyne.pdf Graphic file (type pdf)
 <use pics/schemes/double_homodyne.pdf>
 Package pdftex.def Info: pics/schemes/double_homodyne.pdf  used on input line 1007.
 (pdftex.def)             Requested size: 221.3985pt x 219.79137pt.
+ [7 <./pics/homodyne/full.pdf> <./pics/homodyne/full_fock.pdf>]
 
-
-Package natbib Warning: Citation `Vogel:bk:2006' on page 7 undefined on input line 1039.
-
-
-Package natbib Warning: Citation `lahti2010realistic' on page 7 undefined on input line 1039.
-
-
-Package natbib Warning: Citation `Richter:98' on page 7 undefined on input line 1041.
-
-
-Package natbib Warning: Citation `PhysRevLett.93.170504' on page 7 undefined on input line 1044.
-
-
-Package natbib Warning: Citation `PhysRevLett.118.200501' on page 7 undefined on input line 1044.
-
-[7 <./pics/homodyne/full.pdf> <./pics/homodyne/full_fock.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 1048.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 1058.
 
 <pics/double-homodyne/1111.pdf, id=196, 844.73778pt x 688.23065pt>
 File: pics/double-homodyne/1111.pdf Graphic file (type pdf)
@@ -1081,17 +940,11 @@ File: pics/double-homodyne/1110.5.pdf Graphic file (type pdf)
 Package pdftex.def Info: pics/double-homodyne/1110.5.pdf  used on input line 1205.
 (pdftex.def)             Requested size: 153.00156pt x 124.65327pt.
 [8 <./pics/schemes/double_homodyne.pdf>] [9 <./pics/double-homodyne/1111.pdf> <./pics/double-homodyne/10.510.5.pdf> <./pics/double-homodyne/1110.5.pdf>]
-
-Package natbib Warning: Citation `Gerry:bk:2005' on page 10 undefined on input line 1374.
-
-<tikz_article.pdf, id=248, page=2, 188.54842pt x 183.02077pt>
+<tikz_article.pdf, id=249, page=2, 188.54842pt x 183.02077pt>
 File: tikz_article.pdf Graphic file (type pdf)
 <use tikz_article.pdf, page 2>
 Package pdftex.def Info: tikz_article.pdf , page2 used on input line 1472.
 (pdftex.def)             Requested size: 221.3985pt x 214.90698pt.
-
-Package natbib Warning: Citation `genoni2014general' on page 10 undefined on input line 1520.
-
 
 Underfull \hbox (badness 3701) in paragraph at lines 1516--1521
 \T1/cmr/m/n/10 which is propo-tional to the pure squeezed state
@@ -1099,27 +952,9 @@ Underfull \hbox (badness 3701) in paragraph at lines 1516--1521
 
 [10 <./tikz_article.pdf>]
 
-Package natbib Warning: Citation `PhysRevLett.88.057902' on page 11 undefined on input line 1593.
-
-
 Package natbib Warning: Citation `SochEtAl2024_StatProofBook' on page 11 undefined on input line 1637.
 
-
-Package natbib Warning: Citation `laudenbach2018continuous' on page 11 undefined on input line 1657.
-
-
-Package natbib Warning: Citation `Weed:rmp:2012' on page 11 undefined on input line 1659.
-
-
-Package natbib Warning: Citation `laudenbach2018continuous' on page 11 undefined on input line 1665.
-
 [11]
-
-Package natbib Warning: Citation `PhysRevLett.93.170504' on page 12 undefined on input line 1695.
-
-
-Package natbib Warning: Citation `ruiz2023effects' on page 12 undefined on input line 1789.
-
 <pics/qkd/hom/IAB.pdf, id=298, 182.36246pt x 167.11168pt>
 File: pics/qkd/hom/IAB.pdf Graphic file (type pdf)
 <use pics/qkd/hom/IAB.pdf>
@@ -1160,47 +995,15 @@ File: pics/qkd/dhom/r(l).pdf Graphic file (type pdf)
 <use pics/qkd/dhom/r(l).pdf>
 Package pdftex.def Info: pics/qkd/dhom/r(l).pdf  used on input line 1840.
 (pdftex.def)             Requested size: 229.49844pt x 188.21825pt.
-[12] [13 <./pics/qkd/hom/IAB.pdf> <./pics/qkd/hom/chi.pdf> <./pics/qkd/hom/r.pdf> <./pics/qkd/dhom/IAB.pdf> <./pics/qkd/dhom/chi.pdf> <./pics/qkd/dhom/r.pdf>]
-
-Package natbib Warning: Citation `laudenbach2018continuous' on page 14 undefined on input line 1926.
-
-
+ [12] [13 <./pics/qkd/hom/IAB.pdf> <./pics/qkd/hom/chi.pdf> <./pics/qkd/hom/r.pdf> <./pics/qkd/dhom/IAB.pdf> <./pics/qkd/dhom/chi.pdf> <./pics/qkd/dhom/r.pdf>]
 Underfull \hbox (badness 1237) in paragraph at lines 1943--1944
 \T1/cmr/m/n/10 and $[] \OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 7! [] \OML/cmm/m/it/10 e[]$ \T1/cmr/m/n/10 is needed in
  []
 
-
-Package natbib Warning: Citation `zhang2024continuous' on page 14 undefined on input line 1953.
-
-
-Package natbib Warning: Citation `huang2012wavelength' on page 14 undefined on input line 1953.
-
-
-Package natbib Warning: Citation `huang2014quantum' on page 14 undefined on input line 1953.
-
-
-Package natbib Warning: Citation `qin2018homodyne' on page 14 undefined on input line 1953.
-
-
-Package natbib Warning: Citation `qin2016quantum' on page 14 undefined on input line 1953.
-
 [14 <./pics/qkd/hom/r(l).pdf> <./pics/qkd/dhom/r(l).pdf>]
-
-Package natbib Warning: Citation `usenko2016trusted' on page 15 undefined on input line 1955.
-
-
 Underfull \hbox (badness 1418) in paragraph at lines 1957--1958
 [][]\T1/cmr/m/n/10 Despite the ex-is-tence of coun-ter-mea-sures for the
  []
-
-
-Package natbib Warning: Citation `Vogel:bk:2006' on page 15 undefined on input line 2069.
-
-
-Package natbib Warning: Citation `freyberger1993photon' on page 15 undefined on input line 2082.
-
-
-Package natbib Warning: Citation `NIST:hndbk:2010' on page 15 undefined on input line 2086.
 
 <pics/appendix/app_1.pdf, id=468, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_1.pdf Graphic file (type pdf)
@@ -1213,49 +1016,33 @@ File: pics/appendix/app_2.pdf Graphic file (type pdf)
 <use pics/appendix/app_2.pdf>
 Package pdftex.def Info: pics/appendix/app_2.pdf  used on input line 2189.
 (pdftex.def)             Requested size: 233.69925pt x 191.88611pt.
- (preprint.bbl
-
-LaTeX Warning: Reference `LastBibItem' on page 16 undefined on input line 9.
-
-[16 <./pics/appendix/app_2.pdf>]
+ (preprint.bbl [16 <./pics/appendix/app_2.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 583--589
  \T1/cmr/m/n/9 Homodyne-detector-blinding at-tack in continuous-
  []
 
-[17])
+)
 
 Package natbib Warning: There were undefined citations.
 
-[18] (preprint.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+[17] (preprint.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 9297 strings out of 468220
- 153082 string characters out of 5432386
- 601331 words of memory out of 5000000
- 37676 multiletter control sequences out of 15000+600000
+ 9294 strings out of 468220
+ 153051 string characters out of 5432386
+ 603287 words of memory out of 5000000
+ 37673 multiletter control sequences out of 15000+600000
  645111 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,15n,79p,1265b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,15n,79p,1264b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on preprint.pdf (18 pages, 1140844 bytes).
+Output written on preprint.pdf (17 pages, 1140059 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
+ 614 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
