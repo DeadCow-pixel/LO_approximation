@@ -1592,88 +1592,182 @@ the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
 
 In this section, we apply our results on asymmetric measurements to analyze the Gausssian modulated coherent state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. Specifically, we compute the mutual information, Holevo information, and asymptotic secret key fraction under an untrusted noise scenario, in order to assess the impact of measurement asymmetry on the protocol’s security.
 
-In the GG02 protocol, Alice prepares an ensemble of coherent states whose amplitudes $\alpha$ are drawn from a zero-mean Gaussian distribution (prepare and measure protocol), denoted by $G_\alpha(0;  V)$, where $ V$ is the modulation variance.
-Consider quadrature (either $\hat{q}$ or $\hat{p}$) variance on Alice's side:
-\begin{align}
-  \label{eq:qA}
-  \hat{q}_A\sim G(0,V=4V),
-\end{align}
-where we used the relation $2\hat{a}=\hat{q}+i\hat{p}$, which implies $4\ind{Var}(\hat{a})\equiv 4 V=\ind{Var}(\hat{q})=\ind{Var}(\hat{p})\equiv V$.
-After transmission through channel of transmittance $T$ which has noise with variance $\xi$, and asymmetrical homodyne detection 
-the quadrature variance on Bob's side reads
-\begin{align}
-  \label{eq:qB}
-    \hat{q}_B\sim \sqrt{T}\hat{q}_A+
-    \sqrt{1-T}\hat{q}_{\ind{vac}}+G(0,\xi)+G(0,\sigma_N),
-\end{align}
-where $\sigma_N$ is defined as per Eq.~\eqref{eq:sgm_N}.
-Bob's variance reads
+In the GG02 protocol, Alice prepares an ensemble of coherent states whose 
+amplitudes $\alpha$ are drawn from a zero-mean Gaussian distribution 
+(prepare and measure protocol), denoted by $G(0;  V)$, where $ V$ is the 
+modulation variance. \textcolor{red}{
+Alice’s preparation of coherent states can be understood as choosing 
+random points in phase space whose coordinates (quadratures) are 
+distributed according to a classical multivariate Gaussian probability 
+distribution {~\cite{Serafini:bk:2017}}.  
+}
+
+After the signal passes through a channel with transmittance $T$ that 
+adds excess noise of variance $\xi$, and is subsequently measured using 
+asymmetrical homodyne detection that adds variance $\sigma_N$, the 
+variance of Bob’s measured quadrature is given by
 \begin{align}
   \label{eq:vb}
-  \ind{Var} \left(\hat{q}_B\right)\equiv V_{\ind{B}} = TV+1+\xi+\sigma_N=TV+\xi+\sigma_x,
+  V_{\ind{B}} = TV+1+\xi+\sigma_N=TV+\xi+\sigma_x,
 \end{align}
-where $\sigma_x$ is defined per Eq.~\eqref{eq:sigma-x}.
+where $\sigma_N$ ($\sigma_x$) is defined as per Eq.~\eqref{eq:sgm_N} 
+(Eq.~\eqref{eq:sigma-x}). The term $1$ corresponds to the vacuum shot 
+noise, modeled here as classical noise that adds to the Gaussian 
+quadrature variance.
 It follows that
 \begin{align}
   \label{eq:covqAqB}
-  \ind{cov}(\hat{q}_A,\hat{q}_B)=\sqrt T V,
+  \ind{cov}(A,B)=\sqrt T V,
 \end{align}
-so the covariance matrix describing one quadrature reads
+so the covariance matrix \textcolor{red}{that describes the joint statistics of Alice’s and Bob’s quadrature measurements in the homodyne detection scenario is}
 \begin{align}
   \label{eq:S_qp_hom}
-    \Sigma_{\hat{q},\hat{p}}^{\ind{HOM}}=\begin{pmatrix}
+    \Sigma^{\ind{HOM}}=\begin{pmatrix}
         V&\sqrt TV\\
         \sqrt TV&V_{\ind{B}}
-    \end{pmatrix},
-\end{align}
-and for both quadratures
-\begin{align}
-  \label{eq:S_hom}
-\Sigma_{\ind{AB}}^{\ind{HOM}}=\begin{pmatrix}
-        V\mathbb{I}&\sqrt TV\mathbb{I}\\
-        \sqrt TV\mathbb{I}&V_{\ind{B}}\mathbb{I}
     \end{pmatrix}.
 \end{align}
-Mutual information can be calculated as follows \cite{SochEtAl2024_StatProofBook}
+
+Mutual information between Alice and Bob can be calculated as follows~\cite{SochEtAl2024_StatProofBook}
 \begin{align}
 \label{eq:IABPM}
-    I_{\ind{AB}}^{\ind{HOM}}=\frac{1}{2}\log \frac{VV_{\ind{B}}}{\det\Sigma_{\hat{q},\hat{p}}}=\frac{1}{2}\log \frac{TV+\sigma_x+\xi}{\sigma_x+\xi}.
+    I_{\ind{AB}}^{\ind{HOM}}=\frac{1}{2}\log \frac{VV_{\ind{B}}}
+    {\det\Sigma^{\ind{HOM}}}=\frac{1}{2}\log \frac{TV+\sigma_x+\xi}
+    {\sigma_x+\xi}.
 \end{align}
 where all logarithms are base 2.
 
-Calculation of Holevo information can be done assuming Alice and Bob share two-mode squeezed vacuum state with covariance matrix
+To calculate mutual information if Bob performs double homodyne 
+detection~\cite{PhysRevLett.93.170504}, we start from covariance matrix 
+\begin{align}
+  \label{eq:sigma_ab_nonoise}
+\Sigma_{\ind{AB}}=\begin{pmatrix}
+        V&\sqrt TV\\
+        \sqrt TV&\left(TV+1+\xi\right)
+    \end{pmatrix}\equiv \begin{pmatrix}
+    V&c\\
+        c&b
+    \end{pmatrix}
+    ,
+\end{align}
+note the difference in Bob's variance $b$ -- asymmetry noise would be 
+modeled last, as it is not affected by beam splitter transformation.
+Bob's mode is splitted on BS$_S$, resulting in covariance matrix
+\begin{align}
+    \label{eq:tilde-sigma}
+    \tilde\Sigma^{\ind{DHOM}}=\ind{BS}\left[\Sigma_{\ind {AB}}
+    \oplus \Sigma_{\ind{\ind{vac}}}\right]\ind{BS}^{\ind{T}}
+\end{align}
+where $\Sigma_{\ind{\ind{vac}}}=1$ and BS $=1\oplus    
+\begin{pmatrix}
+    C_S& S_S\\
+    -S_S&C_S
+\end{pmatrix}$.
+Finally, we will model the measurement noise as
+\begin{align}
+  \label{eq:sigma_ab_dhom}
+    \Sigma^{\ind{DHOM}}=
+    \tilde\Sigma^{\ind{DHOM}}+ N,
+\end{align}
+where
+\begin{align}
+\label{eq:N}
+    &N=0\oplus\begin{pmatrix}
+        \sigma_N^{(1)}&0\\
+        0&\sigma_N^{(2)}
+    \end{pmatrix}=\notag\\&0\oplus\begin{pmatrix}
+        \frac{\sigma_1}2-\frac{1}{2}&0\\
+        0&\frac{\sigma_2}2-\frac{1}{2}
+    \end{pmatrix}
+\end{align}
+which is evident from Eq.~\eqref{eq:P_G-x1x2}. \textcolor{red}{
+Note that dependency of noise variance on squeezing parameter $r$ (see Eq.~\eqref{eq:sigma_N-sq-1}) vanishes as it is sufficient to consider the case of projectors onto coherent states (See Eq.~\eqref{eq:sigm-N-i}), because both represent the same variances of the photon count difference distribution.}
+
+The resulting covariance matrix describing measurement statistics
+in double homodyne detection reads
+\begin{align}
+  \label{eq:sigma_qp_dhom}
+    &\Sigma^{\ind{DH}}=\notag\\
+    &\begin{pmatrix}
+        V&C_Sc&-S_Sc\\
+        C_Sc&C_S^2b+S_S^2+\frac{\sigma_1-1}{2}&C_SS_S(1-b)\\
+        -S_Sc&C_SS_S(1-b)&C_S^2+S_S^2b+\frac{\sigma_2-1}{2}
+    \end{pmatrix}\\
+    &\equiv 
+    \begin{pmatrix}
+        V&\gamma_1&\gamma_2\\
+        \gamma_1&\beta_1&\gamma_{12}\\
+        \gamma_2&\gamma_{12}&\beta_2
+    \end{pmatrix}
+    ,
+\end{align}
+which is then used to calculate mutual information between Alice and Bob
+%\begin{align}
+%  \label{eq:I_hom}
+%    I=\frac{1}{2}\sum_i
+%    \log\frac{V \beta_i}{V\beta_i-\gamma_i^2}
+%\end{align}
+%which further simplifies to
+\begin{align}
+  \label{eq:I_hom_final}
+    &I=\frac{1}{2}\sum_i\log \frac{TV_i+\xi_i+\sigma_i+1}{\xi_i+\sigma_i+1}, \\
+    &V_1=2C_S^2V,\quad \xi_1=2C_S^2\xi\\
+    &V_2=2S_S^2V,\quad \xi_2=2S_S^2\xi.
+\end{align}
+
+Calculation of Holevo information can be done assuming Alice and Bob share two-mode squeezed vacuum state, and Eve holds purification of it (entanglement-based protocol), as with appropriate scaling the covariance matrices of prepare-and-measure and entanglement-based protocols are equivalent~\cite{laudenbach2018continuous}. We start from covariance matrix
 \begin{align}
   \label{eq:TVMS}
     &\Sigma_{\ind{AB}}^{\ind{TVMS}}=\notag\\&\begin{pmatrix}
         (V+1)\mathbb{I}&\sqrt{T((V+1)^2-1)}\sigma_Z\\
         \sqrt{T((V+1)^2-1)}\sigma_Z&(TV+\xi+\sigma_x)\mathbb{I}
-    \end{pmatrix}\notag\\
-    &\equiv\begin{pmatrix}
+    \end{pmatrix}\equiv\notag\\
+    &\begin{pmatrix}
         a\mathbb{I}&c\sigma_Z\\
-        c\sigma_Z&V_{\ind{B}}\mathbb{I}
+        c\sigma_Z&V_{\ind{B}}^{\ind{HOM}}\mathbb{I}
     \end{pmatrix}
 \end{align}
-where the identity matrix is $\mathbb{I}=\ind{diag}(1,1)$, 
-and $\sigma_Z=\ind{diag}(1,-1)$, and Eve holds purification of the shared state, as with appropriate scaling the covariance matrices are equivalent~\cite{laudenbach2018continuous}.
-Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the 
-symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{TVMS}}$ as~\cite{Weed:rmp:2012}
+where the identity matrix is $\mathbb{I}=\ind{diag}(1,1)$, and $\sigma_Z=\ind{diag}(1,-1)$. If homodyne detection is used, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{TVMS}}$ as~\cite{Weed:rmp:2012}
 \begin{align}
 \label{eq:nu12}
-    &\nu_{1,2} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}^{\ind{HOM}}-a\right]\right),\notag\\ &z=\sqrt{\left(a+V_{\ind{B}}^{\ind{HOM}}\right)^2-4c^2}.
+    &\nu_{1,2}^{\ind{HOM}} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}^{\ind{HOM}}-a\right]\right),\notag\\ &z=\sqrt{\left(a+V_{\ind{B}}^{\ind{HOM}}\right)^2-4c^2}.
 \end{align}
 
 Bob’s partial measurement of a single quadrature, described by the matrix $\Pi_{q,p}$, where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$ are measurements of $\hat{q}$ and $\hat{p}$ quadratures, respectively, transforms Alice's state covariance matrix as~\cite{laudenbach2018continuous}
 \begin{align}
     \label{eq:AB}
-    &\Sigma_{\ind{A}|\ind{B}}=a\mathbb{I}-c^2\sigma_Z[\Pi_{q,p}\ \left(V_{\ind{B}}-\sigma_N\right)\mathbb{I}\ \Pi_{q,p}]^{-1}\sigma_Z^{\ind T}\notag\\
-    &=a\mathbb{I}-\frac{c^2}{V_{\ind{B}}-\sigma_N}\Pi_{q,p}.
+    &\Sigma_{\ind{A}|\ind{B}}^{\ind{HOM}}=a\mathbb{I}-c^2\sigma_Z[\Pi_{q,p}\ b\mathbb{I}\ \Pi_{q,p}]^{-1}\sigma_Z^{\ind T}\notag\\
+    &=a\mathbb{I}-\frac{c^2}{b}\Pi_{q,p}.
 \end{align}
-The corresponding symplectic eigenvalue $\nu_3$ of $\Sigma_{\ind{A}|\ind{B}}$ is
+The corresponding symplectic eigenvalue $\nu_3^{\ind{HOM}}$ of $\Sigma_{\ind{A}|\ind{B}}$ is
  \begin{align}
      \label{eq:nu3}
-     &\nu_3=\sqrt{a\left(a-\frac{c^2}{V_{\ind{B}}-\sigma_N}\right)}
+     &\nu_3^{\ind{HOM}}=\sqrt{a\left(a-\frac{c^2}{b}\right)}
  \end{align}
-which allows us to calculate the conditional entropy $S_{\ind{E}|\ind{B}}=S_{\ind{A}|\ind{B}}$. The Holevo information is then given by
+which allows us to calculate the conditional entropy $S_{\ind{E}|\ind{B}}=S_{\ind{A}|\ind{B}}$. 
+
+If double homodyne detection is used, Eve's entropy $S_{\ind{E}}$ is calculated using the symplectic eigenvalues of the covariance matrix
+\begin{align}
+\label{eq:Sigma_AB_dhom}
+    \Sigma_{\ind{AB}}^{\ind{DHOM}}=\begin{pmatrix}
+        a\mathbb{I}&c\sigma_Z\\
+        c\sigma_Z&V_{\ind{B}}^{\ind{DHOM}}\mathbb{I}
+    \end{pmatrix},
+\end{align}
+where $V_{\ind{B}}^{\ind{DHOM}}=TV+\xi+\frac{\sigma_1+\sigma_2}{2}$.
+
+Double homodyne detection of Bob’s mode transforms Alice’s conditional covariance matrix as
+\begin{align}
+    \label{eq:AB_dhom}&\Sigma_{\ind{A}|\ind{B}}^{\ind{DHOM}}=
+    a\mathbb{I}-c^2\sigma_Z[b\mathbb{I}+\mathbb{I}]^{-1}\sigma_Z^{\ind T}\notag\\&=\left(a-\frac{c^2}{b+1}\right)\mathbb{I},
+\end{align}
+resulting in symplectic eigenvalue $\nu_3^{\ind{DHOM}}$ in the form
+\begin{align}
+    \nu_3^{\ind{DHOM}}=a-\frac{c^2}{b+1}.
+\end{align}
+%which is then used in Eq.~\eqref{eq:chi} to compute the Holevo information.
+
+The Holevo information is calculated as
 \begin{align}
 \label{eq:chi}
     &\chi_{\ind{EB}}\equiv S_{\ind{E}}-S_{\ind{E}|\ind{B}}=S_{\ind{AB}}-S_{\ind{A}|\ind{B}}\notag\\&=\sum_{i=1,2}g(\nu_i)-g(\nu_3),
@@ -1684,106 +1778,12 @@ where
     g(\nu)=\frac{\nu+1}{2}\log \frac{\nu+1}{2}-
     \frac{\nu-1}{2}\log\frac{\nu-1}{2},
 \end{align}
-and the asymptotic secret fraction is given by
+\textcolor{red}{with appropriate substitution of $\nu_i$ depending on the measurement scheme}, and the asymptotic secret fraction is then calculated as
 \begin{equation}
 \label{eq:r}
     R=\beta I_{AB}-\chi_{EB},
 \end{equation}
 where $\beta$ is the reconciliation efficiency.
-
-To calculate mutual information if Bob performs double homodyne 
-detection~\cite{PhysRevLett.93.170504}, we start from covariance matrix 
-\begin{align}
-  \label{eq:sigma_ab_nonoise}
-\Sigma_{\ind{AB}}=\begin{pmatrix}
-        V\mathbb{I}&\sqrt TV\mathbb{I}\\
-        \sqrt TV\mathbb{I}&\left(TV+1+\xi\right)\mathbb{I}
-    \end{pmatrix}\equiv \begin{pmatrix}
-    V\mathbb{I}&c\mathbb{I}\\
-        c\mathbb{I}&b\mathbb{I}
-    \end{pmatrix}
-    ,
-\end{align}
-note the difference in Bob's variance $b$ -- asymmetry noise would be modeled last, as it is not affected by beam splitter transformation.
-Bob's mode is splitted on BS$_S$, resulting in covariance matrix
-\begin{align}
-    \label{eq:tilde-sigma}
-    \tilde\Sigma_{\ind{AB}}^{\ind{DHOM}}=\ind{BS}\left[\Sigma_{\ind {AB}}\oplus \Sigma_{\ind{\ind{vac}}}\right]\ind{BS}^{\ind{T}}
-\end{align}
-where $\Sigma_{\ind{\ind{vac}}}=\mathbb{I}$ and BS $=\mathbb{I}\oplus    \begin{pmatrix}
-    C_S\mathbb{I}& S_S\mathbb{I}\\
-    -S_S\mathbb{I}&C_S\mathbb{I}
-\end{pmatrix}$.
-Finally, we will model the measurement noise as
-\begin{align}
-  \label{eq:sigma_ab_dhom}
-    \Sigma_{\ind{AB}}^{\ind{DHOM}}=\tilde\Sigma_{\ind{AB}}^{\ind{DHOM}}+ N,
-\end{align}
-where
-\begin{align}
-\label{eq:N}
-    &N=0\mathbb{I}\oplus\begin{pmatrix}
-        \sigma_N^{(1)}{I}&0\mathbb{I}\\
-        0\mathbb{I}&\sigma_N^{(2)}\mathbb{I}
-    \end{pmatrix}=\notag\\&0\mathbb{I}\oplus\begin{pmatrix}
-        \left[\frac{\sigma_1}2-\frac{1}{2}\right]\mathbb{I}&0\mathbb{I}\\
-        0\mathbb{I}&\left[\frac{\sigma_2}2-\frac{1}{2}\right]\mathbb{I}
-    \end{pmatrix}
-\end{align}
-which is evident from Eq.~\eqref{eq:P_G-x1x2}.
-
-Analogously to Eq.~\eqref{eq:IABPM}, to calculate mutual information, 
-we will consider the covariance matrix of one quadrature:
-\begin{align}
-  \label{eq:sigma_qp_dhom}
-    &\Sigma_{\hat{q}, \hat{p}}^{\ind{DH}}=\notag\\
-    &\begin{pmatrix}
-        V&C_Sc&-S_Sc\\
-        C_Sc&C_S^2b+S_S^2+\frac{\sigma_1-1}{2}&C_SS_S(1-b)\\
-        -S_Sc&C_SS_S(1-b)&(C_S^2+S_S^2b+\frac{\sigma_2-1}{2})
-    \end{pmatrix}=\\
-    &\equiv 
-    \begin{pmatrix}
-        V&\gamma_1&\gamma_2\\
-        \gamma_1&\beta_1&\gamma_{12}\\
-        \gamma_2&\gamma_{12}&\beta_2
-    \end{pmatrix}
-    ,
-\end{align}
-so mutual information between Alice and Bob reads
-\begin{align}
-  \label{eq:I_hom}
-    I=\frac{1}{2}\sum_i
-    \log\frac{V \beta_i}{V\beta_i-\gamma_i^2}
-\end{align}
-which further simplifies to
-\begin{align}
-  \label{eq:I_hom_final}
-    &I=\frac{1}{2}\sum_i\log \frac{TV_i+\xi_i+\sigma_i+1}{\xi_i+\sigma_i+1}, \\
-    &V_1=2C_S^2V,\quad \xi_1=2C_S^2\xi\\
-    &V_2=2S_S^2V,\quad \xi_2=2S_S^2\xi.
-\end{align}
-
-Eve's entropy $S_{\ind{E}}$ is calculated using the symplectic eigenvalues of the covariance matrix
-\begin{align}
-\label{eq:Sigma_AB_dhom}
-    \Sigma_{\ind{AB}}'=\begin{pmatrix}
-        a\mathbb{I}&c\sigma_Z\\
-        c\sigma_Z&V_{\ind{B}}^{\ind{DHOM}}\mathbb{I}
-    \end{pmatrix},
-\end{align}
-where $V_{\ind{B}}^{\ind{DHOM}}=TV+\xi+\frac{\sigma_1+\sigma_2}{2}$.
-
-Double homodyne detection of Bob’s mode transforms Alice’s conditional covariance matrix as
-\begin{align}
-    \label{eq:AB_dhom}&\Sigma_{\ind{A}|\ind{B}}=
-    a\mathbb{I}-c^2\sigma_Z[b\mathbb{I}+\mathbb{I}]^{-1}\sigma_Z^{\ind T}\notag\\&=\left(a-\frac{c^2}{b+1}\right)\mathbb{I},
-\end{align}
-resulting in symplectic eigenvalue $\nu_3$ in the form
-\begin{align}
-    \nu_3=a-\frac{c^2}{b+1},
-\end{align}
-which is then used in Eq.~\eqref{eq:chi} to compute the Holevo information.
 
 The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secret key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection. Our numerical results for the homodyne case are consistent 
 with Ref.~\cite{ruiz2023effects}, namely the dependency of asymptotic secret fraction on beam splitter deviation. The dependence of the asymptotic secret key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetrical homodyne detection does not offer any advantage, as ideal detection minimizes Holevo information, while double homodyne detection consistently yields better performance.
