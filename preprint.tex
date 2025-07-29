@@ -1748,7 +1748,7 @@ dependency on $r$ factors out, resulting in Eq.~\eqref{eq:I_hom} and, consequent
   \label{eq:psi_AB}
   \ket{\Psi}_{\ind{AB}}=\sqrt{1-\lambda^2}\sum_{n=0}^{\infty}(-\lambda)^n\ket{n,n}_{\ind{AB}},
 \end{align}
-where $\lambda=\tanh 2r$. Let Alice hold the state $\rho=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the entanglement based (EB) protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\{\hat\Pi_\alpha=\frac{\ket{\alpha}\bra{\alpha}}\pi\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\alpha$ is given by the Born rule:
+where $\lambda=\tanh 2r$. Let Alice hold the state $\rho_{\ind{AB}}=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the entanglement based (EB) protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\left\{\hat\Pi_\alpha=\frac{\ket{\alpha}\bra{\alpha}}\pi\right\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\alpha$ is given by the Born rule:
 \begin{align}
   \label{eq:p_A_dh}
   p_{\ind{A}}^{\ind{DH}}(\alpha)=\Tr \hat{\Pi}_\alpha \rho_A
@@ -1837,7 +1837,7 @@ If double homodyne detection is used, Eve's entropy $S_{\ind{E}}$ is calculated 
         \gamma\sigma_Z&V_{\ind{B}}^{\ind{DHOM}}\mathbb{I}
     \end{pmatrix},
 \end{align}
-where $V_{\ind{B}}^{\ind{DHOM}}=TV+\xi+\frac{\sigma_1+\sigma_2}{2}$.
+where $V_{\ind{B}}^{\ind{DHOM}}=TV_{\ind{A}}+\xi+\frac{\sigma_1+\sigma_2}{2}$.
 
 Double homodyne detection of Bob’s mode transforms Alice’s conditional covariance matrix as
 \begin{align}
