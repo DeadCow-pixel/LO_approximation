@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{45}%
+\begin{thebibliography}{46}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -505,6 +505,33 @@
   (version 2023)}},\ \bibinfo {howpublished}
   {\url{https://doi.org/10.5281/zenodo.4305949}} (\bibinfo {year} {2024}),\
   \bibinfo {note} {accessed: 2025-07-15}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Weedbrook}\ \emph
+  {et~al.}(2012{\natexlab{b}})\citenamefont {Weedbrook}, \citenamefont
+  {Pirandola}, \citenamefont {Garc\'{\i}a-Patr\'on}, \citenamefont {Cerf},
+  \citenamefont {Ralph}, \citenamefont {Shapiro},\ and\ \citenamefont
+  {Lloyd}}]{Weed:rmp:2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Weedbrook}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Pirandola}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Garc\'{\i}a-Patr\'on}}, \bibinfo {author} {\bibfnamefont {N.~J.}\
+  \bibnamefont {Cerf}}, \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Ralph}}, \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Shapiro}},\
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lloyd}},\ }\bibfield
+   {title} {{\selectlanguage {english}\bibinfo {title} {Gaussian quantum
+  information}},\ }\href {https://doi.org/10.1103/RevModPhys.84.621} {\bibfield
+   {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo
+  {volume} {84}},\ \bibinfo {pages} {621} (\bibinfo {year}
+  {2012}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Scully}\ and\ \citenamefont
+  {Zubairy}(1997)}]{Scully:bk:1997}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~O.}\ \bibnamefont
+  {Scully}}\ and\ \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+  {Zubairy}},\ }\href@noop {} {{\selectlanguage {english}\emph {\bibinfo
+  {title} {Quantum Optics}}}}\ (\bibinfo  {publisher} {Cambridge University
+  Press},\ \bibinfo {address} {Cambridge},\ \bibinfo {year} {1997})\ p.\
+  \bibinfo {pages} {630}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Laudenbach}\ \emph {et~al.}(2018)\citenamefont
   {Laudenbach}, \citenamefont {Pacher}, \citenamefont {Fung}, \citenamefont
   {Poppe}, \citenamefont {Peev}, \citenamefont {Schrenk}, \citenamefont
@@ -525,24 +552,6 @@
   {\bibinfo  {journal} {Advanced Quantum Technologies}\ }\textbf {\bibinfo
   {volume} {1}},\ \bibinfo {pages} {1800011} (\bibinfo {year}
   {2018})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Weedbrook}\ \emph
-  {et~al.}(2012{\natexlab{b}})\citenamefont {Weedbrook}, \citenamefont
-  {Pirandola}, \citenamefont {Garc\'{\i}a-Patr\'on}, \citenamefont {Cerf},
-  \citenamefont {Ralph}, \citenamefont {Shapiro},\ and\ \citenamefont
-  {Lloyd}}]{Weed:rmp:2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Weedbrook}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Pirandola}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Garc\'{\i}a-Patr\'on}}, \bibinfo {author} {\bibfnamefont {N.~J.}\
-  \bibnamefont {Cerf}}, \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
-  {Ralph}}, \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Shapiro}},\
-  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lloyd}},\ }\bibfield
-   {title} {{\selectlanguage {english}\bibinfo {title} {Gaussian quantum
-  information}},\ }\href {https://doi.org/10.1103/RevModPhys.84.621} {\bibfield
-   {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo
-  {volume} {84}},\ \bibinfo {pages} {621} (\bibinfo {year}
-  {2012}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Zhang}\ \emph
   {et~al.}(2024{\natexlab{b}})\citenamefont {Zhang}, \citenamefont {Bian},
   \citenamefont {Li}, \citenamefont {Yu},\ and\ \citenamefont
