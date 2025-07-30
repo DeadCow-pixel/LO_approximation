@@ -196,62 +196,20 @@ INPUT .\pics\schemes\homodyne.pdf
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\coherent_distributions.pdf
+INPUT .\pics\homodyne\coherent_distributions.pdf
+INPUT .\pics\homodyne\coherent_distributions.pdf
+INPUT .\pics\homodyne\coherent_distributions.pdf
+INPUT .\pics\homodyne\coherent_distributions.pdf
+INPUT .\pics\homodyne\coherent_distributions.pdf
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss9.tfm
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
-INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT .\pics\homodyne\ed(eta2).pdf
-INPUT .\pics\homodyne\ed(eta2).pdf
-INPUT .\pics\homodyne\ed(eta2).pdf
-INPUT .\pics\homodyne\ed(eta2).pdf
-INPUT .\pics\homodyne\ed(eta2).pdf
-INPUT .\pics\homodyne\ed(eta2).pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt9.tfm
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT .\pics\homodyne\ed(eta1).pdf
-INPUT .\pics\homodyne\ed(eta1).pdf
-INPUT .\pics\homodyne\ed(eta1).pdf
-INPUT .\pics\homodyne\ed(eta1).pdf
-INPUT .\pics\homodyne\ed(eta1).pdf
-INPUT .\pics\homodyne\ed(eta1).pdf
-INPUT .\pics\homodyne\coherent_distributions.pdf
-INPUT .\pics\homodyne\coherent_distributions.pdf
-INPUT .\pics\homodyne\coherent_distributions.pdf
-INPUT .\pics\homodyne\coherent_distributions.pdf
-INPUT .\pics\homodyne\coherent_distributions.pdf
-INPUT .\pics\homodyne\coherent_distributions.pdf
 INPUT .\pics\homodyne\fock_distributions.pdf
 INPUT .\pics\homodyne\fock_distributions.pdf
 INPUT .\pics\homodyne\fock_distributions.pdf
 INPUT .\pics\homodyne\fock_distributions.pdf
 INPUT .\pics\homodyne\fock_distributions.pdf
 INPUT .\pics\homodyne\fock_distributions.pdf
-INPUT .\pics\homodyne\full.pdf
-INPUT .\pics\homodyne\full.pdf
-INPUT .\pics\homodyne\full.pdf
-INPUT .\pics\homodyne\full.pdf
-INPUT .\pics\homodyne\full.pdf
-INPUT .\pics\homodyne\full.pdf
-INPUT .\pics\homodyne\full_fock.pdf
-INPUT .\pics\homodyne\full_fock.pdf
-INPUT .\pics\homodyne\full_fock.pdf
-INPUT .\pics\homodyne\full_fock.pdf
-INPUT .\pics\homodyne\full_fock.pdf
-INPUT .\pics\homodyne\full_fock.pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT .\pics\schemes\double_homodyne.pdf
 INPUT .\pics\schemes\double_homodyne.pdf
 INPUT .\pics\schemes\double_homodyne.pdf
@@ -339,6 +297,48 @@ INPUT .\pics\qkd\dhom\r(l).pdf
 INPUT .\pics\qkd\dhom\r(l).pdf
 INPUT .\pics\qkd\dhom\r(l).pdf
 INPUT .\pics\qkd\dhom\r(l).pdf
+INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
+INPUT .\pics\homodyne\ED = ED(aL)_eta.pdf
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT .\pics\homodyne\ed(eta2).pdf
+INPUT .\pics\homodyne\ed(eta2).pdf
+INPUT .\pics\homodyne\ed(eta2).pdf
+INPUT .\pics\homodyne\ed(eta2).pdf
+INPUT .\pics\homodyne\ed(eta2).pdf
+INPUT .\pics\homodyne\ed(eta2).pdf
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt9.tfm
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT .\pics\homodyne\ed(eta1).pdf
+INPUT .\pics\homodyne\ed(eta1).pdf
+INPUT .\pics\homodyne\ed(eta1).pdf
+INPUT .\pics\homodyne\ed(eta1).pdf
+INPUT .\pics\homodyne\ed(eta1).pdf
+INPUT .\pics\homodyne\ed(eta1).pdf
+INPUT .\pics\homodyne\full.pdf
+INPUT .\pics\homodyne\full.pdf
+INPUT .\pics\homodyne\full.pdf
+INPUT .\pics\homodyne\full.pdf
+INPUT .\pics\homodyne\full.pdf
+INPUT .\pics\homodyne\full.pdf
+INPUT .\pics\homodyne\full_fock.pdf
+INPUT .\pics\homodyne\full_fock.pdf
+INPUT .\pics\homodyne\full_fock.pdf
+INPUT .\pics\homodyne\full_fock.pdf
+INPUT .\pics\homodyne\full_fock.pdf
+INPUT .\pics\homodyne\full_fock.pdf
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT .\pics\appendix\app_1.pdf
 INPUT .\pics\appendix\app_1.pdf
 INPUT .\pics\appendix\app_1.pdf

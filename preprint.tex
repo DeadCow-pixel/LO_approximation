@@ -112,8 +112,7 @@ superscriptaddress,
 \begin{document}
 \DeclareGraphicsExtensions{.png,.pdf}
 \title{
-  Asymmetry effects in homodyne-like measurements:
-Gaussian approximation and positive operator-valued measures
+  Asymmetry effects in homodyne-like measurements: Positive operator-valued measures and \textcolor{red}{quantum communications}
 }
 
 \author{A. S.~Naumchik}
@@ -335,8 +334,8 @@ asymmetrical case.
 
 The paper is organized as follows.  In Sec.~\ref{sec:homodyne} we obtain the statistical
 distribution of difference photon counts in Gaussian approximation, from which we obtain the
-respective POVM. We thoroughly analyze the dependence of the statistical distribution on the asymmetry
-parameters.  In Sec.~\ref{sec:double-homodyne} we conduct the analysis of the double homodyne scheme
+respective POVM. %We thoroughly analyze the dependence of the statistical distribution on the asymmetry parameters.  
+In Sec.~\ref{sec:double-homodyne} we conduct the analysis of the double homodyne scheme
 analogously to the previous section, finding out that the resulting POVM is not well defined for all asymmetry parameters, requiring generalization.
 \textcolor{red}{
 In Sec.~\ref{sec:gen-POVM} we generalize the double homodyne POVM to the set of squeezed coherent states. 
@@ -365,11 +364,6 @@ suggestions for future development.
 \section{Homodyne detection}
 \label{sec:homodyne} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Gaussian approximation}
-\label{subsec:gauss-hom}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 We begin with brief discussion
@@ -572,25 +566,7 @@ where $\sigma_x$ reaches its minimum value
 $\sigma^{(\min)}_{x}$ at the beam splitter transmittance:
 $C^2=\cos^2\theta_{\min}=\sqrt{\eta_1}/(\sqrt{\eta_1}+\sqrt{\eta_2})$.
 
-\begin{figure*}[!htb]
-  \centering
-  \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=\linewidth]{pics/homodyne/ED = ED(a)_eta.pdf}
-    \caption{$|\alpha_L|=5$}
-    \label{fig:amp_05}
-\end{subfigure}
-  \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=\linewidth]{pics/homodyne/ED = ED(aL)_eta.pdf}
-    \caption{$|\alpha|=0.5$}
-    \label{fig:amp_01}
-\end{subfigure}
-\caption{
-  Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
-  as a function of (a)~signal amplitude and (b)~LO amplitude at different
-          detector efficiencies.
-        }
-  \label{fig:amplitude}
-\end{figure*}
+
 
 
 Our next step is to construct
@@ -686,117 +662,8 @@ is well-defined for all possible parameters of the homodyne scheme.
 % }
   
 
-Our concluding remark concerns an alternative method
-to approximate Eq.~\eqref{eq:accurate}
-with a Gaussian-shaped distribution
-which is based on the asymptotic expansions of the modified Bessel functions.
-In Appendix~\ref{sec:appendix} we show that, for the asymmetric homodyne scheme,
-this method generally leads to ill-posed POVMs because
-the corresponding quadrature variance
-appears to be too small leading to negative
-contribution of the excess noise. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Numerical results}
-\label{subsec:num-hom}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure*}
-    \centering
-    \begin{subfigure}[]{.45\linewidth}
-\includegraphics[width=\linewidth]{pics/homodyne/ed(eta2).pdf}
-\caption[]{$\eta_1=1$}
-\label{fig:eta1-1}
-        \end{subfigure}
-\begin{subfigure}[]{.45\linewidth}
- \includegraphics[width=\linewidth]{pics/homodyne/ed(eta1).pdf}
- \caption[]{$\eta_2=1$}
- \label{fig:eta2-1}
-\end{subfigure}
-\caption{Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
-  as a function of  photodetector efficiency
-  (a)~$\eta_2$ at $\eta_1=1$ and
-  (b)~$\eta_1$ at $\eta_2=1$
-  for different values of the beam splitter disbalance angle
-  $\delta\theta$ (see eq.~\eqref{eq:delta-theta}).
-  The amplitudes are
-  $|\alpha|=1$ and $|\alpha_L|=5$.
-}
-\label{fig:delta-eta}
-\end{figure*}
-
-
-In this section, we
-begin with the case where the signal mode is in the coherent state
-$\ket{\alpha}$ and
-compare the exact statistics of difference events
-governed by the Skellam distribution~\eqref{eq:accurate}
-and the Gaussian approximation~\eqref{eq:Gaussian}.
-In order to quantify the statistical distance between the probability distributions,
-we shall use
-the total variational distance
-that can be computed as half of  the $L^1$ distance
-\begin{align}
-  &
-    \label{eq:stat-dist}
-    D_P\equiv\mathtt{D}\left(\prob,\prob_{G}\right)\equiv
-    \frac{1}{2}
-    \sum_{\mu=-\infty}^{\infty}
-    \lvert\prob(\mu) -\prob_G(\mu)\rvert.
-  \end{align}
-
-  Note that, according to Eq.~\eqref{eq:stat-dist},
-  $\mu$ takes integer values and
-  we evaluate the distance between the probability mass fuctions,
-  whereas the normalization condition for
-the Gaussian function~\eqref{eq:Gaussian}
-\begin{align}
-    \label{eq:norm-cont}
-  \int_{-\infty}^{\infty}
-    \prob_G(\mu)
-  \dd\mu
-    =1
-\end{align}
-implies applicability of the continuum limit.
-For integer $\mu$,
-the integral
-on the left hand side of Eq.~\eqref{eq:norm-cont}
-should be replaced with a sum
-and we have the relation
-\begin{align}
-  \label{eq:discr-norm}
-  \sum_{\mu=-\infty}^{\infty} \prob_G(\mu)=\vartheta_3(\pi\mu_G,e^{-2\pi^2\sigma_G})\equiv N_G
-\end{align}
-where $\vartheta_3$ is the Jacobi elliptic theta function~\cite{NIST:hndbk:2010}.
-
-In the applicability region of
-the continuum limit, the normalization constant $N_G$
-is close to unity. The numerical analysis shows that
-$|N_G-1|\le 10^{-4}$ at $ 2\sigma_{G}\ge 1$.
-The latter gives the condition for the LO amplitude
-\begin{equation}
-    |\alpha_L|\geq \frac{1}{\sqrt{2(\eta_1S^2+\eta_2C^2)}}\equiv\alpha_N
-    \label{eq:renorm}
-  \end{equation}
-   which ensures both applicability of the continuum limit
-  and proper normalization of the Gaussian approximation.
-  In our calculations,
-the probability $\prob_G$ will be numerically corrected by introducing
-the factor $N_G^{-1}$
-provided that $|\alpha_L|$ is below the "renormalization point" $\alpha_N$.
-
-
-  The curves presented in Fig.~\ref{fig:amplitude}
-  illustrate how the accuracy of the Gaussian approximation
-  is affected by the signal and LO amplitudes, $|\alpha|$ and $|\alpha_L|$.
-  More specifically, in
-Fig.~\ref{fig:amp_05} (Fig.~\ref{fig:amp_01}),
-  the statistical distance is numerically evaluated as a function
-  of the amplitude $|\alpha|$ ($|\alpha_L|$)
-at different values of the photodetectors efficiencies
-provided that the value of
-the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
 
 \begin{figure*}
     \centering
@@ -810,7 +677,7 @@ the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
 \caption[]{$\ket{\psi}=\ket{n},\:n=1$}
 \label{fig:dist_fock}
 \end{subfigure}
-\caption{Statistical distributions of photon count difference
+\caption{Exact (circle dots) and approximate (solid lines with markers) statistical distributions of photon count difference
   for the signal mode prepared in (a)~the coherent state and
   in (b)~the single photon Fock state computed for
   for different efficiencies  at $|\alpha_L|=5$
@@ -820,114 +687,10 @@ the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
 \end{figure*}
 
 
-\begin{figure*}
-    \centering
-    \begin{subfigure}[]{.45\textwidth}
-\includegraphics[width=\linewidth]{pics/homodyne/full.pdf}
-\caption[]{$\ket{\psi}=\ket{\alpha},\:\alpha=0.5$}
-\label{fig:dth_alp}
-        \end{subfigure}
-        \begin{subfigure}[]{.45\textwidth}
- \includegraphics[width=\linewidth]{pics/homodyne/full_fock.pdf}
-\caption[]{$\ket{\psi}=\ket{n},\:n=1$}
-\label{fig:dth_fock}
-\end{subfigure}
-\caption{
-  Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
-  as a function of the beam splitter disbalance angle, $\delta\theta$,
-for the signal mode prepared in (a)~the coherent state and
-  in (b)~the single photon Fock state at different efficiencies  with $|\alpha_L|=5$.
-    }
-    \label{fig:delta-theta}
-\end{figure*}
 
-
-Referring to Fig.~\ref{fig:amp_05},
-the curves behave as expected:
-given the LO amplitude $|\alpha_L|$,
-the distance monotonically increases with $|\alpha|$.
-It is shown that,
-at $|\alpha_L|=5$ and $|\alpha|>1$,
-the perfectly symmetric homodyne presents the case
-with minimal distance, $D_P$, while in the presence of asymmetry,
-the curves exhibit a rapid growth and
-the quality of  the Gaussian approximation
-rapidly degrades to the point, where $D_P>0.1$,
-so it is not useful for its intended purpose.
-
-When it comes to dependencies of the statistical distance on
-the LO oscillator amplitude
-computed at fixed value of $|\alpha|$,
-the above results suggest that the smaller the amplitude $|\alpha|$
-the better the accuracy of the Gaussian approximation.
-We can also expect the distance
-will be small provided that $|\alpha_L|$ is large
-and the strong LO approximation is applicable. 
-
-
-Referring to Fig.~\ref{fig:amp_01},
-the curves evaluated at $|\alpha|=0.5$
-display a non-monotonic behavior with two local maxima
-in the weak LO range where $|\alpha_L|<1$.
-By contrast, after the second maximum at $|\alpha_L|>1$,
-the distance falls with the LO amplitude
-and it drops below $0.05$ at $|\alpha_L|>2$.
-
-Note, that, when $|\alpha|<0.1$
-and the signal mode state is close to the vacuum state,
-the two local maxima of $D_P$ can be estimated to be slightly above $0.08$ and $0.1$,
-respectively. So, in this case, the distribution~\eqref{eq:Gaussian}
-might be regarded as a reasonable approximation even in the
-weak LO range where
-the probability $\prob_G$ approaches the close neighborhood of
-the singular limit,
-$\lim_{|\alpha_L|\to 0}\prob_G(\mu)=\delta(\mu)$. 
-
-
-From Fig.~\ref{fig:amp_01},
-it can also be seen that
-the distance vs LO amplitude dependence
-that can be used as a tool to characterize
-the applicability region of the strong LO approximation
-is nearly insensitive to asymmetry.
-In other words, the latter does not produce noticeable effects on
-the accuracy of the approximation.
-
-
-The parameters describing
-the photodetection asymmetry are
-the efficiencies $\eta_1$ and $\eta_2$.
-The curves plotted in Fig.~\ref{fig:amplitude}
-are computed at different values of the efficiencies.
-
-In order to quantify deviation of the beam splitter
-transmission and reflection amplitudes
-from the balanced $50:50$ values
-$t=\cos\theta=r=\sin\theta=1/\sqrt{2}$ at
-the angle $\theta=\pi/4$,
-we introduce the beam splitter \textit{disbalance angle} given by
-\begin{equation}
-  \label{eq:delta-theta}
-        \delta\theta\equiv\frac{\pi}{4}-\theta.
-      \end{equation}
-
-      In Figure~\ref{fig:delta-eta}
-      we plot the distance against
-      the efficiency of the photodetector assuming that the
-      other photodetector is perfect.
-      The curves are evaluated at different values of the
-      disbalance angle~\eqref{eq:delta-theta}.
-The efficiency dependence of
-the distance
-is shown to decrease monotonically at $\delta\theta=0$.
-In contrast, for disbalanced beam splitter, this dependence can
-reveal non-motonic behavior.
-
-So far, we have used the analytical results
-obtained in Sec.~\ref{subsec:gauss-hom}
+The exact and approximate analytical results for photon count difference statistical distributions, given by Eq.~\eqref{eq:accurate} and Eq.~\eqref{eq:Gaussian} respectively, are valid
 for the case where the LO and signal modes are both
-in the coherent states.
-In the general case when the quantum state of the signal mode
+in the coherent states. In the more general case when the quantum state of the signal mode
 is $\ket{\psi}$,
 the probability distributions can be evaluated
 using the relations
@@ -987,19 +750,17 @@ Another noticeable effect is that
 the probability minima between the central and side peaks
 become less pronounced.
 
-The photodetector efficiencies
-and the signal mode input states
-of Fig.~\ref{fig:dist-hom}
-are used to compute
-the statistical distance vs disbalance angle
-curves presented in Fig.~\ref{fig:delta-theta}.
-These curves illustrate how the beam splitter disbalance and
-the photodetector efficiencies influence the accuracy of the
-Gaussian approximation.
-The distance is shown to be minimal in the vicinity of
-the balanced beam splitter point with
-a vanishing disbalance angle, $\delta\theta=0$.
+\textcolor{red}{From Fig.~\ref{fig:dist-hom} it becomes apparent that perfomance of Gaussian approximation worsens in presence of asymmetry, which we will quantify in Appendix~\ref{sec:appendix_numerical}.}
 
+Our concluding remark concerns an alternative method
+to approximate Eq.~\eqref{eq:accurate}
+with a Gaussian-shaped distribution
+which is based on the asymptotic expansions of the modified Bessel functions.
+In Appendix~\ref{sec:appendix_comparison} we show that, for the asymmetric homodyne scheme,
+this method generally leads to ill-posed POVMs because
+the corresponding quadrature variance
+appears to be too small leading to negative
+contribution of the excess noise. 
   
 
 \begin{figure}
@@ -2114,10 +1875,242 @@ The work was supported by the Russian Science Foundation (project No. 24-11-0039
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
+\section{Statistical distance between Gaussian approximation and Skellam distribution}
+\label{sec:appendix_numerical}
+The photodetector efficiencies
+and the signal mode input states
+of Fig.~\ref{fig:dist-hom}
+are used to compute
+the statistical distance vs disbalance angle
+curves presented in Fig.~\ref{fig:delta-theta}.
+These curves illustrate how the beam splitter disbalance and
+the photodetector efficiencies influence the accuracy of the
+Gaussian approximation.
+The distance is shown to be minimal in the vicinity of
+the balanced beam splitter point with
+a vanishing disbalance angle, $\delta\theta=0$.
+
+\begin{figure*}[!htb]
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=\linewidth]{pics/homodyne/ED = ED(a)_eta.pdf}
+    \caption{$|\alpha_L|=5$}
+    \label{fig:amp_05}
+\end{subfigure}
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=\linewidth]{pics/homodyne/ED = ED(aL)_eta.pdf}
+    \caption{$|\alpha|=0.5$}
+    \label{fig:amp_01}
+\end{subfigure}
+\caption{
+  Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
+  as a function of (a)~signal amplitude and (b)~LO amplitude at different
+          detector efficiencies.
+        }
+  \label{fig:amplitude}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \begin{subfigure}[]{.45\linewidth}
+\includegraphics[width=\linewidth]{pics/homodyne/ed(eta2).pdf}
+\caption[]{$\eta_1=1$}
+\label{fig:eta1-1}
+        \end{subfigure}
+\begin{subfigure}[]{.45\linewidth}
+ \includegraphics[width=\linewidth]{pics/homodyne/ed(eta1).pdf}
+ \caption[]{$\eta_2=1$}
+ \label{fig:eta2-1}
+\end{subfigure}
+\caption{Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
+  as a function of  photodetector efficiency
+  (a)~$\eta_2$ at $\eta_1=1$ and
+  (b)~$\eta_1$ at $\eta_2=1$
+  for different values of the beam splitter disbalance angle
+  $\delta\theta$ (see eq.~\eqref{eq:delta-theta}).
+  The amplitudes are
+  $|\alpha|=1$ and $|\alpha_L|=5$.
+}
+\label{fig:delta-eta}
+\end{figure*}
+
+
+In this section, we
+begin with the case where the signal mode is in the coherent state
+$\ket{\alpha}$ and
+compare the exact statistics of difference events
+governed by the Skellam distribution~\eqref{eq:accurate}
+and the Gaussian approximation~\eqref{eq:Gaussian}.
+In order to quantify the statistical distance between the probability distributions,
+we shall use
+the total variational distance
+that can be computed as half of  the $L^1$ distance
+\begin{align}
+  &
+    \label{eq:stat-dist}
+    D_P\equiv\mathtt{D}\left(\prob,\prob_{G}\right)\equiv
+    \frac{1}{2}
+    \sum_{\mu=-\infty}^{\infty}
+    \lvert\prob(\mu) -\prob_G(\mu)\rvert.
+  \end{align}
+
+  Note that, according to Eq.~\eqref{eq:stat-dist},
+  $\mu$ takes integer values and
+  we evaluate the distance between the probability mass fuctions,
+  whereas the normalization condition for
+the Gaussian function~\eqref{eq:Gaussian}
+\begin{align}
+    \label{eq:norm-cont}
+  \int_{-\infty}^{\infty}
+    \prob_G(\mu)
+  \dd\mu
+    =1
+\end{align}
+implies applicability of the continuum limit.
+For integer $\mu$,
+the integral
+on the left hand side of Eq.~\eqref{eq:norm-cont}
+should be replaced with a sum
+and we have the relation
+\begin{align}
+  \label{eq:discr-norm}
+  \sum_{\mu=-\infty}^{\infty} \prob_G(\mu)=\vartheta_3(\pi\mu_G,e^{-2\pi^2\sigma_G})\equiv N_G
+\end{align}
+where $\vartheta_3$ is the Jacobi elliptic theta function~\cite{NIST:hndbk:2010}.
+
+In the applicability region of
+the continuum limit, the normalization constant $N_G$
+is close to unity. The numerical analysis shows that
+$|N_G-1|\le 10^{-4}$ at $ 2\sigma_{G}\ge 1$.
+The latter gives the condition for the LO amplitude
+\begin{equation}
+    |\alpha_L|\geq \frac{1}{\sqrt{2(\eta_1S^2+\eta_2C^2)}}\equiv\alpha_N
+    \label{eq:renorm}
+  \end{equation}
+   which ensures both applicability of the continuum limit
+  and proper normalization of the Gaussian approximation.
+  In our calculations,
+the probability $\prob_G$ will be numerically corrected by introducing
+the factor $N_G^{-1}$
+provided that $|\alpha_L|$ is below the "renormalization point" $\alpha_N$.
+
+
+  The curves presented in Fig.~\ref{fig:amplitude}
+  illustrate how the accuracy of the Gaussian approximation
+  is affected by the signal and LO amplitudes, $|\alpha|$ and $|\alpha_L|$.
+  More specifically, in
+Fig.~\ref{fig:amp_05} (Fig.~\ref{fig:amp_01}),
+  the statistical distance is numerically evaluated as a function
+  of the amplitude $|\alpha|$ ($|\alpha_L|$)
+at different values of the photodetectors efficiencies
+provided that the value of
+the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
+
+\begin{figure*}
+    \centering
+    \begin{subfigure}[]{.45\textwidth}
+\includegraphics[width=\linewidth]{pics/homodyne/full.pdf}
+\caption[]{$\ket{\psi}=\ket{\alpha},\:\alpha=0.5$}
+\label{fig:dth_alp}
+        \end{subfigure}
+        \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=\linewidth]{pics/homodyne/full_fock.pdf}
+\caption[]{$\ket{\psi}=\ket{n},\:n=1$}
+\label{fig:dth_fock}
+\end{subfigure}
+\caption{
+  Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
+  as a function of the beam splitter disbalance angle, $\delta\theta$,
+for the signal mode prepared in (a)~the coherent state and
+  in (b)~the single photon Fock state at different efficiencies  with $|\alpha_L|=5$.
+    }
+    \label{fig:delta-theta}
+\end{figure*}
+
+
+Referring to Fig.~\ref{fig:amp_05},
+the curves behave as expected:
+given the LO amplitude $|\alpha_L|$,
+the distance monotonically increases with $|\alpha|$.
+It is shown that,
+at $|\alpha_L|=5$ and $|\alpha|>1$,
+the perfectly symmetric homodyne presents the case
+with minimal distance, $D_P$, while in the presence of asymmetry,
+the curves exhibit a rapid growth and
+the quality of  the Gaussian approximation
+rapidly degrades to the point, where $D_P>0.1$,
+so it is not useful for its intended purpose.
+
+When it comes to dependencies of the statistical distance on
+the LO oscillator amplitude
+computed at fixed value of $|\alpha|$,
+the above results suggest that the smaller the amplitude $|\alpha|$
+the better the accuracy of the Gaussian approximation.
+We can also expect the distance
+will be small provided that $|\alpha_L|$ is large
+and the strong LO approximation is applicable. 
+
+
+Referring to Fig.~\ref{fig:amp_01},
+the curves evaluated at $|\alpha|=0.5$
+display a non-monotonic behavior with two local maxima
+in the weak LO range where $|\alpha_L|<1$.
+By contrast, after the second maximum at $|\alpha_L|>1$,
+the distance falls with the LO amplitude
+and it drops below $0.05$ at $|\alpha_L|>2$.
+
+Note, that, when $|\alpha|<0.1$
+and the signal mode state is close to the vacuum state,
+the two local maxima of $D_P$ can be estimated to be slightly above $0.08$ and $0.1$,
+respectively. So, in this case, the distribution~\eqref{eq:Gaussian}
+might be regarded as a reasonable approximation even in the
+weak LO range where
+the probability $\prob_G$ approaches the close neighborhood of
+the singular limit,
+$\lim_{|\alpha_L|\to 0}\prob_G(\mu)=\delta(\mu)$. 
+
+
+From Fig.~\ref{fig:amp_01},
+it can also be seen that
+the distance vs LO amplitude dependence
+that can be used as a tool to characterize
+the applicability region of the strong LO approximation
+is nearly insensitive to asymmetry.
+In other words, the latter does not produce noticeable effects on
+the accuracy of the approximation.
+
+
+The parameters describing
+the photodetection asymmetry are
+the efficiencies $\eta_1$ and $\eta_2$.
+The curves plotted in Fig.~\ref{fig:amplitude}
+are computed at different values of the efficiencies.
+
+In order to quantify deviation of the beam splitter
+transmission and reflection amplitudes
+from the balanced $50:50$ values
+$t=\cos\theta=r=\sin\theta=1/\sqrt{2}$ at
+the angle $\theta=\pi/4$,
+we introduce the beam splitter \textit{disbalance angle} given by
+\begin{equation}
+  \label{eq:delta-theta}
+        \delta\theta\equiv\frac{\pi}{4}-\theta.
+      \end{equation}
+
+      In Figure~\ref{fig:delta-eta}
+      we plot the distance against
+      the efficiency of the photodetector assuming that the
+      other photodetector is perfect.
+      The curves are evaluated at different values of the
+      disbalance angle~\eqref{eq:delta-theta}.
+The efficiency dependence of
+the distance
+is shown to decrease monotonically at $\delta\theta=0$.
+In contrast, for disbalanced beam splitter, this dependence can
+reveal non-motonic behavior.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Gaussian approximation from Skellam distribution}
-\label{sec:appendix}
+\label{sec:appendix_comparison}
 
 %\section{Bessel approximation}%???????
 %\label{app:bessel}
