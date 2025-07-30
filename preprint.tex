@@ -112,7 +112,7 @@ superscriptaddress,
 \begin{document}
 \DeclareGraphicsExtensions{.png,.pdf}
 \title{
-  Asymmetry effects in homodyne-like measurements: Positive operator-valued measures and \textcolor{red}{quantum communications}
+  Asymmetry effects in homodyne-like measurements: Positive operator-valued measures and \textcolor{red}{quantum key distribution}
 }
 
 \author{A. S.~Naumchik}
@@ -155,168 +155,21 @@ the asymmetry effects lead to ill-posed Gaussian POVM.
 \label{sec:intro}
 %%%%%%%%%%%%%%
 
+Homodyne detection is a key technique in quantum optics that allows measuring the quadrature (amplitude and phase) components of light fields. It is widely used in continuous-variable quantum key distribution (CV-QKD) systems~\cite{PhysRevLett.88.057902,PhysRevLett.93.170504,RevModPhys.84.621,e17096072,opt3040030,Zhang:apr:2024,Gaidash:pra:2024}. Homodyne measurement setup involves mixing a weak quantum signal with a strong classical reference called a local oscillator (LO) at a beam splitter. The two output modes are then detected by photodetectors, and the difference in the photocounts provides information about the signal’s quadrature amplitudes~\cite{Vogel:pra:1993,Kelley:pr:1964}.
 
-Homodyne measurement is an important example of Gaussian measurements and is widely applied in
-continuous-variable quantum key distribution (CV-QKD) systems
-\cite{PhysRevLett.88.057902,PhysRevLett.93.170504,RevModPhys.84.621,e17096072,opt3040030,Zhang:apr:2024}.
-This
-measurement traditionally involves a beam splitter (BS), where the two input ports are occupied by
-the signal and reference modes, and the two output ports are detected by quantum detectors (see
-Fig.~\ref{fig:homodyne}).  To simplify calculations, one can consider the reference mode to be much
-stronger in amplitude than the signal, leading to the so-called strong Local Oscillator (LO)
-approximation. For the resulting statistical distribution to accurately describe a real physical
-process, it is necessary to construct the corresponding positive-valued operator measure (POVM).
+Usually, the LO is considered much stronger than the signal (strong LO approximation), which simplifies the theoretical description and improves measurement precision~\cite{Vogel:bk:2006}. However, having a very strong LO also amplifies any classical noise that the LO carries, which can hide subtle quantum effects such as squeezing. In Ref.~\cite{PhysRevA.51.4160}, a detailed analysis of weak LOs with amplitudes comparable to the signal established that these quantum effects become more visible. In the weak LO regime, new phase-sensitive phenomena such as normally ordered intensity and field strength variances and their correlations become detectable, which are difficult to measure in the strong LO regime. Various measurement schemes including homodyne intensity correlations with two beam splitters and detectors, or cross-correlation with a single unbalanced beam splitter, are especially useful when the overall detection efficiency is low~\cite{PhysRevA.51.4160}. Successful operation in this weak LO regime requires highly efficient and temporally stable detectors due to the low signal strength~\cite{PhysRevA.51.4160,Schumaker:84}.
 
-\textcolor{red} {\textbf{Balanced homodyne:} In
-  Ref.~\cite{PhysRevA.51.4160} a study of potential benefits of using
-  weak LO (of same amplitude as signal) is conducted. Description is
-  focused on correlation functions, and considers 2 schemes: homodyne
-  intensity correlation scheme, consisting of $2$ BS, the intensity
-  correlations are measured with $2$ photodetectors, and homodyne
-  cross correlation scheme with $1$ BS (not $50:50$). These schemes
-  are of particular interest in cases where low overall efficiencies
-  prevent the detection of phase-sensitive effects by standard
-  balanced or unbalanced homodyning. Strong LO does not allow for
-  observing squeezing effect, and LO noise is not balanced out. Small
-  classical excess noise of the LO is amplified when its strong, so
-  detection of squeezed light is not possible. On the contrary, using
-  weak LO, relative squeezing is much larger and therefore easier to
-  observe, new phase-sensitive effects can be observed as well: the
-  normally ordered intensity variance, the normally ordered field
-  strength variance, and the normally ordered correlation of the
-  intensity and field strength fluctuations. The corresponding
-  spectral properties can be recorded by the homodyne correlation
-  schemes: the spectrum of intensity fluctuations, the squeezing
-  spectrum, the correlation spectrum of field strength and intensity
-  fluctuations. Last one gives the spectral correlation of two
-  noncommuting observables. And decreasing LO results in lesser
-  classical noise. Detectors must be of high efficiency to detect
-  these signals, and signals need to be temporally stable.  Balanced
-  homodyning is insensitive to local-oscillator quadrature-phase noise
-  and hence provides (1) a means of detecting reduced quadrature-phase
-  fluctuations (squeezing) that is perhaps more practical than
-  one-port homodyning and (2) an output signal-to-noise ratio that can
-  be a modest to significant improvement over that of unbalanced
-  homodyning and direct detection \cite{Schumaker:84}. In addition to
-  the unavoidable quantum fluctuations, it is shown that excess noise
-  from the local oscillator always affects homodyning and, when it is
-  broadband, also heterodyning. Both the quantum and the excess noise
-  of the local oscillator can be eliminated by coherent subtraction of
-  the two outputs of a 50/50 beam splitter \cite{Yuen:83}. Excess
-  intensity noise in the local oscillator can be canceled
-  \cite{Abbas:83}.  }
-        
-\textcolor{red}{\textbf{Unbalanced:}
-        Ref.~\cite{PhysRevA.53.4528} discusses the technique of
-        unbalanced homodyne detection (only one output port of the BS
-        is detected). It shows that reconstructing the quantum state
-        of the signal field from the photocounting statistics recorded
-        in this scheme (related to $s$-parametrized quasiprobability
-        distributions) is possible for $s<1$. To do so, POVM is
-        derived. 
-        Practically this is difficult to realize: the noise is
-        significant,  presently available photomultipliers have small
-        efficiencies, so that the applicability of the method might be
-        presently limited to the reconstruction of smooth
-        quasiprobability distributions. A possible solution is to use
-        of an array of highly efficient avalanche photodiodes instead
-        of photon count detectors \cite{PhysRevA.53.4528,
-          PhysRevA.101.031801}. Naturally, theoretical description
-        (photon count formula) is to be modified as well
-        \cite{PhysRevA.85.023820,PhysRevA.92.053835} to account for
-        number of detectors (and dark photon counts).  
-Quality of the results of reconstruction are affected by quantum
-detector efficiency, being less accurate for lower efficiencies.} 
+Unbalanced homodyne schemes, where only one output port of the beam splitter is detected, which can be considered as a critical case of homodyne scheme with beamsplitter transmission (reflection) tending to unity, have been studied and shown to allow reconstruction of the signal quantum state from photocounting statistics based on appropriate positive operator-valued measures (POVMs) related to $s$-parametrized quasiprobability distributions for $s<1$~\cite{PhysRevA.53.4528}. However, these schemes face practical challenges including significant noise and currently limited detector efficiencies, restricting their use mostly to reconstruction of smooth quasiprobabilities. The use of arrays of highly efficient avalanche photodiodes is proposed as a possible improvement, along with adapted theoretical descriptions to account for multiple detectors and dark counts~\cite{PhysRevA.101.031801,PhysRevA.85.023820,PhysRevA.92.053835}.
 
-\textcolor{red}{
-\textbf{Double homodyne:}
-        Ref.~\cite{Cives_Esclop_2000} discusses the the double
-        homodyne scheme with finite LO intensity. The paper
-        demonstrates how the eight-port detector can be used to
-        reconstruct the quantum state of the signal field, even when
-        the LO intensity is not significantly larger than the
-        signal. Analysis of limits of weak LO and strong LO is given
-        as well: for strong LO they obtain the $Q$-function of the
-        signal state, and for weak LO the phase is lost and they only
-        able to measure the probability distribution for the photon
-        number. Classical treatment of the homodyne is given as well. 
-}
+Double homodyne detection, often realized with an eight-port detector, enables simultaneous measurement of two conjugate quadratures and allows reconstruction of the Husimi $Q$-function of the signal state~\cite{Richter:98,PhysRevA.101.031801}. The treatment in Ref.~\cite{Cives_Esclop_2000} extends to finite LO intensities and explores the weak LO regime where phase information is lost and measurements reduce to photon number distributions, bridging classical and quantum perspectives of homodyne detection.
 
-\textcolor{red}{\textbf{LO of other states:}
-In Ref.~\cite{combes2022homodyne},  Schr\"odinger cat states (even and
-odd) of finite amplitude are considered as local oscillators of a
-standard homodyne scheme. Since LO state is not Gaussian, this
-measurement scheme is not Gaussian as well. This scheme allows for
-preparation of non-Gaussian states.}. 
+As experimental setups have imperfections, accounting for them becomes critical. Imperfections including unbalanced beam splitters, unequal detector efficiencies, finite photon number resolution, and detector dead times introduce excess noise, which degrade measurement accuracy and affect CV-QKD security~\cite{PhysRevA.53.4528,len2022realistic,yeremenko2024realistic,reutov2021photon,hajomer2025finite,ruiz2023effects,Wang:23}. Although ideal POVMs corresponding to projections onto quadrature or coherent states are well known~\cite{Vogel:bk:2006,Richter:98}, explicit inclusion of asymmetry effects, while simple, were not carried out explicitly~\cite{PhysRevA.85.023820,PhysRevA.92.053835}. In this study we concern ourselves with the first two imperfections, labeling them as \textit{asymmetry effects}.
 
-\textcolor{red}{
-In the context of \textbf{quantum random number generators} (QRNGs),
-accounting for measurement imperfections is of great importance for
-ensuring the reliability and security of the generated random
-numbers. As demonstrated in Ref.~{\cite{haw2015maximization}},
-classical noise plays a significant role in influencing the entropy of
-the random numbers generated, as well as leading to potential
-vulnerabilities, as it can be tampered with. Our results suggest that
-homodyne measurement imperfections are alike to classical noise in the
-sense of affecting the variance of the output, meaning similar
-conclusions of the performance of QRNG may be drawn. 
-}
+In practical CV-QKD implementations, device imperfections are commonly modeled as additive noise contributions encompassing effects like  electronic noise, dark counts, finite bandwidth, and other technical noise sources~\cite{Wang:23,ruiz2023effects,usenko2016trusted}. Electronic noise is often treated as additive Gaussian noise on measured quadrature variance, reflecting thermal and amplifier noise from detection electronics. These noise sources, combined with the asymmetry-induced excess noise analyzed here, reduce measurement fidelity and lower secure key rates if not properly included. Accurate modeling of such imperfections is thus essential for reliable security analysis and system optimization~\cite{Wang:23,ruiz2023effects}.
 
-\textcolor{blue}{For ideal homodyne and double homodyne detection
-  schemes with unequal detector efficiencies, POVMs are well-known,
-  being the projectors onto quadrature operators and superposition of
-  these projectors, respectively.  
-However, practical applications have imperfections~\cite{hajomer2025finite}. 
-Although accounting for BS imbalance in the formulae is conceptually
-simple, the calculations have not been carried out
-explicitly. Additionally, similar projectorsconsiderations have not
-been applied to the double homodyne scheme. Considering
-photon-counting schemes, detection imperfections are not only losses,
-but photon number resolution
-\mbox{~\cite{len2022realistic,yeremenko2024realistic}} and detector
-dead time \mbox{~\cite{ len2022realistic, reutov2021photon}}. These
-imperfections are beyond the scope of this work.} 
+Imperfections also introduce vulnerabilities in CV-QKD systems that can be exploited via side-channel attacks such as wavelength-dependent attacks~\cite{huang2012wavelength,huang2014quantum} and detector blinding or saturation attacks~\cite{qin2018homodyne,qin2016quantum}. Implementing spectral filtering, detector balancing, and careful calibration are necessary countermeasures to preserve security~\cite{Wang:23,usenko2016trusted}. It is of use to account for asymmetry as well.
 
-\textcolor{blue}{Critical cases of asymmetry in homodyne scheme were
-  discussed previously. Ref.~\cite{PhysRevA.53.4528} discusses the
-  technique of unbalanced homodyne detection (in the sense of only one
-  quantum detector used as opposed to traditionally detecting both
-  output ports of BS). It shows that reconstructing the quantum state
-  of the signal field from the photocounting statistics recorded in
-  this scheme (related to $s$-parametrized quasiprobability
-  distributions) is possible. Quality of the results of reconstruction
-  are affected by quantum detector efficiency, being less accurate for
-  lower efficiencies. However,  
-this scheme is difficult to realize, as the effect of classical noise
-is significant, and presently available photomultipliers have small
-efficiencies, so that the applicability of the method might be
-limited. A possible solution is to use of an array of highly efficient
-avalanche photodiodes instead of photon count
-detectors\mbox{~\cite{PhysRevA.53.4528,
-    PhysRevA.101.031801}}. Naturally, theoretical description (photon
-count formula) is to be modified as well
-\mbox{\cite{PhysRevA.85.023820,PhysRevA.92.053835}}. These studies
-focus on the critical case of imbalance (one of the detector ports
-being unused) for specific measurement purposes. In this sense, the
-case with an unused port can be interpreted as corresponding to zero
-efficiency.} 
-
-\textcolor{blue}{
-Numerical studies of photon count distributions for different signal
-states in homodyne schemes have been performed
-{~\cite{freyberger1993photon}}. In that work, photon difference
-distributions for Fock signal states were analyzed, and the dependency
-on detector efficiencies was studied. However, the dependency of the
-quality of the LO approximation compared to the exact distribution was
-not quantified. A numerical study on the role of the LO intensity in
-an imperfect homodyne scheme has been conducted in
-Ref.{~\cite{OLIVARES2020126354}}. In this scheme, the homodyne setup
-has non-unity, equal quantum detectors and a balanced BS. It shows
-that a strong LO is not required to reconstruct a quantum state; a
-low-intensity LO can provide a reconstruction with sufficient
-fidelity, which increases as the LO intensity increases.} 
-
-\textcolor{green}{Device imperfections play a significant role in continuous-variable quantum key distribution (CV-QKD). In Ref.~\cite{ruiz2023effects} a CV-QKD system is modeled numerically using a classical description of electromagnetic fields to investigate the impact of device imperfections on the secure key rate. Specifically, a non-ideal beam splitter and an unbalanced detector are considered. The study reveals that these imperfections lead to a reduction in the secure key generation rate. However, this analysis is based on a classical, rather than quantum, description of the system, which may limit the accuracy of the results.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Our analysis focuses on the case of an unbalanced beam splitter and unequal non-unity quantum
 efficiency of photodetectors, which we refer to as the asymmetrical case, in contrast to the
@@ -975,7 +828,7 @@ give the quadrature variances $\sigma_1$ and $\sigma_2$.
 \end{figure*}
 
 
-As in Sec.~\ref{subsec:gauss-hom},
+As in Sec.~\ref{sec:homodyne},
 formula~\eqref{eq:P_G-x1x2}
 giving the $Q$-symbol of POVM (see Eq.~\eqref{eq:PG-as-avr})
 provides the starting point for reconstruction of the POVM
@@ -1786,13 +1639,13 @@ anisotropy of the distributions in the photocount difference plane.
   {\eqref{eq:x-1}}, {\eqref{eq:x-2}} unchanged if
   $\phi_r^{(1)}+\phi_t^{(1)}=\phi_r^{(2)}+\phi_t^{(2)}=0$.} 
 
-Note that, according to Appendix~\ref{sec:appendix},
+Note that, according to Appendix~\ref{sec:appendix_comparison},
 an alternative method based on the Gaussian approximation
 for the Bessel function that enters the Skellam distribution
 generally leads to  results that are not suitable for dealing with
 asymmetry-induced effects in homodyne detection.
 
-\textcolor{red}{Our concluding remark is to put our results in the context of CV-QKD~\cite{zhang2024continuous}. 
+\textcolor{red}{Our concluding remark is to put our results in the context of CV-QKD{~\cite{zhang2024continuous}}. 
 The asymmetry effects described in the paper, such as deviations from the ideal 50:50 beam splitter ratio and mismatched detector efficiencies, introduce vulnerabilities into CV-QKD systems. %These flaws not only allow quantum hackers to compromise security but also degrade the system’s performance~\cite{ruiz2023effects}. 
 These vulnerabilities can be exploited by adversaries through attack strategies such as the wavelength attack \cite{huang2012wavelength, huang2014quantum} and the homodyne detector blinding \cite{qin2018homodyne} and saturation~\cite{qin2016quantum}. The wavelength attack leverages the wavelength-dependent coupling ratio of fiber beam splitters and can be countered by using proper spectral filtering. Blinding and saturation attacks exploit the saturation behavior of homodyne detectors, and their effectiveness is amplified by receiver imbalance. If the splitting ratio deviates from ideal one, an injected bright pulse more easily displaces the detector output, facilitating saturation and biasing excess noise estimation.} 
 
@@ -1877,18 +1730,6 @@ The work was supported by the Russian Science Foundation (project No. 24-11-0039
 \appendix
 \section{Statistical distance between Gaussian approximation and Skellam distribution}
 \label{sec:appendix_numerical}
-The photodetector efficiencies
-and the signal mode input states
-of Fig.~\ref{fig:dist-hom}
-are used to compute
-the statistical distance vs disbalance angle
-curves presented in Fig.~\ref{fig:delta-theta}.
-These curves illustrate how the beam splitter disbalance and
-the photodetector efficiencies influence the accuracy of the
-Gaussian approximation.
-The distance is shown to be minimal in the vicinity of
-the balanced beam splitter point with
-a vanishing disbalance angle, $\delta\theta=0$.
 
 \begin{figure*}[!htb]
   \centering
@@ -1934,16 +1775,47 @@ a vanishing disbalance angle, $\delta\theta=0$.
 \end{figure*}
 
 
-In this section, we
-begin with the case where the signal mode is in the coherent state
-$\ket{\alpha}$ and
-compare the exact statistics of difference events
-governed by the Skellam distribution~\eqref{eq:accurate}
-and the Gaussian approximation~\eqref{eq:Gaussian}.
+In this Appendix we will study the perfomance of Gaussian approximation for the statistics of photon count difference~\eqref{eq:Gaussian}:
+\begin{align}
+  &
+  \label{eq:App_Gaussian}
+    \prob_G(\mu)=G(\mu-\mu_G;\sigma_G),
+    \\
+  &
+    \label{eq:App_sigma_G}
+    \sigma_G=\eta_1|\alpha_1|^2+\eta_2|\alpha_2|^2
+    \approx
+    (\eta_1S^2+\eta_2C^2) |\alpha_L|^2,
+  \\
+  &
+    \label{eq:App_mu_G}
+    \mu_G=\eta_1|\alpha_1|^2-\eta_2|\alpha_2|^2
+    \approx
+    (\eta_1S^2-\eta_2C^2) |\alpha_L|^2
+    \notag
+  \\
+  &
+    +CS (\eta_1+\eta_2) |\alpha_L| \avr{\hat{x}_\phi}
+\end{align}
+by comparing it with the exact statistics of difference events
+governed by the Skellam distribution~\eqref{eq:accurate}:
+\begin{align}
+  &
+  \label{eq:App_accurate}
+  \prob(\mu)=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
+    \Biggl(\frac{\eta_1|\alpha_1|^2}{\eta_2|\alpha_2|^2}\Biggr)^{\mu/2}
+    \notag
+  \\
+  &
+    \times
+I_{\mu}\bigl(2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2}\bigr),
+\end{align}
+both repeated here for ease. We will limit our numerical results to the coherent signal state only, except in cases where the curves show sufficiently distinct differences.
+
 In order to quantify the statistical distance between the probability distributions,
 we shall use
 the total variational distance
-that can be computed as half of  the $L^1$ distance
+that can be computed as half of the $L^1$ distance
 \begin{align}
   &
     \label{eq:stat-dist}
@@ -1952,12 +1824,11 @@ that can be computed as half of  the $L^1$ distance
     \sum_{\mu=-\infty}^{\infty}
     \lvert\prob(\mu) -\prob_G(\mu)\rvert.
   \end{align}
-
   Note that, according to Eq.~\eqref{eq:stat-dist},
   $\mu$ takes integer values and
   we evaluate the distance between the probability mass fuctions,
   whereas the normalization condition for
-the Gaussian function~\eqref{eq:Gaussian}
+the Gaussian function~\eqref{eq:App_Gaussian}
 \begin{align}
     \label{eq:norm-cont}
   \int_{-\infty}^{\infty}
@@ -2102,6 +1973,16 @@ we introduce the beam splitter \textit{disbalance angle} given by
       other photodetector is perfect.
       The curves are evaluated at different values of the
       disbalance angle~\eqref{eq:delta-theta}.
+
+In Fig.~\ref{fig:delta-theta} 
+the statistical distance vs disbalance angle
+curves are presented for coherent and one-photon signal states. 
+These curves illustrate how the beam splitter disbalance and
+the photodetector efficiencies influence the accuracy of the
+Gaussian approximation.
+The distance is shown to be minimal in the vicinity of
+the balanced beam splitter point with
+a vanishing disbalance angle, $\delta\theta=0$.
 The efficiency dependence of
 the distance
 is shown to decrease monotonically at $\delta\theta=0$.
@@ -2117,8 +1998,7 @@ reveal non-motonic behavior.
 
 
 The derivation procedure for the Gaussian approximation
-outlined in Sec.~\ref{subsec:gauss-hom}
-transforms
+outlined in Sec.~\ref{sec:homodyne} transforms
 the photocount difference probability~\eqref{eq:poisson}
 into the form of a convolution of the normal distributions
 by approximating the Poisson distributions.
@@ -2239,8 +2119,7 @@ into the following quadrature form:
     \tilde{\sigma}_x=\frac{2CS}{\sqrt{\eta_1\eta_2}},
 \end{align}
 so that we may follow the line of reasoning
-presented in Sec.~\ref{subsec:gauss-hom}
-to deduce the POVM
+presented in Sec.~\ref{sec:homodyne} to deduce the POVM
 \begin{align}
   &
 \label{eq:tpovm}    
