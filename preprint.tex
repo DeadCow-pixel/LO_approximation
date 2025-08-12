@@ -1207,23 +1207,30 @@ the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
 In this section, we apply our results on asymmetric measurements to analyze the Gausssian modulated coherent state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. Specifically, we compute the mutual information, Holevo information, and asymptotic secret key fraction under an untrusted noise scenario, in order to assess the impact of measurement asymmetry on the protocol’s security.
 
 In the GG02 protocol, Alice prepares an ensemble of coherent states whose 
-complex amplitudes $\{\alpha=\frac{q+ip}2\}$ are drawn from a zero-mean Gaussian distribution, denoted by $G(0; V_{\ind{A}})$, where $V_{\ind{A}}$ is the modulation variance. 
-\textcolor{red}{Alice’s preparation of coherent states can be understood as choosing 
-random points in phase space whose coordinates (quadratures) are 
-distributed according to a classical multivariate Gaussian probability 
-distribution {~\cite{Serafini:bk:2017}}:}
+complex amplitudes 
+\begin{align}
+  \label{eq:alpha-def}
+  \alpha={q+ip},
+\end{align}
+where $q$ and $p$ are independent zero-mean Gaussian random variables with variance ${V_{\ind{A}}}$, i.e. $q\sim G(q, \frac{V_{\ind{A}}}2)$ and $p\sim G(p, \frac{V_{\ind{A}}}2)$. Therefore, the complex amplitudes $\alpha$
+are drawn from a zero-mean Gaussian distribution in the form
+%\textcolor{red}{Alice’s preparation of coherent states can be understood as choosing random points in phase space whose coordinates (quadratures) are distributed according to a classical multivariate Gaussian probability distribution {~\cite{Serafini:bk:2017}}:}
 %It follows that the probability distribution describing the likelihood that Alice prepares a coherent state with amplitude $\alpha$ is given by
 \begin{align}
   \label{eq:p_A}
-  &p_{\ind{A}}(\alpha)=\frac{1}{\pi V_{\ind{A}}} \exp\left(-\frac{|\alpha|^2}{V_{\ind{A}}}\right)
+  p_{\ind{A}}(\alpha)=\frac{2}{\pi V_{\ind{A}}} \exp\left(-\frac{2|\alpha|^2}{V_{\ind{A}}}\right)
 \end{align}
-After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$. Presense of channel noise with variance $\xi$ further modifies the variance of the probability density function $p_{\ind{A}}$ as $V_{\ind{A}}\mapsto TV_{\ind{A}}+\xi$.
+with variance $\ind{Var}(\alpha)=\ind{Var}(q)+\ind{Var}(p)=V_{\ind{A}}$.
+After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$.
 
 Then, Bob performs a measurement decribed by POVM $\{\hat{\Pi}_x\}$, where the index $x$ parametrizes the measurement outcomes (e.g., quadrature values in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
 \begin{align}
 \label{eq:pB(x|A)}
-    p_{\ind{B}}(x|\tilde\alpha) = \Tr \left[ \ket{{\tilde\alpha}}\bra{{\tilde\alpha}}\hat{\Pi}_x \right].
+    p_{\ind{B}}(x|\tilde\alpha) = \int \mathop{\dd^2\tilde\alpha'}
+G(\tilde\alpha-\tilde\alpha', \xi) \Tr \left[ \ket{{\tilde\alpha}}\bra{{\tilde\alpha}}\hat{\Pi}_x \right]= \notag \\\int \mathop{\dd^2\tilde\alpha'}
+G(\tilde\alpha-\tilde\alpha', \xi) Q_x(\tilde \alpha'),
 \end{align}
+where $Q_x(\tilde \alpha)$ is the $Q$-function of POVM used, and channel noise is modeled as additive Gaussian noise of variance $\xi$. 
 The joint probability distribution
 \begin{align}
 \label{eq:pBxa}
@@ -1234,11 +1241,38 @@ and marginal distribution
 \begin{align}
 \label{eq:pBx}
     &p_{\ind{B}}(x)=\int \mathop{\dd^2\tilde \alpha} p_{\ind{B}}(x|\tilde \alpha)
-    p_{\ind{A}}(\tilde \alpha).
-\end{align}
+    p_{\ind{A}}(\tilde \alpha)\end{align}
 immediately follow.
 
-Consider classical random vector $\boldsymbol{\ind{X}}=\left(\alpha, x\right)^{\ind{T}}$, describing the joint classical variables involved in the protocol. We are able to calculate the classical covariance matrix as
+Consider classical random vector $\boldsymbol{\ind{X}}=\left(\alpha, x\right)^{\ind{T}}$, describing Alice's prepared amplitude quadrature and Bob's measurement outcome, respectively.
+Assuming Bob performs homodyne measurement, i.e. (see Eq.~\eqref{eq:theform}),
+\begin{align}
+  \label{eq:Q_x_hom}
+  Q_x^{\ind{HOM}}(\tilde{\alpha})\sim\textcolor{red}{\int\mathop{\dd x'} G(x-x';\sigma_N)G(x'-\sqrt T\avr{\hat{x}_\phi};1)}\notag\\\sim G(x-2\sqrt T\Re\alpha; 1+\sigma_N),
+\end{align}
+\begin{align}
+  \label{eq:pB_hom}
+  p_{\ind{B}}^{\ind{HOM}}(x)\sim\textcolor{red}{
+    \int \mathop{\dd^2\tilde \alpha} G(x-\sqrt T\avr{\hat{x}_\phi}; 1+\sigma_N)G(\alpha;TV_{\ind{A}}+\xi)
+  }\notag\\\sim G(x;TV_{\ind{A}}+\xi+1+\sigma_N)
+\end{align}
+We are able to calculate the classical covariance matrix as
+\textcolor{red}{\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%}
+\begin{align}
+  &\ind{Var}(\alpha)\overset{\eqref{eq:p_A}}{=}V_{\ind{A}}\\
+  &\ind{Var}(x)\overset{\eqref{eq:pB_hom}}{=} TV_{\ind{A}}+\xi+1+\sigma_N,\\
+  &\ind{cov}(\alpha,x)=\ind{cov}(x,\alpha)=\ind{E}(\alpha x)- \underbrace{\ind{E}(x)}_{0\eqref{eq:pB_hom}}\underbrace{\ind{E}(\tilde\alpha)}_{0\eqref{eq:p_A}}=\notag\\
+  &\int\mathop{\dd^2\alpha}\mathop{\dd x}\alpha x\ p(x,\alpha)=
+  \frac{1}{\sqrt{T}}\int\mathop{\dd^2\tilde\alpha}\mathop{\dd x}\tilde\alpha x\ p(x,\tilde\alpha)=\notag\\
+  &\left/
+  \begin{matrix}
+    \int \mathop{\dd x} xQ_x(\tilde\alpha)\overset{\eqref{eq:Q_x_hom}}{=}2\Re \tilde \alpha e^{-i\phi}\\
+    \int\mathop{\dd^2\tilde\alpha}\tilde\alpha(\tilde \alpha e^{-i\phi}+
+    \ind{c.c})p_{\ind{A}}(\alpha)=TV_{\ind{A}}e^{-i\phi}
+  \end{matrix}
+  \right/=\sqrt{T}V_{\ind{A}}
+\end{align}
+\textcolor{red}{\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%}
 \begin{align}
   \label{eq:S_qp_hom}
     \ind{cov}\left(\boldsymbol{\ind{X}}\right)=\Sigma^{\ind{HOM}}=\begin{pmatrix}
@@ -1262,47 +1296,47 @@ Mutual information between Alice and Bob can be calculated as follows~\cite{Soch
 \end{align}
 where all logarithms are base 2.
 
-To calculate mutual information if Bob performs double homodyne 
-detection~\cite{PhysRevLett.93.170504}, we start from covariance matrix 
+If Bob performs double homodyne 
+detection~\cite{PhysRevLett.93.170504}, using Eq.~\eqref{eq:P_G-x1x2} (note that both Eq.~\eqref{eq:P_G-x1x2-2} and Eq.~\eqref{eq:P_G-gen-x1x2-2} are obviously represented by this formula),
 \begin{align}
-  \label{eq:sigma_ab_nonoise}
-\Sigma_{\ind{AB}}=\begin{pmatrix}
-        V_{\ind{A}}&\sqrt TV_{\ind{A}}\\
-        \sqrt TV_{\ind{A}}&TV_{\ind{A}}+1+\xi
-    \end{pmatrix}\equiv \begin{pmatrix}
-    V_{\ind{A}}&c\\
-        c&b
+  Q_x^{\ind{DHOM}}(x_1,x_2)=G(x_1-\Re\alpha e^{-i\phi}, \frac{\sigma_1}{2})
+  G(x_2-\Im\alpha e^{-i\phi}, \frac{\sigma_2}{2}),
+\end{align}
+which is employed in calculation of conditional probability on Bob's side
+\begin{align}
+  &p_{\ind{B}}(x_1,x_2|\tilde{\alpha})=\notag\\
+  &\int\mathop{\dd^2 x'}
+  G(x_1-x_1', \xi_1)G(x_2-x_2', \xi_2)\notag\\
+  &\times Q_x^{\ind{DHOM}}(x_1,x_2),
+\end{align}
+where channel noise is distributed in quadratures arbitrarely. Marginal probabilities are given by
+\begin{align}
+  &p_{\ind{B}}(x_1,x_2)=\int\mathop{\dd^2\tilde \alpha}
+  p_{\ind{B}}(x_1,x_2|\tilde{\alpha})p_{\ind{A}}(\alpha),\\
+  &p_B(x_1) = \int \mathop{\dd \Re\tilde \alpha};
+G(x_1 - \Re(\tilde{\alpha} e^{-i \phi}); \frac {\sigma_1}2 + \xi_1)
+\notag\\&\times 
+G(\Re(\tilde{\alpha} e^{-i \phi}); \frac{T V_{\ind{A}}}2 )
+\\
+  &p_B(x_2) = \int \mathop{\dd \Im\tilde \alpha};
+G(x_2 - \Im(\tilde{\alpha} e^{-i \phi}); \frac {\sigma_2}2 + \xi_2)
+\notag\\&\times 
+G(\Im(\tilde{\alpha} e^{-i \phi}); \frac{T V_{\ind{A}}}2 )
+\end{align}
+Defining classical vector $\boldsymbol{\ind{Y}}=(\alpha,x_1,x_2)^{\ind{T}}$, we obtain the covariance matrix as
+\textcolor{red}{\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%}
+\begin{align}
+  \ind{Var}(x_1)=
+\end{align}
+\textcolor{red}{\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%}
+\begin{align}
+  \ind{cov}(\boldsymbol{\ind{Y}})\equiv \Sigma^{\ind{DH}}=
+  \begin{pmatrix}
+        V_{\ind{A}}&C_Sc&-S_Sc\\
+        C_Sc&\frac{TV_{\ind{A}}+\sigma_1}{2}+\xi_1&C_SS_S(1-b)\\
+        -S_Sc&C_SS_S(1-b)&S_S^2b+C_S^2+\sigma_N^{(2)}
     \end{pmatrix}
-    ,
 \end{align}
-note the difference in Bob's variance $b$ as opposed to $V_{\ind{B}}$ -- asymmetry noise would be 
-modeled last, as it is not affected by beam splitter transformation.
-Bob's mode is splitted on BS$_S$, resulting in covariance matrix
-\begin{align}
-    \label{eq:tilde-sigma}
-    \tilde\Sigma^{\ind{DHOM}}=\ind{BS}\left[\Sigma_{\ind {AB}}
-    \oplus \Sigma_{\ind{\ind{vac}}}\right]\ind{BS}^{\ind{T}}
-\end{align}
-where $\Sigma_{\ind{\ind{vac}}}=1$ and BS $=1\oplus    
-\begin{pmatrix}
-    C_S& S_S\\
-    -S_S&C_S
-\end{pmatrix}$.
-Finally, we will model the measurement noise as
-\begin{align}
-  \label{eq:sigma_ab_dhom}
-    \Sigma^{\ind{DHOM}}=
-    \tilde\Sigma^{\ind{DHOM}}+0\oplus N,
-\end{align}
-where
-\begin{align}
-\label{eq:N}
-    &N=\begin{pmatrix}
-        \sigma_N^{(1)}&0\\
-        0&\sigma_N^{(2)}
-    \end{pmatrix}
-\end{align}
-where $\sigma_N^{(i)}$ is defined per Eq.~\eqref{eq:sigm-N-i}. 
 
 The resulting covariance matrix describing measurement statistics
 in double homodyne detection reads

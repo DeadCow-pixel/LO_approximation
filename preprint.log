@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.10)  30 JUL 2025 18:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.10)  12 AUG 2025 12:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -901,134 +901,191 @@ Underfull \hbox (badness 3701) in paragraph at lines 1130--1135
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 1222--1223
+Underfull \hbox (badness 1270) in paragraph at lines 1226--1227
 []\T1/cmr/m/n/10 Then, Bob per-forms a mea-sure-ment de-cribed by
  []
 
-[8] [9]
-<pics/qkd/hom/IAB.pdf, id=219, 182.36246pt x 167.11168pt>
+[8]
+Overfull \hbox (1.35806pt too wide) detected at line 1258
+[]
+ []
+
+
+Overfull \hbox (3.93896pt too wide) in paragraph at lines 1258--1261
+[]\T1/cmr/m/n/10 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[] 
+ []
+
+
+Overfull \hbox (3.93896pt too wide) in paragraph at lines 1274--1276
+[]\T1/cmr/m/n/10 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[] 
+ []
+
+
+Overfull \hbox (24.65479pt too wide) detected at line 1304
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1328
+\T1/cmr/m/n/10 Defining clas-si-cal vec-tor $[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 ; x[]; x[]\OT1/cmr/m/n/10 )[]$\T1/cmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1328
+\T1/cmr/m/n/10 we ob-tain the co-vari-ance ma-trix as
+ []
+
+
+Overfull \hbox (3.93896pt too wide) in paragraph at lines 1325--1328
+[]\T1/cmr/m/n/10 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[] 
+ []
+
+
+Overfull \hbox (3.93896pt too wide) in paragraph at lines 1330--1332
+[]\T1/cmr/m/n/10 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[] 
+ []
+
+
+Overfull \hbox (9.75302pt too wide) detected at line 1339
+[]
+ []
+
+
+LaTeX Warning: Reference `eq:N' on page 9 undefined on input line 1373.
+
+[9]
+
+LaTeX Warning: Reference `eq:tilde-sigma' on page 10 undefined on input line 1378.
+
+[10]
+<pics/qkd/hom/IAB.pdf, id=223, 182.36246pt x 167.11168pt>
 File: pics/qkd/hom/IAB.pdf Graphic file (type pdf)
 <use pics/qkd/hom/IAB.pdf>
-Package pdftex.def Info: pics/qkd/hom/IAB.pdf  used on input line 1491.
+Package pdftex.def Info: pics/qkd/hom/IAB.pdf  used on input line 1525.
 (pdftex.def)             Requested size: 153.00156pt x 137.57303pt.
-<pics/qkd/hom/chi.pdf, id=221, 176.86243pt x 167.11168pt>
+<pics/qkd/hom/chi.pdf, id=225, 176.86243pt x 167.11168pt>
 File: pics/qkd/hom/chi.pdf Graphic file (type pdf)
 <use pics/qkd/hom/chi.pdf>
-Package pdftex.def Info: pics/qkd/hom/chi.pdf  used on input line 1496.
+Package pdftex.def Info: pics/qkd/hom/chi.pdf  used on input line 1530.
 (pdftex.def)             Requested size: 153.00156pt x 142.31027pt.
-<pics/qkd/hom/r.pdf, id=223, 182.36246pt x 167.11168pt>
+<pics/qkd/hom/r.pdf, id=227, 182.36246pt x 167.11168pt>
 File: pics/qkd/hom/r.pdf Graphic file (type pdf)
 <use pics/qkd/hom/r.pdf>
-Package pdftex.def Info: pics/qkd/hom/r.pdf  used on input line 1501.
+Package pdftex.def Info: pics/qkd/hom/r.pdf  used on input line 1535.
 (pdftex.def)             Requested size: 153.00156pt x 137.57303pt.
-<pics/qkd/dhom/IAB.pdf, id=225, 194.80988pt x 170.7649pt>
+<pics/qkd/dhom/IAB.pdf, id=229, 194.80988pt x 170.7649pt>
 File: pics/qkd/dhom/IAB.pdf Graphic file (type pdf)
 <use pics/qkd/dhom/IAB.pdf>
-Package pdftex.def Info: pics/qkd/dhom/IAB.pdf  used on input line 1512.
+Package pdftex.def Info: pics/qkd/dhom/IAB.pdf  used on input line 1546.
 (pdftex.def)             Requested size: 153.00156pt x 131.08008pt.
-<pics/qkd/dhom/chi.pdf, id=227, 183.06pt x 170.7649pt>
+<pics/qkd/dhom/chi.pdf, id=231, 183.06pt x 170.7649pt>
 File: pics/qkd/dhom/chi.pdf Graphic file (type pdf)
 <use pics/qkd/dhom/chi.pdf>
-Package pdftex.def Info: pics/qkd/dhom/chi.pdf  used on input line 1517.
+Package pdftex.def Info: pics/qkd/dhom/chi.pdf  used on input line 1551.
 (pdftex.def)             Requested size: 153.00156pt x 140.35764pt.
-<pics/qkd/dhom/r.pdf, id=229, 188.93492pt x 170.7649pt>
+<pics/qkd/dhom/r.pdf, id=233, 188.93492pt x 170.7649pt>
 File: pics/qkd/dhom/r.pdf Graphic file (type pdf)
 <use pics/qkd/dhom/r.pdf>
-Package pdftex.def Info: pics/qkd/dhom/r.pdf  used on input line 1522.
+Package pdftex.def Info: pics/qkd/dhom/r.pdf  used on input line 1556.
 (pdftex.def)             Requested size: 153.00156pt x 135.55971pt.
-<pics/qkd/hom/r(l).pdf, id=231, 234.7277pt x 193.73996pt>
+<pics/qkd/hom/r(l).pdf, id=235, 234.7277pt x 193.73996pt>
 File: pics/qkd/hom/r(l).pdf Graphic file (type pdf)
 <use pics/qkd/hom/r(l).pdf>
-Package pdftex.def Info: pics/qkd/hom/r(l).pdf  used on input line 1532.
+Package pdftex.def Info: pics/qkd/hom/r(l).pdf  used on input line 1566.
 (pdftex.def)             Requested size: 229.49844pt x 189.42928pt.
-<pics/qkd/dhom/r(l).pdf, id=232, 237.51202pt x 195.62881pt>
+<pics/qkd/dhom/r(l).pdf, id=236, 237.51202pt x 195.62881pt>
 File: pics/qkd/dhom/r(l).pdf Graphic file (type pdf)
 <use pics/qkd/dhom/r(l).pdf>
-Package pdftex.def Info: pics/qkd/dhom/r(l).pdf  used on input line 1537.
+Package pdftex.def Info: pics/qkd/dhom/r(l).pdf  used on input line 1571.
 (pdftex.def)             Requested size: 229.49844pt x 189.03732pt.
- [10] [11 <./pics/qkd/hom/IAB.pdf> <./pics/qkd/hom/chi.pdf> <./pics/qkd/hom/r.pdf> <./pics/qkd/dhom/IAB.pdf> <./pics/qkd/dhom/chi.pdf> <./pics/qkd/dhom/r.pdf>]
-Underfull \hbox (badness 1237) in paragraph at lines 1640--1641
+ [11]
+Underfull \hbox (badness 1237) in paragraph at lines 1674--1675
 \T1/cmr/m/n/10 and $[] \OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 7! [] \OML/cmm/m/it/10 e[]$ \T1/cmr/m/n/10 is needed in
  []
 
-[12 <./pics/qkd/hom/r(l).pdf> <./pics/qkd/dhom/r(l).pdf>]
-Underfull \hbox (badness 1418) in paragraph at lines 1654--1655
+[12 <./pics/qkd/hom/IAB.pdf> <./pics/qkd/hom/chi.pdf> <./pics/qkd/hom/r.pdf> <./pics/qkd/dhom/IAB.pdf> <./pics/qkd/dhom/chi.pdf> <./pics/qkd/dhom/r.pdf>]
+Underfull \hbox (badness 1418) in paragraph at lines 1688--1689
 [][]\T1/cmr/m/n/10 Despite the ex-is-tence of coun-ter-mea-sures for the
  []
 
-<pics/homodyne/ED = ED(a)_eta.pdf, id=403, 816.65097pt x 672.11098pt>
+<pics/homodyne/ED = ED(a)_eta.pdf, id=369, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(a)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(a)_eta.pdf>
-Package pdftex.def Info: pics/homodyne/ED = ED(a)_eta.pdf  used on input line 1737.
+Package pdftex.def Info: pics/homodyne/ED = ED(a)_eta.pdf  used on input line 1771.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-<pics/homodyne/ED = ED(aL)_eta.pdf, id=404, 816.65097pt x 672.11098pt>
+<pics/homodyne/ED = ED(aL)_eta.pdf, id=370, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(aL)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(aL)_eta.pdf>
-Package pdftex.def Info: pics/homodyne/ED = ED(aL)_eta.pdf  used on input line 1742.
+Package pdftex.def Info: pics/homodyne/ED = ED(aL)_eta.pdf  used on input line 1776.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-<pics/homodyne/ed(eta2).pdf, id=405, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta2).pdf, id=371, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta2).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta2).pdf>
-Package pdftex.def Info: pics/homodyne/ed(eta2).pdf  used on input line 1756.
+Package pdftex.def Info: pics/homodyne/ed(eta2).pdf  used on input line 1790.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-<pics/homodyne/ed(eta1).pdf, id=406, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta1).pdf, id=372, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta1).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta1).pdf>
-Package pdftex.def Info: pics/homodyne/ed(eta1).pdf  used on input line 1761.
+Package pdftex.def Info: pics/homodyne/ed(eta1).pdf  used on input line 1795.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-<pics/homodyne/full.pdf, id=407, 808.39723pt x 652.25604pt>
+[13 <./pics/qkd/hom/r(l).pdf> <./pics/qkd/dhom/r(l).pdf>] [14 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf> <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf>]
+<pics/homodyne/full.pdf, id=462, 808.39723pt x 652.25604pt>
 File: pics/homodyne/full.pdf Graphic file (type pdf)
 <use pics/homodyne/full.pdf>
-Package pdftex.def Info: pics/homodyne/full.pdf  used on input line 1882.
+Package pdftex.def Info: pics/homodyne/full.pdf  used on input line 1916.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-<pics/homodyne/full_fock.pdf, id=408, 808.39723pt x 652.25604pt>
+<pics/homodyne/full_fock.pdf, id=463, 808.39723pt x 652.25604pt>
 File: pics/homodyne/full_fock.pdf Graphic file (type pdf)
 <use pics/homodyne/full_fock.pdf>
-Package pdftex.def Info: pics/homodyne/full_fock.pdf  used on input line 1887.
+Package pdftex.def Info: pics/homodyne/full_fock.pdf  used on input line 1921.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-[13] [14 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf> <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf>]
-<pics/appendix/app_1.pdf, id=463, 807.97862pt x 663.43863pt>
+ [15]
+<pics/appendix/app_1.pdf, id=467, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_1.pdf Graphic file (type pdf)
 <use pics/appendix/app_1.pdf>
-Package pdftex.def Info: pics/appendix/app_1.pdf  used on input line 2052.
+Package pdftex.def Info: pics/appendix/app_1.pdf  used on input line 2086.
 (pdftex.def)             Requested size: 233.69925pt x 191.88611pt.
- [15 <./pics/homodyne/full.pdf> <./pics/homodyne/full_fock.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 2083.
-
-<pics/appendix/app_2.pdf, id=487, 807.97862pt x 663.43863pt>
+<pics/appendix/app_2.pdf, id=468, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_2.pdf Graphic file (type pdf)
 <use pics/appendix/app_2.pdf>
-Package pdftex.def Info: pics/appendix/app_2.pdf  used on input line 2144.
+Package pdftex.def Info: pics/appendix/app_2.pdf  used on input line 2178.
 (pdftex.def)             Requested size: 233.69925pt x 191.88611pt.
-(preprint.bbl [16 <./pics/appendix/app_1.pdf> <./pics/appendix/app_2.pdf>]
+ [16 <./pics/homodyne/full.pdf> <./pics/homodyne/full_fock.pdf> <./pics/appendix/app_1.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 2199.
+
+(preprint.bbl
 Underfull \hbox (badness 1237) in paragraph at lines 152--159
  \T1/cmr/m/n/9 A. Kozubov, []Intermode-interaction-induced dy-nam-ics
  []
 
-
+[17 <./pics/appendix/app_2.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 409--415
  \T1/cmr/m/n/9 Homodyne-detector-blinding at-tack in continuous-
  []
 
-[17]) [18] (preprint.aux)
+) [18] (preprint.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 9331 strings out of 468220
- 153537 string characters out of 5432386
- 599509 words of memory out of 5000000
- 37701 multiletter control sequences out of 15000+600000
- 647405 words of font info for 103 fonts, out of 8000000 for 9000
+ 9335 strings out of 468220
+ 153560 string characters out of 5432386
+ 605481 words of memory out of 5000000
+ 37703 multiletter control sequences out of 15000+600000
+ 648947 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,79p,1380b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on preprint.pdf (18 pages, 1145597 bytes).
+ 71i,20n,79p,1380b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on preprint.pdf (18 pages, 1164330 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
+ 642 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
