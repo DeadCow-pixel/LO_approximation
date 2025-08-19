@@ -135,12 +135,12 @@ superscriptaddress,
 \date{\today}
 
 \begin{abstract}
-  We study applicability of
+  \textcolor{red}{We study applicability of
   the Gaussian approximation describing
   photon count statistics for both the homodyne and the double homodyne
   measurements in the presence of asymmetry effects when
   the beam splitters are unbalanced and the quantum efficiencies of
-  the photodetectors are not identical.
+  the photodetectors are not identical.}
 We also use the Gaussian approximation to construct
 the positive operator-valued measure (POVM) that takes into account the asymmetry effects. 
 It is found that, when the Skellam distribution is approximated using the asymptotic expansions of
@@ -170,14 +170,14 @@ In practice, such imperfections are commonly modeled as additive technical noise
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Our analysis focuses on the asymmetrical detection case: an unbalanced beam splitter combined with unequal (and non-unity) quantum efficiencies of the photodetectors, in contrast to the conventional symmetrical case of a balanced beam splitter and identical detector efficiencies. To derive tractable expressions we model photocount statistics by approximating Poisson distributions with Gaussian ones (the \emph{Gaussian approximation}) and further simplify using the local-oscillator (LO) approximation. From these approximations we construct the corresponding POVMs and numerically assess the quality of the approximations.
+Our analysis focuses on the asymmetrical detection case: an unbalanced beam splitter combined with unequal (and non-unity) quantum efficiencies of the photodetectors, in contrast to the conventional symmetrical case of a balanced beam splitter and identical detector efficiencies. To derive tractable expressions we model photocount statistics by approximating Poisson distributions with Gaussian ones (the \emph{Gaussian approximation}) and further simplify using the local-oscillator (LO) approximation. From these approximations we construct the corresponding POVMs \textcolor{red}{and numerically assess the quality of the approximations.}
 
 We then apply the developed formalism to a homodyne-based two-quadrature scheme (double homodyne, often called heterodyne in the QKD literature~\cite{Pirandola:20,opt3040030,Zhang:apr:2024}) to demonstrate applicability beyond single-quadrature detection. We find that the asymmetrical double-homodyne POVM requires an extension to the set of squeezed coherent states. The asymmetrical POVMs obtained are then used to compute the CV-QKD asymptotic secret fraction, thereby quantifying the impact of measurement asymmetry on protocol security.
 
 We also show that the commonly used Skellam-distribution approximation based on the asymptotic expansion of the modified Bessel function of the first kind is not valid in the asymmetrical regime.
 
 The paper is organized as follows. In Sec.~\ref{sec:homodyne}, we obtain the statistical distribution of difference photon counts in Gaussian approximation, from which we obtain the respective POVM. %We thoroughly analyze the dependence of the statistical distribution on the asymmetry parameters.  
-In Sec.~\ref{sec:double-homodyne}, we conduct the analysis of the double homodyne scheme analogously to the previous section, finding out that the resulting POVM is not well defined for all asymmetry parameters, requiring generalization. \textcolor{red}{ In Sec.~\ref{sec:gen-POVM}, we generalize the double homodyne POVM to the set of squeezed coherent states. In Sec.~\ref{sec:protocol}, we apply our results for homodyne and double homodyne detection to calculate the asymptotic secret fraction for an ideal CV-QKD system.}
+In Sec.~\ref{sec:double-homodyne}, we conduct the analysis of the double homodyne scheme analogously to the previous section, finding out that the resulting POVM is not well defined for all asymmetry parameters, requiring generalization. In Sec.~\ref{sec:gen-POVM}, we generalize the double homodyne POVM to the set of squeezed coherent states. In Sec.~\ref{sec:protocol}, we apply our results for homodyne and double homodyne detection to calculate the asymptotic secret fraction for an ideal CV-QKD system.
 % In Sec.~\ref{sec-experiment} a number of experiments are performed
 % and the experimental results are analyzed. 
 % xd
@@ -1196,7 +1196,7 @@ complex amplitudes
   \label{eq:alpha-def}
   \alpha={q+ip},
 \end{align}
-where $q$ and $p$ are independent zero-mean Gaussian random variables with variance ${V_{\ind{A}}}$, i.e. $q\sim G(q, \frac{V_{\ind{A}}}2)$ and $p\sim G(p, \frac{V_{\ind{A}}}2)$. Therefore, the complex amplitudes $\alpha$
+where $q$ and $p$ are independent zero-mean Gaussian random variables with variance $\frac{V_{\ind{A}}}2$, i.e. $q\sim G(q, \frac{V_{\ind{A}}}2)$ and $p\sim G(p, \frac{V_{\ind{A}}}2)$. Therefore, the complex amplitudes $\alpha$
 are drawn from a zero-mean Gaussian distribution in the form
 %\textcolor{red}{Alice’s preparation of coherent states can be understood as choosing random points in phase space whose coordinates (quadratures) are distributed according to a classical multivariate Gaussian probability distribution {~\cite{Serafini:bk:2017}}:}
 %It follows that the probability distribution describing the likelihood that Alice prepares a coherent state with amplitude $\alpha$ is given by
@@ -1204,13 +1204,13 @@ are drawn from a zero-mean Gaussian distribution in the form
   \label{eq:p_A}
   p_{\ind{A}}(\alpha)=\frac{2}{\pi V_{\ind{A}}} \exp\left(-\frac{2|\alpha|^2}{V_{\ind{A}}}\right)
 \end{align}
-with variance $\ind{Var}(\alpha)=\ind{Var}(q)+\ind{Var}(p)=V_{\ind{A}}$.
+with variance $V_{\ind{A}}$.
 After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$.
 
-Then, Bob performs a measurement decribed by POVM $\{\hat{\Pi}_x\}$, where the index $x$ parametrizes the measurement outcomes (e.g., quadrature values in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
+Then, Bob performs a measurement decribed by POVM $\{\hat{\Pi}_x\}$, where the index $x$ parametrizes the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
 \begin{align}
 \label{eq:pB(x|A)}
-    p_{\ind{B}}(x|\tilde\alpha) = \int \mathop{\dd^2\tilde\alpha'}
+    p_{\ind{B}}(x|\alpha) = \int \mathop{\dd^2\tilde\alpha'}
 G(\tilde\alpha-\tilde\alpha', \xi) \Tr \left[ \ket{{\tilde\alpha}}\bra{{\tilde\alpha}}\hat{\Pi}_x \right]= \notag \\\int \mathop{\dd^2\tilde\alpha'}
 G(\tilde\alpha-\tilde\alpha', \xi) Q_x(\tilde \alpha'),
 \end{align}
@@ -1218,14 +1218,14 @@ where $Q_x(\tilde \alpha)$ is the $Q$-function of POVM used, and channel noise i
 The joint probability distribution
 \begin{align}
 \label{eq:pBxa}
-    &p_{\ind{B}}(x,\tilde \alpha)=p_{\ind{B}}(x|\tilde \alpha)
-    p_{\ind{A}}(\tilde \alpha),
+    &p_{\ind{B}}(x, \alpha)=p_{\ind{B}}(x| \alpha)
+    p_{\ind{A}}(\alpha),
 \end{align}
 and marginal distribution
 \begin{align}
 \label{eq:pBx}
-    &p_{\ind{B}}(x)=\int \mathop{\dd^2\tilde \alpha} p_{\ind{B}}(x|\tilde \alpha)
-    p_{\ind{A}}(\tilde \alpha)\end{align}
+    &p_{\ind{B}}(x)=\int \mathop{\dd^2\alpha} p_{\ind{B}}(x|\tilde \alpha)
+    p_{\ind{A}}(\alpha)\end{align}
 immediately follow.
 
 Consider classical random vector $\boldsymbol{\ind{X}}=\left(\alpha, x\right)^{\ind{T}}$, describing Alice's prepared amplitude quadrature and Bob's measurement outcome, respectively.
@@ -1243,7 +1243,7 @@ Assuming Bob performs homodyne measurement, i.e. (see Eq.~\eqref{eq:theform}),
 We are able to calculate the classical covariance matrix as
 \textcolor{red}{\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%}
 \begin{align}
-  &\ind{Var}(\alpha)\overset{\eqref{eq:p_A}}{=}V_{\ind{A}}\\
+  %&\ind{Var}(\alpha)\overset{\eqref{eq:p_A}}{=}V_{\ind{A}}\\
   &\ind{Var}(x)\overset{\eqref{eq:pB_hom}}{=} TV_{\ind{A}}+\xi+1+\sigma_N,\\
   &\ind{cov}(\alpha,x)=\ind{cov}(x,\alpha)=\ind{E}(\alpha x)- \underbrace{\ind{E}(x)}_{0\eqref{eq:pB_hom}}\underbrace{\ind{E}(\tilde\alpha)}_{0\eqref{eq:p_A}}=\notag\\
   &\int\mathop{\dd^2\alpha}\mathop{\dd x}\alpha x\ p(x,\alpha)=
@@ -1316,10 +1316,13 @@ Defining classical vector $\boldsymbol{\ind{Y}}=(\alpha,x_1,x_2)^{\ind{T}}$, we 
 \begin{align}
   \ind{cov}(\boldsymbol{\ind{Y}})\equiv \Sigma^{\ind{DH}}=
   \begin{pmatrix}
-        V_{\ind{A}}&C_Sc&-S_Sc\\
-        C_Sc&\frac{TV_{\ind{A}}+\sigma_1}{2}+\xi_1&C_SS_S(1-b)\\
-        -S_Sc&C_SS_S(1-b)&S_S^2b+C_S^2+\sigma_N^{(2)}
+        V_{\ind{A}}&\frac{\sqrt{T}V_{\ind{A}}}2&i\frac{\sqrt{T}V_{\ind{A}}}2\\
+        \frac{\sqrt{T}V_{\ind{A}}}2&\frac{TV_{\ind{A}}+\sigma_1}{2}+\xi_1&0\\
+        -i\frac{\sqrt{T}V_{\ind{A}}}{2}&0&\frac{TV_{\ind{A}}+\sigma_2}{2}+\xi_2
     \end{pmatrix}
+\end{align}
+\begin{align}
+  I=\frac12\sum\log\frac{2 \left(T V_{A} + 2 \xi_{i} + \sigma_i\right)}{T V_{A} + 4 \xi_{i} + 2\sigma_i}
 \end{align}
 
 The resulting covariance matrix describing measurement statistics

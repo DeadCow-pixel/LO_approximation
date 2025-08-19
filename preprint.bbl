@@ -280,6 +280,15 @@
   {journal} {Journal of Optics B: Quantum and Semiclassical Optics}\ }\textbf
   {\bibinfo {volume} {2}},\ \bibinfo {pages} {526} (\bibinfo {year}
   {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Leverrier}(2017)}]{PhysRevLett.118.200501}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Leverrier}},\ }\bibfield  {title} {\bibinfo {title} {Security of
+  continuous-variable quantum key distribution via a gaussian de finetti
+  reduction},\ }\href {https://doi.org/10.1103/PhysRevLett.118.200501}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {118}},\ \bibinfo {pages} {200501} (\bibinfo {year}
+  {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Len}\ \emph {et~al.}(2022)\citenamefont {Len},
   \citenamefont {Byelova}, \citenamefont {Uzunova},\ and\ \citenamefont
   {Semenov}}]{len2022realistic}%
@@ -485,15 +494,6 @@
   observables},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Journal of Modern Optics}\ }\textbf {\bibinfo {volume} {57}},\ \bibinfo
   {pages} {1171} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Leverrier}(2017)}]{PhysRevLett.118.200501}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Leverrier}},\ }\bibfield  {title} {\bibinfo {title} {Security of
-  continuous-variable quantum key distribution via a gaussian de finetti
-  reduction},\ }\href {https://doi.org/10.1103/PhysRevLett.118.200501}
-  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
-  {\bibinfo {volume} {118}},\ \bibinfo {pages} {200501} (\bibinfo {year}
-  {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gerry}\ and\ \citenamefont
   {Knight}(2005)}]{Gerry:bk:2005}%
   \BibitemOpen
