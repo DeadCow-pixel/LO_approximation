@@ -520,7 +520,7 @@ is well-defined for all possible parameters of the homodyne scheme.
   for different efficiencies  at $|\alpha_L|=5$
   and $\delta\theta=0$.
 }
-\label{fig:dist-hom}
+\label{fig:dist-H}
 \end{figure*}
 
 
@@ -542,7 +542,7 @@ using the relations
 \end{align}
 where $P_{\ket{\psi}}(\alpha)$ is the Glauber $P$ function of the quantum state
 $\ket{\psi}$.
-In Figs.~\ref{fig:dist-hom}
+In Figs.~\ref{fig:dist-H}
 and~\ref{fig:delta-theta},
 we show the results computed for the single-photon Fock states
 obtained utilizing
@@ -560,7 +560,7 @@ P_{\ket{n}}(\alpha)=
 \end{equation}
 where $\delta^{2}(\alpha)=\delta(\Re\alpha)\delta(\Im\alpha)$.
 
-Figure~\ref{fig:dist-hom} displays
+Figure~\ref{fig:dist-H} displays
 the photocount difference probabilities
 computed from
 the exact and Gaussian probability distributions
@@ -587,7 +587,7 @@ Another noticeable effect is that
 the probability minima between the central and side peaks
 become less pronounced.
 
-\textcolor{red}{From Fig.~\ref{fig:dist-hom} it becomes apparent that perfomance of Gaussian approximation worsens in presence of asymmetry, which we will quantify in Appendix~\ref{sec:appendix_numerical}.}
+\textcolor{red}{From Fig.~\ref{fig:dist-H} it becomes apparent that perfomance of Gaussian approximation worsens in presence of asymmetry, which we will quantify in Appendix~\ref{sec:appendix_numerical}.}
 
 Our concluding remark concerns an alternative method
 to approximate Eq.~\eqref{eq:accurate}
@@ -1195,7 +1195,7 @@ with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
 \begin{align}
 \label{eq:probabilities}
     p_{\ind{A}}(\alpha)=\frac{1}{\sqrt{\pi V_{\ind{A}}}}\exp\left[
-    -\frac{2|\alpha|^2}{V_{\ind{A}}}
+    -\frac{|\alpha|^2}{2V_{\ind{A}}}
     \right],
 \end{align}
 \begin{align}
@@ -1206,6 +1206,11 @@ with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
 \end{align}
 
 After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$.
+The ensemble reads
+\begin{align}
+\label{eq:rho-tilde}
+    \tilde\rho_{\ind{A}}=\frac{1}{T}\int\mathop{\dd^2\tilde\alpha}p_{\ind{A}}(\tilde\alpha)\ket{\tilde\alpha}\hspace{-4pt}\bra{\tilde\alpha}.
+\end{align}
 Then, Bob performs a measurement decribed by POVM $\{\hat{\Pi}_x\}$, where the index $x$ parametrizes the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
 \begin{align}
 \label{eq:pB(x|A)}
@@ -1221,23 +1226,23 @@ If homodyne detection is used, Eq.~\eqref{eq:pB(x|A)} transforms to (see Eq.~\eq
    &p_{\ind{B}}^{\ind{H}}(x|\tilde \alpha) = p_{\ind{A}}(\tilde \alpha) Q_x(\tilde \alpha)\notag\\
    &\sim
     \exp\left[
-    -\frac{(x-2\tilde q)^2}{2\sigma_x}-\frac{2\tilde q^2}{TV_{\ind{A}}+\xi}
+    -\frac{(x-2\tilde q)^2}{2\sigma_x}-\frac{\tilde q^2}{2\left(TV_{\ind{A}}+\xi\right)}
     \right],
 \end{align}
 where $\tilde q\equiv \sqrt{T}q$. Rewriting exponential's power in Eq.\eqref{eq:pxa} in quadratic form results in
 \begin{align}
     \label{eq:sigma-hom-def}
-    -\frac{1}{2}
+    &-\frac{1}{2}
     \begin{pmatrix}
         \tilde q&x
     \end{pmatrix}
     \begin{pmatrix}
-        \frac{TV_{\ind{A}}}4&\frac{TV_{\ind{A}}}{2}\\
-        \frac{TV_{\ind{A}}}{2}&TV_{\ind{A}}+\sigma_x
+        {TV_{\ind{A}}}&2{TV_{\ind{A}}}\\
+        2{TV_{\ind{A}}}&4TV_{\ind{A}}+\sigma_x
     \end{pmatrix}^{-1}
     \begin{pmatrix}
         \tilde q\\x
-    \end{pmatrix}\notag\\\equiv 
+    \end{pmatrix}\notag\\&\equiv 
     -\frac{1}{2}
     \begin{pmatrix}
         \tilde q&x
@@ -1249,37 +1254,37 @@ where $\tilde q\equiv \sqrt{T}q$. Rewriting exponential's power in Eq.\eqref{eq:
 and with covariance matrix $\Sigma^{\ind{H}}$, mutual information between Alice and Bob can be calculated as follows~\cite{SochEtAl2024_StatProofBook}
 \begin{align}
 \label{eq:IABPM}
-    I_{\ind{AB}}^{\ind{HOM}}=\frac{1}{2}\log \frac{\Sigma^{\ind{H}}_{11}\Sigma^{\ind{H}}_{22}}
-    {\det\Sigma^{\ind{H}}}=\frac{1}{2}\log \frac{TV_{\ind{A}}+\sigma_x+\xi}
+    I_{\ind{AB}}^{\ind{H}}=\frac{1}{2}\log \frac{\Sigma^{\ind{H}}_{11}\Sigma^{\ind{H}}_{22}}
+    {\det\Sigma^{\ind{H}}}=\frac{1}{2}\log \frac{4TV_{\ind{A}}+\sigma_x+\xi}
     {\sigma_x+\xi},
 \end{align}
-where all logarithms are base 2.
+where $\Sigma^{\ind{H}}_{ii}$ are diagonal elements of $\Sigma^{\ind{H}}$, and all logarithms are base 2.
 
 If double homodyne detection is used, from Eq.~\eqref{eq:pB(x|A)} we have (see Eq.~\eqref{eq:P_G-x1x2}):
 \begin{align}
-    &p_{\ind{A}}(\tilde \alpha) Q_x(\tilde \alpha)\notag\\
-    &\sim
-    \exp\left[-\frac{(x_1-\tilde q)^2}{\sigma_1}-\frac{\tilde q^2}{TV_{\ind{A}}+\xi}
-    -\frac{(x_2-\tilde p)^2}{\sigma_2}-\frac{\tilde p^2}{TV_{\ind{A}}+\xi}
-    \right],
+    &p_{\ind{A}}(\tilde \alpha) Q_x(\tilde \alpha)
+    \sim
+    \exp\biggl[-\frac{(x_1-\tilde q)^2}{\sigma_1}-\frac{\tilde q^2}{2\left(TV_{\ind{A}}+\xi\right)}
+    \notag\\&-\frac{(x_2-\tilde p)^2}{\sigma_2}-\frac{\tilde p^2}{2\left(TV_{\ind{A}}+\xi\right)}
+    \biggr],
 \end{align}
-and analogously to Eq.~\eqref{eq:sigma-hom-def}, we obtain covariance matrices as follows:
+where $\tilde p \equiv\sqrt T p$. Analogously to Eq.~\eqref{eq:sigma-hom-def}, we obtain covariance matrices as follows:
 \begin{align}
   \label{eq:Sigma-DH}
     &\Sigma^{\ind{DH}^{(1)}}=\begin{pmatrix}
-        \frac{TV_{\ind{A}}}2&\frac{TV_{\ind{A}}}{2}\\
-        \frac{TV_{\ind{A}}}{2}&\frac{TV_{\ind{A}}}2+\frac{\sigma_1}{2}+\frac{\xi}{2}
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}\\
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_1}{2}+\xi
     \end{pmatrix},\notag\\
     &\Sigma^{\ind{DH}^{(2)}}=\begin{pmatrix}
-        \frac{TV_{\ind{A}}}2&\frac{TV_{\ind{A}}}{2}\\
-        \frac{TV_{\ind{A}}}{2}&\frac{TV_{\ind{A}}}2+\frac{\sigma_2}{2}+\frac{\xi}{2}
-    \end{pmatrix}
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}\\
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_2}{2}+\xi
+    \end{pmatrix},
 \end{align}
 from which we obtain mutual information as
 \begin{align}
     &I_{\ind{AB}}^{\ind{DH}}=\frac{1}{2}\sum_{i=1,2}\log \frac{\Sigma^{\ind{DH}^{(i)}}_{11}\Sigma^{\ind{DH}^{(i)}}_{22}}
     {\det\Sigma^{\ind{DH}^{(i)}}}\notag\\
-    &=\frac{1}{2}\sum_i\log \frac{TV_{\ind{A}}+\sigma_i+\xi}
+    &=\frac{1}{2}\sum_i\log \frac{2TV_{\ind{A}}+\sigma_i+\xi}
     {\sigma_i+\xi}.
 \end{align}
 
@@ -1350,43 +1355,48 @@ calculation of Holevo information can be done from the covariance matrix of TMSV
         \gamma\sigma_Z&V_{\ind{B}}\mathbb{I}
     \end{pmatrix}
 \end{align}
-where the identity matrix is $\mathbb{I}=\ind{diag}(1,1)$, and $\sigma_Z=\ind{diag}(1,-1)$. If homodyne detection is used, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{TVMS}}$ as~\cite{Weed:rmp:2012}
+where the identity matrix is $\mathbb{I}=\ind{diag}(1,1)$, and $\sigma_Z=\ind{diag}(1,-1)$, and
+\begin{align}
+  \label{eq:vb}
+  V_{\ind{B}} \equiv 4TV_{\ind{A}}+\xi+\sigma_x.
+\end{align}
+If homodyne detection is used, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{TVMS}}$ as~\cite{Weed:rmp:2012}
 \begin{align}
 \label{eq:nu12}
-    &\nu_{1,2}^{\ind{HOM}} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}-\alpha\right]\right),\notag\\ &z=\sqrt{\left(\alpha+V_{\ind{B}}\right)^2-4\gamma^2}.
+    &\nu_{1,2}^{\ind{H}} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}-\alpha\right]\right),\notag\\ &z=\sqrt{\left(\alpha+V_{\ind{B}}\right)^2-4\gamma^2}.
 \end{align}
 
 Bob’s partial measurement of a single quadrature, described by the matrix $\Pi_{q,p}$, where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$ are measurements of $\hat{q}$ and $\hat{p}$ quadratures, respectively, transforms Alice's state covariance matrix as~\cite{laudenbach2018continuous}
 \begin{align}
     \label{eq:AB}
-    &\Sigma_{\ind{A}|\ind{B}}^{\ind{HOM}}=\alpha\mathbb{I}-\gamma^2\sigma_Z[\Pi_{q,p}\ b\mathbb{I}\ \Pi_{q,p}]^{-1}\sigma_Z^{\ind T}\notag\\
+    &\Sigma_{\ind{A}|\ind{B}}^{\ind{H}}=\alpha\mathbb{I}-\gamma^2\sigma_Z[\Pi_{q,p}\ b\mathbb{I}\ \Pi_{q,p}]^{-1}\sigma_Z^{\ind T}\notag\\
     &=\alpha\mathbb{I}-\frac{\gamma^2}{b}\Pi_{q,p}.
 \end{align}
-The corresponding symplectic eigenvalue $\nu_3^{\ind{HOM}}$ of $\Sigma_{\ind{A}|\ind{B}}$ is
+The corresponding symplectic eigenvalue $\nu_3^{\ind{H}}$ of $\Sigma_{\ind{A}|\ind{B}}$ is
  \begin{align}
      \label{eq:nu3}
-     &\nu_3^{\ind{HOM}}=\sqrt{\alpha\left(\alpha-\frac{\gamma^2}{b}\right)}
+     &\nu_3^{\ind{H}}=\sqrt{\alpha\left(\alpha-\frac{\gamma^2}{b}\right)}
  \end{align}
 which allows us to calculate the conditional entropy $S_{\ind{E}|\ind{B}}=S_{\ind{A}|\ind{B}}$. 
 
 If double homodyne detection is used, Eve's entropy $S_{\ind{E}}$ is calculated using the symplectic eigenvalues of the covariance matrix
 \begin{align}
-\label{eq:Sigma_AB_dhom}
-    \Sigma_{\ind{AB}}^{\ind{DHOM}}=\begin{pmatrix}
+\label{eq:Sigma_AB_dH}
+    \Sigma_{\ind{AB}}^{\ind{DH}}=\begin{pmatrix}
         \alpha\mathbb{I}&\gamma\sigma_Z\\
-        \gamma\sigma_Z&V_{\ind{B}}^{\ind{DHOM}}\mathbb{I}
+        \gamma\sigma_Z&V_{\ind{B}}^{\ind{DH}}\mathbb{I}
     \end{pmatrix},
 \end{align}
-where $V_{\ind{B}}^{\ind{DHOM}}=TV_{\ind{A}}+\xi+\frac{\sigma_1+\sigma_2}{2}$.
+where $V_{\ind{B}}^{\ind{DH}}=2TV_{\ind{A}}+\xi+\frac{\sigma_1+\sigma_2}{2}$.
 
 Double homodyne detection of Bob’s mode transforms Alice’s conditional covariance matrix as
 \begin{align}
-    \label{eq:AB_dhom}&\Sigma_{\ind{A}|\ind{B}}^{\ind{DHOM}}=
+    \label{eq:AB_dH}&\Sigma_{\ind{A}|\ind{B}}^{\ind{DH}}=
     \alpha\mathbb{I}-\gamma^2\sigma_Z[b\mathbb{I}+\mathbb{I}]^{-1}\sigma_Z^{\ind T}\notag\\&=\left(\alpha-\frac{\gamma^2}{b+1}\right)\mathbb{I},
 \end{align}
-resulting in symplectic eigenvalue $\nu_3^{\ind{DHOM}}$ in the form
+resulting in symplectic eigenvalue $\nu_3^{\ind{DH}}$ in the form
 \begin{align}
-    \nu_3^{\ind{DHOM}}=\alpha-\frac{\gamma^2}{b+1}.
+    \nu_3^{\ind{DH}}=\alpha-\frac{\gamma^2}{b+1}.
 \end{align}
 %which is then used in Eq.~\eqref{eq:chi} to compute the Holevo information.
 
@@ -1427,7 +1437,7 @@ with Ref.~\cite{ruiz2023effects}, namely the dependency of asymptotic secret fra
 \includegraphics[width=\linewidth, trim={.2cm .3cm .4cm .35cm},clip]{pics/qkd/hom/r.pdf}
 \caption[]{$R$}
         \end{subfigure}
-        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using homodyne measurement as functions of the beam splitter transmission, for various detector efficiencies at $V_{\ind{A}}=1, T=0.95, \xi=10^{-3}, \beta=0.95$
+        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using homodyne measurement as functions of the beam splitter transmission, for various detector efficiencies at $V_{\ind{A}}=\frac{1}{4}, T=0.95, \xi=10^{-3}, \beta=0.95$
 }
 \label{fig:homodyne-all}
 \end{figure*}
@@ -1448,7 +1458,8 @@ with Ref.~\cite{ruiz2023effects}, namely the dependency of asymptotic secret fra
 \includegraphics[width=\linewidth, trim={.2cm .3cm .4cm .35cm},clip]{pics/qkd/dhom/r.pdf}
 \caption[]{$R$}
         \end{subfigure}
-        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using double homodyne detection as functions of the signal beam splitter transmission. All other beam splitters are assumed to be balanced. Results are shown for various detector efficiencies; efficiencies not specified in the legend are taken to be unity. Parameters: $V_{\ind{A}}=1, T=0.95, \xi=10^{-3}, \beta=0.95$.
+        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using double homodyne detection as functions of the signal beam splitter transmission. All other beam splitters are assumed to be balanced. Results are shown for various detector efficiencies; efficiencies not specified in the legend are taken to be unity. Parameters: $V_{\ind{A}}=\frac14
+        , T=0.95, \xi=10^{-3}, \beta=0.95$.
 }
 \label{fig:double-homodyne-all}
 \end{figure*}
@@ -1492,7 +1503,7 @@ that generalizes the well-known results to the case of the asymmetric homodyne d
 This POVM is found to be well defined across all  parameter settings of the scheme
 with the excess noise variance modified by the asymmetry 
 and incorporates the effect of asymmetry-induced shift of the mean value
-(these effects are illustrated in Fig.~\ref{fig:dist-hom}).
+(these effects are illustrated in Fig.~\ref{fig:dist-H}).
 
 
 We have used the total variational distance~\eqref{eq:stat-dist}, $D_P$,
