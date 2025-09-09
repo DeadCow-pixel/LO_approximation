@@ -566,8 +566,7 @@ computed from
 the exact and Gaussian probability distributions
 for the balanced beam splitter at different photodetector efficiencies
 and signal mode input states.
-From Fig.~\ref{fig:dist_alp},
-it is seen that,
+Fig.~\ref{fig:dist_alp} shows that,
 in agreement with Eq.~\eqref{eq:mu_G},
 asymmetry in photodetection
 results in the shift of the probability maximum.
@@ -671,7 +670,7 @@ a suitably chosen phase shifter placed before
 the corresponding input port
 of the beam splitter BS$_2$.
 
-It is rather straightforward to see that
+Direct calculation shows that
 the joint statistics of the difference photocount events
 is determined by the product
 of the Skellam distributions given by
@@ -1188,7 +1187,7 @@ the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
 \section{Incorporating measurement imperfections into the GG02 CV-QKD Protocol}
 \label{sec:protocol}
 
-In this section, we apply our results on asymmetric measurements to analyze the Gausssian modulated coherent state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. Specifically, we compute the mutual information, Holevo information, and asymptotic secret key fraction under an untrusted noise scenario, in order to assess the impact of measurement asymmetry on the protocol’s security.
+In this section, we apply our results on asymmetric measurements to analyze the Gausssian-modulated coherent state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. We compute the mutual information, Holevo information, and asymptotic secret fraction (secure key rate per symbol) under an untrusted noise scenario, to assess the impact of measurement asymmetry on the protocol’s security.
 
 In the GG02 protocol, Alice prepares an ensemble of coherent states $\ket{\alpha=q+ip}$
 with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
@@ -1205,13 +1204,14 @@ with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
     \bra{\alpha}.
 \end{align}
 
-After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state transforms as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$.
+After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state is transformed as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha}$.
 The ensemble reads
 \begin{align}
 \label{eq:rho-tilde}
     \tilde\rho_{\ind{A}}=\frac{1}{T}\int\mathop{\dd^2\tilde\alpha}p_{\ind{A}}(\tilde\alpha)\ket{\tilde\alpha}\hspace{-4pt}\bra{\tilde\alpha}.
 \end{align}
-Then, Bob performs a measurement decribed by POVM $\{\hat{\Pi}_x\}$, where the index $x$ parametrizes the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
+
+Then, Bob performs a measurement described by POVM $\{\hat{\Pi}_x\}$, where the index $x$ corresponds to the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
 \begin{align}
 \label{eq:pB(x|A)}
     p_{\ind{B}}(x|\tilde\alpha) =
@@ -1220,7 +1220,7 @@ Then, Bob performs a measurement decribed by POVM $\{\hat{\Pi}_x\}$, where the i
 \end{align}
 where $Q_x(\tilde \alpha)$ is the $Q$-function of POVM used. \textcolor{red}{Independent channel noise of variance $\xi$ is modeled as addition to variance of $p_{\ind{A}}(\tilde\alpha)$, i.e. $TV_{\ind{A}}\mapsto TV_{\ind{A}}+\xi$.}
 
-If homodyne detection is used, Eq.~\eqref{eq:pB(x|A)} transforms to (see Eq.~\eqref{eq:Pgood-w-def})
+For homodyne detection, Eq.~\eqref{eq:pB(x|A)} takes the form given by  Eq.~\eqref{eq:Pgood-w-def}
 \begin{align}
 \label{eq:pxa}
    &p_{\ind{B}}^{\ind{H}}(x|\tilde \alpha) = p_{\ind{A}}(\tilde \alpha) Q_x(\tilde \alpha)\notag\\
@@ -1293,7 +1293,7 @@ from which we obtain mutual information as
   \label{eq:psi_AB}
   \ket{\Psi}_{\ind{AB}}=\sqrt{1-\lambda^2}\sum_{n=0}^{\infty}(-\lambda)^n\ket{n,n}_{\ind{AB}},
 \end{align}
-where $\lambda=\tanh 2r$. Let Alice hold the state $\rho_{\ind{AB}}=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the entanglement based (EB) protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\left\{\hat\Pi_\alpha=\frac{\ket{\alpha}\bra{\alpha}}\pi\right\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\alpha$ is given by the Born rule:
+where $\lambda=\tanh 2r$. Let Alice hold the state $\rho_{\ind{AB}}=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the entanglement-based (EB) protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\left\{\hat\Pi_\alpha=\frac{\ket{\alpha}\bra{\alpha}}\pi\right\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\alpha$ is given by the Born rule:
 \begin{align}
   \label{eq:p_A_dh}
   p_{\ind{A}}^{\ind{DH}}(\alpha)=\Tr \hat{\Pi}_\alpha \rho_A
@@ -1308,7 +1308,7 @@ where the mean number of photons $\bar{n}=\sinh^2 r = V_{\ind{A}}$. It can be re
   \label{eq:rho_A_th_coh}
   \rho_A=\frac{1}{\pi\bar{n}}\int \mathop{\dd^2\beta} e^{-\frac{|\beta|^2}{\bar{n}}}\ket{\beta}\bra{\beta}.
 \end{align}
-Substituing Eq.~\eqref{eq:rho_A_th_coh} into Eq.~\eqref{eq:p_A_dh} yields
+Substituting Eq.~\eqref{eq:rho_A_th_coh} into Eq.~\eqref{eq:p_A_dh} yields
 \begin{align}
   \label{eq:p_A_dh_final}
   p_A^{\ind{DH}}(\alpha)=\frac{1}{\pi(V_{\ind{A}}+1)}\exp\left[
@@ -1337,12 +1337,12 @@ As $V_{\ind{A}}=\sinh^2r$, we obtain the scaling factor $\lambda$ as
   \label{eq:lambda}
   \lambda=\frac{2\sqrt{V_{\ind{A}}\left(V_{\ind{A}}+1\right)}}{1+2V_{\ind{A}}}.
 \end{align}
-With scaling by $\lambda$, as well as defining $V=V_{\ind{A}}+1$, the joint probability distribuion in entaglement based protocol
+With scaling by $\lambda$, as well as defining $V=V_{\ind{A}}+1$, the joint probability distribuion in entanglement-based protocol
 Eq.~\eqref{eq:pBxa_dh}
-is exactly the same joint probability distribution in prepare and measure protocol Eq.~\eqref{eq:pB(x|A)}.
+is exactly the same joint probability distribution in prepare-and-measure protocol Eq.~\eqref{eq:pB(x|A)}.
 
 It follows that the EB protocol reproduces the PM protocol probabilities.
-And so, 
+Therefore, 
 calculation of Holevo information can be done from the covariance matrix of TMSVS in the form~\cite{laudenbach2018continuous}
 \begin{align}
   \label{eq:TVMS}
@@ -1418,8 +1418,8 @@ where
 \end{equation}
 where $\beta$ is the reconciliation efficiency.
 
-The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secret key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection. Our numerical results for the homodyne case are consistent 
-with Ref.~\cite{ruiz2023effects}, namely the dependency of asymptotic secret fraction on beam splitter deviation. The dependence of the asymptotic secret key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetrical homodyne detection does not offer any advantage, as ideal detection minimizes Holevo information, while double homodyne detection consistently yields better performance.
+The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection. Our numerical results for the homodyne case are consistent 
+with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation. The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetric homodyne detection offers no advantage over ideal, symmetric detection, which minimizes the Holevo information. In contrast, double homodyne detection consistently yields better performance.
 
 \begin{figure*}
     \centering
@@ -1509,7 +1509,7 @@ and incorporates the effect of asymmetry-induced shift of the mean value
 We have used the total variational distance~\eqref{eq:stat-dist}, $D_P$,
 to quantify the statistical distance between the Skellam and Gaussian distributions
 and evaluate the accuracy of the Gaussian approximation across various asymmetry parameters.
-It is found that, for the signal mode prepared in the coherent state $\ket{\alpha}$,
+We find that, for the signal mode prepared in the coherent state $\ket{\alpha}$,
 the distance increases with $|\alpha|$ (see Fig.~\ref{fig:amp_05}) and,
 in the small-amplitude region with $|\alpha|\le 0.1$,
 the maximum value of the distance can be estimated at about $0.13$
@@ -1557,7 +1557,7 @@ anisotropy of the distributions in the photocount difference plane.
 %where we will discuss how to extend our approach to
 %this case and related issues.
 
-\textcolor{red}{As shown in the main text, the applicability of double homodyne POVM in the form ~\eqref{eq:povm-hetero} may be broken provided that the beam splitter for the signal mode is unbalanced. To resolve this, an extension to the set of squeezed coherent states is needed (see Eq.~\eqref{eq:Pi_G-gen-x1x2}), leading to explicit dependency of POVM on the squeezing parameter, which is not defined unambiguously. This implies that there are, generally, infinitely many POVMs representing one set of the parameters of double homodyne scheme, and so the squeezing parameter needs additional rule to make the POVM well-defined. Practically, however, ambiguousness of POVM does not matter, as  all of their averages represent the same photon counting difference statistical distribution~\eqref{eq:Gaussian-8p} or, equivalently, quadrature distribution~\eqref{eq:P_G-x1x2}.} \textcolor{blue}{This is supported by our calculations for mutual information between Alice and Bob in Gaussian modulated coherent states CV-QKD protocol (for a comprehensive review see, e.g., Ref.~\cite{laudenbach2018continuous}). As we have shown, choosing any POVM in the form~\eqref{eq:Pi_G-gen-x1x2} would yield the same result for secret fraction, as it is dependent only on variances of quadrature distribution~\eqref{eq:P_G-x1x2}.}
+\textcolor{red}{As shown in the main text, the applicability of double homodyne POVM in the form ~\eqref{eq:povm-hetero} may be broken provided that the beam splitter for the signal mode is unbalanced. To resolve this, an extension to the set of squeezed coherent states is needed (see Eq.~\eqref{eq:Pi_G-gen-x1x2}), leading to explicit dependency of POVM on the squeezing parameter, which is not defined unambiguously. This implies that there are, generally, infinitely many POVMs representing one set of the parameters of double homodyne scheme, and so the squeezing parameter needs additional rule to make the POVM well-defined. Practically, however, ambiguousness of POVM does not matter, as  all of their averages represent the same photon count difference statistical distribution~\eqref{eq:Gaussian-8p} or, equivalently, quadrature distribution~\eqref{eq:P_G-x1x2}.} \textcolor{blue}{This is supported by our calculations for mutual information between Alice and Bob in Gaussian modulated coherent states CV-QKD protocol (for a comprehensive review see, e.g., Ref.~\cite{laudenbach2018continuous}). As we have shown, choosing any POVM in the form~\eqref{eq:Pi_G-gen-x1x2} would yield the same result for secret fraction, as it is dependent only on variances of quadrature distribution~\eqref{eq:P_G-x1x2}.}
 
 \textcolor{red}{Generalization to complex transmission and reflection
   coefficients for both homodyne and double homodyne is trivial. For
@@ -1582,7 +1582,7 @@ for the Bessel function that enters the Skellam distribution
 generally leads to  results that are not suitable for dealing with
 asymmetry-induced effects in homodyne detection.
 
-\textcolor{red}{Our concluding remark is to put our results in the context of CV-QKD{~\cite{zhang2024continuous}}. 
+\textcolor{red}{Our concluding remark is to put our results in the context of CV-QKD security{~\cite{zhang2024continuous}}. 
 The asymmetry effects described in the paper, such as deviations from the ideal 50:50 beam splitter ratio and mismatched detector efficiencies, introduce vulnerabilities into CV-QKD systems. %These flaws not only allow quantum hackers to compromise security but also degrade the system’s performance~\cite{ruiz2023effects}. 
 These vulnerabilities can be exploited by adversaries through attack strategies such as the wavelength attack \cite{huang2012wavelength, huang2014quantum} and the homodyne detector blinding \cite{qin2018homodyne} and saturation~\cite{qin2016quantum}. The wavelength attack leverages the wavelength-dependent coupling ratio of fiber beam splitters and can be countered by using proper spectral filtering. Blinding and saturation attacks exploit the saturation behavior of homodyne detectors, and their effectiveness is amplified by receiver imbalance. If the splitting ratio deviates from ideal one, an injected bright pulse more easily displaces the detector output, facilitating saturation and biasing excess noise estimation.} 
 
@@ -1749,9 +1749,7 @@ I_{\mu}\bigl(2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2}\bigr),
 \end{align}
 both repeated here for ease. We will limit our numerical results to the coherent signal state only, except in cases where the curves show sufficiently distinct differences.
 
-In order to quantify the statistical distance between the probability distributions,
-we shall use
-the total variational distance
+We evaluate the statistical distance between the probability distributions using the total variational distance
 that can be computed as half of the $L^1$ distance
 \begin{align}
   &
@@ -1893,7 +1891,7 @@ the efficiencies $\eta_1$ and $\eta_2$.
 The curves plotted in Fig.~\ref{fig:amplitude}
 are computed at different values of the efficiencies.
 
-In order to quantify deviation of the beam splitter
+To quantify deviation of the beam splitter
 transmission and reflection amplitudes
 from the balanced $50:50$ values
 $t=\cos\theta=r=\sin\theta=1/\sqrt{2}$ at
