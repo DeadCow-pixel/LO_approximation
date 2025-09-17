@@ -1268,20 +1268,16 @@ If double homodyne detection is used, from Eq.~\eqref{eq:pB(x|A)} we have (see E
   \label{eq:dh-exp}
     &p_{\ind{B}}^{\ind{DH}}(x|\tilde \alpha) \sim\notag\\
     &\exp\left[-\frac{(x_1-\tilde q)^2}{2\left(\frac{\sigma_1}2+\xi\right)}-\frac{\tilde q^2}{2TV_{\ind{A}}}
-    -\frac{(x_2-\tilde p)^2}{\left(\frac{\sigma_2}2+\xi\right)}-\frac{\tilde p^2}{2TV_{\ind{A}}}
+    -\frac{(x_2-\tilde p)^2}{2\left(\frac{\sigma_2}2+\xi\right)}-\frac{\tilde p^2}{2TV_{\ind{A}}}
     \right].
 \end{align}
 Analogously to Eq.~\eqref{eq:sigma-hom-def}, we obtain covariance matrices as follows:
 \begin{align}
   \label{eq:Sigma-DH}
-    &\Sigma^{\ind{DH}^{(1)}}=\begin{pmatrix}
+    &\Sigma^{\ind{DH}^{(i)}}=\begin{pmatrix}
         {TV_{\ind{A}}}&{TV_{\ind{A}}}\\
-        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_1}{2}+\xi
-    \end{pmatrix},\notag\\
-    &\Sigma^{\ind{DH}^{(2)}}=\begin{pmatrix}
-        {TV_{\ind{A}}}&{TV_{\ind{A}}}\\
-        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_2}{2}+\xi
-    \end{pmatrix},
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_i}{2}+\xi
+    \end{pmatrix}, \quad i = 1,2,
 \end{align}
 from which we obtain mutual information as
 \begin{align}
