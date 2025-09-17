@@ -1,16 +1,22 @@
-This is BibTeX, Version 0.99d (TeX Live 2022)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: preprint.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: apsrev4-2.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: preprintNotes.bib
 Database file #2: quant.bib
 Database file #3: refs.bib
@@ -19,8 +25,8 @@ Database file #5: math.bib
 control{REVTEX42Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev42Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{0}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
 Control: key (0) 
 Control: author (8) initials jnrlst
@@ -30,45 +36,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--can't use both volume and number fields in reutov2021photon
-You've used 44 entries,
+You've used 43 entries,
             6079 wiz_defined-function locations,
-            1963 strings with 24511 characters,
-and the built_in function-call counts, 51850 in all, are:
-= -- 3428
-> -- 1523
-< -- 309
-+ -- 464
-- -- 384
-* -- 8203
-:= -- 4707
-add.period$ -- 42
-call.type$ -- 44
-change.case$ -- 211
-chr.to.int$ -- 58
-cite$ -- 45
-duplicate$ -- 4807
-empty$ -- 3699
-format.name$ -- 865
-if$ -- 10613
+            1957 strings with 24427 characters,
+and the built_in function-call counts, 50926 in all, are:
+= -- 3364
+> -- 1504
+< -- 305
++ -- 458
+- -- 380
+* -- 8067
+:= -- 4615
+add.period$ -- 41
+call.type$ -- 43
+change.case$ -- 207
+chr.to.int$ -- 57
+cite$ -- 44
+duplicate$ -- 4712
+empty$ -- 3621
+format.name$ -- 852
+if$ -- 10425
 int.to.chr$ -- 3
-int.to.str$ -- 51
-missing$ -- 717
-newline$ -- 178
-num.names$ -- 127
-pop$ -- 1828
+int.to.str$ -- 50
+missing$ -- 708
+newline$ -- 175
+num.names$ -- 124
+pop$ -- 1793
 preamble$ -- 1
-purify$ -- 210
+purify$ -- 205
 quote$ -- 0
-skip$ -- 2143
+skip$ -- 2107
 stack$ -- 0
-substring$ -- 1075
-swap$ -- 4706
-text.length$ -- 188
+substring$ -- 1056
+swap$ -- 4626
+text.length$ -- 185
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 652
+type$ -- 640
 warning$ -- 2
-while$ -- 133
+while$ -- 130
 width$ -- 0
-write$ -- 424
+write$ -- 416
 (There were 2 warnings)
