@@ -1349,18 +1349,23 @@ After transmitting through noisy channel
 covariance matrix reads
 \begin{align}
   \label{eq:TVMS-final}
-    \Sigma^{\ind{EB}}_{\ind{AB}}=\begin{pmatrix}
+    &\Sigma^{\ind{EB}}_{\ind{AB}}=\begin{pmatrix}
         V\mathbb{I}&\sqrt{T\left(V^2-1\right)}\sigma_Z\\
         \sqrt{T\left(V^2-1\right)}\sigma_Z&\left[T(V-1)+1+\xi\right]\mathbb{I}
+    \end{pmatrix}
+    \notag
+    \\&\equiv\begin{pmatrix}
+        a\mathbb{I}&c\sigma_Z\\
+        c\sigma_Z&V_{\ind{B}}\mathbb{I}
     \end{pmatrix}.
+\end{align}
+Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{EB}}$ as~\cite{Weed:rmp:2012}
+\begin{align}
+\label{eq:nu12}
+    &\nu_{1,2} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}-a\right]\right),\notag\\ &z=\sqrt{\left(a+V_{\ind{B}}\right)^2-4c^2}.
 \end{align}
 \textcolor{red}{\hrule}
 \vspace{7pt}
-If homodyne detection is used, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{TVMS}}$ as~\cite{Weed:rmp:2012}
-\begin{align}
-\label{eq:nu12}
-    &\nu_{1,2}^{\ind{H}} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}-\alpha\right]\right),\notag\\ &z=\sqrt{\left(\alpha+V_{\ind{B}}\right)^2-4\gamma^2}.
-\end{align}
 
 Bob’s partial measurement of a single quadrature, described by the matrix $\Pi_{q,p}$, where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$ are measurements of $\hat{q}$ and $\hat{p}$ quadratures, respectively, transforms Alice's state covariance matrix as~\cite{laudenbach2018continuous}
 \begin{align}
