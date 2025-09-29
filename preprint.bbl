@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{41}%
+\begin{thebibliography}{42}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -561,6 +561,14 @@
   {\bibinfo  {journal} {Advanced Quantum Technologies}\ }\textbf {\bibinfo
   {volume} {1}},\ \bibinfo {pages} {1800011} (\bibinfo {year}
   {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Serafini}(2017)}]{Serafini:bk:2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Serafini}},\ }\href@noop {} {{\selectlanguage {english}\emph {\bibinfo
+  {title} {Quantum Continuous Variables: A Primer of Theoretical Methods}}}}\
+  (\bibinfo  {publisher} {CRC Press, Taylor \& Francis Group},\ \bibinfo
+  {address} {Boca Raton},\ \bibinfo {year} {2017})\ p.\ \bibinfo {pages}
+  {350}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Zhang}\ \emph
   {et~al.}(2024{\natexlab{b}})\citenamefont {Zhang}, \citenamefont {Bian},
   \citenamefont {Li}, \citenamefont {Yu},\ and\ \citenamefont

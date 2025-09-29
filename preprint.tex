@@ -1364,40 +1364,47 @@ Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eig
 \label{eq:nu12}
     &\nu_{1,2} =\frac{1}{2}\left(z\pm\left[V_{\ind{B}}-a\right]\right),\notag\\ &z=\sqrt{\left(a+V_{\ind{B}}\right)^2-4c^2}.
 \end{align}
-\textcolor{red}{\hrule}
-\vspace{7pt}
 
-Bob’s partial measurement of a single quadrature, described by the matrix $\Pi_{q,p}$, where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$ are measurements of $\hat{q}$ and $\hat{p}$ quadratures, respectively, transforms Alice's state covariance matrix as~\cite{laudenbach2018continuous}
+Following Ref.~\cite{Serafini:bk:2017}, if covariance matrix of system $AB$ is in the form
+\begin{align}
+  \label{eq:serf-ab}
+    \sigma_{AB}=\begin{pmatrix}
+        A&C\\
+        C^{T}&B
+    \end{pmatrix},
+  \end{align}
+partial measurement of system $B$ transforms $A$ mode as follows
+\begin{align}
+  \label{eq:serf-a|b}
+        \sigma_{A|B}=
+        A-C(B+\sigma_m)^{-1}C^{\ind{T}},
+    \end{align}
+where, in case of additive noise, $\sigma_m$ is given by
+\begin{align}
+\label{eq:sigma_m}
+\sigma_m=SS^{\ind{T}}+Y^*,
+\end{align}
+where $Y^*$ is proportional to noise. If Bob uses homodyne detection, we have
 \begin{align}
     \label{eq:AB}
-    &\Sigma_{\ind{A}|\ind{B}}^{\ind{H}}=\alpha\mathbb{I}-\gamma^2\sigma_Z[\Pi_{q,p}\ b\mathbb{I}\ \Pi_{q,p}]^{-1}\sigma_Z^{\ind T}\notag\\
-    &=\alpha\mathbb{I}-\frac{\gamma^2}{b}\Pi_{q,p}.
+    &\Sigma_{\ind{A}|\ind{B}}^{\ind{H}}=a\mathbb{I}-c^2\sigma_Z[\Pi_{q,p}\ (V_{\ind{B}}+\sigma_N)\mathbb{I}\ \Pi_{q,p}]^{-1}\sigma_Z^{\ind T}\notag\\
+    &=a\mathbb{I}-\frac{c^2}{V_{\ind{B}}+\sigma_N}\Pi_{q,p},
 \end{align}
-The corresponding symplectic eigenvalue $\nu_3^{\ind{H}}$ of $\Sigma_{\ind{A}|\ind{B}}$ is
+where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$, with symplectic eigenvalue $\nu_3^{\ind{H}}$:
  \begin{align}
      \label{eq:nu3}
-     &\nu_3^{\ind{H}}=\sqrt{\alpha\left(\alpha-\frac{\gamma^2}{b}\right)}
+     &\nu_3^{\ind{H}}=\sqrt{a\left(a-\frac{c^2}{V_{\ind{B}}+\sigma_N}\right)}.
  \end{align}
-which allows us to calculate the conditional entropy $S_{\ind{E}|\ind{B}}=S_{\ind{A}|\ind{B}}$. 
-
-If double homodyne detection is used, Eve's entropy $S_{\ind{E}}$ is calculated using the symplectic eigenvalues of the covariance matrix
-\begin{align}
-\label{eq:Sigma_AB_dH}
-    \Sigma_{\ind{AB}}^{\ind{DH}}=\begin{pmatrix}
-        \alpha\mathbb{I}&\gamma\sigma_Z\\
-        \gamma\sigma_Z&V_{\ind{B}}^{\ind{DH}}\mathbb{I}
-    \end{pmatrix},
-\end{align}
-where $V_{\ind{B}}^{\ind{DH}}=TV_{\ind{A}}+\xi+\frac{\sigma_1+\sigma_2}{2}$.
-
-Double homodyne detection of Bob’s mode transforms Alice’s conditional covariance matrix as
+If double homodyne detection is used, we have
 \begin{align}
     \label{eq:AB_dH}&\Sigma_{\ind{A}|\ind{B}}^{\ind{DH}}=
-    \alpha\mathbb{I}-\gamma^2\sigma_Z[b\mathbb{I}+\mathbb{I}]^{-1}\sigma_Z^{\ind T}\notag\\&=\left(\alpha-\frac{\gamma^2}{b+1}\right)\mathbb{I},
+    a\mathbb{I}-c^2\sigma_Z[V_{\ind{B}}\mathbb{I}+\frac{1}{2}\ind{diag}(\sigma_1+1,\sigma_2+1)]^{-1}\sigma_Z^{\ind T}\notag\\&=\begin{pmatrix}
+        a - \frac{c^{2}}{V_{\ind{B}} + \frac{\sigma_{1}+1}2} & 0\\0 & a - \frac{c^{2}}{V_{\ind{B}} + \frac{\sigma_{2}+1}2}
+    \end{pmatrix}
 \end{align}
 resulting in symplectic eigenvalue $\nu_3^{\ind{DH}}$ in the form
 \begin{align}
-    \nu_3^{\ind{DH}}=\alpha-\frac{\gamma^2}{b+1}.
+    \nu_3^{\ind{DH}}=a\sqrt{\frac{\left(V_{\ind{B}}  + \frac{\sigma_1+1}{2} - \frac{c^{2}}a\right) \left( V_{\ind{B}}  + \frac{\sigma_2+1}2 - \frac{c^{2}}a\right)}{\left( V_{\ind{B}} + \frac{\sigma_{1}+1}2\right) \left(V_{\ind{B}} + \frac{\sigma_{2}+1}2\right)}}.
 \end{align}
 %which is then used in Eq.~\eqref{eq:chi} to compute the Holevo information.
 
@@ -1418,6 +1425,8 @@ where
     R=\beta I_{AB}-\chi_{EB},
 \end{equation}
 where $\beta$ is the reconciliation efficiency.
+\textcolor{red}{\hrule}
+\vspace{7pt}
 
 The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection. Our numerical results for the homodyne case are consistent 
 with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation. The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetric homodyne detection offers no advantage over ideal, symmetric detection, which minimizes the Holevo information. In contrast, double homodyne detection consistently yields better performance.
@@ -1438,7 +1447,7 @@ with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret
 \includegraphics[width=\linewidth, trim={.2cm .3cm .4cm .35cm},clip]{pics/qkd/hom/r.pdf}
 \caption[]{}%{$R$}
         \end{subfigure}
-        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using homodyne measurement as functions of the beam splitter transmission, for various detector efficiencies at $V_{\ind{A}}=\frac{1}{4}, T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$
+        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using homodyne measurement as functions of the beam splitter transmission, for various detector efficiencies at $V_{\ind{A}}=1, T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$
 }
 \label{fig:homodyne-all}
 \end{figure*}
@@ -1476,7 +1485,7 @@ with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret
 \caption[]{Double homodyne detection}
 \label{fig:dhom-r}
 \end{subfigure}
-\caption{Asymptotic secret fraction as a function of channel length computed for (a) homodyne detection and (b) double homodyne detection, shown for various detector efficiencies. Parameters are $V_{\ind{A}}=\frac14,T=0.95,\xi=0.5\cdot10^{-3}, \beta=0.95$. The losses are assumed to be 20 dB per 100 km.
+\caption{Asymptotic secret fraction as a function of channel length computed for (a) homodyne detection and (b) double homodyne detection, shown for various detector efficiencies. Parameters are $V_{\ind{A}}=4,T=0.95,\xi=0.5\cdot10^{-3}, \beta=0.95$. The losses are assumed to be 20 dB per 100 km.
 }
 \label{fig:r-of-l-all}
 \end{figure*}
