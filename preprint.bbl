@@ -514,33 +514,6 @@
   {Russian Journal of Mathematical Physics}\ }\textbf {\bibinfo {volume}
   {21}},\ \bibinfo {pages} {329} (\bibinfo {year} {2014})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Soch}\ \emph {et~al.}(2024)\citenamefont {Soch} \emph
-  {et~al.}}]{SochEtAl2024_StatProofBook}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Soch}} \emph {et~al.},\ }\href@noop {} {\bibinfo {title}
-  {Statproofbook/statproofbook.github.io: The book of statistical proofs
-  (version 2023)}},\ \bibinfo {howpublished}
-  {\url{https://doi.org/10.5281/zenodo.4305949}} (\bibinfo {year} {2024}),\
-  \bibinfo {note} {accessed: 2025-07-15}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Weedbrook}\ \emph
-  {et~al.}(2012{\natexlab{b}})\citenamefont {Weedbrook}, \citenamefont
-  {Pirandola}, \citenamefont {Garc\'{\i}a-Patr\'on}, \citenamefont {Cerf},
-  \citenamefont {Ralph}, \citenamefont {Shapiro},\ and\ \citenamefont
-  {Lloyd}}]{Weed:rmp:2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Weedbrook}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Pirandola}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Garc\'{\i}a-Patr\'on}}, \bibinfo {author} {\bibfnamefont {N.~J.}\
-  \bibnamefont {Cerf}}, \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
-  {Ralph}}, \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Shapiro}},\
-  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lloyd}},\ }\bibfield
-   {title} {{\selectlanguage {english}\bibinfo {title} {Gaussian quantum
-  information}},\ }\href {https://doi.org/10.1103/RevModPhys.84.621} {\bibfield
-   {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo
-  {volume} {84}},\ \bibinfo {pages} {621} (\bibinfo {year}
-  {2012}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Laudenbach}\ \emph {et~al.}(2018)\citenamefont
   {Laudenbach}, \citenamefont {Pacher}, \citenamefont {Fung}, \citenamefont
   {Poppe}, \citenamefont {Peev}, \citenamefont {Schrenk}, \citenamefont
@@ -561,6 +534,24 @@
   {\bibinfo  {journal} {Advanced Quantum Technologies}\ }\textbf {\bibinfo
   {volume} {1}},\ \bibinfo {pages} {1800011} (\bibinfo {year}
   {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Weedbrook}\ \emph
+  {et~al.}(2012{\natexlab{b}})\citenamefont {Weedbrook}, \citenamefont
+  {Pirandola}, \citenamefont {Garc\'{\i}a-Patr\'on}, \citenamefont {Cerf},
+  \citenamefont {Ralph}, \citenamefont {Shapiro},\ and\ \citenamefont
+  {Lloyd}}]{Weed:rmp:2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Weedbrook}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Pirandola}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Garc\'{\i}a-Patr\'on}}, \bibinfo {author} {\bibfnamefont {N.~J.}\
+  \bibnamefont {Cerf}}, \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Ralph}}, \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Shapiro}},\
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lloyd}},\ }\bibfield
+   {title} {{\selectlanguage {english}\bibinfo {title} {Gaussian quantum
+  information}},\ }\href {https://doi.org/10.1103/RevModPhys.84.621} {\bibfield
+   {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo
+  {volume} {84}},\ \bibinfo {pages} {621} (\bibinfo {year}
+  {2012}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Serafini}(2017)}]{Serafini:bk:2017}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
@@ -594,4 +585,13 @@
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physics Letters
   A}\ }\textbf {\bibinfo {volume} {176}},\ \bibinfo {pages} {41} (\bibinfo
   {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Soch}\ \emph {et~al.}(2024)\citenamefont {Soch} \emph
+  {et~al.}}]{SochEtAl2024_StatProofBook}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Soch}} \emph {et~al.},\ }\href@noop {} {\bibinfo {title}
+  {Statproofbook/statproofbook.github.io: The book of statistical proofs
+  (version 2023)}},\ \bibinfo {howpublished}
+  {\url{https://doi.org/10.5281/zenodo.4305949}} (\bibinfo {year} {2024}),\
+  \bibinfo {note} {accessed: 2025-07-15}\BibitemShut {NoStop}%
 \end{thebibliography}%

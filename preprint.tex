@@ -1185,164 +1185,32 @@ the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
 \section{Incorporating measurement imperfections into the GG02 CV-QKD Protocol}
 \label{sec:protocol}
 
-In this section, we apply our results on asymmetric measurements to analyze the Gausssian-modulated coherent state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. We compute the mutual information, Holevo information, and asymptotic secret fraction (secure key rate per symbol) under an untrusted noise scenario, to assess the impact of measurement asymmetry on the protocol’s security.
+In this section, we apply our results on asymmetric measurements to analyze the Gausssian-modulated coherent state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. We compute the mutual information, Holevo information, and asymptotic secret fraction (secure key rate per symbol) under \textcolor{red}{both trusted and untrusted} noise scenario, to assess the impact of measurement asymmetry on the protocol’s security.
 
-In the GG02 protocol, Alice prepares an ensemble of coherent states $\ket{\alpha=q+ip}$
-with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
+In the GG02 protocol the mutual information between Alice and Bob when Bob performs homodyne detection is given by
 \begin{align}
-\label{eq:probabilities}
-    p_{\ind{A}}(\alpha)=\frac{1}{\pi V_{\ind{A}}}\exp\left[
-    -\frac{|\alpha|^2}{2V_{\ind{A}}}
-    \right],
+  \label{eq:I_H_res}
+  I_{\ind{AB}}^{\ind{H}}=\frac{1}{2}\log\left[1+\frac{4TV_{\ind{A}}}{\sigma_x+2\xi}\right],
 \end{align}
+where $T$ is the channel transmission, $\xi$ is the channel noise variance, $V_{\ind{A}}$ is Alice's modulation variance, and $\sigma_x$ is given by Eq.~\eqref{eq:sigma-x}.
+If Bob used double homodyne detection, mutual information takes the form
 \begin{align}
-    \label{eq:ensemble}
-    \rho_{\ind{A}}=\int\mathop{\dd^2\alpha} p_{\ind{A}}(\alpha)
-    \ket{\alpha}\hspace{-1pt}
-    \bra{\alpha}.
+  \label{eq:I_DH_res}
+  I_{\ind{AB}}^{\ind{DH}}=\frac{1}{2}\sum_i\log\left[1+\frac{2TV_{\ind{A}}}
+    {\sigma_i+\xi}\right],
 \end{align}
+where $\sigma_i$ are defined by Eq.~\eqref{eq:sigm-x-i}/
+The details of these derivations are given in Appendix~\ref{sec:MI-and-EBtoPm}.
 
-After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state is transformed as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha=\tilde q +i \tilde p}$.
-If independent channel noise is present, the ensemble reads
-\begin{align}
-\label{eq:rho-tilde}
-    &\tilde\rho_{\ind{A}}=\frac{1}{\pi\xi T}\int\mathop{\dd^2\tilde\alpha}p_{\ind{A}}(\tilde\alpha)
-    \int\mathop{\dd^2\alpha'}
-    \exp\left[
-    -\frac{\left|\alpha'\right|^2}{\xi}\right]\notag\times\\&\ket{\tilde\alpha-\alpha'}\hspace{-1pt}\bra{\tilde\alpha-\alpha'},
-\end{align}
-where $\xi$ is the channel noise variance.
-
-Then, Bob performs a measurement described by POVM $\{\hat{\Pi}_x\}$, where the index $x$ corresponds to the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The conditional probability that Bob obtains measurement outcome $x$ given that Alice sent the specific coherent state $\ket{\tilde\alpha}$ is given by the Born rule:
-\begin{align}
-\label{eq:pB(x|A)}
-    &p_{\ind{B}}(x|\tilde\alpha) \sim
-    p_{\ind{A}}(\tilde\alpha)\int\mathop{\dd^2\alpha'}\exp\left[
-    -\frac{\left|\alpha'\right|^2}{\xi}\right]Q_x(\tilde \alpha-\alpha'),
-\end{align}
-where $Q_x(\tilde \alpha)$ is the $Q$-function of POVM used.
-
-For homodyne detection, Eq.~\eqref{eq:pB(x|A)} takes the form given by  Eq.~\eqref{eq:Pgood-w-def}
-\begin{align}
-\label{eq:pxa}
-   p_{\ind{B}}^{\ind{H}}(x|\tilde \alpha) 
-  \sim
-    \exp\left[
-    -\frac{(x-2\tilde q)^2}{2\left(\sigma_x+\xi\right)}-\frac{\tilde q^2}{2TV_{\ind{A}}}
-    \right].
-\end{align}
-Rewriting exponential's power in Eq.\eqref{eq:pxa} in quadratic form results in
-\begin{align}
-    \label{eq:sigma-hom-def}
-    &-\frac{1}{2}
-    \begin{pmatrix}
-        \tilde q&x
-    \end{pmatrix}
-    \begin{pmatrix}
-        {TV_{\ind{A}}}&2{TV_{\ind{A}}}\\
-        2{TV_{\ind{A}}}&4TV_{\ind{A}}+\sigma_x+\xi
-    \end{pmatrix}^{-1}
-    \begin{pmatrix}
-        \tilde q\\x
-    \end{pmatrix}\notag\\&\equiv 
-    -\frac{1}{2}
-    \begin{pmatrix}
-        \tilde q&x
-    \end{pmatrix}{\Sigma^{\ind{H}}}^{-1}
-    \begin{pmatrix}
-        \tilde q\\x
-    \end{pmatrix},
-\end{align}
-and with covariance matrix $\Sigma^{\ind{H}}$, mutual information between Alice and Bob can be calculated as follows~\cite{SochEtAl2024_StatProofBook}
-\begin{align}
-\label{eq:IABPM}
-    I_{\ind{AB}}^{\ind{H}}=\frac{1}{2}\log \frac{\Sigma^{\ind{H}}_{11}\Sigma^{\ind{H}}_{22}}
-    {\det\Sigma^{\ind{H}}}=\frac{1}{2}\log \frac{4TV_{\ind{A}}+\sigma_x+\xi}
-    {\sigma_x+\xi},
-\end{align}
-where $\Sigma^{\ind{H}}_{ii}$ are diagonal elements of $\Sigma^{\ind{H}}$, and all logarithms are base 2.
-
-If double homodyne detection is used, from Eq.~\eqref{eq:pB(x|A)} we have (see Eq.~\eqref{eq:P_G-x1x2}):
-\begin{align}
-  \label{eq:dh-exp}
-    &p_{\ind{B}}^{\ind{DH}}(x|\tilde \alpha) \sim\notag\\
-    &\exp\left[-\frac{(x_1-\tilde q)^2}{2\left(\frac{\sigma_1}2+\frac\xi2\right)}-\frac{\tilde q^2}{2TV_{\ind{A}}}
-    -\frac{(x_2-\tilde p)^2}{2\left(\frac{\sigma_2}2+\frac\xi2\right)}-\frac{\tilde p^2}{2TV_{\ind{A}}}
-    \right].
-\end{align}
-Analogously to Eq.~\eqref{eq:sigma-hom-def}, we obtain covariance matrices as follows:
-\begin{align}
-  \label{eq:Sigma-DH}
-    &\Sigma^{\ind{DH}^{(i)}}=\begin{pmatrix}
-        {TV_{\ind{A}}}&{TV_{\ind{A}}}\\
-        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_i}{2}+\frac\xi2
-    \end{pmatrix}, \quad i = 1,2,
-\end{align}
-from which we obtain mutual information as
-\begin{align}
-  \label{eq:I_dh}
-    &I_{\ind{AB}}^{\ind{DH}}=\frac{1}{2}\sum_{i=1,2}\log \frac{\Sigma^{\ind{DH}^{(i)}}_{11}\Sigma^{\ind{DH}^{(i)}}_{22}}
-    {\det\Sigma^{\ind{DH}^{(i)}}}\notag\\
-    &=\frac{1}{2}\sum_i\log \frac{2TV_{\ind{A}}+\sigma_i+\xi}
-    {\sigma_i+\xi}.
-\end{align}
-
-To calculate Holevo information, first, consider two mode squeezed vacuum state (TMSVS), in ket notation written as{~\cite{Weed:rmp:2012}}
-\begin{align}
-  \label{eq:psi_AB}
-  \ket{\Psi}_{\ind{AB}}=\sqrt{1-\lambda^2}\sum_{n=0}^{\infty}(-\lambda)^n\ket{n,n}_{\ind{AB}},
-\end{align}
-where $\lambda=\tanh r,\ r$ is the squeezing parameter. Let Alice hold the state $\varsigma_{\ind{AB}}=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the entanglement-based (EB) protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\left\{\hat\Pi_\beta=\frac{\ket{\beta}\hspace{-1pt}\bra{\beta}}\pi\right\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\beta$ is given by the Born rule:
-\begin{align}
-  \label{eq:p_A_EB}
-  p_{\ind{A}}^{\ind{EB}}(\beta)=\Tr \hat{\Pi}_\beta \varsigma_{\ind{A}},
-\end{align}
-where
-\begin{align}
-  \label{eq:vars_A}
-  \varsigma_{\ind{A}}=\Tr_{\ind{B}}\varsigma_{\ind{AB}}=\left(1-\lambda^2\right)\sum_{n}\lambda^{2n}\ket{n}\hspace{-1pt}\bra{n}.
-\end{align}
-is the reduced density matrix of Alice's mode.
-Substituing Eq.~\eqref{eq:vars_A} into into Eq.~\eqref{eq:p_A_EB} yields
-\begin{align}
-  \label{eq:p_A_EB-final}
-  p_{\ind{A}}^{\ind{EB}}(\beta)=\frac{\left(1-\lambda^2\right)}{\pi}\exp\left[\left(\lambda^2-1\right)|\beta|^2\right].
-\end{align}
-
-After Alice obtains outcome $\beta$, second mode before channel transmission reads
-\begin{align}
-  \label{eq:vars_B_beta}
-    \varsigma_{\ind{B}}^\beta=
-    \ket{-\lambda\beta^*}\hspace{-1pt}\bra{-\lambda\beta^*}
-\end{align}
-and the ensemble reads
-\begin{align}
-  \label{eq:EB-ensemble}
-    \varsigma_{\ind{B}}=\int\mathop{\dd^2\beta}
-    p_{\ind{A}}^{\ind{EB}}(\beta)
-    \ket{-\lambda\beta^*}\hspace{-1pt}\bra{-\lambda\beta^*},
-\end{align}
-exactly the same as Eq.~\eqref{eq:ensemble} after substituting
-\begin{align}
-  \label{eq:EB_subs}
-    \alpha=-{\lambda}{\beta^*}, \quad
-    \frac{1-\lambda^2}{\lambda^2}=\frac{1}{2V_{\ind{A}}}.
-\end{align}
-
-It follows that covariance matrix of TMSVS can be used to calculate Holevo information in the PM protocol. It is defined as follows
-\begin{align}
-  \label{eq:TVMS}
-    \Sigma^{\ind{TMSVS}}=\begin{pmatrix}
-        V\mathbb{I}&\sqrt{V^2-1}\sigma_Z\\
-        \sqrt{V^2-1}\sigma_Z&V\mathbb{I}
-    \end{pmatrix},
-\end{align}
-where $\mathbb{I}=\ind{diag}(1,1), \sigma_Z=\ind{diag}(1,-1)$, and
-\begin{align}
-  \label{eq:V(V_A)}
-    V=\cosh 2r=1+4V_{\ind{A}}.
-\end{align}
-
+\textcolor{red}{First, we will calculate Holevo information in the trusted noise scenario. [add desc]} We will use the fact that prepare-and-measure (PM) and entanglement-based (EB) protocols are equivalent (see App.~\ref{sec:MI-and-EBtoPm}), allowing us to calculate Holevo information from the two mode squeezed vacuum state covariance matrix. 
+%It is given given by
+%\begin{align}
+%  \label{eq:TVMS}
+%    \Sigma^{\ind{TMSVS}}=\begin{pmatrix}
+%        V\mathbb{I}&\sqrt{V^2-1}\sigma_Z\\
+%        \sqrt{V^2-1}\sigma_Z&V\mathbb{I}
+%    \end{pmatrix},
+%\end{align}
 After transmitting through noisy channel
 (see Ref.~\cite{laudenbach2018continuous})
 covariance matrix reads
@@ -1350,14 +1218,20 @@ covariance matrix reads
   \label{eq:TVMS-final}
     &\Sigma^{\ind{EB}}_{\ind{AB}}=\begin{pmatrix}
         V\mathbb{I}&\sqrt{T\left(V^2-1\right)}\sigma_Z\\
-        \sqrt{T\left(V^2-1\right)}\sigma_Z&\left[T(V-1)+1+\xi\right]\mathbb{I}
+        \sqrt{T\left(V^2-1\right)}\sigma_Z&\left[T(V-1)+1+2\xi\right]\mathbb{I}
     \end{pmatrix}
     \notag
     \\&\equiv\begin{pmatrix}
         a\mathbb{I}&c\sigma_Z\\
         c\sigma_Z&V_{\ind{B}}\mathbb{I}
-    \end{pmatrix}.
+    \end{pmatrix},
 \end{align}
+where $\mathbb{I}=\ind{diag}(1,1), \sigma_Z=\ind{diag}(1,-1)$, and
+\begin{align}
+  \label{eq:V(V_A)}
+    V=1+4V_{\ind{A}}.
+\end{align}
+%Note that Bob's variance $V_{\ind{B}}$ is exactly the same as Bob's variance calculated in PM protocol per Eq.~\eqref{eq:sigma-hom-def} after substituting $\sigma_x=1$, as is required to equate both protocols.
 Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$, is calculated from the symplectic eigenvalues of $\Sigma_{\ind{AB}}^{\ind{EB}}$ as~\cite{Weed:rmp:2012}
 \begin{align}
 \label{eq:nu12}
@@ -1375,72 +1249,38 @@ If covariance matrix of system $AB$ is in the form
 noisy Gaussian measurement of system $B$ transforms $A$ mode as follows~\cite{Serafini:bk:2017},
 \begin{align}
   \label{eq:serf-a|b}
-        \sigma_{A|B}=
-        A-C(B+\sigma_m)^{-1}C^{\ind{T}},
+        \sigma_{A|B}^{(m)}=
+        A-C(B+\sigma_\Pi^{(m)})^{-1}C^{\ind{T}},\quad m\in\left\{\ind{H}, \ind{DH}\right\}
     \end{align}
-where, in case of additive noise, $\sigma_m$ is given by
+where $\sigma_\Pi^{(m)}$ is the POVM covariance matrix, deduced from Eq.~\eqref{eq:Pgood-w-def} and Eq.~\eqref{eq:P_G-x1x2} for homodyne and double homodyne respectively as
 \begin{align}
-\label{eq:sigma_m}
-\sigma_m=SS^{\ind{T}}+Y^*,
+\label{eq:sigma_m-h}
+\sigma_\Pi^{\ind{H}}=\textcolor{red}{\mathbb{I}+\sigma_N\Pi_{qp}},\\
+\label{eq:sigma_m-dh}
+\sigma_\Pi^{\ind{DH}}=\begin{pmatrix}
+        2\sigma_1-1&0\\
+        0&2\sigma_2-1
+    \end{pmatrix},
 \end{align}
-where $SS^{\ind{T}}$ represents the covariance matrix of the ideal pure Gaussian state associated with the measurement, and $Y^*$ is proportional to the the variance of added noise. If Bob uses homodyne detection, we set $Y^*=\sigma_N\mathbb{I}$ (see Eq.~\eqref{eq:sgm_N}), $SS^{\ind{T}}=\lim_{z\to0}R_\phi^{\ind{T}}\ind{diag}(z,z^{-1})R_\phi$, $R_\phi$ is the rotation matrix by angle $\phi$, so we have
-\begin{align}
-  \label{eq:Rz-lim}
-  &\left(V_{\ind{B}}\mathbb{I}
-  +\sigma_m
-  \right)^{-1}=\notag\\&\lim_{z\to0}\left(V_{\ind{B}}\mathbb{I}
-  +R_\phi^{\ind{T}}\ind{diag}(z,z^{-1})R_\phi+\sigma_N\mathbb{I}
-  \right)^{-1}=\notag\\
-  &\begin{pmatrix}
-     \frac{\cos^{2}{\phi}}{V_{B} + \sigma_{N}} & \frac{\sin{2\phi}}{2 \left(V_{B} + \sigma_{N}\right)}\\\frac{\sin2\phi}{2 \left(V_{B} + \sigma_{N}\right)} & \frac{\sin^{2}{\phi}}{V_{B} + \sigma_{N}}, 
-  \end{pmatrix},
-\end{align}
-by setting either $\phi=0$ or $\phi=\frac{\pi}{2}$ to recover $q$ and $p$ quadratures, respectively, and substituting Eq.~\eqref{eq:Rz-lim} back into Eq.~\eqref{eq:serf-a|b}, we arrive at
+where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$.
+If Bob uses homodyne detection, we arrive at conditional matrix with symplectic eigenvalue
 \begin{align}
     \label{eq:AB}
     &\Sigma_{\ind{A}|\ind{B}}^{\ind{H}}
-    =a\mathbb{I}-\frac{c^2}{V_{\ind{B}}+\sigma_N}\Pi_{q,p},
-\end{align}
-where $\Pi_q=\ind{diag}(1,0)$ and $\Pi_p=\ind{diag}(0,1)$, with symplectic eigenvalue $\nu_3^{\ind{H}}$:
- \begin{align}
+    =a\mathbb{I}-\frac{c^2}{V_{\ind{B}}+\sigma_N}\Pi_{q,p},\\
      \label{eq:nu3}
      &\nu_3^{\ind{H}}=\sqrt{a\left(a-\frac{c^2}{V_{\ind{B}}+\sigma_N}\right)}.
  \end{align}
-If Bob uses double homodyne measurement, $SS^{\ind{T}}=\mathbb{I}$ and $Y^*=\ind{diag}\left(\sigma_N^{(1)},\sigma_N^{(2)}\right)$ (see Eq.~\eqref{eq:sigm-N-i}), we have
+If Bob uses double homodyne measurement, we have
 \begin{align}
-  \label{eq:sigma_m-dh}
-  \sigma_m=\mathbb{I}+
-    \begin{pmatrix}
-       \sigma_N^{(1)}&0\\0&\sigma_N^{(2)}
-    \end{pmatrix}=\mathbb{I}+
-    \begin{pmatrix}
-        \frac{\sigma_1}{2}-\frac{1}{2}&0\\0&\frac{\sigma_2}{2}-\frac{1}{2}
-    \end{pmatrix}=\notag\\
-    \begin{pmatrix}
-        \frac{\sigma_1+1}{2}&0\\0&\frac{\sigma_2+1}{2}
-    \end{pmatrix}.
+  \label{eq:AB-dh}
+  &\Sigma_{\ind{A}|\ind{B}}^{\ind{DH}}=\begin{pmatrix}
+        a - \frac{c^{2}}{V_{\ind{B}} + {2\sigma_{1}-1}} & 0\\0 & a - \frac{c^{2}}{V_{\ind{B}} + {2\sigma_{2}-1}}
+    \end{pmatrix},\\
+    \label{eq:nu3-dh}
+    & \nu_3^{\ind{DH}}=a\sqrt{\frac{\left(V_{\ind{B}}  + 2\sigma_1-1 - \frac{c^{2}}a\right) \left( V_{\ind{B}}  + 2\sigma_2-1 - \frac{c^{2}}a\right)}{\left( V_{\ind{B}} + 2\sigma_1-1\right) \left(V_{\ind{B}} + 2\sigma_2-1\right)}}
 \end{align}
-\textcolor{red}{Note that, if we decide to use double homodyne POVM in the form of projectors onto squeezed coherent states Eq.~\eqref{eq:Pi_G-gen-x1x2} instead of projectors onto coherent states Eq.~\eqref{eq:povm-hetero}, we would have, as $SS^T=\ind{diag}\left(e^{-2r}, e^{2r}\right)$, and $2\sigma_N^{(i)}=\sigma_i-\frac{1+e^{\pm2r}}{2}$}
-\begin{align}
-  \textcolor{red}{\sigma_m=
-    \begin{pmatrix}
-       e^{-2r}&0\\0&e^{2r}
-    \end{pmatrix}+
-    \begin{pmatrix}
-       \sigma_N^{(1)}(r)&0\\0&\sigma_N^{(2)}(r)
-    \end{pmatrix}}
-\end{align}
-Using Eq.~\eqref{eq:serf-a|b}, we obtain
-\begin{align}
-    \label{eq:AB_dH}&\Sigma_{\ind{A}|\ind{B}}^{\ind{DH}}=\begin{pmatrix}
-        a - \frac{c^{2}}{V_{\ind{B}} + \frac{\sigma_{1}+1}2} & 0\\0 & a - \frac{c^{2}}{V_{\ind{B}} + \frac{\sigma_{2}+1}2}
-    \end{pmatrix},
-\end{align}
-resulting in symplectic eigenvalue $\nu_3^{\ind{DH}}$ in the form
-\begin{align}
-  \label{eq:nu3-dh}
-    \nu_3^{\ind{DH}}=a\sqrt{\frac{\left(V_{\ind{B}}  + \frac{\sigma_1+1}{2} - \frac{c^{2}}a\right) \left( V_{\ind{B}}  + \frac{\sigma_2+1}2 - \frac{c^{2}}a\right)}{\left( V_{\ind{B}} + \frac{\sigma_{1}+1}2\right) \left(V_{\ind{B}} + \frac{\sigma_{2}+1}2\right)}}.
-\end{align}
+\textcolor{red}{Note that in this scenario generalization to double homodyne POVM in the form of projectors onto squeezed coherent states Eq.~\eqref{eq:Pi_G-gen-x1x2} from projectors onto coherent states Eq.~\eqref{eq:povm-hetero} is not required as it is not necessery to separate noise part of covariance matrix.}
 %which is then used in Eq.~\eqref{eq:chi} to compute the Holevo information.
 
 The Holevo information is calculated as
@@ -1464,22 +1304,22 @@ where $\beta$ is the reconciliation efficiency.
 The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection. Our numerical results for the homodyne case are inconsistent 
 with Ref.~\cite{ruiz2023effects}: the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation is maximal for the symmetric case, but our results suggest otherwise. This is due our attribution of asymmetry noise to $S_{\ind{A|B}}$, while in Ref.~\cite{ruiz2023effects} it is atributted to Eve, modifying $S_{\ind{AB}}$. 
 
-The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetric homodyne detection offers slight advantage at large distance over ideal, symmetric detection, which maximizes the Holevo information.  In contrast, double homodyne detection consistently yields better performance. Yet, due to the way $\nu_3^{\ind{DH}}$ is dependent on noise variances, at large distances asymmetry results in lesser secure key rate. At smaller distances, where $T\approx1$, asymmetry reduces the secure key rate of both homodyne and double homodyne detection.
+The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetric homodyne detection offers slight advantage at large distance over ideal, symmetric detection, which maximizes the Holevo information.  In contrast, double homodyne detection consistently yields better performance. Yet, due to the way $\nu_3^{\ind{DH}}$ is dependent on noise variances, at large distances asymmetry results in lesser secure key rate. At smaller distances, where $T\approx1$, asymmetry reduces the secure key rate of both homodyne and double homodyne detection. \textcolor{red}{LITERATURE WILL BE HERE}
 
 \begin{figure*}
     \centering
     \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth, ]{pics/qkd/hom/IAB.pdf}
+\includegraphics[width=\linewidth, ]{pics/trust/hom/IAB.pdf}
 \caption[]{}%{$I_{\ind{AB}}$}
         \end{subfigure}
 \hfill
         \begin{subfigure}[c]{.3\linewidth}
- \includegraphics[width=\linewidth, ]{pics/qkd/hom/chi.pdf}
+ \includegraphics[width=\linewidth, ]{pics/trust/hom/chi.pdf}
 \caption[]{}%{$\chi_{\ind{EB}}$}
 \end{subfigure}
 \hfill
     \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth, ]{pics/qkd/hom/r.pdf}
+\includegraphics[width=\linewidth, ]{pics/trust/hom/r.pdf}
 \caption[]{}%{$R$}
         \end{subfigure}
         \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using homodyne measurement as functions of the beam splitter transmission, for various detector efficiencies at $V_{\ind{A}}=1, T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$
@@ -1490,41 +1330,118 @@ The dependence of the asymptotic secure key rate on channel length in the presen
 \begin{figure*}
     \centering
     \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth, ]{pics/qkd/dhom/IAB.pdf}
+\includegraphics[width=\linewidth, ]{pics/trust/dhom/IAB.pdf}
 \caption[]{}%{$I_{\ind{AB}}$}
         \end{subfigure}
 \hfill
         \begin{subfigure}[c]{.3\linewidth}
- \includegraphics[width=\linewidth, ]{pics/qkd/dhom/chi.pdf}
+ \includegraphics[width=\linewidth, ]{pics/trust/dhom/chi.pdf}
 \caption[]{}%{$\chi_{\ind{EB}}$}
 \end{subfigure}
 \hfill
     \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth, ]{pics/qkd/dhom/r.pdf}
+\includegraphics[width=\linewidth, ]{pics/trust/dhom/r.pdf}
 \caption[]{}%{$R$}
         \end{subfigure}
-        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using double homodyne detection as functions of the signal beam splitter transmission. All other beam splitters are assumed to be balanced. Results are shown for various detector efficiencies; efficiencies not specified in the legend are taken to be unity. Parameters: $V_{\ind{A}}=\frac1
-        , T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$.
+        \caption{(a) Mutual information, (b) Holevo information, and (c) asymptotic secret fraction using double homodyne detection as functions of the signal beam splitter transmission. All other beam splitters are assumed to be balanced. Results are shown for various detector efficiencies; efficiencies not specified in the legend are taken to be unity. Parameters: $V_{\ind{A}}=1
+        , T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$. \textcolor{red}{(Trusted noise)}
 }
 \label{fig:double-homodyne-all}
 \end{figure*}
 \begin{figure*}
     \centering
     \begin{subfigure}[]{.45\textwidth}
-\includegraphics[width=\linewidth]{pics/qkd/hom/r(l).pdf}
+\includegraphics[width=\linewidth]{pics/trust/hom/r(l).pdf}
 \caption[]{Homodyne detection}
 \label{fig:hom-r}
         \end{subfigure}
         \begin{subfigure}[]{.45\textwidth}
- \includegraphics[width=\linewidth]{pics/qkd/dhom/r(l).pdf}
+ \includegraphics[width=\linewidth]{pics/trust/dhom/r(l).pdf}
 \caption[]{Double homodyne detection}
 \label{fig:dhom-r}
 \end{subfigure}
 \caption{Asymptotic secret fraction as a function of channel length computed for (a) homodyne detection and (b) double homodyne detection, shown for various detector efficiencies. Parameters are $V_{\ind{A}}=1,T=0.95,\xi=0.5\cdot10^{-3}, \beta=0.95$. The losses are assumed to be 20 dB per 100 km.
+\textcolor{red}{(Trusted noise)}
 }
 \label{fig:r-of-l-all}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textcolor{red}{Now we will move on to untrusted noise scenario [add desc]}. Conditional entropy is calculated from symplectic eigenvalues
+\begin{align}
+  \label{eq:mu3-h}
+  &\mu_3^{\ind{H}}=\sqrt{a\left(a-\frac{c^2}{V_{\ind{B}}}\right)},\\
+  \label{eq:mu3-dh}
+    &\mu_3^{\ind{DH}}=a-\frac{c^2}{V_{\ind{B}}+1}.
+\end{align}
+Joint entropy will be calculated from symplectic eigenvalues of the matrix
+\begin{align}
+    \Sigma^{\ind{EB}'}_{\ind{AB}}\begin{pmatrix}
+        a\mathbb{I}&c\sigma_Z\\
+        c\sigma_Z&V_{\ind{B}}\mathbb{I}+\sigma_{\eta}^{(m)}
+    \end{pmatrix},
+\end{align}
+where $\sigma_{\eta}^{(m)}$ is the noise part of $\sigma_\Pi^{(m)}$.
+Explicitly, per Eq.~\eqref{eq:sigma_m-h} and \eqref{eq:sigma_m-dh},
+\begin{align}
+    &\sigma_{\eta}^{\ind{H}}=\sigma_N\Pi_{qp},\\
+    &\sigma_{\eta}^{\ind{DH}}=\begin{pmatrix}
+        2\sigma_1-1-e^{2r}&0\\
+        0&2\sigma_2-1-e^{-2r}
+    \end{pmatrix}.
+\end{align}
+Note that Holevo information for double homodyne detection is explicitly dependent on squeezing parameter $r$ that lies in the interval~\eqref{eq:r1-r2}. For calculations, we will numerically find $r$ that maximizes Holevo information. \textcolor{red}{Describing \ref{fig:untrust-homodyne-all}, \ref{fig:untrust-double-homodyne-all}, \ref{fig:untrust-r-of-l-all}.}
+
+\begin{figure*}
+    \centering
+        \begin{subfigure}[c]{.45\linewidth}
+ \includegraphics[width=\linewidth, ]{pics/untrust/hom/chi.pdf}
+\caption[]{}%{$\chi_{\ind{EB}}$}
+\end{subfigure}
+\hfill
+    \begin{subfigure}[c]{.45\linewidth}
+\includegraphics[width=\linewidth, ]{pics/untrust/hom/r.pdf}
+\caption[]{}%{$R$}
+        \end{subfigure}
+        \caption{(a) Holevo information and (b) asymptotic secret fraction using homodyne measurement as functions of the beam splitter transmission, for various detector efficiencies at $V_{\ind{A}}=1, T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$ \textcolor{red}{(Untrusted noise)}
+}
+\label{fig:untrust-homodyne-all}
+\end{figure*}
+
+\begin{figure*}
+        \begin{subfigure}[c]{.45\linewidth}
+ \includegraphics[width=\linewidth, ]{pics/untrust/dhom/chi.pdf}
+\caption[]{}%{$\chi_{\ind{EB}}$}
+\end{subfigure}
+\hfill
+    \begin{subfigure}[c]{.45\linewidth}
+\includegraphics[width=\linewidth, ]{pics/untrust/dhom/r.pdf}
+\caption[]{}%{$R$}
+        \end{subfigure}
+        \caption{(a) Holevo information and (b) asymptotic secret fraction using double homodyne detection as functions of the signal beam splitter transmission. All other beam splitters are assumed to be balanced. Results are shown for various detector efficiencies; efficiencies not specified in the legend are taken to be unity. Parameters: $V_{\ind{A}}=1
+        , T=0.95, \xi=0.5\cdot10^{-3}, \beta=0.95$.
+        \textcolor{red}{(Untrusted noise)}
+}
+\label{fig:untrust-double-homodyne-all}
+\end{figure*}
+\begin{figure*}
+    \centering
+    \begin{subfigure}[]{.45\textwidth}
+\includegraphics[width=\linewidth]{pics/untrust/hom/r(l).pdf}
+\caption[]{Homodyne detection}
+\label{fig:untrust-hom-r}
+        \end{subfigure}
+        \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=\linewidth]{pics/untrust/dhom/r(l).pdf}
+\caption[]{Double homodyne detection}
+\label{fig:untrust-dhom-r}
+\end{subfigure}
+\caption{Asymptotic secret fraction as a function of channel length computed for (a) homodyne detection and (b) double homodyne detection, shown for various detector efficiencies. Parameters are $V_{\ind{A}}=1,T=0.95,\xi=0.5\cdot10^{-3}, \beta=0.95$. The losses are assumed to be 20 dB per 100 km. \textcolor{red}{(Untrusted noise)}
+}
+\label{fig:untrust-r-of-l-all}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Conclusion and discussion}
 \label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2167,7 +2084,152 @@ when $2CS\le \sqrt{\eta_1\eta_2}$.
 The latter breaks applicability of Eq.~\eqref{eq:tpovm}
 giving an ill-posed POVM.
 
+\section{Mutual Information in GG02 protocol and equivalence between Prepare-and-Measure and Entanglement-based schemes}
+\label{sec:MI-and-EBtoPm}
+In the GG02 protocol, Alice prepares an ensemble of coherent states $\ket{\alpha=q+ip}$
+with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
+\begin{align}
+\label{eq:probabilities}
+    p_{\ind{A}}(\alpha)=\frac{1}{\pi V_{\ind{A}}}\exp\left[
+    -\frac{|\alpha|^2}{2V_{\ind{A}}}
+    \right],
+\end{align}
+\begin{align}
+    \label{eq:ensemble}
+    \rho_{\ind{A}}=\int\mathop{\dd^2\alpha} p_{\ind{A}}(\alpha)
+    \ket{\alpha}\hspace{-1pt}
+    \bra{\alpha}.
+\end{align}
 
+After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state is transformed as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha=\tilde q +i \tilde p}$.
+If independent channel noise is present, the ensemble reads
+\begin{align}
+\label{eq:rho-tilde}
+    &\tilde\rho_{\ind{A}}=\frac{1}{\pi\xi T}\int\mathop{\dd^2\tilde\alpha}p_{\ind{A}}(\tilde\alpha)
+    \int\mathop{\dd^2\alpha'}
+    \exp\left[
+    -\frac{\left|\alpha'\right|^2}{\xi}\right]\notag\times\\&\ket{\tilde\alpha-\alpha'}\hspace{-1pt}\bra{\tilde\alpha-\alpha'},
+\end{align}
+where $\xi$ is the channel noise variance. Note that variance of $p_{\ind{A}}(\tilde\alpha)$ is $TV_{\ind{A}}$.
+
+Then, Bob performs a measurement described by POVM $\{\hat{\Pi}_x\}$, where the index $x$ corresponds to the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The probability that Bob obtains measurement outcome $x$ is given by the Born rule:
+\begin{align}
+\label{eq:pB(xA)}
+    &p_{\ind{B}}(x,\tilde\alpha) \sim
+    p_{\ind{A}}(\tilde\alpha)\int\mathop{\dd^2\alpha'}\exp\left[
+    -\frac{\left|\alpha'\right|^2}{\xi}\right]Q_x(\tilde \alpha-\alpha'),
+\end{align}
+where $Q_x(\tilde \alpha)$ is the $Q$-function of POVM used.
+
+For homodyne detection, Eq.~\eqref{eq:pB(xA)} takes the form given by  Eq.~\eqref{eq:Pgood-w-def}
+\begin{align}
+\label{eq:pxa}
+   p_{\ind{B}}^{\ind{H}}(x,\tilde \alpha) 
+  \sim
+    \exp\left[
+    -\frac{(x-2\tilde q)^2}{2\left(\sigma_x+2\xi\right)}-\frac{\tilde q^2}{2TV_{\ind{A}}}
+    \right].
+\end{align}
+Rewriting exponential's power in Eq.\eqref{eq:pxa} in quadratic form results in
+\begin{align}
+    \label{eq:sigma-hom-def}
+    &-\frac{1}{2}
+    \begin{pmatrix}
+        \tilde q&x
+    \end{pmatrix}
+    \begin{pmatrix}
+        {TV_{\ind{A}}}&2{TV_{\ind{A}}}\\
+        2{TV_{\ind{A}}}&4TV_{\ind{A}}+\sigma_x+2\xi
+    \end{pmatrix}^{-1}
+    \begin{pmatrix}
+        \tilde q\\x
+    \end{pmatrix}\notag\\&\equiv 
+    -\frac{1}{2}
+    \begin{pmatrix}
+        \tilde q&x
+    \end{pmatrix}{\Sigma^{\ind{H}}}^{-1}
+    \begin{pmatrix}
+        \tilde q\\x
+    \end{pmatrix},
+\end{align}
+and with covariance matrix $\Sigma^{\ind{H}}$, mutual information between Alice and Bob can be calculated as follows~\cite{SochEtAl2024_StatProofBook}
+\begin{align}
+\label{eq:IABPM}
+    I_{\ind{AB}}^{\ind{H}}=\frac{1}{2}\log \frac{\Sigma^{\ind{H}}_{11}\Sigma^{\ind{H}}_{22}}
+    {\det\Sigma^{\ind{H}}}
+    %\frac{1}{2}\log \frac{4TV_{\ind{A}}+\sigma_x+2\xi}{\sigma_x+2\xi}
+    =\frac{1}{2}\log\left[1+\frac{4TV_{\ind{A}}}{\sigma_x+2\xi}\right],
+\end{align}
+where $\Sigma^{\ind{H}}_{ii}$ are diagonal elements of $\Sigma^{\ind{H}}$, and all logarithms are base 2.
+
+If double homodyne detection is used, from Eq.~\eqref{eq:pB(xA)} we have (see Eq.~\eqref{eq:P_G-x1x2}):
+\begin{align}
+  \label{eq:dh-exp}
+    &p_{\ind{B}}^{\ind{DH}}(x,\tilde \alpha) \sim\notag\\
+    &\exp\left[-\frac{(x_1-\tilde q)^2}{2\left(\frac{\sigma_1}2+\frac\xi2\right)}-\frac{\tilde q^2}{2TV_{\ind{A}}}
+    -\frac{(x_2-\tilde p)^2}{2\left(\frac{\sigma_2}2+\frac\xi2\right)}-\frac{\tilde p^2}{2TV_{\ind{A}}}
+    \right].
+\end{align}
+Analogously to Eq.~\eqref{eq:sigma-hom-def}, we obtain covariance matrices as follows:
+\begin{align}
+  \label{eq:Sigma-DH}
+    &\Sigma^{\ind{DH}^{(i)}}=\begin{pmatrix}
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}\\
+        {TV_{\ind{A}}}&{TV_{\ind{A}}}+\frac{\sigma_i}{2}+\frac\xi2
+    \end{pmatrix}, \quad i = 1,2,
+\end{align}
+from which we obtain mutual information as
+\begin{align}
+  \label{eq:I_dh}
+    &I_{\ind{AB}}^{\ind{DH}}=\frac{1}{2}\sum_{i=1,2}\log \frac{\Sigma^{\ind{DH}^{(i)}}_{11}\Sigma^{\ind{DH}^{(i)}}_{22}}
+    {\det\Sigma^{\ind{DH}^{(i)}}}=\notag\\
+    &\frac{1}{2}\sum_i\log\left[1+\frac{2TV_{\ind{A}}}
+    {\sigma_i+\xi}\right].
+\end{align}
+\textcolor{red}{\hrule}
+Consider two mode squeezed vacuum state (TMSVS), in ket notation written as{~\cite{Weed:rmp:2012}}
+\begin{align}
+  \label{eq:psi_AB}
+  \ket{\Psi}_{\ind{AB}}=\sqrt{1-\lambda^2}\sum_{n=0}^{\infty}\lambda^n\ket{n,n}_{\ind{AB}},
+\end{align}
+where $\lambda=\tanh r,\ r$ is the squeezing parameter. Let Alice hold the state $\varsigma_{\ind{AB}}=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the entanglement-based (EB) protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\left\{\hat\Pi_\beta=\frac{\ket{\beta}\hspace{-1pt}\bra{\beta}}\pi\right\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\beta$ is given by the Born rule:
+\begin{align}
+  \label{eq:p_A_EB}
+  p_{\ind{A}}^{\ind{EB}}(\beta)=\Tr \hat{\Pi}_\beta \varsigma_{\ind{A}},
+\end{align}
+where
+\begin{align}
+  \label{eq:vars_A}
+  \varsigma_{\ind{A}}=\Tr_{\ind{B}}\varsigma_{\ind{AB}}=\left(1-\lambda^2\right)\sum_{n}\lambda^{2n}\ket{n}\hspace{-1pt}\bra{n}.
+\end{align}
+is the reduced density matrix of Alice's mode.
+Substituing Eq.~\eqref{eq:vars_A} into into Eq.~\eqref{eq:p_A_EB} yields
+\begin{align}
+  \label{eq:p_A_EB-final}
+  p_{\ind{A}}^{\ind{EB}}(\beta)=\frac{\left(1-\lambda^2\right)}{\pi}\exp\left[\left(\lambda^2-1\right)|\beta|^2\right].
+\end{align}
+
+After Alice obtains outcome $\beta$, second mode before channel transmission reads
+\begin{align}
+  \label{eq:vars_B_beta}
+    \varsigma_{\ind{B}}^\beta=
+    \ket{-\lambda\beta^*}\hspace{-1pt}\bra{-\lambda\beta^*}
+\end{align}
+and the ensemble reads
+\begin{align}
+  \label{eq:EB-ensemble}
+    \varsigma_{\ind{B}}=\int\mathop{\dd^2\beta}
+    p_{\ind{A}}^{\ind{EB}}(\beta)
+    \ket{-\lambda\beta^*}\hspace{-1pt}\bra{-\lambda\beta^*},
+\end{align}
+exactly the same as Eq.~\eqref{eq:ensemble} after substituting
+\begin{align}
+  \label{eq:EB_subs}
+    \alpha=-{\lambda}{\beta^*}, \quad
+    \frac{1-\lambda^2}{\lambda^2}=\frac{1}{2V_{\ind{A}}}.
+\end{align}
+
+It follows that covariance matrix of TMSVS can be used to calculate Holevo information in the PM protocol.
 
 
 % This implies that $\sigma$ can be negative for certain combinations of $\eta_{1,2}$ and $\theta$,
