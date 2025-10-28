@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.3)  23 OCT 2025 09:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.3)  28 OCT 2025 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -915,156 +915,135 @@ Underfull \hbox (badness 3701) in paragraph at lines 1111--1116
  []
 
 [7 <./tikz_article.pdf>] [8]
-<pics/trust/hom/IAB.pdf, id=215, 182.36246pt x 167.11168pt>
-File: pics/trust/hom/IAB.pdf Graphic file (type pdf)
-<use pics/trust/hom/IAB.pdf>
-Package pdftex.def Info: pics/trust/hom/IAB.pdf  used on input line 1312.
+<pics/untrust/hom/IAB.pdf, id=215, 182.36246pt x 167.11168pt>
+File: pics/untrust/hom/IAB.pdf Graphic file (type pdf)
+<use pics/untrust/hom/IAB.pdf>
+Package pdftex.def Info: pics/untrust/hom/IAB.pdf  used on input line 1309.
 (pdftex.def)             Requested size: 153.00156pt x 140.20709pt.
-<pics/trust/hom/chi.pdf, id=216, 182.36246pt x 167.11168pt>
-File: pics/trust/hom/chi.pdf Graphic file (type pdf)
-<use pics/trust/hom/chi.pdf>
-Package pdftex.def Info: pics/trust/hom/chi.pdf  used on input line 1317.
+<pics/untrust/hom/chi.pdf, id=216, 182.36246pt x 167.11168pt>
+File: pics/untrust/hom/chi.pdf Graphic file (type pdf)
+<use pics/untrust/hom/chi.pdf>
+Package pdftex.def Info: pics/untrust/hom/chi.pdf  used on input line 1314.
 (pdftex.def)             Requested size: 153.00156pt x 140.20709pt.
-<pics/trust/hom/r.pdf, id=217, 182.36246pt x 167.11168pt>
-File: pics/trust/hom/r.pdf Graphic file (type pdf)
-<use pics/trust/hom/r.pdf>
-Package pdftex.def Info: pics/trust/hom/r.pdf  used on input line 1322.
+<pics/untrust/hom/r.pdf, id=217, 182.36246pt x 167.11168pt>
+File: pics/untrust/hom/r.pdf Graphic file (type pdf)
+<use pics/untrust/hom/r.pdf>
+Package pdftex.def Info: pics/untrust/hom/r.pdf  used on input line 1319.
 (pdftex.def)             Requested size: 153.00156pt x 140.20709pt.
 <pics/trust/dhom/IAB.pdf, id=218, 199.05992pt x 170.7649pt>
 File: pics/trust/dhom/IAB.pdf Graphic file (type pdf)
 <use pics/trust/dhom/IAB.pdf>
-Package pdftex.def Info: pics/trust/dhom/IAB.pdf  used on input line 1333.
+Package pdftex.def Info: pics/trust/dhom/IAB.pdf  used on input line 1330.
 (pdftex.def)             Requested size: 153.00156pt x 131.26006pt.
-<pics/trust/dhom/chi.pdf, id=219, 193.185pt x 170.7649pt>
-File: pics/trust/dhom/chi.pdf Graphic file (type pdf)
-<use pics/trust/dhom/chi.pdf>
-Package pdftex.def Info: pics/trust/dhom/chi.pdf  used on input line 1338.
-(pdftex.def)             Requested size: 153.00156pt x 135.25194pt.
-<pics/trust/dhom/r.pdf, id=220, 193.185pt x 170.7649pt>
-File: pics/trust/dhom/r.pdf Graphic file (type pdf)
-<use pics/trust/dhom/r.pdf>
-Package pdftex.def Info: pics/trust/dhom/r.pdf  used on input line 1343.
-(pdftex.def)             Requested size: 153.00156pt x 135.25194pt.
-<pics/trust/hom/r(l).pdf, id=221, 237.43185pt x 193.73996pt>
-File: pics/trust/hom/r(l).pdf Graphic file (type pdf)
-<use pics/trust/hom/r(l).pdf>
-Package pdftex.def Info: pics/trust/hom/r(l).pdf  used on input line 1354.
-(pdftex.def)             Requested size: 229.49844pt x 187.27124pt.
-<pics/trust/dhom/r(l).pdf, id=222, 239.2345pt x 195.62881pt>
-File: pics/trust/dhom/r(l).pdf Graphic file (type pdf)
-<use pics/trust/dhom/r(l).pdf>
-Package pdftex.def Info: pics/trust/dhom/r(l).pdf  used on input line 1359.
-(pdftex.def)             Requested size: 229.49844pt x 187.67912pt.
-<pics/untrust/hom/chi.pdf, id=223, 182.36246pt x 167.11168pt>
-File: pics/untrust/hom/chi.pdf Graphic file (type pdf)
-<use pics/untrust/hom/chi.pdf>
-Package pdftex.def Info: pics/untrust/hom/chi.pdf  used on input line 1398.
-(pdftex.def)             Requested size: 229.49844pt x 210.30681pt.
-<pics/untrust/hom/r.pdf, id=224, 176.86243pt x 167.11168pt>
-File: pics/untrust/hom/r.pdf Graphic file (type pdf)
-<use pics/untrust/hom/r.pdf>
-Package pdftex.def Info: pics/untrust/hom/r.pdf  used on input line 1403.
-(pdftex.def)             Requested size: 229.49844pt x 216.84734pt.
-<pics/untrust/dhom/chi.pdf, id=225, 193.185pt x 170.7649pt>
+<pics/untrust/dhom/chi.pdf, id=219, 193.185pt x 170.7649pt>
 File: pics/untrust/dhom/chi.pdf Graphic file (type pdf)
 <use pics/untrust/dhom/chi.pdf>
-Package pdftex.def Info: pics/untrust/dhom/chi.pdf  used on input line 1413.
-(pdftex.def)             Requested size: 229.49844pt x 202.8766pt.
-<pics/untrust/dhom/r.pdf, id=226, 187.31004pt x 170.7649pt>
+Package pdftex.def Info: pics/untrust/dhom/chi.pdf  used on input line 1335.
+(pdftex.def)             Requested size: 153.00156pt x 135.25194pt.
+<pics/untrust/dhom/r.pdf, id=220, 193.185pt x 170.7649pt>
 File: pics/untrust/dhom/r.pdf Graphic file (type pdf)
 <use pics/untrust/dhom/r.pdf>
-Package pdftex.def Info: pics/untrust/dhom/r.pdf  used on input line 1418.
-(pdftex.def)             Requested size: 229.49844pt x 209.23962pt.
-<pics/untrust/hom/r(l).pdf, id=227, 237.43185pt x 193.73996pt>
+Package pdftex.def Info: pics/untrust/dhom/r.pdf  used on input line 1340.
+(pdftex.def)             Requested size: 153.00156pt x 135.25194pt.
+<pics/untrust/hom/r(l).pdf, id=221, 237.43185pt x 193.73996pt>
 File: pics/untrust/hom/r(l).pdf Graphic file (type pdf)
 <use pics/untrust/hom/r(l).pdf>
-Package pdftex.def Info: pics/untrust/hom/r(l).pdf  used on input line 1430.
+Package pdftex.def Info: pics/untrust/hom/r(l).pdf  used on input line 1351.
 (pdftex.def)             Requested size: 229.49844pt x 187.27124pt.
-<pics/untrust/dhom/r(l).pdf, id=228, 239.2345pt x 195.62881pt>
+<pics/untrust/dhom/r(l).pdf, id=222, 239.2345pt x 195.62881pt>
 File: pics/untrust/dhom/r(l).pdf Graphic file (type pdf)
 <use pics/untrust/dhom/r(l).pdf>
-Package pdftex.def Info: pics/untrust/dhom/r(l).pdf  used on input line 1435.
+Package pdftex.def Info: pics/untrust/dhom/r(l).pdf  used on input line 1356.
 (pdftex.def)             Requested size: 229.49844pt x 187.67912pt.
- [9] [10 <./pics/trust/hom/IAB.pdf> <./pics/trust/hom/chi.pdf> <./pics/trust/hom/r.pdf> <./pics/trust/dhom/IAB.pdf> <./pics/trust/dhom/chi.pdf> <./pics/trust/dhom/r.pdf>]
-Underfull \hbox (badness 1237) in paragraph at lines 1539--1540
+ [9]
+Underfull \hbox (badness 1237) in paragraph at lines 1459--1460
 \T1/cmr/m/n/10 and $[] \OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 7! [] \OML/cmm/m/it/10 e[]$ \T1/cmr/m/n/10 is needed in
  []
 
-[11 <./pics/trust/hom/r(l).pdf> <./pics/trust/dhom/r(l).pdf> <./pics/untrust/hom/chi.pdf> <./pics/untrust/hom/r.pdf>] [12 <./pics/untrust/dhom/chi.pdf> <./pics/untrust/dhom/r.pdf> <./pics/untrust/hom/r(l).pdf> <./pics/untrust/dhom/r(l).pdf>]
-Underfull \hbox (badness 1418) in paragraph at lines 1553--1554
+[10 <./pics/untrust/hom/IAB.pdf> <./pics/untrust/hom/chi.pdf> <./pics/untrust/hom/r.pdf> <./pics/trust/dhom/IAB.pdf> <./pics/untrust/dhom/chi.pdf> <./pics/untrust/dhom/r.pdf>]
+Underfull \hbox (badness 1418) in paragraph at lines 1473--1474
 [][]\T1/cmr/m/n/10 Despite the ex-is-tence of coun-ter-mea-sures for the
  []
 
-<pics/homodyne/ED = ED(a)_eta.pdf, id=527, 816.65097pt x 672.11098pt>
+<pics/homodyne/ED = ED(a)_eta.pdf, id=349, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(a)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(a)_eta.pdf>
-Package pdftex.def Info: pics/homodyne/ED = ED(a)_eta.pdf  used on input line 1636.
+Package pdftex.def Info: pics/homodyne/ED = ED(a)_eta.pdf  used on input line 1556.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-<pics/homodyne/ED = ED(aL)_eta.pdf, id=528, 816.65097pt x 672.11098pt>
+<pics/homodyne/ED = ED(aL)_eta.pdf, id=350, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(aL)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(aL)_eta.pdf>
-Package pdftex.def Info: pics/homodyne/ED = ED(aL)_eta.pdf  used on input line 1641.
+Package pdftex.def Info: pics/homodyne/ED = ED(aL)_eta.pdf  used on input line 1561.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-<pics/homodyne/ed(eta2).pdf, id=529, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta2).pdf, id=351, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta2).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta2).pdf>
-Package pdftex.def Info: pics/homodyne/ed(eta2).pdf  used on input line 1655.
+Package pdftex.def Info: pics/homodyne/ed(eta2).pdf  used on input line 1575.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-<pics/homodyne/ed(eta1).pdf, id=530, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta1).pdf, id=352, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta1).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta1).pdf>
-Package pdftex.def Info: pics/homodyne/ed(eta1).pdf  used on input line 1660.
+Package pdftex.def Info: pics/homodyne/ed(eta1).pdf  used on input line 1580.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-<pics/homodyne/full.pdf, id=531, 808.39723pt x 652.25604pt>
+[11 <./pics/untrust/hom/r(l).pdf> <./pics/untrust/dhom/r(l).pdf>] [12 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf> <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf>]
+<pics/homodyne/full.pdf, id=452, 808.39723pt x 652.25604pt>
 File: pics/homodyne/full.pdf Graphic file (type pdf)
 <use pics/homodyne/full.pdf>
-Package pdftex.def Info: pics/homodyne/full.pdf  used on input line 1779.
+Package pdftex.def Info: pics/homodyne/full.pdf  used on input line 1699.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-<pics/homodyne/full_fock.pdf, id=532, 808.39723pt x 652.25604pt>
+<pics/homodyne/full_fock.pdf, id=453, 808.39723pt x 652.25604pt>
 File: pics/homodyne/full_fock.pdf Graphic file (type pdf)
 <use pics/homodyne/full_fock.pdf>
-Package pdftex.def Info: pics/homodyne/full_fock.pdf  used on input line 1784.
+Package pdftex.def Info: pics/homodyne/full_fock.pdf  used on input line 1704.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-[13] [14 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf> <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf>]
-<pics/appendix/app_1.pdf, id=587, 807.97862pt x 663.43863pt>
+<pics/appendix/app_1.pdf, id=454, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_1.pdf Graphic file (type pdf)
 <use pics/appendix/app_1.pdf>
-Package pdftex.def Info: pics/appendix/app_1.pdf  used on input line 1949.
+Package pdftex.def Info: pics/appendix/app_1.pdf  used on input line 1869.
 (pdftex.def)             Requested size: 233.69925pt x 191.88611pt.
- [15 <./pics/homodyne/full.pdf> <./pics/homodyne/full_fock.pdf>]
-<pics/appendix/app_2.pdf, id=611, 807.97862pt x 663.43863pt>
+ [13]
+<pics/appendix/app_2.pdf, id=459, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_2.pdf Graphic file (type pdf)
 <use pics/appendix/app_2.pdf>
-Package pdftex.def Info: pics/appendix/app_2.pdf  used on input line 2041.
+Package pdftex.def Info: pics/appendix/app_2.pdf  used on input line 1961.
 (pdftex.def)             Requested size: 233.69925pt x 191.88611pt.
- [16 <./pics/appendix/app_1.pdf> <./pics/appendix/app_2.pdf>] (preprint.bbl [17]
+ [14 <./pics/homodyne/full.pdf> <./pics/homodyne/full_fock.pdf> <./pics/appendix/app_1.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 1998.
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 2011--2013
+[]\T1/cmr/m/n/10 Alice pre-pares an en-sem-ble of co-her-ent states
+ []
+
+[15 <./pics/appendix/app_2.pdf>] (preprint.bbl
 Underfull \hbox (badness 1237) in paragraph at lines 152--159
  \T1/cmr/m/n/9 A. Kozubov, []Intermode-interaction-induced dy-nam-ics
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 418--424
  \T1/cmr/m/n/9 Homodyne-detector-blinding at-tack in continuous-
  []
 
-[18]) [19] (preprint.aux)
+) [17] (preprint.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9363 strings out of 468132
- 155075 string characters out of 5430208
- 603959 words of memory out of 5000000
- 37830 multiletter control sequences out of 15000+600000
+ 9310 strings out of 468132
+ 153515 string characters out of 5430208
+ 599770 words of memory out of 5000000
+ 37777 multiletter control sequences out of 15000+600000
  644648 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,79p,1377b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on preprint.pdf (19 pages, 1283197 bytes).
+Output written on preprint.pdf (17 pages, 1191452 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
+ 629 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
