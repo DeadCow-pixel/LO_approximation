@@ -1264,7 +1264,7 @@ from symplectic eigenvalues of which we will calculate Eve's entropy, $S_{\ind{E
 To calculate conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$, we will apply partial measurements formula~\cite{Serafini:bk:2017}, which for $\Sigma_{\ind{AB}}^{(m)}$ takes the form
 \begin{align}
   \label{eq:serf-a|b}
-        \Sigma_{A|B}^{(m)}=
+        \Sigma_{\ind{A|B}}^{(m)}=
         a\mathbb{I}-c^2\sigma_z(V_{\ind{B}}\mathbb{I}+\Pi^{(m)})^{-1}\sigma_z,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
     \end{align}
 For homodyne detection, we arrite at symplectic eigenvalue
@@ -1296,7 +1296,15 @@ with appropriate substitution of $\nu_i$ depending on the measurement scheme, an
 \end{equation}
 where $\beta$ is the reconciliation efficiency.
 
-\textcolor{red}{Note that Holevo information for double homodyne detection is explicitly dependent on squeezing parameter $r$ that lies in the interval~\eqref{eq:r1-r2}. For calculations, we will numerically find $r$ that maximizes Holevo information. More context...}
+Note that, in the case of double homodyne detection, $S_{\ind{AB}}$ and thereby $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r$ that lies in the interval~\eqref{eq:r1-r2}. Moreover, as illustated by Fig~\ref{fig:Entropy}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth, ]{pics\S_AB.pdf}
+  \caption{a}\label{fig:Entropy}
+\end{figure}
+
+
+\textcolor{red}{For calculations, we will numerically optimize $r$ to maximize $\chi_{\ind{EB}}$. }
 
 The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection. \textcolor{red}{Our numerical results for the homodyne case are inconsistent 
 with Ref.~\cite{ruiz2023effects}: the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation is maximal for the symmetric case, but our results suggest otherwise. This is due our attribution of asymmetry noise to $S_{\ind{A|B}}$, while in Ref.~\cite{ruiz2023effects} it is atributted to Eve, modifying $S_{\ind{AB}}$. Add York!}
