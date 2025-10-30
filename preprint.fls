@@ -183,7 +183,6 @@ INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Ася\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0900.tfm
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1000.tfm
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 OUTPUT preprint.pdf
 INPUT C:\Users\Ася\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
@@ -241,7 +240,12 @@ INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0900.tfm
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
@@ -346,6 +350,7 @@ INPUT .\pics\appendix\app_2.pdf
 INPUT .\preprint.bbl
 INPUT .\preprint.bbl
 INPUT preprint.bbl
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0900.tfm
 INPUT preprint.aux
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
@@ -401,8 +406,6 @@ INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx0900.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx0900.pfb
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1000.pfb
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1000.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1200.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1200.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfrm0600.pfb
