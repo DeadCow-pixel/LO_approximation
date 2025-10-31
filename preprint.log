@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.3)  28 OCT 2025 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.11)  31 OCT 2025 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/LO_approximation-1/preprint.tex
-(c:/LO_approximation-1/preprint.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-08-13>
-(C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/revtex\revtex4-2.cls
+**/Users/goncharov/Documents/itmo/science/cv/work/articles/LO_approximation/preprint.tex
+(/Users/goncharov/Documents/itmo/science/cv/work/articles/LO_approximation/preprint.tex
+LaTeX2e <2025-06-01>
+L3 programming layer <2025-05-26>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/revtex/revtex4-2.cls
 Document Class: revtex4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
  Copyright (c) 2019 American Physical Society.
  mailto:revtex@aps.org
@@ -62,19 +62,19 @@ Class revtex4-2 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and 
 \widetext@top=\box66
 \widetext@bot=\box67
 Class revtex4-2 Info: Selecting society aps on input line 7669.
-(C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/revtex\aps4-2.rtx
+(/usr/local/texlive/2022/texmf-dist/tex/latex/revtex/aps4-2.rtx
 File: aps4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
 Class revtex4-2 Info: RevTeX society APS selected on input line 40.
 )
 Class revtex4-2 Info: Selecting journal pra on input line 7671.
 Class revtex4-2 Info: APS journal PRA selected on input line 7672.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/revtex\aps10pt4-2.rtx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
 File: aps10pt4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
 Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 39.
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2025/02/16 v1.05 Text only upper/lower case changing (DPC)
 Package textcase Info: Defining Legacy names on input line 20.
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks19
 \symAMSa=\mathgroup4
@@ -82,25 +82,25 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/05/18 v2.17x AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen148
 )
 LaTeX Info: Redefining \text on input line 28.
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen149
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count290
@@ -150,10 +150,10 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip54
 \bibsep=\skip55
@@ -161,62 +161,56 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count302
 )
 Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7676.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/revtex\revsymb4-2.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/revtex/revsymb4-2.sty
 Package: revsymb4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
 LaTeX Info: Redefining \frak on input line 104.
 LaTeX Info: Redefining \Bbb on input line 120.
 LaTeX Info: Redefining \REV@mathfrak on input line 128.
-)) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/05/14 v25.9 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
 \babel@savecnt=\count303
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2050.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2043.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2045.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2047.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2048.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2049.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2076.
 \U@D=\dimen157
-\l@unhyphenated=\language79
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\l@unhyphenated=\language90
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count304
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 12.
+(babel)             from babel-en.ini. Reported on input line 11.
 )
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
+(babel)             (\language22). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
-)) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(babel)             (\language22). Reported on input line 108.
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/ucs\utf8x.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
 
 
 Package ucs Info: utf8x disabled, assuming standard utf8 processing
 (ucs)             load ucs package to force utf8x processing.
 
-(C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\utf8.def
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2022/06/07 v1.3c UTF-8 support
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\omsenc.dfu
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -227,7 +221,7 @@ File: omsenc.dfu 2022/06/07 v1.3c UTF-8 support
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\ot1enc.dfu
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -275,7 +269,7 @@ File: ot1enc.dfu 2022/06/07 v1.3c UTF-8 support
 )
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\t1enc.dfu
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -554,7 +548,7 @@ File: t1enc.dfu 2022/06/07 v1.3c UTF-8 support
 )
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1enc.dfu
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -646,9 +640,9 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
    defining Unicode char U+FEFF (decimal 65279)
-))) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks27
 \thm@bodyfont=\toks28
@@ -659,12 +653,12 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip57
 \thm@headsep=\skip58
 \dth@everypar=\toks32
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks33
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count305
 \calc@Bcount=\count306
@@ -676,7 +670,7 @@ LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count307
 \calc@Cskip=\skip61
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count308
@@ -690,42 +684,42 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen166
 \xmathstrut@box=\box70
 \xmathstrut@dim=\dimen167
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip63
 \multirow@cntb=\count309
 \multirow@dima=\skip64
 \bigstrutjot=\dimen170
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count310
 \float@exts=\toks34
 \float@box=\box71
 \@float@everytoks=\toks35
 \@floatcapt=\box72
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen171
 \captionmargin=\dimen172
@@ -752,9 +746,9 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count313
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count314
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul-ori.sty
 Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@word=\toks36
 \SOUL@lasttoken=\toks37
@@ -776,19 +770,19 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen185
 \SOUL@uldp=\dimen186
 \SOUL@ulht=\dimen187
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-))) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document class! (Proceeding with fingers crossed.) on input line 112.
 
 
@@ -797,10 +791,10 @@ Class revtex4-2 Warning: Repair the float package.
 Class revtex4-2 Info: cite was not loaded (OK!) on input line 112.
 Class revtex4-2 Info: mcite was not loaded (OK!) on input line 112.
 Class revtex4-2 Info: multicol was not loaded (OK!) on input line 112.
-(C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count319
-) (preprint.aux)
+) (./preprint.aux)
 \openout1 = `preprint.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
@@ -817,7 +811,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
 LaTeX Font Info:    ... okay on input line 112.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
 LaTeX Font Info:    ... okay on input line 112.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count320
 \scratchdimen=\dimen188
@@ -830,40 +824,40 @@ LaTeX Font Info:    ... okay on input line 112.
 \MPnumerator=\count324
 \makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks43
-) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout3 = `preprintNotes.bib'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 149.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 149.
- (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1{C:/Users/Ася/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Underfull \hbox (badness 4416) in paragraph at lines 173--174
+)
+Underfull \hbox (badness 2401) in paragraph at lines 162--163
+[]\T1/cmr/m/n/10 Another im-por-tant ap-proach is double-homodyne
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 167--171
+[]\T1/cmr/m/n/10 Although the ideal POVMs for pro-jec-tions onto
+ []
+
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Underfull \hbox (badness 4416) in paragraph at lines 178--179
 []\T1/cmr/m/n/10 We then ap-ply the de-vel-oped for-mal-ism to a
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 173--174
-\T1/cmr/m/n/10 homodyne-based two-quadrature scheme (dou-ble ho-
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 175--176
-[]\T1/cmr/m/n/10 We also show that the com-monly used Skellam-
  []
 
 <pics/schemes/homodyne.pdf, id=18, 245.5815pt x 242.24803pt>
@@ -915,42 +909,42 @@ Underfull \hbox (badness 3701) in paragraph at lines 1111--1116
  []
 
 [7 <./tikz_article.pdf>] [8]
-<pics/untrust/hom/IAB.pdf, id=215, 182.36246pt x 167.11168pt>
+<pics/untrust/hom/IAB.pdf, id=216, 182.36246pt x 167.11168pt>
 File: pics/untrust/hom/IAB.pdf Graphic file (type pdf)
 <use pics/untrust/hom/IAB.pdf>
 Package pdftex.def Info: pics/untrust/hom/IAB.pdf  used on input line 1309.
 (pdftex.def)             Requested size: 153.00156pt x 140.20709pt.
-<pics/untrust/hom/chi.pdf, id=216, 182.36246pt x 167.11168pt>
+<pics/untrust/hom/chi.pdf, id=217, 182.36246pt x 167.11168pt>
 File: pics/untrust/hom/chi.pdf Graphic file (type pdf)
 <use pics/untrust/hom/chi.pdf>
 Package pdftex.def Info: pics/untrust/hom/chi.pdf  used on input line 1314.
 (pdftex.def)             Requested size: 153.00156pt x 140.20709pt.
-<pics/untrust/hom/r.pdf, id=217, 182.36246pt x 167.11168pt>
+<pics/untrust/hom/r.pdf, id=218, 182.36246pt x 167.11168pt>
 File: pics/untrust/hom/r.pdf Graphic file (type pdf)
 <use pics/untrust/hom/r.pdf>
 Package pdftex.def Info: pics/untrust/hom/r.pdf  used on input line 1319.
 (pdftex.def)             Requested size: 153.00156pt x 140.20709pt.
-<pics/trust/dhom/IAB.pdf, id=218, 199.05992pt x 170.7649pt>
+<pics/trust/dhom/IAB.pdf, id=219, 199.05992pt x 170.7649pt>
 File: pics/trust/dhom/IAB.pdf Graphic file (type pdf)
 <use pics/trust/dhom/IAB.pdf>
 Package pdftex.def Info: pics/trust/dhom/IAB.pdf  used on input line 1330.
 (pdftex.def)             Requested size: 153.00156pt x 131.26006pt.
-<pics/untrust/dhom/chi.pdf, id=219, 193.185pt x 170.7649pt>
+<pics/untrust/dhom/chi.pdf, id=220, 193.185pt x 170.7649pt>
 File: pics/untrust/dhom/chi.pdf Graphic file (type pdf)
 <use pics/untrust/dhom/chi.pdf>
 Package pdftex.def Info: pics/untrust/dhom/chi.pdf  used on input line 1335.
 (pdftex.def)             Requested size: 153.00156pt x 135.25194pt.
-<pics/untrust/dhom/r.pdf, id=220, 193.185pt x 170.7649pt>
+<pics/untrust/dhom/r.pdf, id=221, 193.185pt x 170.7649pt>
 File: pics/untrust/dhom/r.pdf Graphic file (type pdf)
 <use pics/untrust/dhom/r.pdf>
 Package pdftex.def Info: pics/untrust/dhom/r.pdf  used on input line 1340.
 (pdftex.def)             Requested size: 153.00156pt x 135.25194pt.
-<pics/untrust/hom/r(l).pdf, id=221, 237.43185pt x 193.73996pt>
+<pics/untrust/hom/r(l).pdf, id=222, 237.43185pt x 193.73996pt>
 File: pics/untrust/hom/r(l).pdf Graphic file (type pdf)
 <use pics/untrust/hom/r(l).pdf>
 Package pdftex.def Info: pics/untrust/hom/r(l).pdf  used on input line 1351.
 (pdftex.def)             Requested size: 229.49844pt x 187.27124pt.
-<pics/untrust/dhom/r(l).pdf, id=222, 239.2345pt x 195.62881pt>
+<pics/untrust/dhom/r(l).pdf, id=223, 239.2345pt x 195.62881pt>
 File: pics/untrust/dhom/r(l).pdf Graphic file (type pdf)
 <use pics/untrust/dhom/r(l).pdf>
 Package pdftex.def Info: pics/untrust/dhom/r(l).pdf  used on input line 1356.
@@ -965,44 +959,44 @@ Underfull \hbox (badness 1418) in paragraph at lines 1473--1474
 [][]\T1/cmr/m/n/10 Despite the ex-is-tence of coun-ter-mea-sures for the
  []
 
-<pics/homodyne/ED = ED(a)_eta.pdf, id=349, 816.65097pt x 672.11098pt>
+<pics/homodyne/ED = ED(a)_eta.pdf, id=351, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(a)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(a)_eta.pdf>
 Package pdftex.def Info: pics/homodyne/ED = ED(a)_eta.pdf  used on input line 1556.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-<pics/homodyne/ED = ED(aL)_eta.pdf, id=350, 816.65097pt x 672.11098pt>
+<pics/homodyne/ED = ED(aL)_eta.pdf, id=352, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ED = ED(aL)_eta.pdf Graphic file (type pdf)
 <use pics/homodyne/ED = ED(aL)_eta.pdf>
 Package pdftex.def Info: pics/homodyne/ED = ED(aL)_eta.pdf  used on input line 1561.
 (pdftex.def)             Requested size: 249.9028pt x 205.66528pt.
-<pics/homodyne/ed(eta2).pdf, id=351, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta2).pdf, id=353, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta2).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta2).pdf>
 Package pdftex.def Info: pics/homodyne/ed(eta2).pdf  used on input line 1575.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
-<pics/homodyne/ed(eta1).pdf, id=352, 816.65097pt x 672.11098pt>
+<pics/homodyne/ed(eta1).pdf, id=354, 816.65097pt x 672.11098pt>
 File: pics/homodyne/ed(eta1).pdf Graphic file (type pdf)
 <use pics/homodyne/ed(eta1).pdf>
 Package pdftex.def Info: pics/homodyne/ed(eta1).pdf  used on input line 1580.
 (pdftex.def)             Requested size: 229.49844pt x 188.8769pt.
 [11 <./pics/untrust/hom/r(l).pdf> <./pics/untrust/dhom/r(l).pdf>] [12 <./pics/homodyne/ED = ED(a)_eta.pdf> <./pics/homodyne/ED = ED(aL)_eta.pdf> <./pics/homodyne/ed(eta2).pdf> <./pics/homodyne/ed(eta1).pdf>]
-<pics/homodyne/full.pdf, id=452, 808.39723pt x 652.25604pt>
+<pics/homodyne/full.pdf, id=455, 808.39723pt x 652.25604pt>
 File: pics/homodyne/full.pdf Graphic file (type pdf)
 <use pics/homodyne/full.pdf>
 Package pdftex.def Info: pics/homodyne/full.pdf  used on input line 1699.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-<pics/homodyne/full_fock.pdf, id=453, 808.39723pt x 652.25604pt>
+<pics/homodyne/full_fock.pdf, id=456, 808.39723pt x 652.25604pt>
 File: pics/homodyne/full_fock.pdf Graphic file (type pdf)
 <use pics/homodyne/full_fock.pdf>
 Package pdftex.def Info: pics/homodyne/full_fock.pdf  used on input line 1704.
 (pdftex.def)             Requested size: 229.49844pt x 185.16837pt.
-<pics/appendix/app_1.pdf, id=454, 807.97862pt x 663.43863pt>
+<pics/appendix/app_1.pdf, id=457, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_1.pdf Graphic file (type pdf)
 <use pics/appendix/app_1.pdf>
 Package pdftex.def Info: pics/appendix/app_1.pdf  used on input line 1869.
 (pdftex.def)             Requested size: 233.69925pt x 191.88611pt.
  [13]
-<pics/appendix/app_2.pdf, id=459, 807.97862pt x 663.43863pt>
+<pics/appendix/app_2.pdf, id=463, 807.97862pt x 663.43863pt>
 File: pics/appendix/app_2.pdf Graphic file (type pdf)
 <use pics/appendix/app_2.pdf>
 Package pdftex.def Info: pics/appendix/app_2.pdf  used on input line 1961.
@@ -1016,34 +1010,35 @@ Underfull \hbox (badness 5231) in paragraph at lines 2011--2013
 []\T1/cmr/m/n/10 Alice pre-pares an en-sem-ble of co-her-ent states
  []
 
-[15 <./pics/appendix/app_2.pdf>] (preprint.bbl
-Underfull \hbox (badness 1237) in paragraph at lines 152--159
+[15 <./pics/appendix/app_2.pdf>] (./preprint.bbl
+Underfull \hbox (badness 1237) in paragraph at lines 72--73
  \T1/cmr/m/n/9 A. Kozubov, []Intermode-interaction-induced dy-nam-ics
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 418--424
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
  \T1/cmr/m/n/9 Homodyne-detector-blinding at-tack in continuous-
  []
 
-) [17] (preprint.aux)
+) [17] (./preprint.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-08-13>
+LaTeX2e <2025-06-01>
+L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9310 strings out of 468132
- 153515 string characters out of 5430208
- 599770 words of memory out of 5000000
- 37777 multiletter control sequences out of 15000+600000
+ 9300 strings out of 467886
+ 151837 string characters out of 5434039
+ 596853 words of memory out of 5000000
+ 37710 multiletter control sequences out of 15000+600000
  644648 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,79p,1377b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on preprint.pdf (17 pages, 1191452 bytes).
+ 71i,16n,79p,1629b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on preprint.pdf (17 pages, 993483 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 496 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
