@@ -239,6 +239,12 @@ INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
+INPUT .\pics\S_AB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
@@ -287,7 +293,6 @@ INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1000.tfm
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
@@ -401,8 +406,6 @@ INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx0900.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx0900.pfb
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1000.pfb
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1000.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1200.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfbx1200.pfb
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfrm0600.pfb
