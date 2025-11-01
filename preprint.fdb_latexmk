@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex preprint"] 1761815288.47488 "preprint.aux" "preprint.bbl" "preprint" 1761815399.02213 0
+["bibtex preprint"] 1762034337.27556 "preprint.aux" "preprint.bbl" "preprint" 1762034344.29333 0
   "./homodyne.bib" 1751645257 45879 1269261e30caa5aa8600d70e932367e8 ""
   "./math.bib" 1751645257 28710 3b9b5a701feb6e90ee46f59bfc0b2618 ""
-  "./preprintNotes.bib" 1761815396 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+  "./preprintNotes.bib" 1762034341 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "./quant.bib" 1751645257 336053 c0681c68709a4d08b74c95faf07d7cab ""
-  "./refs.bib" 1753173558 20257 7ec6f9e1a4ac7019c51091037668b646 ""
+  "./refs.bib" 1762033013 20760 806c0c928eb95f38aa71b74ac5533eb7 ""
   "C:/Users/РђСЃСЏ/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex/apsrev4-2.bst" 0 -1 0 ""
-  "preprint.aux" 1761815396 20048 91cfff7af9c0537e5ff5b61058cc5401 "pdflatex"
+  "preprint.aux" 1762034341 19887 ffa2b4a81d92d49fa3ca94d4a3f8982b "pdflatex"
   (generated)
   "preprint.bbl"
   "preprint.blg"
   (rewritten before read)
-["pdflatex"] 1761815392.41504 "c:/LO_approximation-1/preprint.tex" "preprint.pdf" "preprint" 1761815399.02313 0
+["pdflatex"] 1762034337.68585 "c:/LO_approximation-1/preprint.tex" "preprint.pdf" "preprint" 1762034344.29445 0
   "C:/Users/Ася/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1761621438 362143 74273436a7d77f4e59d46a12d1f8e73a ""
   "C:/Users/Ася/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1751636171 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Ася/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1751636173 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -19,6 +19,7 @@
   "C:/Users/Ася/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1756892093 13257867 49b560978dab1d7347aa0497a50a1189 ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1001775420 2971 def0b6c1f0b107b3b936def894055589 ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx0900.tfm" 993061954 3200 f959f56c26f697d341ba38dba18fe1f8 ""
+  "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx1000.tfm" 993061956 3200 328792ff19833a39406f06fa0555a6dc ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm0600.tfm" 993062116 3160 116e21835795bb29209ae8bb4682382f ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm0700.tfm" 993062116 3168 c739b83da3134ef1007979877c1089cf ""
@@ -81,6 +82,7 @@
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb" 1215618300 143961 fe73b0de40bc9eebafe5b31a39c455e0 ""
+  "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1000.pfb" 1215618300 145408 bcd327f112f643a875638eafb48d1d8b ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb" 1215618300 140176 d0f50dba675c56d445f84a32c1f93a79 ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb" 1215618300 162624 077de688981132fb8efe9feeb03a998c ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb" 1215618300 154599 111aa29c1b43dc5b4a8516224bf12bac ""
@@ -149,8 +151,7 @@
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1749468414 10374 2ffd4f27c7f90b8a300608069537743c ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/tex/latex/ucs/utf8x.def" 1700127473 8944 e3433baec74c4b7b278c6b6a547ff9ec ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/LO_approximation-1/preprint.tex" 1761815391 91741 5207015abad2b1f1b9e88f827b3eb71f ""
-  "pics/S_AB.pdf" 1761811376 232622 f067720c2f3f304b382168f58e2f1f5d ""
+  "c:/LO_approximation-1/preprint.tex" 1762033275 92312 a578fac4b4a8071ca8736aad0efea89b ""
   "pics/appendix/app_1.pdf" 1751645257 100641 76c3a7e947d49362749f9ba9f2387c60 ""
   "pics/appendix/app_2.pdf" 1751645257 100269 feff01ef169437123095d8227a50bd57 ""
   "pics/double-homodyne/10.510.5.pdf" 1751645257 100013 c404c06cb6257997555c38f9aa04a3f4 ""
@@ -174,9 +175,9 @@
   "pics/untrust/hom/chi.pdf" 1761639855 199590 aada81b8d9a216f02b14a680b4be5293 ""
   "pics/untrust/hom/r(l).pdf" 1761639856 231110 7ff2ae0a9b273f72297397021c2dcebc ""
   "pics/untrust/hom/r.pdf" 1761639855 199587 d40c1e8c44ac3f517bbcc0cd8b3e52c1 ""
-  "preprint.aux" 1761815396 20048 91cfff7af9c0537e5ff5b61058cc5401 "pdflatex"
-  "preprint.bbl" 1761815288 36694 bc20e1811d3ae3ca5906155a4cffb416 "bibtex preprint"
-  "preprint.tex" 1761815391 91741 5207015abad2b1f1b9e88f827b3eb71f ""
+  "preprint.aux" 1762034341 19887 ffa2b4a81d92d49fa3ca94d4a3f8982b "pdflatex"
+  "preprint.bbl" 1762034337 37399 4baebb077beba1e26efff7d93c45626c "bibtex preprint"
+  "preprint.tex" 1762033275 92312 a578fac4b4a8071ca8736aad0efea89b ""
   "tikz_article.pdf" 1751645257 95427 6910e9fe3713ad0b08bdcd47cb473db9 ""
   (generated)
   "preprint.aux"
