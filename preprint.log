@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.10)  29 JUL 2025 21:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.3)  2 NOV 2025 02:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **c:/LO_approximation-1/preprint.tex
 (c:/LO_approximation-1/preprint.tex
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-06-09>
+L3 programming layer <2025-08-13>
 (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/latex/revtex\revtex4-2.cls
 Document Class: revtex4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for documentation)
  Copyright (c) 2019 American Physical Society.
@@ -167,15 +167,15 @@ LaTeX Info: Redefining \frak on input line 104.
 LaTeX Info: Redefining \Bbb on input line 120.
 LaTeX Info: Redefining \REV@mathfrak on input line 128.
 )) (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/05/14 v25.9 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count303
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2043.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2045.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2047.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2048.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2049.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2051.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2076.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2050.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
 \U@D=\dimen157
 \l@unhyphenated=\language79
  (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
@@ -191,7 +191,7 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of 
 Language: english 2017/06/06 v3.3r English support from the babel system
  (C:\Users\Ася\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
 Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 11.
+(babel)             from babel-en.ini. Reported on input line 12.
 )
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -1029,19 +1029,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 609--615
 ) [18] (preprint.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-06-09>
+L3 programming layer <2025-08-13>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9338 strings out of 468220
- 153697 string characters out of 5432386
- 597599 words of memory out of 5000000
- 37707 multiletter control sequences out of 15000+600000
+ 9341 strings out of 468132
+ 153741 string characters out of 5430208
+ 600950 words of memory out of 5000000
+ 37798 multiletter control sequences out of 15000+600000
  648181 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,79p,1380b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti0900.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1000.pfb><C:/Users/Ася/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on preprint.pdf (18 pages, 1168604 bytes).
+Output written on preprint.pdf (18 pages, 1168588 bytes).
 PDF statistics:
  642 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
