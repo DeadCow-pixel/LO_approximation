@@ -1033,6 +1033,7 @@ and $\sigma_{x}^{(2)}$
 (see Eq.~\eqref{eq:sigm-x-i})
 that cannot be smaller than unity
 (see Eq.~\eqref{eq:sigma-x-min-i}): $\sigma_x^{(i)}\ge 1$.
+Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement noise part of POVM covariance matrix $\Sigma^{\ind{DH}}=\ind{diag}(\delta_1,\delta_2)$ being positive, which will become relevant in next section.
 
 In our subsequent analysis,
 we assume without the loss of generality
@@ -1203,27 +1204,26 @@ If Bob uses double-homodyne detection, mutual information takes the form
 where $\sigma_i$ are given by Eq.~\eqref{eq:sigm-x-i}.
 The details of these derivations are given in Appendix~\ref{sec:MI-and-EBtoPm}.
 
-Next, we compute the Holevo information in the untrusted-noise scenario, in which detection imperfections are modeled as additional noise accessible to the eavesdropper (Eve). Consequently, this noise contribution effectively augments the quantum-channel parameters, increasing Eve’s accessible information.
+Next, we compute the Holevo information in the untrusted-noise scenario, in which detection imperfections are modeled as additional noise accessible to the eavesdropper (Eve). We assume that Eve controls a Gaussian channel that modifies only the covariance matrix, leaving the mean unchanged, while Bob’s measurements are considered ideal. %This additional noise effectively enhances the quantum channel parameters, thereby increasing the information accessible to Eve. %Consequently, this noise contribution effectively augments the quantum-channel parameters, increasing Eve’s accessible information.
 
 To do so, we need covariance matrices of POVMs used, which can be deduced from the $Q$-symbols of homodyne~\eqref{eq:Pgood-w-def} and double-homodyne~\eqref{eq:P_G-x1x2} detection as
 \begin{align}
   \label{eq:Pi_h}
-  &\Pi^{\ind{H}}=\pi_{qp}\left(\cdot\right)\pi_{qp}+\sigma_N\pi_{qp}\equiv \Pi_0^{\ind{H}}+\Pi_N^{\ind{H}},\\
+  &\Sigma^{\ind{H}}=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})+\sigma_N\mathbb{I}\right]R_\phi\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},\\
   \label{eq:Pi_dh}
-  &\Pi^{\ind{DH}}=
+  &\Sigma^{\ind{DH}}=
     \begin{pmatrix}
       e^{2r}&0\\0&e^{-2r}
-    \end{pmatrix}+\notag\\
-    &\begin{pmatrix}
-        2\sigma_1-1-e^{2r}&0\\
-        0&2\sigma_2-1-e^{-2r}
-    \end{pmatrix}\equiv \Pi_0^{\ind{DH}}+\Pi_N^{\ind{DH}}
+    \end{pmatrix}+
+    \begin{pmatrix}
+        \delta_1-e^{2r}&0\\
+        0&\delta_2-e^{-2r}
+    \end{pmatrix}\notag\\ &\equiv \Sigma_0^{\ind{DH}}+\Sigma_N^{\ind{DH}}
 \end{align} 
-% where we defined covariance matrices of ideal measurement $\Pi_0^{\ind{(m)}}$ and noise $\Pi_N^{\ind{(m)}}$, $m\in\{\ind{H},\ind{DH}\}$, and $\pi_q=\ind{diag}(1,0)$ and $\pi_p=\ind{diag}(0,1)$ are projectors onto respective quadratures.
-where $\Pi_0^{\ind{(m)}}$ and $\Pi_N^{\ind{(m)}}$ ($m\in\{\ind{H},\ind{DH}\}$) denote the covariance matrices of the ideal measurement and the associated excess noise, respectively, while $\pi_q=\mathrm{diag}(1,0)$ and $\pi_p=\mathrm{diag}(0,1)$ project onto the corresponding quadratures.
+where $\Sigma_0^{\ind{(m)}}$ and $\Sigma_N^{\ind{(m)}}$ ($m\in\{\ind{H},\ind{DH}\}$) denote the covariance matrices of the ideal measurement and the associated excess noise, respectively, $\mathbb{I}=\ind{diag}(1,1)$, and $R_\phi$ is the rotation matrix by angle $\phi$.
+%$\pi_q=\mathrm{diag}(1,0)$ and $\pi_p=\mathrm{diag}(0,1)$ project onto the corresponding quadratures.
 
-Using the equivalence between the prepare-and-measure (PM) and entanglement-based (EB) pictures% (see App.~\ref{sec:MI-and-EBtoPm})
-, the Holevo information can be derived from the covariance matrix of the two mode squeezed vacuum (TMSV) state $\Sigma^{\ind{EB}}_{\ind{AB}}$. 
+Using the equivalence between the prepare-and-measure (PM) and entanglement-based (EB) pictures (see App.~\ref{sec:MI-and-EBtoPm}), the Holevo information can be derived from the covariance matrix of the two mode squeezed vacuum (TMSV) state $\Sigma^{\ind{EB}}_{\ind{AB}}$. 
 %It is given given by
 %\begin{align}
 %  \label{eq:TVMS}
@@ -1233,7 +1233,7 @@ Using the equivalence between the prepare-and-measure (PM) and entanglement-base
 %    \end{pmatrix},
 %\end{align}
 After transmitting through noisy channel
-(see Ref.~\cite{laudenbach2018continuous}), it reads
+(see Ref.~\cite{laudenbach2018continuous}), TMSV covariance matrix reads
 \begin{align}
   \label{eq:TVMS-final}
     &\Sigma^{\ind{EB}}_{\ind{AB}}=\begin{pmatrix}
@@ -1242,41 +1242,42 @@ After transmitting through noisy channel
     \end{pmatrix}
     \notag
     \\&\equiv\begin{pmatrix}
-        a\mathbb{I}&c\sigma_Z\\
+        V\mathbb{I}&c\sigma_Z\\
         c\sigma_Z&V_{\ind{B}}\mathbb{I}
     \end{pmatrix},
 \end{align}
-where $\mathbb{I}=\ind{diag}(1,1), \sigma_Z=\ind{diag}(1,-1)$, and
+where $\sigma_Z=\ind{diag}(1,-1)$, and
 \begin{align}
   \label{eq:V(V_A)}
     V=1+4V_{\ind{A}}.
 \end{align}
 %Note that Bob's variance $V_{\ind{B}}$ is exactly the same as Bob's variance calculated in PM protocol per Eq.~\eqref{eq:sigma-hom-def} after substituting $\sigma_x=1$, as is required to equate both protocols.
-Measurement noise modifies this covariance matrix as
+%Measurement noise modifies this covariance matrix as
+In the paradigm described previosly, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$ will be calculated from symplectic eigenvalues of the following covariance matrix:
 \begin{align}
     \label{eq:sigma_m_cov}
 \Sigma_{\ind{AB}}^{(m)}=\begin{pmatrix}
-    a\mathbb{I}&c\sigma_z\\
-    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Pi_N^{\ind{(m)}}
-\end{pmatrix},
+    V\mathbb{I}&c\sigma_z\\
+    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{\ind{(m)}}
+\end{pmatrix}.
 \end{align}
-from symplectic eigenvalues of which we can calculate Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$.
+%from symplectic eigenvalues of which we can calculate Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$.
 
-The conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$ is found via partial measurement~\cite{Serafini:bk:2017},% so $\Sigma_{\ind{AB}}^{(m)}$ takes the following form
+The conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$ is found via partial measurement formula~\cite{Serafini:bk:2017}, written for $\Sigma_{\ind{AB}}^{(m)}$ as follows:
 \begin{align}
   \label{eq:serf-a|b}
         \Sigma_{\ind{A|B}}^{(m)}=
-        a\mathbb{I}-c^2\sigma_z(V_{\ind{B}}\mathbb{I}+\Pi^{(m)})^{-1}\sigma_z,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
+        V\mathbb{I}-c^2\sigma_z(V_{\ind{B}}\mathbb{I}+\Sigma^{(m)})^{-1}\sigma_z,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
     \end{align}
-For homodyne detection,
+For homodyne detection, calculating symplectic eigenvalue of conditional covariance matrix as square root of the determinant  yields:
 \begin{align}
      \label{eq:nu3}
-     &\nu_3^{\ind{H}}=\sqrt{a\left(a-\frac{c^2}{V_{\ind{B}}+\sigma_N}\right)},
+     &\nu_3^{\ind{H}}=\sqrt{V\left(V-\frac{c^2}{V_{\ind{B}}+\sigma_N}\right)}.
  \end{align}
-while for double homodyne,
+The same calculation for double homodyne results in:
 \begin{align}
     \label{eq:nu3-dh}
-    & \nu_3^{\ind{DH}}=a\sqrt{\frac{\left(V_{\ind{B}}  + 2\sigma_1-1 - \frac{c^{2}}a\right) \left( V_{\ind{B}}  + 2\sigma_2-1 - \frac{c^{2}}a\right)}{\left( V_{\ind{B}} + 2\sigma_1-1\right) \left(V_{\ind{B}} + 2\sigma_2-1\right)}}.
+    & \nu_3^{\ind{DH}}=V\sqrt{\frac{\left(V_{\ind{B}}  + \delta_1 - \frac{c^{2}}V\right) \left( V_{\ind{B}}  + \delta_2 - \frac{c^{2}}V\right)}{\left( V_{\ind{B}} + \delta_1\right) \left(V_{\ind{B}} + \delta_2\right)}}.
 \end{align}
 
 The Holevo information is thus
@@ -1292,11 +1293,16 @@ where
 \end{align}
 with appropriate substitution of $\nu_i$ depending on the measurement scheme.
 
-Note that, in the case of double homodyne detection, $S_{\ind{AB}}$ and thereby $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r$ that lies in the interval~\eqref{eq:r1-r2}. Moreover, as illustated by Fig~\ref{fig:Entropy}, the choice of $r$ significantly affects the value of $\chi_{\ind{EB}}$. For calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
+Note that in the case of double homodyne detection, joint entropy $S_{\ind{AB}}$ and thereby Holevo information $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r\in[r_2,r_1]$~\eqref{eq:r1-r2}, as seen from the expression for covariance matrix~\eqref{eq:sigma_m_cov}. Moreover, as illustated by Fig.~\ref{fig:Entropy}, the choice of $r$ significantly affects the value of $\chi_{\ind{EB}}$.
+Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne only $r=0$ is allowed (black dot), yielding respective eigenvalues. When detection efficiencies are unity and $C_S^2 \neq 0.5$, the singular allowed value of $r$ shifts to $r=\rho \neq 0$~\eqref{eq:r-ideal}, as shown at point $\rho$ in Fig.~\ref{fig:squeezing}. In this case, the value of $S_{\ind{AB}}$ is independent of $\rho$ and determined solely by modulation variance $V_{\ind{A}}$ and channel parameters $T$ and $\xi$.
+In the symmetrical but non-ideal case (red curve), symmetrical interval $[-r_1,r_1]$ arises, and joint entropy is maximized by the midpoint $r=0$. In this case, choosing the POVM in the form of coherent state superposition~\eqref{eq:povm-hetero} is not only allowed, but optimal.
+In asymmetrical case, if $C_S^2=0.5$ (blue curve), while using $r=0$, i.e. Eq.~\eqref{eq:povm-hetero}, is possible, joint entropy is maximized by $r\neq0$. Finally, in asymmetrical case with $C_S^2\neq0.5$ (green curve), usage of $r=0$ results in one of eigenvalues being less than $1$, which is impossible. Therefore, the more general representation given by Eq.~\eqref{eq:Pi_G-gen-x1x2} must be employed.
+For calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
 \begin{figure}
   \centering
   \includegraphics[width=.75\linewidth, ]{pics/S_AB.pdf}
-  \caption{Joint entropy $S_{\ind{AB}}$ as a function of squeezing parameter $r$ for various detector efficiencies with all beam spliiters taken to be balanced.}\label{fig:Entropy}
+  \caption{Joint entropy $S_{\ind{AB}}$ as a function of squeezing parameter $r$ for various detector efficiencies. Unless specified, all beam spliiters are taken to be balanced. Parameters: $V_{\ind{A}}=1
+        , T=0.95, \xi=0.5\cdot10^{-3}$.}\label{fig:Entropy}
 \end{figure}
 
 The asymptotic secret fraction is
@@ -1307,10 +1313,12 @@ The asymptotic secret fraction is
 where $\beta$ is the reconciliation efficiency.
 
 The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection.
+From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry in homodyne detection generally degrades performance, the combination of a non-balanced beamsplitter and unequal detector efficiencies can be beneficial, resulting in maxima of the mutual information and secret fraction with given parameters. Correspondingly, the minima of the Holevo information exhibit similar behavior. % Notably, these functions are symmetric and even with shifting local minima (symmetry point).
 Our numerical results for the homodyne case are consistent 
 with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation and balanced detector deviation.
+Similar behavior can be seen from Fig.~\ref{fig:double-homodyne-all} for double homodyne. However, while mutual information in double homodyne is generally higher than in homodyne, Holevo information is significantly higher, resulting in lesser secret key fraction overall. An interesting feature illustrated by the black curves in this figure is that, under ideal detection efficiencies, variations in the beamsplitter transmission cause reduction in the Holevo information. As seen previosly in Fig.~\ref{fig:Entropy}, this is the case of joint entropy being constant in $r$ and therefore $C_S^2$ per Eq.~\eqref{eq:r-ideal}, so that only dependency of conditional entropy on asymmetry remains. Conditional entropy is reduced by asymmetry, see Eq.~\eqref{eq:nu3-dh}.
 
-The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetry noise significantly reduces maximal channel length. Note that asymmetrical double homodyne performs worse than asymmetrical homodyne, as, due to the $r$ optimization, Holevo information can be rather high. The discrepancy in our Holevo information calculations leads to results for the asymptotic secret fraction dependence under double homodyne detection that differ from those in Ref.~\cite{Bartlett:25}, although both works reach the same conclusion regarding its degraded performance.
+The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetry noise significantly reduces maximal channel length. Consistent with previous results, asymmetrical double homodyne performs worse than asymmetrical homodyne, due to Holevo information being high. The discrepancy in our Holevo information calculations leads to results for the asymptotic secret fraction dependence under double homodyne detection that differ from those in Ref.~\cite{Bartlett:25}, although both works reach the same conclusion regarding its degraded performance.
 
 \begin{figure*}
     \centering
