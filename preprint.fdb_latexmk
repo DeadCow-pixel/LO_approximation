@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex preprint"] 1763071770.27159 "preprint.aux" "preprint.bbl" "preprint" 1763071777.16089 0
+["bibtex preprint"] 1763113835.62257 "preprint.aux" "preprint.bbl" "preprint" 1763113884.52513 0
   "./homodyne.bib" 1751645257 45879 1269261e30caa5aa8600d70e932367e8 ""
   "./math.bib" 1751645257 28710 3b9b5a701feb6e90ee46f59bfc0b2618 ""
-  "./preprintNotes.bib" 1763071774 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+  "./preprintNotes.bib" 1763113881 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "./quant.bib" 1751645257 336053 c0681c68709a4d08b74c95faf07d7cab ""
   "./refs.bib" 1762041310 20760 806c0c928eb95f38aa71b74ac5533eb7 ""
   "C:/Users/РђСЃСЏ/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex/apsrev4-2.bst" 0 -1 0 ""
-  "preprint.aux" 1763071774 20270 b5b83c6216be4906d6275cffe638338d "pdflatex"
+  "preprint.aux" 1763113881 20270 c470db64bbb049523a217fc46a35b529 "pdflatex"
   (generated)
   "preprint.bbl"
   "preprint.blg"
   (rewritten before read)
-["pdflatex"] 1763071770.65532 "c:/LO_approximation-1/preprint.tex" "preprint.pdf" "preprint" 1763071777.16188 0
+["pdflatex"] 1763113877.72008 "c:/LO_approximation-1/preprint.tex" "preprint.pdf" "preprint" 1763113884.52614 0
   "C:/Users/Ася/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762766554 363741 bb136d37255168b0dbf53cb5cdf3c7f5 ""
   "C:/Users/Ася/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1751636171 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Ася/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1751636173 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -149,7 +149,7 @@
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1749468414 10374 2ffd4f27c7f90b8a300608069537743c ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/tex/latex/ucs/utf8x.def" 1700127473 8944 e3433baec74c4b7b278c6b6a547ff9ec ""
   "C:/Users/Ася/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/LO_approximation-1/preprint.tex" 1763071762 96496 066d2e6674796b0f0c70e09b0effaaaf ""
+  "c:/LO_approximation-1/preprint.tex" 1763113876 96735 9dabaf018092ce16b1ade91d3cdc0d05 ""
   "pics/S_AB.pdf" 1763057495 201996 4da5efbb27f955a15c66736fd65185f1 ""
   "pics/appendix/app_1.pdf" 1751645257 100641 76c3a7e947d49362749f9ba9f2387c60 ""
   "pics/appendix/app_2.pdf" 1751645257 100269 feff01ef169437123095d8227a50bd57 ""
@@ -174,9 +174,9 @@
   "pics/untrust/hom/chi.pdf" 1763049811 199604 a86d29308577cb88267ef32d92bd121a ""
   "pics/untrust/hom/r(l).pdf" 1763049813 230825 9bc35dff55c709cfd5e846a74e866445 ""
   "pics/untrust/hom/r.pdf" 1763049812 199581 bc56eb41bc19bb690205b25b7e750fb7 ""
-  "preprint.aux" 1763071774 20270 b5b83c6216be4906d6275cffe638338d "pdflatex"
-  "preprint.bbl" 1763071770 37399 4baebb077beba1e26efff7d93c45626c "bibtex preprint"
-  "preprint.tex" 1763071762 96496 066d2e6674796b0f0c70e09b0effaaaf ""
+  "preprint.aux" 1763113881 20270 c470db64bbb049523a217fc46a35b529 "pdflatex"
+  "preprint.bbl" 1763113836 37399 4baebb077beba1e26efff7d93c45626c "bibtex preprint"
+  "preprint.tex" 1763113876 96735 9dabaf018092ce16b1ade91d3cdc0d05 ""
   "tikz_article.pdf" 1751645257 95427 6910e9fe3713ad0b08bdcd47cb473db9 ""
   (generated)
   "preprint.aux"

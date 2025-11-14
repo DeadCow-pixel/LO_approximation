@@ -481,7 +481,6 @@ stems from Eq.~\eqref{eq:sigma-x-min}.
 \end{align}
 Note that the variance $\sigma_N$
 describes the excess noise that takes into account asymmetry effects.
-
 In the limiting case of perfect homodyne,
 we have
 \begin{equation}
@@ -492,6 +491,13 @@ which is the expected behavior for
 Eq.~\eqref{eq:theform} to hold .
 Therefore, the constructed POVM~\eqref{eq:homodyne-povm}
 is well-defined for all possible parameters of the homodyne scheme.
+
+From Eq.~\eqref{eq:Pgood-w-def} we are also able to construct POVMs~\eqref{eq:homodyne-povm} covariance matrix:
+\begin{align}
+  \label{eq:Pi_h}
+  &\Sigma^{\ind{H}}=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})+\sigma_N\mathbb{I}\right]R_\phi\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},
+\end{align}
+where $\Sigma_0^{\ind{H}}$ and $\Sigma_N^{\ind{H}}$ denote the covariance matrices of the ideal measurement and the associated excess noise, respectively, $\mathbb{I}=\ind{diag}(1,1)$, and $R_\phi$ is the rotation matrix by angle $\phi$.
 
 % \textit{The ability of the homodyne scheme to reconstruct the quadrature of the state is well known
 % (see e.g. Ref.~\cite{liu2021homodyne}), which is showcased by Eq.~\eqref{eq:homodyne-povm}.
@@ -1033,7 +1039,6 @@ and $\sigma_{x}^{(2)}$
 (see Eq.~\eqref{eq:sigm-x-i})
 that cannot be smaller than unity
 (see Eq.~\eqref{eq:sigma-x-min-i}): $\sigma_x^{(i)}\ge 1$.
-Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement noise part of POVM covariance matrix $\Sigma^{\ind{DH}}=\ind{diag}(\delta_1,\delta_2)$ being positive, which will become relevant in next section.
 
 In our subsequent analysis,
 we assume without the loss of generality
@@ -1166,6 +1171,21 @@ the corresponding POVM
 decomposed into
 the Gaussian incoherent superposition
 of the pure squeezed states explicitly depends on the value of $r$.
+
+Constructing POVM~\eqref{eq:Pi_G-gen-x1x2} covariance matrix from Eq.~\eqref{eq:P_G-gen-x1x2-2} yields
+\begin{align}
+  \label{eq:Pi_dh}
+  &\Sigma^{\ind{DH}}=
+    \begin{pmatrix}
+      e^{2r}&0\\0&e^{-2r}
+    \end{pmatrix}+
+    \begin{pmatrix}
+        \delta_1-e^{2r}&0\\
+        0&\delta_2-e^{-2r}
+    \end{pmatrix}\notag\\ &\equiv \Sigma_0^{\ind{DH}}+\Sigma_N^{\ind{DH}},
+\end{align}
+where, similarly to Eq.~\eqref{eq:Pi_h}, we defined matrices of perfect measurement $\Sigma_0^{\ind{DH}}$ and excess noise $\Sigma_N^{\ind{DH}}$. Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement of $\Sigma_N^{\ind{DH}}$ being positive.
+
 Our analysis suggests that  the ambiguity (non-uniqueness) of
 the Gaussian represention~\eqref{eq:Pi_G-gen-x1x2} for the double-homodyne
 POVM is a universal feature coming into play
@@ -1178,11 +1198,10 @@ with $0<r \le r_1$.
 One of the way to make the Gaussian POVM decomposition unique
 is to place additional constraints
 on the noise variances that would fix the value of the squeeze parameter.
-For example,
-the squeeze parameter would take the minimal (maximal) value:
-$r=\min\{r_1,r_2\}$ ($r=\max\{r_1,r_2\}$)
-provided the constraint requires minimization of
-the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
+For example, the ``amount'' of noise, i.e. the product of variances $\sigma_N^{(i)}$, is maximized by the midpoint of the interval $\frac{r_1+r_2}2$.
+%the squeeze parameter would take the minimal (maximal) value: $r=\min\{r_1,r_2\}$ ($r=\max\{r_1,r_2\}$)
+%provided the constraint requires minimization of
+%the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Incorporating measurement imperfections into the GG02 CV-QKD Protocol}
 \label{sec:protocol}
@@ -1205,24 +1224,6 @@ where $\sigma_i$ are given by Eq.~\eqref{eq:sigm-x-i}.
 The details of these derivations are given in Appendix~\ref{sec:MI-and-EBtoPm}.
 
 Next, we compute the Holevo information in the untrusted-noise scenario, in which detection imperfections are modeled as additional noise accessible to the eavesdropper (Eve). We assume that Eve controls a Gaussian channel that modifies only the covariance matrix, leaving the mean unchanged, while Bob’s measurements are considered ideal. %This additional noise effectively enhances the quantum channel parameters, thereby increasing the information accessible to Eve. %Consequently, this noise contribution effectively augments the quantum-channel parameters, increasing Eve’s accessible information.
-
-To do so, we need covariance matrices of POVMs used, which can be deduced from the $Q$-symbols of homodyne~\eqref{eq:Pgood-w-def} and double-homodyne~\eqref{eq:P_G-x1x2} detection as
-\begin{align}
-  \label{eq:Pi_h}
-  &\Sigma^{\ind{H}}=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})+\sigma_N\mathbb{I}\right]R_\phi\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},\\
-  \label{eq:Pi_dh}
-  &\Sigma^{\ind{DH}}=
-    \begin{pmatrix}
-      e^{2r}&0\\0&e^{-2r}
-    \end{pmatrix}+
-    \begin{pmatrix}
-        \delta_1-e^{2r}&0\\
-        0&\delta_2-e^{-2r}
-    \end{pmatrix}\notag\\ &\equiv \Sigma_0^{\ind{DH}}+\Sigma_N^{\ind{DH}}
-\end{align} 
-where $\Sigma_0^{\ind{(m)}}$ and $\Sigma_N^{\ind{(m)}}$ ($m\in\{\ind{H},\ind{DH}\}$) denote the covariance matrices of the ideal measurement and the associated excess noise, respectively, $\mathbb{I}=\ind{diag}(1,1)$, and $R_\phi$ is the rotation matrix by angle $\phi$.
-%$\pi_q=\mathrm{diag}(1,0)$ and $\pi_p=\mathrm{diag}(0,1)$ project onto the corresponding quadratures.
-
 Using the equivalence between the prepare-and-measure (PM) and entanglement-based (EB) pictures (see App.~\ref{sec:MI-and-EBtoPm}), the Holevo information can be derived from the covariance matrix of the two mode squeezed vacuum (TMSV) state $\Sigma^{\ind{EB}}_{\ind{AB}}$. 
 %It is given given by
 %\begin{align}
@@ -1259,8 +1260,9 @@ In the paradigm described previosly, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$ w
 \Sigma_{\ind{AB}}^{(m)}=\begin{pmatrix}
     V\mathbb{I}&c\sigma_z\\
     c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{\ind{(m)}}
-\end{pmatrix}.
+\end{pmatrix},\quad m\in\{\ind{H},\ind{DH}\}
 \end{align}
+where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:Pi_h} (Eq.~\eqref{eq:Pi_dh}).
 %from symplectic eigenvalues of which we can calculate Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$.
 
 The conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$ is found via partial measurement formula~\cite{Serafini:bk:2017}, written for $\Sigma_{\ind{AB}}^{(m)}$ as follows:
