@@ -514,6 +514,7 @@ where $\Sigma_0^{\ind{H}}$ and $\Sigma_N^{\ind{H}}$ denote the covariance matric
 \caption[]{$\ket{\psi}=\ket{\alpha},\:$$\alpha=0.5$}
 \label{fig:dist_alp}
         \end{subfigure}
+        \hfill
         \begin{subfigure}[]{.45\textwidth}
  \includegraphics[width=\linewidth]{pics/homodyne/fock_distributions.pdf}
 \caption[]{$\ket{\psi}=\ket{n},\:n=1$}
@@ -547,8 +548,7 @@ using the relations
 \end{align}
 where $P_{\ket{\psi}}(\alpha)$ is the Glauber $P$ function of the quantum state
 $\ket{\psi}$.
-In Figs.~\ref{fig:dist-H}
-and~\ref{fig:delta-theta},
+In Fig.~\ref{fig:dist-H},
 we show the results computed for the single-photon Fock states
 obtained utilizing
 the well-known expression for
@@ -1316,9 +1316,8 @@ where $\beta$ is the reconciliation efficiency.
 
 The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection.
 From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry in homodyne detection generally degrades performance, the combination of a non-balanced beamsplitter and unequal detector efficiencies can be beneficial, resulting in maxima of the mutual information and secret fraction with given parameters. Correspondingly, the minima of the Holevo information exhibit similar behavior. % Notably, these functions are symmetric and even with shifting local minima (symmetry point).
-Our numerical results for the homodyne case are consistent 
-with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation and balanced detector deviation.
-Similar behavior can be seen from Fig.~\ref{fig:double-homodyne-all} for double homodyne. However, while mutual information in double homodyne is generally higher than in homodyne, Holevo information is significantly higher, resulting in lesser secret key fraction overall. An interesting feature illustrated by the black curves in this figure is that, under ideal detection efficiencies, variations in the beamsplitter transmission cause reduction in the Holevo information. As seen previosly in Fig.~\ref{fig:Entropy}, this is the case of joint entropy being constant in $r$ and therefore $C_S^2$ per Eq.~\eqref{eq:r-ideal}, so that only dependency of conditional entropy on asymmetry remains. Conditional entropy is reduced by asymmetry, see Eq.~\eqref{eq:nu3-dh}.
+Our numerical results for the homodyne case are qualitatively consistent with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation and balanced detector deviation.
+Similar behavior can be seen from Fig.~\ref{fig:double-homodyne-all} for double homodyne. However, while mutual information in double homodyne is generally higher than in homodyne, the significantly greater increase in Holevo information leads to a lower secret key fraction overall. An interesting feature illustrated by the black curves in this figure is that, under ideal detection efficiencies, variations in the beamsplitter transmission cause reduction in the Holevo information. As seen previosly in Fig.~\ref{fig:Entropy}, this is the case of joint entropy being constant in $r$ and therefore $C_S^2$ per Eq.~\eqref{eq:r-ideal}, so that only dependency of conditional entropy on asymmetry remains. Conditional entropy is reduced by asymmetry, see Eq.~\eqref{eq:nu3-dh}.
 
 The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetry noise significantly reduces maximal channel length. Consistent with previous results, asymmetrical double homodyne performs worse than asymmetrical homodyne, due to Holevo information being high. The discrepancy in our Holevo information calculations leads to results for the asymptotic secret fraction dependence under double homodyne detection that differ from those in Ref.~\cite{Bartlett:25}, although both works reach the same conclusion regarding its degraded performance.
 
@@ -1346,7 +1345,7 @@ The dependence of the asymptotic secure key rate on channel length in the presen
 \begin{figure*}
     \centering
     \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth, ]{pics/trust/dhom/IAB.pdf}
+\includegraphics[width=\linewidth, ]{pics/untrust/dhom/IAB.pdf}
 \caption[]{}%{$I_{\ind{AB}}$}
         \end{subfigure}
 \hfill
@@ -1371,6 +1370,7 @@ The dependence of the asymptotic secure key rate on channel length in the presen
 \caption[]{Homodyne detection}
 \label{fig:hom-r}
         \end{subfigure}
+        \hfill
         \begin{subfigure}[]{.45\textwidth}
  \includegraphics[width=\linewidth]{pics/untrust/dhom/r(l).pdf}
 \caption[]{Double homodyne detection}
@@ -1439,7 +1439,7 @@ We have demonstrated this by performing an analysis for
 the eight-port asymmetric  double homodyne scheme.
 For this scheme,
 we have deduced the Gaussian approximation
-(see Eqs.~\eqref{eq:Gaussian-8p}-~\eqref{eq:mu_G-i})
+(see Eqs.~\eqref{eq:Gaussian-8p}-\eqref{eq:mu_G-i})
 and the corresponding POVM expressed in terms of the
 projectors onto coherent states (see Eq.~\eqref{eq:povm-hetero}).
 As is shown in Fig.~\ref{fig:dh-statistics},
@@ -1455,7 +1455,7 @@ anisotropy of the distributions in the photocount difference plane.
 %where we will discuss how to extend our approach to
 %this case and related issues.
 
-As shown in the main text, the applicability of double homodyne POVM in the form ~\eqref{eq:povm-hetero} may be broken provided that the beam splitter for the signal mode is unbalanced. To resolve this, an extension to the set of squeezed coherent states is needed (see Eq.~\eqref{eq:Pi_G-gen-x1x2}), leading to explicit dependency of POVM on the squeezing parameter, which is not defined unambiguously, illustrated by Fig.~\ref{fig:squeezing}. This implies that there are, generally, infinitely many POVMs representing one set of the parameters of double homodyne scheme, and so the squeezing parameter needs additional rule to make the POVM well-defined. This becomes relevant in untrusted noise security analysis. Namely, while mutual information between Alice and Bob and conditional entropy in Gaussian modulated coherent states CV-QKD protocol are calculated with variances of quadrature distribution~\eqref{eq:P_G-x1x2} (see Appendix~\ref{sec:MI-and-EBtoPm} for explicit calculations), joint entropy, and thereby Holevo information, is explicitly dependent on the squeezing parameter (see Fig.~\ref{fig:Entropy}), due to the need of separating asymmetry noise from perfect measurement. We optimize the squeezing parameter to maximize Holevo information.
+As shown in the main text, the applicability of double homodyne POVM in the form ~\eqref{eq:povm-hetero} may be broken provided that the beam splitter for the signal mode is unbalanced. To resolve this, an extension to the set of squeezed coherent states is needed (see Eq.~\eqref{eq:Pi_G-gen-x1x2}), leading to explicit dependency of POVM on the squeezing parameter, which is defined by interval~\eqref{eq:r1-r2}, illustrated by Fig.~\ref{fig:squeezing}. This implies that there are, generally, infinitely many POVMs representing one set of the parameters of double homodyne scheme, and so the squeezing parameter needs additional rule to make the POVM well-defined. This becomes relevant in untrusted noise security analysis. Namely, while mutual information between Alice and Bob and conditional entropy in Gaussian modulated coherent states CV-QKD protocol are calculated with variances of quadrature distribution~\eqref{eq:P_G-x1x2} (see Appendix~\ref{sec:MI-and-EBtoPm} for explicit calculations), joint entropy, and thereby Holevo information, is explicitly dependent on the squeezing parameter (see Fig.~\ref{fig:Entropy}), due to the need of separating asymmetry noise from perfect measurement. We optimize the squeezing parameter to maximize Holevo information.
 
 %Note that, according to Appendix~\ref{sec:appendix_comparison},
 %an alternative method based on the Gaussian approximation
@@ -1551,12 +1551,13 @@ The work was supported by the Russian Science Foundation (project No. 24-11-0039
 \begin{figure*}[!htb]
   \centering
   \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=\linewidth]{pics/homodyne/ED = ED(a)_eta.pdf}
+    \includegraphics[width=.9\linewidth]{pics/homodyne/ED = ED(a)_eta.pdf}
     \caption{$|\alpha_L|=5$}
     \label{fig:amp_05}
 \end{subfigure}
+\hfill
   \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=\linewidth]{pics/homodyne/ED = ED(aL)_eta.pdf}
+    \includegraphics[width=.9\linewidth]{pics/homodyne/ED = ED(aL)_eta.pdf}
     \caption{$|\alpha|=0.5$}
     \label{fig:amp_01}
 \end{subfigure}
@@ -1569,13 +1570,14 @@ The work was supported by the Russian Science Foundation (project No. 24-11-0039
 \end{figure*}
 \begin{figure*}
     \centering
-    \begin{subfigure}[]{.45\linewidth}
+    \begin{subfigure}[b]{.45\linewidth}
 \includegraphics[width=\linewidth]{pics/homodyne/ed(eta2).pdf}
 \caption[]{$\eta_1=1$}
 \label{fig:eta1-1}
         \end{subfigure}
-\begin{subfigure}[]{.45\linewidth}
- \includegraphics[width=\linewidth]{pics/homodyne/ed(eta1).pdf}
+        \hfill
+\begin{subfigure}[b]{.45\linewidth}
+ \includegraphics[width=.97\linewidth]{pics/homodyne/ed(eta1).pdf}
  \caption[]{$\eta_2=1$}
  \label{fig:eta2-1}
 \end{subfigure}
@@ -1693,13 +1695,14 @@ the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
 
 \begin{figure*}
     \centering
-    \begin{subfigure}[]{.45\textwidth}
+    \begin{subfigure}[b]{.45\textwidth}
 \includegraphics[width=\linewidth]{pics/homodyne/full.pdf}
 \caption[]{$\ket{\psi}=\ket{\alpha},\:\alpha=0.5$}
 \label{fig:dth_alp}
         \end{subfigure}
-        \begin{subfigure}[]{.45\textwidth}
- \includegraphics[width=\linewidth]{pics/homodyne/full_fock.pdf}
+        \hfill
+        \begin{subfigure}[b]{.45\textwidth}
+ \includegraphics[width=.97\linewidth]{pics/homodyne/full_fock.pdf}
 \caption[]{$\ket{\psi}=\ket{n},\:n=1$}
 \label{fig:dth_fock}
 \end{subfigure}
@@ -1864,7 +1867,7 @@ into the normalization factor of the Gaussian approximation).
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=.95\linewidth]{pics/appendix/app_1.pdf}
+    \includegraphics[width=.75\linewidth]{pics/appendix/app_1.pdf}
     \caption{Distances, $D_P=D(\prob,\prob_G)$ and $D_S=D(P,{\prob}_G^{(s)})$, 
       between the Skellam distribution, $P$, and
       two Gaussian approximations, $\prob_G$ (see Eq.~\eqref{eq:Gaussian})
@@ -1956,7 +1959,7 @@ with the noise variance
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=.95\linewidth]{pics/appendix/app_2.pdf}
+    \includegraphics[width=.75\linewidth]{pics/appendix/app_2.pdf}
     \caption{Distances, $D_P=D(\prob,\prob_G)$ and $D_S=D(\prob,\prob_G^{(s)})$, 
       between the Skellam distribution, $P$, and
       two Gaussian approximations, $\prob_G$ (see Eq.~\eqref{eq:Gaussian})
