@@ -492,7 +492,7 @@ Eq.~\eqref{eq:theform} to hold .
 Therefore, the constructed POVM~\eqref{eq:homodyne-povm}
 is well-defined for all possible parameters of the homodyne scheme.
 
-From Eq.~\eqref{eq:Pgood-w-def} we are also able to construct POVMs~\eqref{eq:homodyne-povm} covariance matrix:
+From Eq.~\eqref{eq:Pgood-w-def} we are also able to construct POVM's~\eqref{eq:homodyne-povm} covariance matrix:
 \begin{align}
   \label{eq:Pi_h}
   &\Sigma^{\ind{H}}=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})+\sigma_N\mathbb{I}\right]R_\phi\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},
@@ -1172,7 +1172,7 @@ decomposed into
 the Gaussian incoherent superposition
 of the pure squeezed states explicitly depends on the value of $r$.
 
-Constructing POVM~\eqref{eq:Pi_G-gen-x1x2} covariance matrix from Eq.~\eqref{eq:P_G-gen-x1x2-2} yields
+Constructing POVM's~\eqref{eq:Pi_G-gen-x1x2} covariance matrix from Eq.~\eqref{eq:P_G-gen-x1x2-2} yields
 \begin{align}
   \label{eq:Pi_dh}
   &\Sigma^{\ind{DH}}=
@@ -1297,7 +1297,7 @@ with appropriate substitution of $\nu_i$ depending on the measurement scheme.
 
 Note that in the case of double homodyne detection, joint entropy $S_{\ind{AB}}$ and thereby Holevo information $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r\in[r_2,r_1]$~\eqref{eq:r1-r2}, as seen from the expression for covariance matrix~\eqref{eq:sigma_m_cov}. Moreover, as illustated by Fig.~\ref{fig:Entropy}, the choice of $r$ significantly affects the value of $\chi_{\ind{EB}}$.
 Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne only $r=0$ is allowed (black dot), yielding respective eigenvalues. When detection efficiencies are unity and $C_S^2 \neq 0.5$, the singular allowed value of $r$ shifts to $r=\rho \neq 0$~\eqref{eq:r-ideal}, as shown at point $\rho$ in Fig.~\ref{fig:squeezing}. In this case, the value of $S_{\ind{AB}}$ is independent of $\rho$ and determined solely by modulation variance $V_{\ind{A}}$ and channel parameters $T$ and $\xi$.
-In the symmetrical but non-ideal case (red curve), symmetrical interval $[-r_1,r_1]$ arises, and joint entropy is maximized by the midpoint $r=0$. In this case, choosing the POVM in the form of coherent state superposition~\eqref{eq:povm-hetero} is not only allowed, but optimal.
+In the symmetrical but non-ideal case (red curve), symmetrical interval $[-r_1,r_1]$ arises, and joint entropy is maximized by the midpoint $r=0$. In this case, choosing the POVM in the form superposition of coherent states~\eqref{eq:povm-hetero} is not only allowed, but optimal.
 In asymmetrical case, if $C_S^2=0.5$ (blue curve), while using $r=0$, i.e. Eq.~\eqref{eq:povm-hetero}, is possible, joint entropy is maximized by $r\neq0$. Finally, in asymmetrical case with $C_S^2\neq0.5$ (green curve), usage of $r=0$ results in one of eigenvalues being less than $1$, which is impossible. Therefore, the more general representation given by Eq.~\eqref{eq:Pi_G-gen-x1x2} must be employed.
 For calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
 \begin{figure}
