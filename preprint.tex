@@ -1254,7 +1254,7 @@ where $\sigma_Z=\ind{diag}(1,-1)$, and
 \end{align}
 %Note that Bob's variance $V_{\ind{B}}$ is exactly the same as Bob's variance calculated in PM protocol per Eq.~\eqref{eq:sigma-hom-def} after substituting $\sigma_x=1$, as is required to equate both protocols.
 %Measurement noise modifies this covariance matrix as
-In the paradigm described previosly, Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$ will be calculated from symplectic eigenvalues of the following covariance matrix:
+Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\ind{AB}}$ is evaluated from symplectic eigenvalues of the following covariance matrix:
 \begin{align}
     \label{eq:sigma_m_cov}
 \Sigma_{\ind{AB}}^{(m)}=\begin{pmatrix}
@@ -1303,7 +1303,7 @@ For calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
 \begin{figure}
   \centering
   \includegraphics[width=.75\linewidth, ]{pics/S_AB.pdf}
-  \caption{Joint entropy as a function of squeezing parameter $r$ for different detector efficiencies. Unless specified, all beam spliiters are taken to be balanced. Parameters: $V_{\ind{A}}=1
+  \caption{Dependence of joint entropy on squeezing parameter $r$ (See Eq.~\eqref{eq:r1-r2}) for different detector efficiencies. Unless specified, all beam spliiters are taken to be balanced. Parameters: $V_{\ind{A}}=1
         , T=0.95, \xi=0.5\cdot10^{-3}$.}\label{fig:Entropy}
 \end{figure}
 
