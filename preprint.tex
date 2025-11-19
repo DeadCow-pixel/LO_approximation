@@ -1204,7 +1204,7 @@ After transmitting through noisy channel
 (see Ref.~\cite{laudenbach2018continuous}), TMSVSs covariance matrix reads
 \begin{align}
   \label{eq:TVMS-final}
-    &\Sigma^{\ind{EB}}_{\ind{AB}}=\begin{pmatrix}
+    \Sigma^{\ind{EB}}_{\ind{AB}}&=\begin{pmatrix}
         V\mathbb{I}&\sqrt{T\left(V^2-1\right)}\sigma_Z\\
         \sqrt{T\left(V^2-1\right)}\sigma_Z&\left[T(V-1)+1+2\xi\right]\mathbb{I}
     \end{pmatrix}
@@ -1226,7 +1226,7 @@ Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\in
     \label{eq:sigma_m_cov}
 \Sigma_{\ind{AB}}^{(m)}=\begin{pmatrix}
     V\mathbb{I}&c\sigma_z\\
-    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{\ind{(m)}}
+    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{{(m)}}
 \end{pmatrix},\quad m\in\{\ind{H},\ind{DH}\}
 \end{align}
 where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:Pi_h} (Eq.~\eqref{eq:Pi_dh}).
@@ -1236,7 +1236,7 @@ The conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$ is found via partial measu
 \begin{align}
   \label{eq:serf-a|b}
         \Sigma_{\ind{A|B}}^{(m)}=
-        V\mathbb{I}-c^2\sigma_z(V_{\ind{B}}\mathbb{I}+\Sigma^{(m)})^{-1}\sigma_z,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
+        V\mathbb{I}-c^2\sigma_z(V_{\ind{B}}\mathbb{I}+\Sigma^{(m)})^{-1}\sigma_z.%,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
     \end{align}
 For homodyne detection, calculating symplectic eigenvalue of conditional covariance matrix as square root of the determinant  yields:
 \begin{align}
@@ -1252,7 +1252,7 @@ The same calculation for double homodyne results in:
 The Holevo information is thus
 \begin{align}
 \label{eq:chi}
-    &\chi_{\ind{EB}}\equiv S_{\ind{E}}-S_{\ind{E}|\ind{B}}=S_{\ind{AB}}-S_{\ind{A}|\ind{B}}\notag\\&=\sum_{i=1,2}g(\nu_i)-g(\nu_3),
+    \chi_{\ind{EB}}&\equiv S_{\ind{E}}-S_{\ind{E}|\ind{B}}=S_{\ind{AB}}-S_{\ind{A}|\ind{B}}\notag\\&=\sum_{i=1,2}g(\nu_i)-g(\nu_3),
 \end{align}
 where
 \begin{align}
