@@ -144,7 +144,7 @@ superscriptaddress,
   the beam splitters are unbalanced and the quantum efficiencies of
   the photodetectors are not identical.
 We also use the Gaussian approximation to construct
-the positive operator-valued measure (POVM) that takes into account the asymmetry effects. The results are applied to calculate the secure key rate of the GG02 protocol under an untrusted noise model. It is found that asymmetry is detrimental in this case.
+the positive operator-valued measure (POVM) that takes into account the asymmetry effects. The results are applied to calculate the asymptotic secret fraction of the GG02 protocol under an untrusted noise model. It is found that asymmetry is detrimental in this case.
 Moreover, we found that the double homodyne POVM is not uniquely defined, because the squeezing parameter, which governs the POVM, is constrained within an interval determined by the asymmetry parameters of the measurement scheme. Consequently, the Holevo information, which depends on this POVM, also varies with the squeezing parameter within this range.
 %Moreover, when the Skellam distribution is approximated using the asymptotic expansions of modified Bessel functions for large argument, the asymmetry effects lead to ill-posed Gaussian POVM.
 \end{abstract}
@@ -563,7 +563,7 @@ are depicted in Fig.~\ref{fig:dist_fock}
 and, similar to the coherent state,
 demonstrate the effect of asymmetry-induced shift.
 Another noticeable effect is that
-the probability minima between the central and side peaks
+the probability minimum between the central and side peaks
 become less pronounced.
 
 From Fig.~\ref{fig:dist-H} it becomes apparent that perfomance of Gaussian approximation worsens in presence of asymmetry, which we will quantify in Appendix~\ref{sec:appendix_numerical}.
@@ -1226,7 +1226,7 @@ Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\in
     \label{eq:sigma_m_cov}
 \Sigma_{\ind{AB}}^{(m)}=\begin{pmatrix}
     V\mathbb{I}&c\sigma_z\\
-    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{{(m)}}
+    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{(m)}
 \end{pmatrix},\quad m\in\{\ind{H},\ind{DH}\}
 \end{align}
 where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:Pi_h} (Eq.~\eqref{eq:Pi_dh}).
@@ -1246,21 +1246,21 @@ For homodyne detection, calculating symplectic eigenvalue of conditional covaria
 The same calculation for double homodyne results in:
 \begin{align}
     \label{eq:nu3-dh}
-    & \nu_3^{\ind{DH}}=V\sqrt{\frac{\left(V_{\ind{B}}  + \delta_1 - \frac{c^{2}}V\right) \left( V_{\ind{B}}  + \delta_2 - \frac{c^{2}}V\right)}{\left( V_{\ind{B}} + \delta_1\right) \left(V_{\ind{B}} + \delta_2\right)}}.
+    & \nu_3^{\ind{DH}}=V\sqrt{\frac{\left(V_{\ind{B}}  + \delta_1 - \frac{c^{2}}V\right) \left( V_{\ind{B}}  + \delta_2 - \frac{c^{2}}V\right)}{\left( V_{\ind{B}} + \delta_1\right) \left(V_{\ind{B}} + \delta_2\right)}},
 \end{align}
-
-The Holevo information is thus
+where $\delta_i=2\sigma_i-1$ per Eq.~\eqref{eq:delta_12}.
+Assuming purification attack, Holevo information is calculated as
 \begin{align}
 \label{eq:chi}
-    \chi_{\ind{EB}}&\equiv S_{\ind{E}}-S_{\ind{E}|\ind{B}}=S_{\ind{AB}}-S_{\ind{A}|\ind{B}}\notag\\&=\sum_{i=1,2}g(\nu_i)-g(\nu_3),
+    \chi_{\ind{EB}} ^{(m)}&\equiv S_{\ind{E}}-S_{\ind{E}|\ind{B}}=S_{\ind{AB}}-S_{\ind{A}|\ind{B}}\notag\\&=\sum_{i=1,2}g(\nu_i^{(m)})-g(\nu_3^{(m)}),
 \end{align}
 where
 \begin{align}
 \label{eq:g(nu)}
     g(\nu)=\frac{\nu+1}{2}\log \frac{\nu+1}{2}-
-    \frac{\nu-1}{2}\log\frac{\nu-1}{2},
+    \frac{\nu-1}{2}\log\frac{\nu-1}{2}.
 \end{align}
-with appropriate substitution of $\nu_i$ depending on the measurement scheme.
+%with appropriate substitution of $\nu_i$ depending on the measurement scheme.
 
 Note that in the case of double homodyne detection, joint entropy $S_{\ind{AB}}$ and thereby Holevo information $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r\in[r_2,r_1]$~\eqref{eq:r1-r2}, as seen from the expression for covariance matrix~\eqref{eq:sigma_m_cov}. Moreover, as illustated by Fig.~\ref{fig:Entropy}, the choice of $r$ significantly affects the value of $\chi_{\ind{EB}}$.
 Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne only $r=0$ is allowed (black dot), yielding respective eigenvalues. When detection efficiencies are unity and $C_S^2 \neq 0.5$, the singular allowed value of $r$ shifts to $r=\rho \neq 0$~\eqref{eq:r-ideal}, as shown at point $\rho$ in Fig.~\ref{fig:squeezing}. In this case, the value of $S_{\ind{AB}}$ is independent of $\rho$ and determined solely by modulation variance $V_{\ind{A}}$ and channel parameters $T$ and $\xi$.
@@ -1322,12 +1322,12 @@ The asymptotic secret fraction is
 \end{equation}
 where $\beta$ is the reconciliation efficiency.
 
-The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secure key rate are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection.
-From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry in homodyne detection generally degrades performance, the combination of an unbalanced beamsplitter and unequal detector efficiencies can be beneficial, resulting in maxima of the mutual information and secret fraction with given parameters. Correspondingly, the minima of the Holevo information exhibit similar behavior. % Notably, these functions are symmetric and even with shifting local minima (symmetry point).
+The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secret fraction are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection.
+From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry in homodyne detection generally degrades performance, the combination of an unbalanced beamsplitter and unequal detector efficiencies can be beneficial, resulting in maxima of the mutual information and secret fraction with given parameters. Correspondingly, the minima of the Holevo information exhibit similar behavior. % Notably, these functions are symmetric and even with shifting local mininimum (symmetry point).
 Our numerical results for the homodyne case are qualitatively consistent with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation and balanced detector deviation.
 Similar behavior can be seen from Fig.~\ref{fig:double-homodyne-all} for double homodyne. However, while mutual information in double homodyne is generally higher than in homodyne, the significantly greater increase in Holevo information leads to a lower secret fraction overall. An interesting feature illustrated by the black curves in this figure is that, under ideal detection efficiencies, variations in the beamsplitter transmission cause reduction in the Holevo information. As seen previosly in Fig.~\ref{fig:Entropy}, this is the case of joint entropy being constant in $r$ and therefore $C_S^2$ per Eq.~\eqref{eq:r-ideal}, so that only dependency of conditional entropy on asymmetry remains. Conditional entropy is reduced by asymmetry, see Eq.~\eqref{eq:nu3-dh}.
 
-The dependence of the asymptotic secure key rate on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetry noise significantly reduces maximal channel length. Consistent with previous results, asymmetrical double homodyne performs worse than asymmetrical homodyne, due to Holevo information being high. The discrepancy in our Holevo information calculations leads to results for the asymptotic secret fraction dependence under double homodyne detection that differ from those in Ref.~\cite{Bartlett:25}, although both works reach the same conclusion regarding its degraded performance.
+The dependence of the asymptotic secret fraction on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetry noise significantly reduces maximal channel length. Consistent with previous results, asymmetrical double homodyne performs worse than asymmetrical homodyne, due to Holevo information being high. The discrepancy in our Holevo information calculations leads to results for the asymptotic secret fraction dependence under double homodyne detection that differ from those in Ref.~\cite{Bartlett:25}, although both works reach the same conclusion regarding its degraded performance.
 
 
 
