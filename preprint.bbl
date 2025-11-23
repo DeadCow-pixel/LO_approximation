@@ -491,6 +491,14 @@
   Mathematical Functions}}}}\ (\bibinfo  {publisher} {NIST \& Cambridge
   University Press},\ \bibinfo {address} {New York},\ \bibinfo {year} {2010})\
   p.\ \bibinfo {pages} {951}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Serafini}(2017)}]{Serafini:bk:2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Serafini}},\ }\href@noop {} {{\selectlanguage {english}\emph {\bibinfo
+  {title} {Quantum Continuous Variables: A Primer of Theoretical Methods}}}}\
+  (\bibinfo  {publisher} {CRC Press, Taylor \& Francis Group},\ \bibinfo
+  {address} {Boca Raton},\ \bibinfo {year} {2017})\ p.\ \bibinfo {pages}
+  {350}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Lahti}\ \emph {et~al.}(2010)\citenamefont {Lahti},
   \citenamefont {Pellonp{\"a}{\"a}},\ and\ \citenamefont
   {Schultz}}]{lahti2010realistic}%
@@ -543,14 +551,6 @@
   {\bibinfo  {journal} {Advanced Quantum Technologies}\ }\textbf {\bibinfo
   {volume} {1}},\ \bibinfo {pages} {1800011} (\bibinfo {year}
   {2018})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Serafini}(2017)}]{Serafini:bk:2017}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Serafini}},\ }\href@noop {} {{\selectlanguage {english}\emph {\bibinfo
-  {title} {Quantum Continuous Variables: A Primer of Theoretical Methods}}}}\
-  (\bibinfo  {publisher} {CRC Press, Taylor \& Francis Group},\ \bibinfo
-  {address} {Boca Raton},\ \bibinfo {year} {2017})\ p.\ \bibinfo {pages}
-  {350}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Freyberger}\ \emph {et~al.}(1993)\citenamefont
   {Freyberger}, \citenamefont {Vogel},\ and\ \citenamefont
   {Schleich}}]{freyberger1993photon}%
