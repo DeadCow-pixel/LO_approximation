@@ -372,9 +372,11 @@
   {Bartlett}}, \bibinfo {author} {\bibfnamefont {A.~J.~M.}\ \bibnamefont
   {Wilson}}, \bibinfo {author} {\bibfnamefont {C.~J.}\ \bibnamefont
   {Chunnilall}},\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Kumar}},\ }\href {https://doi.org/10.48550/ARXIV.2510.17419} {\bibinfo
-  {title} {Detector asymmetry in continuous variable quantum key distribution}}
-  (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+  {Kumar}},\ }\bibfield  {title} {\bibinfo {title} {Detector asymmetry in
+  continuous variable quantum key distribution},\ }\href
+  {https://arxiv.org/abs/2510.17419} {\bibfield  {journal} {\bibinfo  {journal}
+  {arXiv preprint arXiv:2510.17419}\ } (\bibinfo {year} {2025})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Usenko}\ and\ \citenamefont
   {Filip}(2016)}]{usenko2016trusted}%
   \BibitemOpen

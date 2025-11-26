@@ -449,7 +449,13 @@ Its' covariance matrix takes the form~\cite{Serafini:bk:2017}:
   \label{eq:Sigma-H-0}
   \Sigma_0^{\ind{H}}=\lim_{z\to0}R_\phi^{\ind{T}}\,\ind{diag}(z,z^{-1})\,R_\phi,
 \end{align}
-where $R_\phi$ is the rotation matrix by angle $\phi$.
+where $R_\phi$ is the rotation matrix by angle $\phi$:
+\begin{align}
+  \label{eq:rotation-matrix}
+  R_\phi=\begin{pmatrix}=\cos\phi&\sin\phi\\
+    -\sin\phi&\cos\phi
+  \end{pmatrix}.
+\end{align}
 
 In a more general asymmetric case with $\eta_1\ne \eta_2$
 and $C\ne S$,
@@ -498,10 +504,16 @@ From Eq.~\eqref{eq:Pgood-w-def} % and Eq.~\eqref{eq:Sigma-H-0}
 we are also able to construct POVM's~\eqref{eq:homodyne-povm} covariance matrix:
 \begin{align}
   \label{eq:Pi_h}
-  \Sigma^{\ind{H}}&=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})+\sigma_N\mathbb{I}\right]R_\phi\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},
+  \Sigma^{\ind{H}}&=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})\right]R_\phi+\sigma_N\mathbb{I}\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},
 \end{align}
-where $\Sigma_N^{\ind{H}}$ denotes the covariance matrix of the associated excess noise, and $\mathbb{I}=\ind{diag}(1,1)$.
-
+where $\Sigma_N^{\ind{H}}$ denotes the covariance matrix of the associated excess noise:
+\begin{align}
+    \label{eq:def-sigma_h-N}
+  &\Sigma^{\ind{H}}_N=\begin{pmatrix}
+        \sigma_N&0\\
+        0&\sigma_N
+    \end{pmatrix}.
+\end{align}
 % \textit{The ability of the homodyne scheme to reconstruct the quadrature of the state is well known
 % (see e.g. Ref.~\cite{liu2021homodyne}), which is showcased by Eq.~\eqref{eq:homodyne-povm}.
 % }
@@ -558,13 +570,7 @@ Fig.~\ref{fig:dist_alp} shows that,
 in agreement with Eq.~\eqref{eq:mu_G},
 asymmetry in photodetection
 results in the shift of the probability maximum.
-Note that, at $\delta\theta=0$,
-the photocount variance~\eqref{eq:sigma_G},
-$\sigma_G=(\eta_1+\eta_2)\left|\alpha_L\right|^2/2$, and
-the quadrature variance~\eqref{eq:sigma-x},
-$\sigma_x=2/(\eta_1+\eta_2)$,
-are both invariant under transposition of the photodetectors:
-$\eta_{1}\leftrightarrow \eta_{2}$.
+%Note that, at $\delta\theta=0$, the photocount variance~\eqref{eq:sigma_G}, $\sigma_G=(\eta_1+\eta_2)\left|\alpha_L\right|^2/2$, and the quadrature variance~\eqref{eq:sigma-x}, $\sigma_x=2/(\eta_1+\eta_2)$, are both invariant under transposition of the photodetectors: $\eta_{1}\leftrightarrow \eta_{2}$.
 
 The distributions for the single-photon states
 are depicted in Fig.~\ref{fig:dist_fock}
@@ -869,7 +875,8 @@ The corresponding expression for the POVM reads
 with covariance matrix
 \begin{align}
   \label{eq:tilde-Sigma-DH}
-  \tilde\Sigma^{\ind{DH}}&=\mathbb{I}+\ind{diag}\left(\delta_1-1,\delta_2-1\right)\notag\\
+  \tilde\Sigma^{\ind{DH}}&\equiv\ind{diag}\left(\delta_1,\delta_2\right)
+  \notag\\&=\mathbb{I}+\ind{diag}\left(\delta_1-1,\delta_2-1\right)\notag\\
   &\equiv \tilde\Sigma^{\ind{DH}}_0+\tilde\Sigma^{\ind{DH}}_N.
 \end{align}
 An important point is that
@@ -993,7 +1000,20 @@ By using this squeezed state distribution instead of the coherent state one give
         0&\delta_2-e^{-2r}
     \end{pmatrix}\notag\\ &\equiv \Sigma_1^{\ind{DH}}+\Sigma_N^{\ind{DH}},
 \end{align}
-where, analogously to Eq.~\eqref{eq:tilde-Sigma-DH}, we defined matrices of perfect measurement $\Sigma_1^{\ind{DH}}$ (squeezed state covariance matrix) and excess noise $\Sigma_N^{\ind{DH}}$. % Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement of $\Sigma_N^{\ind{DH}}$ being positive.
+where, analogously to Eq.~\eqref{eq:tilde-Sigma-DH}, we defined matrices of perfect measurement $\Sigma_1^{\ind{DH}}$ (squeezed state covariance matrix) and excess noise $\Sigma_N^{\ind{DH}}$, explicitly written as
+\begin{align}
+  \label{eq:def-sigma_dh-1}
+  &\Sigma^{\ind{DH}}_1=
+    \begin{pmatrix}
+      e^{2r}&0\\0&e^{-2r}
+    \end{pmatrix},\\
+    \label{eq:def-sigma_dh-N}
+  &\Sigma^{\ind{DH}}_N=\begin{pmatrix}
+        \delta_1-e^{2r}&0\\
+        0&\delta_2-e^{-2r}
+    \end{pmatrix}.
+\end{align}
+% Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement of $\Sigma_N^{\ind{DH}}$ being positive.
 %Now, we are to require that the elements of $\Sigma_N^{\ind{DH}}$ to be positive:
 To ensure physical consistency, we require the excess noise matrix $\Sigma_N^{\ind{DH}}$
 to be positive semidefinite:
@@ -1218,12 +1238,14 @@ After transmitting through noisy channel
     \\&\equiv\begin{pmatrix}
         V\mathbb{I}&c\sigma_Z\\
         c\sigma_Z&V_{\ind{B}}\mathbb{I}
-    \end{pmatrix},
+    \end{pmatrix}, \quad \sigma_Z=\ind{diag}(1,-1)
 \end{align}
-where $\sigma_Z=\ind{diag}(1,-1)$, and
+where Alice and Bob's quadrature variances explicitly are
 \begin{align}
   \label{eq:V(V_A)}
-    V=1+4V_{\ind{A}}.
+    &V=1+4V_{\ind{A}},\\
+  \label{eq:V_B}
+    &V_{\ind{B}}=T(V-1)+1+2\xi.
 \end{align}
 %Note that Bob's variance $V_{\ind{B}}$ is exactly the same as Bob's variance calculated in PM protocol per Eq.~\eqref{eq:sigma-hom-def} after substituting $\sigma_x=1$, as is required to equate both protocols.
 %Measurement noise modifies this covariance matrix as
@@ -1235,13 +1257,27 @@ Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\in
     c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{(m)}
 \end{pmatrix},\quad m\in\{\ind{H},\ind{DH}\}
 \end{align}
-where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:Pi_h} (Eq.~\eqref{eq:Pi_dh}).
+where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:def-sigma_h-N} (Eq.~\eqref{eq:def-sigma_dh-N}). Symplectic eigenvalues of this matrix $\nu_{1,2}$ are used to calculate joint entropy $S_{\ind{AB}}$.
 %from symplectic eigenvalues of which we can calculate Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=.75\linewidth, ]{pics/S_AB.pdf}
-  \caption{Dependence of joint entropy on squeezing parameter $r$ (See Eq.~\eqref{eq:r1-r2}) for different detector efficiencies. Unless specified, all beam spliiters are taken to be balanced. Parameters: $V_{\ind{A}}=1,$ $T=0.95,$ $\xi=0.5\cdot10^{-3}$.}\label{fig:Entropy}
+  \begin{subfigure}[c]{.49\linewidth}
+ \includegraphics[width=\linewidth, ]{pics/S_AB_q1.pdf}
+\caption[]{$q=1$}
+\end{subfigure}
+\hfill
+\begin{subfigure}[c]{.49\linewidth}
+ \includegraphics[width=\linewidth, ]{pics/S_AB_qge1.pdf}
+\caption[]{$q>1$}
+\end{subfigure}
+  \caption{Dependence of joint entropy on squeezing parameter $r$ (See Eq.~\eqref{eq:r1-r2}) for different quadrature variances $\sigma_x^{(i)}$~\eqref{eq:sigm-x-i} and disbalance ratio of input beamsplitters$q$~\eqref{eq:q-param}.
+  Panel (a) shows the case of balanced input beamsplitter, while panel (b) corresponds to unbalanced case. All other beamsplitters are taken to be balanced.
+  %Black dots represent the case where all efficiencies are equal to unity, $\eta_j^{(i)}=1$.
+  %Red curves represent non-ideal symmetrical homodyne% with all efficiencies being equal and lesser than $1$
+  %, $\eta_j^{(i)}=0.95$. Blue curves represent the case of homodynes constituting %making up 
+  %the scheme being nonideal and symmetrical, but not identical: $\eta_j^{(1)}=0.75$ and $\eta_j^{(1)}=0.9$.
+  Channel parameters: $V_{\ind{A}}=1,$ $T=0.95,$ $\xi=0.5\cdot10^{-3}$.}\label{fig:Entropy}
 \end{figure}
 \begin{figure*}
     \centering
@@ -1316,9 +1352,12 @@ where
 %with appropriate substitution of $\nu_i$ depending on the measurement scheme.
 
 Note that in the case of double homodyne detection, joint entropy $S_{\ind{AB}}$ and thereby Holevo information $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r\in[r_2,r_1]$~\eqref{eq:r1-r2}, as seen from the expression for covariance matrix~\eqref{eq:sigma_m_cov}. Moreover, as illustated by Fig.~\ref{fig:Entropy}, the choice of $r$ significantly affects the value of $\chi_{\ind{EB}}$.
-Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne only $r=0$ is allowed (black dot), yielding respective eigenvalues. When detection efficiencies are unity and $C_S^2 \neq 0.5$, the singular allowed value of $r$ shifts to $r=\rho \neq 0$~\eqref{eq:r-ideal}, as shown at point $\rho$ in Fig.~\ref{fig:squeezing}. In this case, the value of $S_{\ind{AB}}$ is independent of $\rho$ and determined solely by modulation variance $V_{\ind{A}}$ and channel parameters $T$ and $\xi$.
-In the symmetrical but nonideal case (red curve), symmetrical interval $[-r_1,r_1]$ arises, and joint entropy is maximized by the midpoint $r=0$. In this case, choosing the POVM in the form superposition of coherent states~\eqref{eq:povm-hetero} is not only allowed, but optimal.
-In asymmetrical case, if $C_S^2=0.5$ (blue curve), while using $r=0$, i.e. Eq.~\eqref{eq:povm-hetero}, is possible, joint entropy is maximized by $r\neq0$. Finally, in asymmetrical case with $C_S^2\neq0.5$ (green curve), usage of $r=0$ results in one of eigenvalues being less than $1$, which is impossible. Therefore, the more general representation given by Eq.~\eqref{eq:Pi_G-gen-x1x2} must be employed.
+%singular value
+Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne, $\sigma_x^{(1)}=\sigma_x^{(2)}=1$ (black dot), only singular value of $r=\rho$~\eqref{eq:r-ideal} is allowed,as shown at point $\rho$ in Fig.~\ref{fig:squeezing}. If input beansplitter is balanced, $q=1$ (Fig.~\ref{fig:Entropy}a), then $r=0$, and the case of projector onto coherent state~\eqref{eq:POVM-hetero-ideal} is realized. Otherwise, if $q\neq1$, $r \neq 0$ as well, representing projector onto squeezed state~\eqref{eq:Pi_G-ideal}. In both cases, the value of $S_{\ind{AB}}$ is independent of $\rho$ and determined solely by modulation variance $V_{\ind{A}}$ and channel parameters $T$ and $\xi$.
+%equal sigma_x^i
+In the symmetrical but nonideal case (red curve in Fig.~\ref{fig:Entropy}a), symmetrical interval $[-r_1,r_1]$ arises, and joint entropy is maximized by the midpoint $r=0$. In this case, choosing the POVM in the form superposition of coherent states~\eqref{eq:povm-hetero} is not only allowed, but optimal. If input beamplitter is unbalanced (red curve in Fig.~\ref{fig:Entropy}b), interval of possible $r$, as well as optimal squeezing parameterthat maximazis Holevo information, shift. Moreover, if disbalance of input beamsplitter $\left|1-q\right|$ is sufficiently high, choice of $r=0$ becomes impossible as it does not lay in the interval~\eqref{eq:r1-r2}. Substituing $r\not\in[r_2,r_1]$ results in one of eigenvalues being less than $1$, which is unphysical. Therefore, the more general representation given by Eq.~\eqref{eq:Pi_G-gen-x1x2} must be employed.
+%unequal sigma_x^i
+In asymmetrical case (blue curves) if input beamsplitter is balanced, while using $r=0$, i.e. Eq.~\eqref{eq:povm-hetero}, is possible, joint entropy is maximized by $r\neq0$. If input beamsplitter is unbalanced, similarly to red curve, dependencies of $r$ shift in accordance to disbalance ratio.
 For calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
 
 
@@ -1832,7 +1871,7 @@ into the normalization factor of the Gaussian approximation).
     \centering
     \includegraphics[width=.75\linewidth]{pics/appendix/app_1.pdf}
     \caption{Distances, $D_P=D(\prob,\prob_G)$ and $D_S=D(P,{\prob}_G^{(s)})$, 
-      between the Skellam distribution, $P$, and
+      between the Skellam distribution, $\prob$, and
       two Gaussian approximations, $\prob_G$ (see Eq.~\eqref{eq:Gaussian})
       and  ${\prob}_G^{(s)}$ (see Eq.~\eqref{eq:tPG-mu}), as a function of $\left|\alpha_L\right|$
       the beam splitter disbalance angle  at $\delta\theta=15^{\circ}$

@@ -38,37 +38,37 @@ Control: production of eprint (0) enabled
 Warning--can't use both volume and number fields in reutov2021photon
 You've used 44 entries,
             6079 wiz_defined-function locations,
-            1967 strings with 24712 characters,
-and the built_in function-call counts, 51389 in all, are:
-= -- 3396
-> -- 1506
-< -- 306
+            1967 strings with 24718 characters,
+and the built_in function-call counts, 51571 in all, are:
+= -- 3414
+> -- 1507
+< -- 307
 + -- 459
 - -- 380
-* -- 8121
-:= -- 4681
+* -- 8139
+:= -- 4692
 add.period$ -- 42
 call.type$ -- 44
 change.case$ -- 211
 chr.to.int$ -- 59
 cite$ -- 45
-duplicate$ -- 4764
-empty$ -- 3668
+duplicate$ -- 4784
+empty$ -- 3684
 format.name$ -- 853
-if$ -- 10511
+if$ -- 10555
 int.to.chr$ -- 2
 int.to.str$ -- 51
-missing$ -- 707
+missing$ -- 714
 newline$ -- 178
 num.names$ -- 127
-pop$ -- 1809
+pop$ -- 1823
 preamble$ -- 1
 purify$ -- 210
 quote$ -- 0
-skip$ -- 2122
+skip$ -- 2139
 stack$ -- 0
 substring$ -- 1075
-swap$ -- 4658
+swap$ -- 4672
 text.length$ -- 186
 text.prefix$ -- 0
 top$ -- 10
@@ -76,5 +76,5 @@ type$ -- 650
 warning$ -- 2
 while$ -- 133
 width$ -- 0
-write$ -- 422
+write$ -- 423
 (There were 2 warnings)
