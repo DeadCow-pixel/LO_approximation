@@ -452,7 +452,7 @@ Its' covariance matrix takes the form~\cite{Serafini:bk:2017}:
 where $R_\phi$ is the rotation matrix by angle $\phi$:
 \begin{align}
   \label{eq:rotation-matrix}
-  R_\phi=\begin{pmatrix}=\cos\phi&\sin\phi\\
+  R_\phi=\begin{pmatrix}\cos\phi&\sin\phi\\
     -\sin\phi&\cos\phi
   \end{pmatrix}.
 \end{align}
@@ -504,15 +504,13 @@ From Eq.~\eqref{eq:Pgood-w-def} % and Eq.~\eqref{eq:Sigma-H-0}
 we are also able to construct POVM's~\eqref{eq:homodyne-povm} covariance matrix:
 \begin{align}
   \label{eq:Pi_h}
-  \Sigma^{\ind{H}}&=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})\right]R_\phi+\sigma_N\mathbb{I}\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},
+  \Sigma^{\ind{H}}&=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})\right]R_\phi\notag\\
+  &+R_\phi^{\ind{T}}\ind{diag}(\sigma_N,0)R_\phi\notag\\ &\equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}},
 \end{align}
 where $\Sigma_N^{\ind{H}}$ denotes the covariance matrix of the associated excess noise:
 \begin{align}
     \label{eq:def-sigma_h-N}
-  &\Sigma^{\ind{H}}_N=\begin{pmatrix}
-        \sigma_N&0\\
-        0&\sigma_N
-    \end{pmatrix}.
+  &\Sigma^{\ind{H}}_N=\sigma_N\begin{pmatrix}\cos^{2}\phi & \cos\phi\sin\phi\\ \cos\phi\sin\phi & \sin^{2}\phi\end{pmatrix}.
 \end{align}
 % \textit{The ability of the homodyne scheme to reconstruct the quadrature of the state is well known
 % (see e.g. Ref.~\cite{liu2021homodyne}), which is showcased by Eq.~\eqref{eq:homodyne-povm}.
@@ -975,11 +973,11 @@ the form
 \label{eq:squeezed-Q}
     \left|\avr{\beta,r e^{2 i \phi}|\alpha}\right|^2&=\frac{1}{\cosh r}
     \exp\Biggl[-
-    \frac{e^{-r}}{\cosh r}{}
-    \left(\tilde{\beta}_1e^{r}-\tilde{\alpha}_1\right)^2
+    \frac{e^{-r}}{\cosh r}
+    \left(\tilde{\beta}_1-\tilde{\alpha}_1\right)^2
     \notag
   \\
-    &-\frac{e^{r}}{\cosh r}{}\left(\tilde{\beta}_2e^{{-r}}-\tilde{\alpha}_2\right)^2
+    &-\frac{e^{r}}{\cosh r}\left(\tilde{\beta}_2-\tilde{\alpha}_2\right)^2
       \Biggr],
   \\
     \label{eq:tbeta-alpha}
@@ -1102,20 +1100,16 @@ expressed in terms of the distribution~\eqref{eq:squeezed-Q}
     \label{eq:P_G-ideal}
   \prob_{G}^{(1)}(x_1,x_2)=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}
     \left|\avr{\beta e^{i\phi},\rho e^{2i\phi}|\alpha}\right|^2,
-  \\
-  &
-    \label{eq:beta-ideal}
-    \beta=e^{-\rho}x_1+i e^{\rho} x_2
+  %\\
+  %&
+  %  \label{eq:beta-ideal}
+  %  \beta=e^{-\rho}x_1+i e^{\rho} x_2
 \end{align}
 yields the POVM
 \begin{align}
     \label{eq:Pi_G-ideal}
-    \hat{\Pi}_{G}^{(1)}(x_1,x_2)&=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}
-    \notag
-  \\
-  &
-  \times
-    \ket{\beta e^{i\phi},\rho e^{2i\phi}}\bra{\beta e^{i\phi},\rho e^{2i\phi}},
+    \hat{\Pi}_{G}^{(1)}(x_1,x_2)&=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}\notag\\&\times
+    \ket{\beta e^{i\phi},\rho e^{2i\phi}}\bra{\beta e^{i\phi}, \rho e^{2i\phi}},
 \end{align}
 which is propotional to the pure squeezed state
 $\ket{\beta e^{i\phi},\rho e^{2i\phi}}$.
@@ -1135,12 +1129,12 @@ the probability~\eqref{eq:P_G-x1x2}
   \\
   &
     \times
-    G\left(x_1e^{-r}-\beta_1;\sigma_N^{(1)}(r)e^{-2r}\right)
+    G\left(x_1-\beta_1;\sigma_N^{(1)}(r)\right)
     \notag
   \\
   &
     \times
-    G\left(x_2e^{+r}-\beta_2;\sigma_N^{(2)}(r)e^{+2r}\right)
+    G\left(x_2-\beta_2;\sigma_N^{(2)}(r)\right)
     \notag
   \\
   &
@@ -1157,12 +1151,12 @@ the corresponding POVM
   \\
   &
     \times
-    G\left(x_1e^{-r}-\beta_1;\sigma_N^{(1)}(r)e^{-2r}\right)
+    G\left(x_1-\beta_1;\sigma_N^{(1)}(r)\right)
     \notag
   \\
   &
     \times
-    G\left(x_2e^{+r}-\beta_2;\sigma_N^{(2)}(r)e^{+2r}\right)
+    G\left(x_2-\beta_2;\sigma_N^{(2)}(r)\right)
     \notag
   \\
   &
@@ -1216,7 +1210,23 @@ If Bob uses double-homodyne detection, mutual information takes the form
 where $\sigma_i$ are given by Eq.~\eqref{eq:sigm-x-i}.
 The details of these derivations are given in Appendix~\ref{sec:MI-and-EBtoPm}.
 
-Next, we compute the Holevo information in the untrusted-noise scenario, in which detection imperfections are modeled as additional noise accessible to the eavesdropper (Eve). We assume that Eve controls a Gaussian channel that modifies only the covariance matrix, leaving the mean unchanged, while Bob’s measurements are considered ideal. %This additional noise effectively enhances the quantum channel parameters, thereby increasing the information accessible to Eve. %Consequently, this noise contribution effectively augments the quantum-channel parameters, increasing Eve’s accessible information.
+Next, we compute the Holevo information in the untrusted-noise scenario, where detection imperfections are modeled as additional noise accessible to the eavesdropper, Eve.
+%We assume that Eve controls a Gaussian channel that modifies only the covariance matrix, leaving the mean unchanged, while Bob’s measurements are considered ideal. 
+To this end, we consider Eve to be in control of a classical mixing channel~\cite{Serafini:bk:2017}:
+\begin{align}
+  \label{eq:Eve-channel}
+  \Phi^*(\rho)&=\frac{1}{\pi\det \Sigma_N^{(m)}}\int\mathop{\dd \boldsymbol{r'}}\exp\left[-{\boldsymbol{r}'}^{\ind{T}}{\Sigma_N^{(m)}}^{-1}\boldsymbol{r}'\right]\notag\\& D\left(\boldsymbol{r}'\right)\rho \left(-\boldsymbol{r}'\right),
+\end{align}
+where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:def-sigma_h-N} (Eq.~\eqref{eq:def-sigma_dh-N}).  
+%where $\Sigma_N^{(m)}$ are given by Eq.~\eqref{eq:def-sigma_h-N} and Eq.~\eqref{eq:def-sigma_dh-N}.
+This channel leaves first moment unchanged, and modifies covariance matrix of $\rho$ as
+\begin{align}
+  \label{eq:Eve-action}
+  {\sigma}\mapsto {\sigma}+\Sigma_N^{(m)}.
+\end{align}
+Accordingly, POVM decompositions given by Eq.~\eqref{eq:homodyne-povm} and Eq.~\eqref{eq:P_G-gen-x1x2-2} imply that this scenario is equivalent to Eve performing asymmetrical Gaussian measurement, while Bob’s measurement is considered ideal.
+
+%This additional noise effectively enhances the quantum channel parameters, thereby increasing the information accessible to Eve. %Consequently, this noise contribution effectively augments the quantum-channel parameters, increasing Eve’s accessible information.
 Using the equivalence between the prepare-and-measure (PM) and entanglement-based (EB) pictures (see App.~\ref{sec:MI-and-EBtoPm}), the Holevo information can be derived from the covariance matrix of the two mode squeezed vacuum state (TMSVS) $\Sigma^{\ind{EB}}_{\ind{AB}}$. 
 %It is given given by
 %\begin{align}
@@ -1249,7 +1259,7 @@ where Alice and Bob's quadrature variances explicitly are
 \end{align}
 %Note that Bob's variance $V_{\ind{B}}$ is exactly the same as Bob's variance calculated in PM protocol per Eq.~\eqref{eq:sigma-hom-def} after substituting $\sigma_x=1$, as is required to equate both protocols.
 %Measurement noise modifies this covariance matrix as
-Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\ind{AB}}$ is evaluated from symplectic eigenvalues of the following covariance matrix:
+Eve's entropy $S_{\ind{E}}=S_{\ind{AB}}$ is evaluated from symplectic eigenvalues of the following covariance matrix:
 \begin{align}
     \label{eq:sigma_m_cov}
 \Sigma_{\ind{AB}}^{(m)}=\begin{pmatrix}
@@ -1257,7 +1267,9 @@ Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\in
     c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{(m)}
 \end{pmatrix},\quad m\in\{\ind{H},\ind{DH}\}
 \end{align}
-where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:def-sigma_h-N} (Eq.~\eqref{eq:def-sigma_dh-N}). Symplectic eigenvalues of this matrix $\nu_{1,2}$ are used to calculate joint entropy $S_{\ind{AB}}$.
+%where $\Sigma^{\ind{H}}_N$ ($\Sigma^{\ind{DH}}_N$) is given by Eq.~\eqref{eq:def-sigma_h-N} (Eq.~\eqref{eq:def-sigma_dh-N}). 
+in accordance with Eq.~\eqref{eq:Eve-action}
+Symplectic eigenvalues of this matrix $\nu_{1,2}$ are used to calculate joint entropy $S_{\ind{AB}}$.
 %from symplectic eigenvalues of which we can calculate Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$.
 
 \begin{figure}[t]
