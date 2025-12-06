@@ -36,45 +36,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--can't use both volume and number fields in reutov2021photon
-You've used 42 entries,
+You've used 41 entries,
             6079 wiz_defined-function locations,
-            1958 strings with 24387 characters,
-and the built_in function-call counts, 48879 in all, are:
-= -- 3242
-> -- 1418
-< -- 292
-+ -- 432
-- -- 358
-* -- 7688
-:= -- 4455
-add.period$ -- 40
-call.type$ -- 42
-change.case$ -- 201
-chr.to.int$ -- 58
-cite$ -- 43
-duplicate$ -- 4544
-empty$ -- 3495
-format.name$ -- 803
-if$ -- 10000
+            1950 strings with 24263 characters,
+and the built_in function-call counts, 47955 in all, are:
+= -- 3178
+> -- 1399
+< -- 288
++ -- 426
+- -- 354
+* -- 7552
+:= -- 4363
+add.period$ -- 39
+call.type$ -- 41
+change.case$ -- 197
+chr.to.int$ -- 57
+cite$ -- 42
+duplicate$ -- 4449
+empty$ -- 3417
+format.name$ -- 790
+if$ -- 9812
 int.to.chr$ -- 1
-int.to.str$ -- 49
-missing$ -- 677
-newline$ -- 172
-num.names$ -- 121
-pop$ -- 1736
+int.to.str$ -- 48
+missing$ -- 668
+newline$ -- 169
+num.names$ -- 118
+pop$ -- 1701
 preamble$ -- 1
-purify$ -- 200
+purify$ -- 195
 quote$ -- 0
-skip$ -- 2033
+skip$ -- 1997
 stack$ -- 0
-substring$ -- 1020
-swap$ -- 4422
-text.length$ -- 175
+substring$ -- 1001
+swap$ -- 4342
+text.length$ -- 172
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 617
+type$ -- 605
 warning$ -- 2
-while$ -- 127
+while$ -- 124
 width$ -- 0
-write$ -- 405
+write$ -- 397
 (There were 2 warnings)
