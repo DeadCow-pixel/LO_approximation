@@ -677,7 +677,7 @@ that leads to the relation
 \begin{align}
   &
   \label{eq:theform}
-  \prob_G^{(\ind{H})}(x)=\sqrt{\frac{\sigma_x}{\sigma_G}} \int \mathop{\dd x'} G(x-x';\sigma_N) Q_{x',\phi}(\alpha)  
+  \prob_G^{(\ind{H})}(x)=\sqrt{\frac{\sigma_x}{\sigma_G}} \int {\dd x'}\, G(x-x';\sigma_N) Q_{x',\phi}(\alpha)  
 \end{align}
 linking the Q symbols of
 the projectors $\ket{x',\phi}\bra{x',\phi}$
@@ -841,7 +841,7 @@ we consider the eight-port double homodyne scheme
 depicted in Fig.~\ref{fig:double-homodyne}
 (see, e.g., Refs.~\cite{Vogel:bk:2006,lahti2010realistic}).
 This measurement scheme is known to allow reconstructing the
-Husimi $Q$ function of the signal state~\cite{Richter:98} providing complete information about the signal
+Husimi $Q$-function of the signal state~\cite{Richter:98} providing complete information about the signal
 state that may be used in CV-QKD protocols. It should be noted that restoration of the
 complex amplitude of the state completely serves as the basis for composable security
 proofs~\cite{PhysRevLett.93.170504,PhysRevLett.118.200501}.
@@ -940,7 +940,7 @@ into the folowing quadrature form:
 \begin{align}
   \label{eq:P_G-x1x2}
   &
-    \prob_G(x_1,x_2)\equiv \prob_G^{(\ind{DH})}(x_1,x_2)\equiv 
+    \prob_G(x_1,x_2)\equiv \prob_G^{(\ind{DH})}(x_1,x_2) 
     =\frac{1}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
   \notag
   \\
@@ -1514,7 +1514,7 @@ so that the density matrix of the input state
 \begin{align}
   \label{eq:ensemble}
   &
-    \hat{\rho}_{\ind{A}}=\int\mathop{\dd^2\alpha} p_{\ind{A}}(\alpha)
+    \hat{\rho}_{\ind{A}}=\int{\dd^2\alpha}\, p_{\ind{A}}(\alpha)
     \ket{\alpha}\bra{\alpha}=\Phi_A(\ket{0}\bra{0}),
     \notag
 \\
@@ -2173,7 +2173,7 @@ that can be computed as half of the $L^1$ distance
 the Gaussian function~\eqref{eq:App_Gaussian}
 \begin{align}
     \label{eq:norm-cont}
-  \int_{-\infty}^{\infty}\mathop{\dd\mu}
+  \int_{-\infty}^{\infty}{\dd\mu}\,
     \prob_G(\mu)
     =1
 \end{align}
