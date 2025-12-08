@@ -101,6 +101,7 @@ superscriptaddress,
 \usepackage{multirow}% Include figure files
 \usepackage{float}% Include figure files
 \usepackage{subcaption}% Include figure files
+\usepackage{bbm}
 
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
@@ -160,7 +161,6 @@ superscriptaddress,
  
  \maketitle
 
-%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
 %%%%%%%%%%%%%%
@@ -251,7 +251,7 @@ research.
   markers) statistical distributions of photon count difference for
   the signal mode prepared in (a)~the coherent state and in (b)~the
   single photon Fock state computed for for different efficiencies at
-  $|\alpha_L|=5$ and balanced beamspliiter.  }
+  $\left|\alpha_L\right|=5$ and balanced beamspliiter.  }
 \label{fig:dist-H}
 \end{figure*}
 
@@ -296,12 +296,12 @@ can be computed from the well-known Kelley-Kleiner formula~\cite{Kelley:pr:1964}
 (see also Ref.~\cite{Vogel:pra:1993}):
 \begin{align}
     \label{eq:1}
-    &\prob(m_1,m_2)=
+    \prob(m_1,m_2)&=
     \bra{\alpha_1,\alpha_2}:\prod_{l=1}^{2}\frac{(\eta_l\hat{n}_l)^{m_l}e^{-\eta_l\hat{n}_l}}{m_l!}:\ket{\alpha_1,\alpha_2}
     \notag
   \\
   &
- =\prod_{l=1}^{2}\frac{(\eta_l|\alpha_L|^2)^{m_l}}{m_l!}e^{-\eta_l|\alpha_L|^2}    
+ =\prod_{l=1}^{2}\frac{(\eta_l\left|\alpha_L\right|^2)^{m_l}}{m_l!}e^{-\eta_l\left|\alpha_L\right|^2}    
 \end{align}
 where
 $:\ldots:$ stands for normal ordering,
@@ -319,7 +319,7 @@ We can now introduce the photon count difference
   the form of a product of the two Poisson distributions as follows 
 \begin{align}
 \label{eq:poisson}  
-    &\prob(\mu) =\sum_{m_2=\max(0,-\mu)}^{\infty}
+    \prob(\mu) &=\sum_{m_2=\max(0,-\mu)}^{\infty}
     \frac{(\eta_1|\alpha_1|^2)^{\mu+m_2}}{(\mu+m_2)!}e^{-\eta_1|\alpha_1|^2}
     \notag
   \\
@@ -332,13 +332,13 @@ the probabilty $\prob(\mu)$ reduces to
 the Skellam distribution given by~\cite{skellam1946frequency}
 \begin{align}
   \label{eq:accurate}
-  &\prob(\mu)=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
+  \prob(\mu)&=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
     \left(\frac{\eta_1|\alpha_1|^2}{\eta_2|\alpha_2|^2}\right)^{\mu/2}
     \notag
   \\
   &
     \times
-I_{\mu}(2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2},
+I_{\mu}\left(2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2}\right),
 \end{align}
 where $I_k(z)$ is the modified Bessel function of the first kind~\cite{NIST:hndbk:2010}.
 
@@ -354,15 +354,15 @@ Then, in the continuum limit where
 summation in Eq.~\eqref{eq:poisson} is replaced with integration,
 the Skellam distribution~\eqref{eq:accurate}
 can be approximated assuming
-that the amplitude of the local oscillator, $|\alpha_L|$, is large
-(the strong LO approximation) and
+that the amplitude of the local oscillator, $\left|\alpha_L\right|$, is large
+(the strong-LO approximation) and
 we can apply the convolution formula
 for Gaussian probability densities
 \begin{align}
   &
   \label{eq:convolution}
-  \int\dd
-    x_2\, G(x_1-x_2;\sigma_1)G(x_2;\sigma_2)=G(x_1;\sigma_1+\sigma_2),
+  \int G(x_1-x_2;\sigma_1)G(x_2;\sigma_2)\dd
+    x_2=G(x_1;\sigma_1+\sigma_2),
   \\
   &
     \label{eq:G-notation}
@@ -381,17 +381,17 @@ of the form:
     \label{eq:sigma_G}
     \sigma_G=\eta_1|\alpha_1|^2+\eta_2|\alpha_2|^2
     \approx
-    (\eta_1S^2+\eta_2C^2) |\alpha_L|^2,
+    (\eta_1S^2+\eta_2C^2) \left|\alpha_L\right|^2,
   \\
   &
     \label{eq:mu_G}
     \mu_G=\eta_1|\alpha_1|^2-\eta_2|\alpha_2|^2
     \approx
-    (\eta_1S^2-\eta_2C^2) |\alpha_L|^2
+    (\eta_1S^2-\eta_2C^2) \left|\alpha_L\right|^2
     \notag
   \\
   &
-    +CS (\eta_1+\eta_2) |\alpha_L| \avr{\hat{x}_\phi}
+    +CS (\eta_1+\eta_2) \left|\alpha_L\right| \avr{\hat{x}_\phi}
 \end{align}
 where
 \begin{align}
@@ -419,7 +419,7 @@ where
 $x$ is the quadrature variable given by
 \begin{align}
   \label{eq:x-def}
-  x\equiv\frac{\mu}{(\eta_1+\eta_2)CS|\alpha_L|}-\frac{\eta_1S^2-\eta_2C^2}{(\eta_1+\eta_2)CS}|\alpha_L|
+  x\equiv\frac{\mu}{(\eta_1+\eta_2)CS\left|\alpha_L\right|}-\frac{\eta_1S^2-\eta_2C^2}{\left(\eta_1+\eta_2\right)CS}\left|\alpha_L\right|
 \end{align}
 and $\sigma_x$ is the quadrature variance
 \begin{align}
@@ -427,7 +427,7 @@ and $\sigma_x$ is the quadrature variance
         \label{eq:sigma-x}
     \sigma_x\equiv
     \frac{\eta_1S^2+\eta_2C^2}{
-    [(\eta_1+\eta_2)CS]^2
+    \left[(\eta_1+\eta_2)CS\right]^2
     }.
 \end{align}
 Minimizing the variance~\eqref{eq:sigma-x} with respect to the transmittance $C^2$  is straightforward:
@@ -468,25 +468,27 @@ is determined by
 the Gaussian shaped distribution of the form:
 \begin{align}
   \label{eq:PG-Q-symbol}
-    &\bra{\alpha}\hat{\Pi}_G\ket{\alpha}
+    \bra{\alpha}\hat{\Pi}_G\ket{\alpha}
     \propto
-    \exp\bigl\{-2 (\vc{r}-\vc{r}_m)^{\ind{T}}
+    &
+    \exp\{-2 (\vc{r}-\vc{r}_m)^{\ind{T}}
     \notag
     \\
 &
-  \times  (\Sigma_m+\mathbb{I})^{-1}(\vc{r}-\vc{r}_m)\bigr\},
+  \times  (\Sigma_m+\mathbbm{1})^{-1}(\vc{r}-\vc{r}_m)\},
   \\
-      &\alpha=q+i p,
+    &
+      \alpha=\alpha_1+i \alpha_2,
       \quad \vc{r}=
       \begin{pmatrix}
-        q\\ p
+        \alpha_1\\ \alpha_2
       \end{pmatrix},
 \end{align}
 where
-$\mathbb{I}$ is the identity matrix
+$\mathbbm{1}$ is the identity matrix
 and the superscipt $\ind{T}$ stands for transposition,
 so that the transpose of $\vc{r}$ is the row vector:
-$\tcnj{\vc{r}}=(q,p)$.
+$\tcnj{\vc{r}}=(\alpha_1,\alpha_2)$.
 
 It is known that POVMs of noisy measurements can be introduced
 using the dual of a quantum channel acting on
@@ -504,12 +506,12 @@ the classical mixing (additive noise) quantum channel
     \notag
   \\
   &
-    \times \int_{\mathbb{C}}\dd^2\beta \,
-    \exp\{-2 \vc{s}^{\ind{T}}\Sigma_N^{-1}\vc{s}\}
-    \hat{D}(\beta)\, \hat{\Pi}_{\ind{id}}\, \hat{D}(-\beta),
+    \times \int_{\mathbb{C}}\dd^2\beta
+    \exp\{-2 \vc{s}^T\Sigma_N^{-1}\vc{s}\}
+    \hat{D}(\beta)\hat{\Pi}_{\ind{id}}\hat{D}(-\beta),
 \end{align}
 where
-$\tcnj{\vc{s}}=(\Re(\beta), \Im(\beta))\equiv(\beta_1,\beta_2)$,
+$\tcnj{\vc{s}}=(\Re(\beta), \Im(\beta))=(\beta_1,\beta_2)$,
 $\dd^2\beta=\dd \beta_1\dd \beta_2$
 and $\hat{D}(\beta)$ is the displacement operator given by
 \begin{align}
@@ -517,7 +519,8 @@ and $\hat{D}(\beta)$ is the displacement operator given by
 \hat{D}(\beta) =
 e^{\beta\hcnj{\hat{a}}-\beta^*\hat{a}}.
 \end{align}
-This is a self-dual channel
+This is a self-dual channel,
+$\cnj{\Phi}_N=\Phi_N$,
 that transforms the POVM of the ideal projective Gaussian measurements,
 $\hat{\Pi}_{\ind{id}}$,
 into the POVM of the noisy measurements,
@@ -551,11 +554,11 @@ takes the form
 \begin{equation}
     \label{eq:P_0}
     \prob_{\ind{id}}^{(\ind{H})}=
-    \frac{1}{|\alpha_L|} Q_{x,\phi}(\alpha), 
+    \frac{1}{\left|\alpha_L\right|} Q_{x,\phi}(\alpha), 
   \end{equation}
   where
-  $x=\mu/|\alpha_L|$
-  and $Q_{x,\phi}(\alpha)$ is the Husimi $Q$-distribution
+  $x=\mu/\left|\alpha_L\right|$
+  and $Q_{x,\phi}(\alpha)$ is the Husimi $Q$ distribution
 for the eigenstate of the phase-rotated quadrature
 operator~\eqref{eq:quad-op},
 $\ket{x,\phi}$,
@@ -571,7 +574,7 @@ the POVM describing sharp homodyne measurements
 \begin{align}
   &
   \label{eq:POVM-P0}
-    \hat{\Pi}_{\ind{id}}^{(\ind{H})}=\frac{1}{|\alpha_L|}|x,\phi\rangle\langle x,\phi|
+    \hat{\Pi}_{\ind{id}}^{(\ind{H})}=\frac{1}{\left|\alpha_L\right|}|x,\phi\rangle\langle x,\phi|
 \end{align}
  is proportional to
 the projector onto $\ket{x,\phi}$.
@@ -594,7 +597,7 @@ taken in the limit of infinitely large squeezing
 where $\hat{S}(r)$ is the squeezing operator given by
 \begin{align}
 \label{eq:S-def}
-    \hat{S}(\zeta)=e^{\frac{1}{2}(\zeta\hat{a}^{\dag2}-\zeta^*\hat{a}^2)},
+    \hat{S}(\zeta)=e^{\frac{1}{2}\left(\zeta\hat{a}^{\dag2}-\zeta^*\hat{a}^2\right)},
 \end{align}
 its covariance matrix assumes similar form~\cite{Serafini:bk:2017}:
 \begin{align}
@@ -611,7 +614,7 @@ where $R_\phi$ is the rotation matrix given by
 \end{align}
 
 In a more general asymmetric case with $\eta_1\ne \eta_2$
-and $C\ne S$, from the $Q$-symbol~\eqref{eq:Pgood-w-def}
+and $C\ne S$, from the Q symbol~\eqref{eq:Pgood-w-def}
 we deduce the following expression for the covariance matrix of
 noisy homodyne measurements
 \begin{align}
@@ -639,8 +642,8 @@ along with the algebraic identities
 \begin{align}
   \label{eq:phi_N-rel1}
   &
-    \int_{\mathbb{C}}\dd^2\beta \,
-    \exp\{-2 \vc{s}^T[R(\phi)\Sigma_N^{-1}\tcnj{R}(\phi)]
+    \int_{\mathbb{C}}\dd^2\beta
+    \exp\{-2 \vc{s}^T\bigl[R(\phi)\Sigma_N^{-1}\tcnj{R}(\phi)\bigr]
     \vc{s}\}
     \hat{D}(\beta)\hat{\Pi}_{\ind{id}}\hat{D}(-\beta)
     \notag
@@ -659,13 +662,14 @@ to derive the POVM in the form of randomly displaced
 projectors
 \begin{align}
 \label{eq:homodyne-povm}    
-  &\hat{\Pi}_G^{(\ind{H})}
-               =\frac{1}{(\eta_1+\eta_2)CS|\alpha_L|}
+  \hat{\Pi}_G^{(\ind{H})}
+  &
+               =\frac{1}{(\eta_1+\eta_2)CS\left|\alpha_L\right|}
     \notag
   \\
   &
     \times
-    \int \dd x' G(x-x'; \sigma_N) \ket{x',\phi}\bra{x',\phi}.
+    \int \dd x' G\left(x-x'; \sigma_N\right) \ket{x',\phi}\bra{x',\phi}.
 \end{align}
 Alternatively, this result can be obtained
 using the convolution identity~\eqref{eq:convolution}
@@ -673,9 +677,9 @@ that leads to the relation
 \begin{align}
   &
   \label{eq:theform}
-  \prob_G^{(\ind{H})}(x)=\sqrt{\frac{\sigma_x}{\sigma_G}} \int \dd x'\, G(x-x';\sigma_N) Q_{x',\phi}(\alpha)  
+  \prob_G^{(\ind{H})}(x)=\sqrt{\frac{\sigma_x}{\sigma_G}} \int \mathop{\dd x'} G(x-x';\sigma_N) Q_{x',\phi}(\alpha)  
 \end{align}
-linking the $Q$-symbols of
+linking the Q symbols of
 the projectors $\ket{x',\phi}\bra{x',\phi}$
 and the POVM $\hat{\Pi}_G^{(\ind{H})}$.
 
@@ -699,16 +703,16 @@ and the POVM $\hat{\Pi}_G^{(\ind{H})}$.
 % we are also able to construct POVM's~\eqref{eq:homodyne-povm} covariance matrix:
 % \begin{align}
 %   \label{eq:Pi_h}
-%   \Sigma^{(\ind{H})}&=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})\right]R_\phi+\sigma_N\mathbb{I}
+%   \Sigma^{\ind{H}}&=\lim_{z\to0}R_\phi^{\ind{T}}\left[\ind{diag}(z,z^{-1})\right]R_\phi+\sigma_N\mathbbm{1}
 %                     \notag
 %   \\
 %                   &
-%                     \equiv\Sigma_0^{(\ind{H})}+\Sigma_N^{(\ind{H})}, 
+%                     \equiv\Sigma_0^{\ind{H}}+\Sigma_N^{\ind{H}}, 
 % \end{align}
-% where $\Sigma_N^{(\ind{H})}$ denotes the covariance matrix of the associated excess noise:
+% where $\Sigma_N^{\ind{H}}$ denotes the covariance matrix of the associated excess noise:
 % \begin{align}
 %     \label{eq:def-sigma_h-N}
-%   &\Sigma^{(\ind{H})}_N=\begin{pmatrix}
+%   &\Sigma^{\ind{H}}_N=\begin{pmatrix}
 %         \sigma_N&0\\
 %         0&\sigma_N
 %     \end{pmatrix}.
@@ -717,13 +721,6 @@ and the POVM $\hat{\Pi}_G^{(\ind{H})}$.
 % % (see e.g. Ref.~\cite{liu2021homodyne}), which is showcased by Eq.~\eqref{eq:homodyne-povm}.
 % % }
   
-
-
-
-
-
-
-
 
 The exact and approximate analytical results for photon count difference statistical distributions, given by Eq.~\eqref{eq:accurate} and Eq.~\eqref{eq:Gaussian} respectively, are valid
 for the case where the LO and signal modes are both
@@ -743,7 +740,7 @@ using the relations
 where $P_{\ket{\psi}}(\alpha)$ is the Glauber $P$ function of the quantum state
 $\ket{\psi}$.
 In Fig.~\ref{fig:dist-H},
-we show the results computed for the single-photon Fock states
+we show the results computed for the single-photon Fock state
 obtained utilizing
 the well-known expression for
 the $P$-function of Fock states $\ket{\psi}=\ket{n}$ given by
@@ -769,7 +766,7 @@ Fig.~\ref{fig:dist_alp} shows that,
 in agreement with Eq.~\eqref{eq:mu_G},
 asymmetry in photodetection
 results in the shift of the probability maximum.
-%Note that, at $\delta\theta=0$, the photocount variance~\eqref{eq:sigma_G}, $\sigma_G=(\eta_1+\eta_2)|\alpha_L|^2/2$, and the quadrature variance~\eqref{eq:sigma-x}, $\sigma_x=2/(\eta_1+\eta_2)$, are both invariant under transposition of the photodetectors: $\eta_{1}\leftrightarrow \eta_{2}$.
+%Note that, at $\delta\theta=0$, the photocount variance~\eqref{eq:sigma_G}, $\sigma_G=(\eta_1+\eta_2)\left|\alpha_L\right|^2/2$, and the quadrature variance~\eqref{eq:sigma-x}, $\sigma_x=2/(\eta_1+\eta_2)$, are both invariant under transposition of the photodetectors: $\eta_{1}\leftrightarrow \eta_{2}$.
 
 The distributions for the single-photon states
 are depicted in Fig.~\ref{fig:dist_fock}
@@ -779,7 +776,8 @@ Another noticeable effect is that
 the probability minimum between the central and side peaks
 become less pronounced.
 
-From Fig.~\ref{fig:dist-H} it becomes apparent that perfomance of Gaussian approximation worsens in presence of asymmetry, which we will quantify in Appendix~\ref{sec:appendix_numerical}.
+From Fig.~\ref{fig:dist-H} it becomes apparent that perfomance of Gaussian approximation worsens in
+presence of asymmetry, which we will quantify in Appendix~\ref{sec:appendix_numerical}.
 
 Our concluding remark concerns an alternative method
 to approximate Eq.~\eqref{eq:accurate}
@@ -843,12 +841,11 @@ we consider the eight-port double homodyne scheme
 depicted in Fig.~\ref{fig:double-homodyne}
 (see, e.g., Refs.~\cite{Vogel:bk:2006,lahti2010realistic}).
 This measurement scheme is known to allow reconstructing the
-Husimi $Q$-function of the signal state~\cite{Richter:98} providing complete information about the signal
+Husimi $Q$ function of the signal state~\cite{Richter:98} providing complete information about the signal
 state that may be used in CV-QKD protocols. It should be noted that restoration of the
 complex amplitude of the state completely serves as the basis for composable security
 proofs~\cite{PhysRevLett.93.170504,PhysRevLett.118.200501}.
 %~\cite{pirandola2024improvedcomposablekeyrates,pascualgarcía2024improvedfinitesizekeyrates}.
-
 
 Figure~\ref{fig:double-homodyne} shows two homodyne setups
 with elements such as beam splitters BS$_i$
@@ -943,20 +940,20 @@ into the folowing quadrature form:
 \begin{align}
   \label{eq:P_G-x1x2}
   &
-    \prob_G(\mu_1,\mu_2)\equiv \prob_G^{(\ind{DH})}(x_1,x_2)\equiv 
-    \frac{1}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
+    \prob_G(x_1,x_2)\equiv \prob_G^{(\ind{DH})}(x_1,x_2)\equiv 
+    =\frac{1}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
   \notag
   \\
   &
-                      \times \exp\left[
+                      \times \exp\biggl[
     -\frac{(x_1-\Re\alpha e^{-i\phi})^2}{\sigma_1}
     -\frac{(x_2-\Im\alpha e^{-i\phi})^2}{\sigma_2}
-    \right],
+    \biggr]
 \end{align}
 where $x_i$ are the quadrature variables given by
 \begin{align}
   \label{eq:x-1}
-  &x_1=
+  x_1&=
   \frac{1}{2(\eta_1^{(1)}+\eta_2^{(1)})C_1S_1C_S}
   \notag
   \\
@@ -967,7 +964,7 @@ where $x_i$ are the quadrature variables given by
     \right\},
   \\
   \label{eq:x-2}
-  &x_2=
+  x_2&=
   \frac{1}{2(\eta_1^{(2)}+\eta_2^{(2)})C_2S_2S_S}
   \notag
   \\
@@ -988,7 +985,7 @@ and relations
   &
     \label{eq:sigm-x-i}
     \sigma_x^{(i)}=\frac{\eta_1^{(i)}S_i^2+\eta_2^{(i)}C_i^2}{
-    [(\eta_1^{(i)}+\eta_2^{(i)})C_iS_i]^2
+    \left[(\eta_1^{(i)}+\eta_2^{(i)})C_iS_i\right]^2
     }
 \end{align}
 give the quadrature variances $\sigma_1$ and $\sigma_2$.
@@ -1021,34 +1018,33 @@ is given by
 \end{align}
 
 
-In the ideal case where all the beam splitters are balanced
+In the case, where all the beam splitters are balanced
 and the photodetection is perfect,
 we have
 \begin{align}
   &
   \label{eq:P0-hetero}
-    \prob_{\ind{CS}}^{(\ind{DH})}(x_1,x_2)=\frac{|\avr{\alpha|ze^{i\phi}}|^2}{\pi
-    |\alpha_L|^2},
+    \prob_{\ind{CS}}^{(\ind{DH})}\left(x_1,x_2\right)=\frac{\left|\avr{\alpha|ze^{i\phi}}\right|^2}{\pi
+    \left|\alpha_L\right|^2},
     \notag
   \\
   &
-    |\avr{\alpha|z e^{i\phi}}|^2=e^{-|z e^{i\phi}-\alpha|^2},
+    \left|\avr{\alpha|z e^{i\phi}}\right|^2=e^{-|z e^{i\phi}-\alpha|^2},
     \quad
-    z= x_1+ix_2.
+    z= x_1+ix_2,
 \end{align}
-where
-
-So, the POVM is proportional to the projector onto the coherent state
-$\hat{R}(\phi)\ket{z}=\ket{(x_1+ix_2)e^{i\phi}}$:
+so that the POVM is proportional to the projector onto the coherent state
+$\hat{R}(\phi)\ket{z}=\ket{\left(x_1+ix_2\right)e^{i\phi}}$:
 \begin{align}
   \label{eq:POVM-hetero-ideal}
-    \hat{\Pi}_{\ind{CS}}^{(\ind{DH})}(x_1,x_2)=\frac{1}{\pi |\alpha_L|^2} \ket{z e^{i\phi}}\bra{z e^{i\phi}},
+    \hat{\Pi}_{\ind{CS}}^{(\ind{DH})}(x_1,x_2)=\frac{1}{\pi \left|\alpha_L\right|^2} \ket{z e^{i\phi}}\bra{z e^{i\phi}},
 \end{align}
-with the well-known coherent state covariance matrix
+with the coherent state covariance matrix
 \begin{align}
   \label{eq:tilde-Sigma-DH-0}
-  \Sigma_{\ind{CS}}=\mathbb{I}.
+  \Sigma_{\ind{CS}}=\mathbbm{1}
 \end{align}
+equal to the identity matrix.
 
 For nonideal measurements,
 following the steps of the general procedure described in Sec.~\ref{subsec:hom-POVM},
@@ -1081,8 +1077,8 @@ can be expressed
 as a Gaussian superposition of the coherent state Husimi functions
 \begin{align}
   \label{eq:P_G-x1x2-2}
-    &\prob_G^{(\ind{DH})}(x_1,x_2)=\frac{\sqrt{\sigma_1\sigma_2}}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
-\int\dd^2\beta \,
+    \prob_G^{(\ind{DH})}(x_1,x_2)&=\frac{\sqrt{\sigma_1\sigma_2}}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
+\int\dd^2 \beta\,
     G(x_1-\beta_1;\tilde{\sigma}_N^{(1)})
     \notag
   \\
@@ -1094,34 +1090,33 @@ as a Gaussian superposition of the coherent state Husimi functions
 where $\beta=\beta_1+i\beta_2$, and
 $\sigma_N^{(i)}$ is
 the excess noise variance  given by Eq.~\eqref{eq:tsigm-N-i}.
-
 The corresponding expression for the
 POVM reads
 \begin{align}
   \label{eq:povm-hetero}
-    &\hat{\Pi}_G^{(\ind{DH})}(x_1,x_2)=\frac{\sqrt{\sigma_1\sigma_2}}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
-\int \dd^2\beta \,
+    \hat{\Pi}_G^{(\ind{DH})}(x_1,x_2)&=\frac{\sqrt{\sigma_1\sigma_2}}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
+\int \dd^2 \beta\,
     G(x_1-\beta_1;\tilde{\sigma}_N^{(1)})
     \notag
   \\
   &
     \times
     G(x_2-\beta_2;\tilde{\sigma}_N^{(2)})
-    \ket{\beta e^{i\phi}}\bra{\beta e^{i\phi}},
+    \ket{\beta e^{i\phi}}\bra{\beta e^{i\phi}}.
 \end{align}
 % with covariance matrix
 % \begin{align}
 %   \label{eq:tilde-Sigma-DH}
-%   \tilde\Sigma^{(\ind{DH})}&\equiv\ind{diag}\left(\delta_1,\delta_2\right)
-%   \notag\\&=\mathbb{I}+\ind{diag}\left(\delta_1-1,\delta_2-1\right)\notag\\
-%   &\equiv \tilde\Sigma^{(\ind{DH})}_0+\tilde\Sigma^{(\ind{DH})}_N.
+%   \tilde\Sigma^{\ind{DH}}&\equiv\ind{diag}\left(\delta_1,\delta_2\right)
+%   \notag\\&=\mathbbm{1}+\ind{diag}\left(\delta_1-1,\delta_2-1\right)\notag\\
+%   &\equiv \tilde\Sigma^{\ind{DH}}_0+\tilde\Sigma^{\ind{DH}}_N.
 % \end{align}
 An important point is that
 the results given by Eq.~\eqref{eq:P_G-x1x2-2} and
 Eq.~\eqref{eq:povm-hetero}
 are well defined only if
 the excess noise covariance matrix~\eqref{eq:Sigma-N-CS}
-is positive semi-definite: $\tilde\Sigma^{\ind{(\ind{DH})}}_N\ge 0$.
+is positive semi-definite: $\tilde\Sigma^{\ind{(DH)}}_N\ge 0$.
 The latter requires the variances
 $\tilde{\sigma}_N^{(2)}$ and $\tilde{\sigma}_N^{(2)}$ to be non-negative,
 which is equivalent to the inequalities:
@@ -1131,17 +1126,18 @@ we arrive at the conditions
 $\sigma_x^{(1)}\ge 2 C_S^2$ and $\sigma_x^{(2)}\ge 2 S_S^2$ be met.
 
 When the beam splitter BS$_S$
-is balanced $2 C_S^2=2 S_S^2=1$
-and inequality (see Eq.~\eqref{eq:sigma-x-min})
+is balanced $2 C_S^2=2 S_S^2=1$,
+applicability of the above expression for the POVM
+is guaranteed by the
+inequality (see Eq.~\eqref{eq:sigma-x-min})
 \begin{align}
   \label{eq:sigma-x-min-i}
   \sigma_x^{(i)}\ge \left(
 \frac{\sqrt{\eta_1^{(i)}}+\sqrt{\eta_2^{(i)}}}{\eta_1^{(i)}+\eta_2^{(i)}}
-  \right)^2\ge 1
+  \right)^2\ge 1.
 \end{align}
-ensures applicability of the expression for the POVM.
 Otherwise, either $2 C_S^2$ or $2 S_S^2$ will be above unity,
-and our results are valid only if
+and the coherent-state representation is valid only if
 the value of the corresponding variance $\sigma_x^{(i)}$ is sufficiently high.
 For example, at $\eta_{1,2}^{(i)}=\eta<1/2$,
 the minimal values of $\sigma_x^{(i)}$ are higher than $2$
@@ -1149,13 +1145,12 @@ the minimal values of $\sigma_x^{(i)}$ are higher than $2$
 and the noise variance will be positive at
 any disbalance of the signal mode beam splitter
 because $\max\{2 C_S^2,2 S_S^2\}\le 2$.
-When the noise variance is negative,
-the POVM reconstruction procedure
-needs to be generalized.
-We shall present details on this generalization
-in the next section.
+
+When one of the noise variances~\eqref{eq:tsigm-N-i} is negative,
+the POVM reconstruction procedure needs to be generalized.
+We shall present details on this generalization in the next section.
 Meanwhile,
-in the remaining part of this section,
+in the concluding part of this section,
 we confine ourselves to the cases where $\sigma_N^{(i)}$ are positive.
 
 The effects of photodetection asymmetry
@@ -1175,16 +1170,31 @@ of the double homodyne distribution.
 \label{subsec:gen-POVM}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-From Eq.~\eqref{eq:Sigma-N-CS},
-the expression for the POVM
-in the form of incoherent Gaussian superposition
-of coherent states is justified only if
-both the quadrature variances, $\sigma_1$ and $\sigma_2$,
-exceed unity.
-In this section, we show that our procedure employed
-for derivation of the double homodyne POVM can be
-suitably generalized by enlarging a set of the pure states to include
-the squeezed coherent states
+In this section we apply our general procedure outlined
+in
+Sec.~\ref{subsec:hom-POVM} to
+double homodyne measurements so as to derive the POVM expressed in
+terms of the projectors describing sharp (ideal)
+measurements. According to the previous section, the class of such
+measurement states, which are assumed to be Gaussian, should be
+extended beyond the family of the coherent states even though these
+states represent the measurements in the limiting case of balanced beam splitters and perfect
+photodetection.
+So, we begin with  the generalized representation of
+noiseless measurements
+that uses a set of
+pure states enlarged so as to include the squeezed states
+taken in the form
+% From Eq.~\eqref{eq:sigm-N-i},
+% the expression for the POVM
+% in the form of incoherent Gaussian superposition
+% of coherent states is justified only if
+% both the quadrature variances, $\sigma_1$ and $\sigma_2$,
+% exceed unity.
+% In this section, we show that our procedure employed
+% for derivation of the double homodyne POVM can be
+% suitably generalized by enlarging a set of the pure states to include
+% the squeezed coherent states
 \begin{align}
   \label{eq:squeezed-def}
   \ket{z,r,\phi}=\hat{R}(\phi)\hat{D}(z)\hat{S}(r)\ket{0}=
@@ -1192,37 +1202,44 @@ the squeezed coherent states
 \end{align}
 where $\hat{D}(\beta)$ ($\hat{S}(\zeta)$) is the displacement
 (squeezing) operator  given by
-% \begin{align}
-% \label{eq:D-S-def}
-% \hat{D}(\beta) =
-% e^{\beta\hcnj{\hat{a}}-\beta^*\hat{a}}, \quad
-%     \hat{S}(\zeta)=e^{\frac{1}{2}\left(\zeta\hat{a}^{\dag2}-\zeta^*\hat{a}^2\right)},
-% \end{align}
-$\beta$ and $\zeta$ are the complex-valued amplitude
-and the squeezing parameter, respectively. 
+Eq.~\eqref{eq:D-def}
+(Eq.~\eqref{eq:S-def}).
 
-% To this end, we consider the case where the squeezing parameter is given by
-% \begin{align}
-%   \label{eq:sq-param}
-%   \zeta=r e^{2 i \phi},\quad
-%   r\in\mathbb{R}
-% \end{align}
-% and
-
-The non-normalized Husimi distribution
+Then the covariance matrix of the noiseless POVM
+proporional to the projectors
+$\ket{z,r,\phi}\bra{z,r,\phi}$ is given by
+% By using this squeezed state distribution instead of the coherent state one given in
+% Eq.~\eqref{eq:POVM-hetero-ideal}, we are immediately led to the POVM's covariance matrix in the
+% form:
+%Constructing POVM's~\eqref{eq:Pi_G-gen-x1x2} covariance matrix from Eq.~\eqref{eq:P_G-gen-x1x2-2} yields
+\begin{align}
+  \label{eq:Sigma-id-DH}
+  &
+  \Sigma_{\ind{id}}^{(\ind{DH})}=
+    R(\phi)
+    \begin{pmatrix}
+      e^{2r}&0\\0&e^{-2r}
+    \end{pmatrix}
+    \tcnj{R}(\phi),
+\end{align}
+whereas formula~\eqref{eq:r_m-DH} giving
+the vector of the averaged quadratures
+remains applicable to the case of the squeezed states
+As a result,
+the non-normalized Husimi distribution
 for the squeezed state~\eqref{eq:squeezed-def} takes
 the form
-%(see, e.g., the textbook~\cite{Gerry:bk:2005})
 \begin{align}
   \label{eq:squeezed-Q}
-    &|\avr{z e^{i\phi},r e^{2 i \phi}|\alpha}|^2=\frac{1}{\cosh r}
+  &
+    \left|\avr{z e^{i\phi},r e^{2 i \phi}|\alpha}\right|^2=\frac{1}{\cosh r}
     \exp\Biggl[-
     \frac{2}{e^{2 r}+1}
-    (x_1-\tilde{\alpha}_1)^2
+    \left(x_1-\tilde{\alpha}_1\right)^2
     \notag
   \\
   &
-    -\frac{2}{e^{-2 r}+1}(x_2-\tilde{\alpha}_2)^2
+    -\frac{2}{e^{-2 r}+1}\left(x_2-\tilde{\alpha}_2\right)^2
       \Biggr],
   \\
   \label{eq:tbeta-alpha}
@@ -1231,10 +1248,9 @@ the form
   \quad
   \tilde{\alpha}_2=\Im \alpha e^{-i\phi}.
 \end{align}
-By using this squeezed state distribution instead of the coherent state one given in
-Eq.~\eqref{eq:POVM-hetero-ideal}, we are immediately led to the the covariance matrix of the additive noise quantum
-channel in the form:
-%Constructing POVM's~\eqref{eq:Pi_G-gen-x1x2} covariance matrix from Eq.~\eqref{eq:P_G-gen-x1x2-2} yields
+
+From Eqs.~\eqref{eq:Sigma_m-DH} and~\eqref{eq:Sigma-id-DH},
+we derive the covariance matrix of the additive noise channel
 \begin{align}
   &
     \label{eq:Sigma-N-DH}
@@ -1247,62 +1263,61 @@ channel in the form:
 \begin{pmatrix}
       4\sigma_N^{(1)}(r) &0\\0& 4 \sigma_N^{(2)}(r)
     \end{pmatrix}
-    \tcnj{R}(\phi)\ge 0,\\
-    \label{eq:sigma_N-sq-2}
+    \tcnj{R}(\phi)\ge 0,
+\end{align}
+where
+\begin{align}
+  \label{eq:sigma_N-sq-2}
   &
     4\sigma_N^{(1)}(r)=\delta_1-e^{2r},
     \quad
     4\sigma_N^{(2)}(r)=\delta_2-e^{-2r}.
 \end{align}
-where the covariance matrix of coherent state~\eqref{eq:tilde-Sigma-DH-0} was generalized to squeezed state covariance
-matrix:
-\begin{align}
-  \label{eq:Sigma-id-DH}
-  &
-  \Sigma_{\ind{id}}^{(\ind{DH})}=
-    R(\phi)
-    \begin{pmatrix}
-      e^{2r}&0\\0&e^{-2r}
-    \end{pmatrix}
-    \tcnj{R}(\phi),
-\end{align}
-and $\delta_i\equiv2\sigma_i-1$ as previosly defined.
+Since this matrix should be positive semidefinite,
+the noise variances~\eqref{eq:sigma_N-sq-2}
+cannot take negative values.
+
 % \begin{align}
 %   \label{eq:Pi_dh}
-%   \Sigma^{(\ind{DH})}&=
+%   \Sigma^{\ind{DH}}&=
 %     \begin{pmatrix}
 %       e^{2r}&0\\0&e^{-2r}
 %     \end{pmatrix}+
 %     \begin{pmatrix}
 %         \delta_1-e^{2r}&0\\
 %         0&\delta_2-e^{-2r}
-%     \end{pmatrix}\notag\\ &\equiv \Sigma_1^{(\ind{DH})}+\Sigma_N^{(\ind{DH})},
+%     \end{pmatrix}\notag\\ &\equiv \Sigma_1^{\ind{DH}}+\Sigma_N^{\ind{DH}},
 % \end{align}
-%where, analogously to Eq.~\eqref{eq:tilde-Sigma-DH}, we defined matrices of perfect measurement
-%$\Sigma_1^{(\ind{DH})}$ (squeezed state covariance matrix) and excess noise $\Sigma_N^{(\ind{DH})}$,
-%explicitly written as
+% where, analogously to Eq.~\eqref{eq:tilde-Sigma-DH}, we defined matrices of perfect measurement
+% $\Sigma_1^{\ind{DH}}$ (squeezed state covariance matrix) and excess noise $\Sigma_N^{\ind{DH}}$,
+% explicitly written as
 % \begin{align}
 %   \label{eq:def-sigma_dh-1}
-%   &\Sigma^{(\ind{DH})}_1=
+%   &\Sigma^{\ind{DH}}_1=
 %     \begin{pmatrix}
 %       e^{2r}&0\\0&e^{-2r}
 %     \end{pmatrix},\\
 %     \label{eq:def-sigma_dh-N}
-%   &\Sigma^{(\ind{DH})}_N=\begin{pmatrix}
+%   &\Sigma^{\ind{DH}}_N=\begin{pmatrix}
 %         \delta_1-e^{2r}&0\\
 %         0&\delta_2-e^{-2r}
 %     \end{pmatrix}.
 % \end{align}
-% Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement of $\Sigma_N^{(\ind{DH})}$ being positive.
-%Now, we are to require that the elements of $\Sigma_N^{(\ind{DH})}$ to be positive:
-%To ensure physical consistency, we require the excess noise matrix $\Sigma_N^{(\ind{DH})}$
-%to be positive semidefinite:
-These expressions present the extension of
-the relations~\eqref{eq:Sigma-N-CS} to the case with non-vanishing squeezing parameter.
-% As an immediate consequence of Eq.~\eqref{eq:sigma_N-sq-1}, we find that the conditions for the
-% noise variances to be positive definite can be written in the form of two inequalities
+% Note that the condition~\eqref{eq:sigma_N-sq-2} is equivalent to the requirement of $\Sigma_N^{\ind{DH}}$ being positive.
+%Now, we are to require that the elements of $\Sigma_N^{\ind{DH}}$ to be positive:
+% To ensure physical consistency, we require the excess noise matrix $\Sigma_N^{\ind{DH}}$
+% to be positive semidefinite:
 
-For subsequent analysis, it will be useful express POVM's covariance matrix elements $\delta_i$ in
+
+% where $\delta_i\equiv2\sigma_i-1$ as previosly defined.
+% These expressions present the extension of
+% the relations~\eqref{eq:sigm-N-i} to the case with non-vanishing squeezing parameter.
+% % As an immediate consequence of Eq.~\eqref{eq:sigma_N-sq-1}, we find that the conditions for the
+% % noise variances to be positive definite can be written in the form of two inequalities
+
+For subsequent analysis, it will be useful to express
+the covariance matrix elements $\delta_i$ given by Eq.~\eqref{eq:sigma-i}
+in
 terms of the disbalance (reflection-to-transmission) ratio of the input beam splitter, $q$, and the
 parameters $\sigma_{x}^{(1)}$ and $\sigma_{x}^{(2)}$ (see Eq.~\eqref{eq:sigm-x-i}):
 \begin{subequations}
@@ -1317,18 +1332,20 @@ parameters $\sigma_{x}^{(1)}$ and $\sigma_{x}^{(2)}$ (see Eq.~\eqref{eq:sigm-x-i
     \delta_2\equiv 2\sigma_2-1=(q^{-1}+1)\sigma_x^{(2)}-1\ge q^{-1}=\frac{C_S^2}{S_S^2},
 \end{align}
 \end{subequations}
-where we used the fact that $\sigma_x^{(i)}\ge 1$ per Eq.~\eqref{eq:sigma-x-min-i}.
+where we used the fact that $\sigma_x^{(i)}\ge 1$ (see Eq.~\eqref{eq:sigma-x-min-i}).
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.9\linewidth, page={2}]{tikz_article.pdf}
-    \caption{An illustration for the conditions for the noise variances, see
-      Eqs.~\eqref{eq:sigma_N-sq-2}-\eqref{eq:r1-r2}.  Solid grey lines represent the exponents
-      $e^{\pm2r}$. Dashdotted black, red and blue lines are the independent on $r$ functions $q$ and
-      $q^{-1}$, $\delta_1$ and $\delta_2$ respectively. Solid purple line is the interval of
-      squeezing parameter $r\in[r_2,r_1]$, solid red (blue)
-      line %with pointing arrow of the same color
-      is the magnitude of $4\sigma_N^{(1)}$ ($4\sigma_N^{(2)}$) at $r$.}
+    \caption{ Geometry in the $\delta$-$r$ (principal variance-squeezing parameter) plane.
+      Noise variances~\eqref{eq:sigma_N-sq-2}
+      are positive when the principal variance $\delta_1$ ($\delta_2$)
+      is above $e^{2 r}$ ($e^{-2r}$), so that the squeezing parameter $r$
+      is ranged between $r_1$ and $r_2$.
+      Solid grey lines represent the graphs of the exponents:
+      $e^{2r}$ and $e^{-2r}$.
+      In the case, where $\delta_1=q$ and $\delta_2=q^{-1}$,
+      the interval is reduced to the point $r_1=r_2=\rho$.}
     \label{fig:squeezing}
 \end{figure}
 
@@ -1354,18 +1371,23 @@ the endpoints of the interval given by
 \begin{align}
   \label{eq:r1-r2}
   &
-    r\in [r_2,r_1],\;
+    r\in \left[r_2,r_1\right],\;
     r_1=\ln\delta_1^{1/2},
     \;
     r_2=\ln\delta_2^{-1/2}%\max\{\ln\delta_2^{-1/2},0\}.
 \end{align}
 
-An important point is that the value of the squeezing parameter is not uniquely determined by the
-conditions~\eqref{eq:sigma_N-sq-2}.  Sole value of the squeezing parameter corresponds to the
-limiting case of perfect homodyne measurements with $\sigma_{x}^{(1)}=\sigma_{x}^{(2)}=1$ and
-$\delta_{1}=\delta_{2}^{-1}=q$. %, as can be seen from Eq.~\eqref{eq:Pi_dh}.
+An important point is that the value of the squeezing parameter is
+generally not
+uniquely determined by
+the conditions~\eqref{eq:sigma_N-sq-2}.
+Referring to Fig.~\ref{fig:squeezing},
+the sole exception is provided by the
+limiting case of perfect homodyne measurements
+with $\sigma_{x}^{(1)}=\sigma_{x}^{(2)}=1$ and $\delta_{1}=\delta_{2}^{-1}=q$.
 In this case, the
-squeezing parameter is unambiguously defined
+squeezing parameter is uniquely defined
+by the disbalance ration of the input beam splitter
 \begin{align}
   &
   \label{eq:r-ideal}
@@ -1376,20 +1398,20 @@ expressed in terms of the distribution~\eqref{eq:squeezed-Q}
 \begin{align}
   &
     \label{eq:P_G-ideal}
-    \prob_{\ind{id}}^{(\ind{DH})}(x_1,x_2)=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}
-    |\avr{z e^{i\phi},\rho e^{2i\phi}|\alpha}|^2,
+    \prob_{G}^{(1)}(x_1,x_2)=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}
+    \left|\avr{z e^{i\phi},\rho e^{2i\phi}|\alpha}\right|^2,
 \end{align}
 yields the POVM
 \begin{align}
     \label{eq:Pi_G-ideal}
-    &\hat{\Pi}_{\ind{id}}^{(\ind{DH})}(x_1,x_2)=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}
+    \hat{\Pi}_{G}^{(1)}(x_1,x_2)&=\frac{\cosh \rho}{2\pi |\alpha_L^{(1)}\alpha_L^{(2)}|}
     \notag
   \\
   &
   \times
     \ket{z e^{i\phi},\rho e^{2i\phi}}\bra{z e^{i\phi},\rho e^{2i\phi}},
 \end{align}
-which is propotional to the pure squeezed state
+which is propotional to the projector onto the pure squeezed state
 $\ket{z e^{i\phi},\rho e^{2i\phi}}$.
 The result~\eqref{eq:r-ideal}
 was reported in Ref.~\cite{genoni2014general}.
@@ -1405,13 +1427,13 @@ the probability~\eqref{eq:P_G-x1x2}
   &
   \prob_G^{(\ind{DH})}(x_1,x_2)
                                  =\frac{\sqrt{\sigma_1\sigma_2}}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
-                                 \int \dd^2\beta \, G(x_1-\beta_1;\sigma_N^{(1)}(r))
+                                 \int \dd^2 \beta G(x_1-\beta_1;\sigma_N^{(1)}(r))
 \notag
   \\
   &
     \times
     G(x_2-\beta_2;\sigma_N^{(2)}(r))
-    |\avr{\beta e^{i\phi},r e^{2i\phi}|\alpha}|^2, 
+    \left|\avr{\beta e^{i\phi},r e^{2i\phi}|\alpha}\right|^2, 
 \end{align}
 that varies with the squeezing parameter $r$.
 Similarly,
@@ -1420,7 +1442,7 @@ the corresponding POVM
   \label{eq:Pi_G-gen-x1x2}
   &
     \hat{\Pi}_G^{(\ind{DH})}(x_1,x_2)=\frac{\sqrt{\sigma_1\sigma_2}}{2\pi\sqrt{\sigma_G^{(1)}\sigma_G^{(2)}}}
-    \int\dd^2\beta \, G(x_1-\beta_1;\sigma_N^{(1)}(r))
+    \int \dd^2 \beta G(x_1-\beta_1;\sigma_N^{(1)}(r))
     \notag
   \\
   &
@@ -1433,91 +1455,148 @@ the Gaussian incoherent superposition
 of the pure squeezed states explicitly depends on the value of $r$.% Its' covariance matrix is given by Eq.~\eqref{eq:Pi_dh}.
 
 Our analysis suggests that  the ambiguity (non-uniqueness) of
-the Gaussian represention~\eqref{eq:Pi_G-gen-x1x2} for the double homodyne
-POVM is a universal feature coming into play
-in the presence of imperfections.
+the Gaussian represention~\eqref{eq:Pi_G-gen-x1x2} for the double-homodyne
+POVM is a universal feature coming into play in the presence of imperfections.
 Even when $\delta_2\ge 1$ and
 the coherent-state represention~\eqref{eq:povm-hetero} for the POVM is well-defined,
 the photocount statistics can be reproduced using
 the squeezed-state representation~\eqref{eq:Pi_G-gen-x1x2}
-with $r\neq0$.
-One way to make the Gaussian POVM decomposition unique is to impose additional constraints on the noise variances, which in turn fix the value of the squeezing parameter. 
-For example,
-the product of noise variances is maximized by the midpoint of the interval:
-\begin{align}
-  \label{eq:mid-r}
-  &r_0\equiv\argmax_r[\sigma_N^{(1)}(r) \times \sigma_N^{(2)}(r)]\notag\\
-  &=\frac14\ln\frac{\delta_1}{\delta_2}=\frac{r_1+r_2}2,
-\end{align}
-which is easily verified by finding the extremum using definitions from Eq.~\eqref{eq:sigma_N-sq-2}.
-%the squeezing parameter would take the minimal (maximal) value: $r=\min\{r_1,r_2\}$ ($r=\max\{r_1,r_2\}$)
+with $r\neq 0$.
+Analogously, the density matrices of mixed Gaussian states can be
+expressed as randomly displaced squeezed states and, in general, this
+representation is non-unique.
+In the next section we demonstrate that
+the non-uniqueness of additive noise channel
+should be taken into account in
+certain scenarios of security analysis of
+continuous variable quantum key distribution protocols.
+
+% One way to make the Gaussian POVM decomposition unique is to impose
+% additional constraints on the noise variances, which in turn fix the
+% value of the squeezing parameter.  For example, the product of noise
+% variances is maximized by the midpoint of the interval:
+% \begin{align}
+%   \label{eq:mid-r}
+%   r_0&\equiv\argmax_r\left[\sigma_N^{(1)}(r) \times \sigma_N^{(2)}(r)\right]\notag\\
+%   &=\frac14\ln\frac{\delta_1}{\delta_2}=\frac{r_1+r_2}2,
+% \end{align}
+% which is easily verified by finding the extremum using definitions from Eq.~\eqref{eq:sigma_N-sq-2}.
+
+% the squeezing parameter would take the minimal (maximal) value: $r=\min\{r_1,r_2\}$ ($r=\max\{r_1,r_2\}$)
 %provided the constraint requires minimization of
 %the noise variance $\sigma_N^{(2)}$ ($\sigma_N^{(1)}$).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%The non-uniqueness of additive noise channel
+should be taken into account when analyzing 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Measurement imperfections and security
 of continuous variable quantum key distribution protocols}
 \label{sec:protocol}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, we apply the developed formalism for asymmetric measurements to analyze the
-Gaussian-modulated coherent-state (GMCS, or GG02~\cite{PhysRevLett.88.057902}) CV-QKD protocol. We
-evaluate the mutual information, Holevo information, and asymptotic secret fraction (secure key rate
+In this section, we apply the developed formalism for asymmetric noisy
+Gaussian measurements to analyze the
+Gaussian-modulated coherent-state (GMCS, or
+GG02~\cite{PhysRevLett.88.057902})
+continuous variable quantum key distribution
+(CV-QKD) protocol.
+Specifically, we evaluate the mutual information, Holevo information, and asymptotic secret fraction (secure key rate
 per symbol) under the untrusted-noise scenario to quantify how measurement asymmetry affects
-protocol security.
+the protocol security.
 
-In the GG02 protocol, 
-Alice prepares an ensemble of coherent states
-with probabilities distributed according to Gaussian law with modulation variance $V_{\ind{A}}$. 
-These states are transmitted through a Gaussian channel characterized by transmission $T$ and independent excess noise of variance $\xi$. Upon receiving the states, Bob can perform either homodyne or double homodyne detection. When Bob uses homodyne detection, the mutual information between the two parties %Alice and Bob 
-is given by
+In the GG02 protocol,
+the sender (Alice) prepares an ensemble of normally distributed coherent states
+$\ket{\alpha=\alpha_1+i \alpha_2}$
+with the Gaussian probability density
+$p_{\ind{A}}(\alpha)=G(\alpha_1;V_A)G(\alpha_2;V_A)$,
+so that the density matrix of the input state
+\begin{align}
+  \label{eq:ensemble}
+  &
+    \hat{\rho}_{\ind{A}}=\int\mathop{\dd^2\alpha} p_{\ind{A}}(\alpha)
+    \ket{\alpha}\bra{\alpha}=\Phi_A(\ket{0}\bra{0}),
+    \notag
+\\
+    %\label{eq:probabilities}
+    &p_{\ind{A}}(\alpha)=\frac{1}{\pi V_{\ind{A}}}\exp\left[
+    -\frac{|\alpha|^2}{2V_{\ind{A}}}
+    \right]
+\end{align}
+represents randomly displaced states generated by
+applying the additive noise channel $\Phi_A$ with the covariance matrix
+$\Sigma_A= 4 V_A\mathbbm{1}$ to the vacuum state $\ket{0}\bra{0}$.
+The states prepared by Alice are then transmitted to
+the receiver (Bob)
+through the quantum channel
+$\mathcal{E}_{A\to B}$ which is assumed to be a composition
+of two Gaussian channels~\cite{laudenbach2018continuous}
+given by
+\begin{align}
+  \label{eq:AB-channel}
+  \mathcal{E}_{A\to B}=\Phi_{\xi}\circ\mathcal{E}_T,
+\end{align}
+where
+$\mathcal{E}_T$ is the pure-loss channel with the transmittance $T$
+and $\Phi_{\xi}$ is the additive noise channel  with
+the noise covariance matrix $\Sigma_{\xi}=\xi \mathbbm{1}$.
+In order to decode the signal,
+Bob measures the output state of the quantum channel~\eqref{eq:AB-channel}.
+Joint probability distribution of
+the outcomes of measurements and the components of the coherent state amplitude
+determines the mutual information between Alice and Bob.
+When Bob performs homodyne detection,
+the mutual information is given by
 \begin{align}
   \label{eq:I_H_res}
   I_{\ind{AB}}^{(\ind{H})}=\frac{1}{2}\log\left[1+\frac{TV_{\ind{A}}}{\sigma_x+\xi}\right],
 \end{align}
-where %$T$ is the channel transmission, $\xi$ is the channel noise variance, $V_{\ind{A}}$ is Alice's modulation variance, and 
-$\sigma_x$ is given by Eq.~\eqref{eq:sigma-x}.  If Bob uses double homodyne
-detection, mutual information takes the form
+where $\sigma_x$ is given by Eq.~\eqref{eq:sigma-x}.
+If Bob uses double-homodyne detection, the expression for
+the mutual information takes the form
 \begin{align}
   \label{eq:I_DH_res}
   I_{\ind{AB}}^{(\ind{DH})}=\frac{1}{2}\sum_i\log\left[1+\frac{TV_{\ind{A}}}
-    {2\sigma_i+\xi}\right],
+    {2 \sigma_i+\xi}\right],
 \end{align}
 where $\sigma_i$ are given by Eq.~\eqref{eq:sigm-x-i}.
-The details of these derivations are given in Appendix~\ref{sec:MI-and-EBtoPm}.
+The details on derivation of these expressions are
+relegated to Appendix~\ref{sec:MI-and-EBtoPm}.
 
-Next, we compute the Holevo information in the untrusted-noise scenario, in which detection
-imperfections are modeled as additional noise accessible to the eavesdropper (Eve). We assume that
-Eve controls a Gaussian channel that modifies only the covariance matrix, leaving the mean
-unchanged, while Bob’s measurements are considered
-ideal. %This additional noise effectively enhances the quantum channel parameters, thereby increasing the information accessible to Eve. %Consequently, this noise contribution effectively augments the quantum-channel parameters, increasing Eve’s accessible information.
-Using the equivalence between the prepare-and-measure (PM) and entanglement-based (EB) pictures (see
-App.~\ref{sec:MI-and-EBtoPm}), the Holevo information can be derived from the covariance matrix of
-the two mode squeezed vacuum state (TMSVS) $\Sigma^{\ind{EB}}_{\ind{AB}}$.
+ %This additional noise effectively enhances the quantum channel
+       %parameters, thereby increasing the information accessible to
+       %Eve. %Consequently, this noise contribution effectively
+       %augments the quantum-channel parameters, increasing Eve’s
+       %accessible information.
+Using the equivalence between the prepare-and-measure (PM) and entanglement-based (EB) pictures
+(see Appendix~\ref{sec:MI-and-EBtoPm}),
+
+
+the Holevo information can be derived from the covariance matrix of
+the two mode squeezed vacuum (TMSV) state  $\Sigma^{\ind{EB}}_{\ind{AB}}$.
 %It is given given by
 %\begin{align}
 %  \label{eq:TVMS}
 %    \Sigma^{\ind{TMSVS}}=\begin{pmatrix}
-%        V\mathbb{I}&\sqrt{V^2-1}\sigma_Z\\
-%        \sqrt{V^2-1}\sigma_Z&V\mathbb{I}
+%        V\mathbbm{1}&\sqrt{V^2-1}\sigma_Z\\
+%        \sqrt{V^2-1}\sigma_Z&V\mathbbm{1}
 %    \end{pmatrix},
 %\end{align}
 After transmitting through noisy channel
 (see Ref.~\cite{laudenbach2018continuous}), TMSVSs covariance matrix reads
 
 \begin{align}
-  &
   \label{eq:TMSVS-to-AB}
-  \mathcal{I}_A\otimes \Phi_{2\xi}\circ\mathcal{A}_T:
-  \Sigma_{\ind{TMSV}}
+  \mathcal{I}_A&\otimes \Phi_{\xi}\circ\mathcal{E}_T:
+\quad
+    \Sigma_{\ind{TMSV}}
   \notag
   \\
   &
   =
   \begin{pmatrix}
-        V\mathbb{I}&\sqrt{V^2-1}\sigma_z\\
-        \sqrt{V^2-1}\sigma_z&V\mathbb{I}
+        V\mathbbm{1}&\sqrt{V^2-1}\sigma_z\\
+        \sqrt{V^2-1}\sigma_z&V\mathbbm{1}
     \end{pmatrix}
   \mapsto
     \Sigma^{\ind{EB}}_{\ind{AB}}
@@ -1526,25 +1605,11 @@ After transmitting through noisy channel
   &
     =
     \begin{pmatrix}
-        V\mathbb{I}&c\sigma_z\\
-        c\sigma_z&V_{\ind{B}}\mathbb{I}
-    \end{pmatrix}, \quad \sigma_z=\ind{diag}(1,-1)
+        V\mathbbm{1}&c\sigma_z\\
+        c\sigma_z&V_{\ind{B}}\mathbbm{1}
+    \end{pmatrix}, \quad \sigma_z=\ind{diag}(1,-1),
 \end{align}
-
-% \begin{align}
-%   \label{eq:TVMS-final}
-%   \Sigma^{\ind{EB}}_{\ind{AB}}&=
-%                                 \begin{pmatrix}
-%         V\mathbb{I}&\sqrt{T\left(V^2-1\right)}\sigma_z\\
-%         \sqrt{T\left(V^2-1\right)}\sigma_z&\left[T(V-1)+1+2\xi\right]\mathbb{I}
-%     \end{pmatrix}
-%     \notag
-%     \\&\equiv\begin{pmatrix}
-%         V\mathbb{I}&c\sigma_z\\
-%         c\sigma_z&V_{\ind{B}}\mathbb{I}
-%     \end{pmatrix}, \quad \sigma_z=\ind{diag}(1,-1)
-% \end{align}
-where Alice and Bob's quadrature variances explicitly are
+where 
 \begin{align}
   \label{eq:V-c}
   &
@@ -1553,13 +1618,18 @@ where Alice and Bob's quadrature variances explicitly are
   \\
   &
   \label{eq:V_B}
-    V_{\ind{B}}=T(V-1)+1+\xi,
+    V_{\ind{B}}=T(V-1)+1+\xi.
 \end{align}
 % Note that Bob's variance $V_{\ind{B}}$ is exactly the same as Bob's variance calculated in PM
 % protocol per Eq.~\eqref{eq:sigma-hom-def} after substituting $\sigma_x=1$, as is required to
 % equate both protocols.  Measurement noise modifies this covariance matrix as
-Assuming measurement noise as accessible to Eve, her entropy $S_{\ind{E}}=S_{\ind{AB}}$ is evaluated
-from symplectic eigenvalues of the following covariance matrix:
+
+Next, we compute the Holevo information in the untrusted-noise scenario, in which detection
+imperfections are modeled as additional noise accessible to the eavesdropper (Eve).
+We assume that
+Eve controls a Gaussian channel that modifies only the covariance matrix, leaving the mean
+unchanged, while Bob’s measurements are considered
+ideal.
 \begin{align}
   &
   \label{eq:sigma_m_cov}
@@ -1570,14 +1640,20 @@ from symplectic eigenvalues of the following covariance matrix:
   \\
   &
   =\begin{pmatrix}
-    V\mathbb{I}&c\sigma_z\\
-    c\sigma_z&V_{\ind{B}}\mathbb{I}+\Sigma_N^{(\gamma)}
+    V\mathbbm{1}&c\sigma_z\\
+    c\sigma_z&V_{\ind{B}}\mathbbm{1}+\Sigma_N^{(\gamma)}
 \end{pmatrix},\quad \gamma\in\{\ind{H},\ind{DH}\}
 \end{align}
 where $\Sigma^{(\ind{H})}_N$ ($\Sigma^{(\ind{DH})}_N$) is given by
 Eq.~\eqref{eq:Sigma-H-m}
 (Eq.~\eqref{eq:Sigma-N-DH}).
-Symplectic eigenvalues of this matrix $\nu_{1,2}$:
+
+
+Assuming measurement noise as accessible to Eve,
+her entropy $S_{\ind{E}}=S_{\ind{AB}}$ is evaluated
+from symplectic eigenvalues of the covariance matrix~\eqref{eq:sigma_m_cov}
+given by
+%Symplectic eigenvalues of this matrix $\nu_{1,2}$ are used to calculate joint entropy $S_{\ind{AB}}$.
 %from symplectic eigenvalues of which we can calculate Eve's entropy, $S_{\ind{E}}=S_{\ind{AB}}$.
 \begin{align}
   &
@@ -1591,10 +1667,9 @@ Symplectic eigenvalues of this matrix $\nu_{1,2}$:
   \label{eq:D-gamma}
   D_{\gamma}=\det \Sigma_{\ind{AB}}^{(\gamma)},
   \;
-  \Delta_{\gamma}=\det(V_{\ind{B}}\mathbb{I}+\Sigma_N^{(\gamma)}) +
+  \Delta_{\gamma}=\det(V_{\ind{B}}\mathbbm{1}+\Sigma_N^{(\gamma)}) +
   V^2- 2 c^2
 \end{align}
-are used to calculate joint entropy $S_{\ind{AB}}$.
 
 \begin{figure}[t]
   \centering
@@ -1616,7 +1691,7 @@ are used to calculate joint entropy $S_{\ind{AB}}$.
   %Red curves represent non-ideal symmetrical homodyne% with all efficiencies being equal and lesser than $1$
   %, $\eta_j^{(i)}=0.95$. Blue curves represent the case of homodynes constituting %making up 
   %the scheme being nonideal and symmetrical, but not identical: $\eta_j^{(1)}=0.75$ and $\eta_j^{(1)}=0.9$.
-  Channel parameters: $V=5,$ $T=0.95,$ $\xi=0.5\cdot10^{-3}$.}\label{fig:Entropy}
+  Channel parameters: $V=5,$ $T=0.95,$ $\xi=10^{-3}$.}\label{fig:Entropy}
 \end{figure}
 \begin{figure*}
     \centering
@@ -1636,7 +1711,7 @@ are used to calculate joint entropy $S_{\ind{AB}}$.
         \end{subfigure}
         \caption{Dependence of (a) mutual information, (b) Holevo information, and (c) asymptotic
           secret fraction on beam splitter transmission $C^2$ if receiver uses homodyne detection,
-          for different detector efficiencies at $V=5,$ $T=0.95,$ $\xi=0.5\cdot10^{-3},$
+          for different detector efficiencies at $V=5,$ $T=0.95,$ $\xi=10^{-3},$
           $\beta=0.95$.  }
 \label{fig:homodyne-all}
 \end{figure*}
@@ -1662,23 +1737,23 @@ are used to calculate joint entropy $S_{\ind{AB}}$.
           Fig.~\ref{fig:double-homodyne}) if receiver uses double homodyne detection. All other beam
           splitters are assumed to be balanced. Results are shown for various detector efficiencies;
           efficiencies not specified in the legend are taken to be unity. Parameters:
-          $V=5,$ $T=0.95,$ $\xi=0.5\cdot10^{-3},$ $\beta=0.95$.}
+          $V=5,$ $T=0.95,$ $\xi=10^{-3},$ $\beta=0.95$.}
 
 \label{fig:double-homodyne-all}
 \end{figure*}
 
-The conditional covariance matrix is found via partial measurement
+The conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$ is found via partial measurement
 formula~\cite{Serafini:bk:2017}, written for $\Sigma_{\ind{AB}}^{(\gamma)}$ as follows:
 \begin{align}
   \label{eq:serf-a|b}
         \Sigma_{\ind{A|B}}^{(\gamma)}=
-        V\mathbb{I}-c^2\sigma_z(V_{\ind{B}}\mathbb{I}+\Sigma^{(\gamma)}_m)^{-1}\sigma_z.%,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
+        V\mathbbm{1}-c^2\sigma_z(V_{\ind{B}}\mathbbm{1}+\Sigma^{(\gamma)}_m)^{-1}\sigma_z.%,\quad m\in\left\{\ind{H}, \ind{DH}\right\}.
 \end{align}
-with symplectic eigenvalue $\nu_3$ used to calculate conditional entropy $S_{\ind{E|B}}=S_{\ind{A|B}}$,
+
 \begin{align}
      \label{eq:nu3}
   &
-    \nu_3^{(\ind{\gamma})}=\sqrt{\det\Sigma_{\ind{A|B}}^{(\gamma)}}.
+    \nu_3^{(\ind{\gamma})}=\sqrt{\det\Sigma_{\ind{A|B}}^{(\gamma)}}
 \end{align}
 
 For homodyne detection, calculating symplectic eigenvalue of conditional covariance matrix as square root of the determinant  yields:
@@ -1691,9 +1766,9 @@ The same calculation for double homodyne results in:
     \label{eq:nu3-DH}
   &
     \nu_3^{(\ind{DH})}=V
-    \sqrt{\frac{(V_{\ind{B}}  + \delta_1 - \frac{c^{2}}V) ( V_{\ind{B}}  + \delta_2
-    - \frac{c^{2}}V)}{
-    ( V_{\ind{B}} + \delta_1) (V_{\ind{B}} + \delta_2)}},
+    \sqrt{\frac{\left(V_{\ind{B}}  + \delta_1 - \frac{c^{2}}V\right) \left( V_{\ind{B}}  + \delta_2
+    - \frac{c^{2}}V\right)}{
+    \left( V_{\ind{B}} + \delta_1\right) \left(V_{\ind{B}} + \delta_2\right)}},
 \end{align}
 where $\delta_i=2\sigma_i-1$ per Eq.~\eqref{eq:delta_12}.
 Assuming purification attack, Holevo information is calculated as
@@ -1715,32 +1790,96 @@ where
     \frac{\nu-1}{2}\log\frac{\nu-1}{2}.
 \end{align}
 %with appropriate substitution of $\nu_i$ depending on the measurement scheme.
-
-Note that in the case of double homodyne detection, joint entropy $S_{\ind{AB}}$ and thereby Holevo information $\chi_{\ind{EB}}$ are explicitly dependent on squeezing parameter $r\in[r_2,r_1]$~\eqref{eq:r1-r2}, as seen from the expression for covariance matrix~\eqref{eq:sigma_m_cov}. Moreover, as illustated by Fig.~\ref{fig:Entropy}, the choice of $r$ significantly affects the value of $\chi_{\ind{EB}}$.
-%singular value
-Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne, $\sigma_x^{(1)}=\sigma_x^{(2)}=1$ (black dot), only singular value of $r=\rho$~\eqref{eq:r-ideal} is allowed,as shown at point $\rho$ in Fig.~\ref{fig:squeezing}. If input beansplitter is balanced, $q=1$ (Fig.~\ref{fig:Entropy}a), then $r=0$, and the case of projector onto coherent state~\eqref{eq:POVM-hetero-ideal} is realized. Otherwise, if $q\neq1$, $r \neq 0$ as well, representing projector onto squeezed state~\eqref{eq:Pi_G-ideal}. In both cases, the value of $S_{\ind{AB}}$ is independent of $\rho$ and determined solely by modulation variance $V_{\ind{A}}$ and channel parameters $T$ and $\xi$.
-%equal sigma_x^i
-In the symmetrical but nonideal case (red curve in Fig.~\ref{fig:Entropy}a), symmetrical interval $[-r_1,r_1]$ arises, and joint entropy is maximized by the midpoint $r=0$. In this case, choosing the POVM in the form superposition of coherent states~\eqref{eq:povm-hetero} is not only allowed, but optimal. If input beamplitter is unbalanced (red curve in Fig.~\ref{fig:Entropy}b), interval of possible $r$, as well as optimal squeezing parameterthat maximazis Holevo information, shift. Moreover, if disbalance of input beamsplitter $|1-q|$ is sufficiently high, choice of $r=0$ becomes impossible as it does not lay in the interval~\eqref{eq:r1-r2}. Substituing $r\not\in[r_2,r_1]$ results in one of eigenvalues being less than $1$, which is unphysical. Therefore, the more general representation given by Eq.~\eqref{eq:Pi_G-gen-x1x2} must be employed.
-%unequal sigma_x^i
-In asymmetrical case (blue curves) if input beamsplitter is balanced, while using $r=0$, i.e. Eq.~\eqref{eq:povm-hetero}, is possible, joint entropy is maximized by $r\neq0$. If input beamsplitter is unbalanced, similarly to red curve, dependencies of $r$ shift in accordance to disbalance ratio.
-For calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
-
-
-
-
-The asymptotic secret fraction is
+Finally, the asymptotic secret fraction reads
 \begin{equation}
 \label{eq:r}
     K^{(\gamma)}=\beta I_{AB}^{(\gamma)}-\chi_{EB}^{(\gamma)},
 \end{equation}
 where $\beta$ is the reconciliation efficiency.
 
-The effects of detection asymmetry on mutual information, Holevo information, and the asymptotic secret fraction are illustrated in Fig.~\ref{fig:homodyne-all} for homodyne detection and Fig.~\ref{fig:double-homodyne-all} for double homodyne detection.
-From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry in homodyne detection generally degrades performance, the combination of an unbalanced beamsplitter and unequal detector efficiencies can be beneficial, resulting in maxima of the mutual information and secret fraction with given parameters. Correspondingly, the minima of the Holevo information exhibit similar behavior. % Notably, these functions are symmetric and even with shifting local mininimum (symmetry point).
-Our numerical results for the homodyne case are qualitatively consistent with Ref.~\cite{ruiz2023effects}, namely the dependence of the asymptotic secret fraction on the beam splitter transmittance deviation and balanced detector deviation.
-Similar behavior can be seen from Fig.~\ref{fig:double-homodyne-all} for double homodyne. However, while mutual information in double homodyne is generally higher than in homodyne, the significantly greater increase in Holevo information leads to a lower secret fraction overall. An interesting feature illustrated by the black curves in this figure is that, under ideal detection efficiencies, variations in the beamsplitter transmission cause reduction in the Holevo information. As seen previosly in Fig.~\ref{fig:Entropy}, this is the case of joint entropy being constant in $r$ and therefore $C_S^2$ per Eq.~\eqref{eq:r-ideal}, so that only dependency of conditional entropy (see Eq.~\eqref{eq:nu3-DH}) on asymmetry remains.
 
-The dependence of the asymptotic secret fraction on channel length in the presence of asymmetrical detection is shown in Fig.~\ref{fig:r-of-l-all}. These results indicate that in the untrusted noise scenario, asymmetry noise significantly reduces maximal channel length. Consistent with previous results, asymmetrical double homodyne performs worse than asymmetrical homodyne, due to Holevo information being high. The discrepancy in our Holevo information calculations leads to results for the asymptotic secret fraction dependence under double homodyne detection that differ from those in Ref.~\cite{Bartlett:25}, although both works reach the same conclusion regarding its degraded performance.
+
+Note that in the case of double homodyne detection, joint entropy
+$S_{\ind{AB}}$ and thereby Holevo information $\chi_{\ind{EB}}$ are
+explicitly dependent on squeezing parameter
+$r\in[r_2,r_1]$~\eqref{eq:r1-r2}, as seen from the expression for
+covariance matrix~\eqref{eq:sigma_m_cov}. Moreover, as illustated by
+Fig.~\ref{fig:Entropy}, the choice of $r$ significantly affects the
+value of $\chi_{\ind{EB}}$.
+%singular value
+Regarding Fig.~\ref{fig:Entropy}, for ideal double homodyne,
+$\sigma_x^{(1)}=\sigma_x^{(2)}=1$ (black dot), only singular value of
+$r=\rho$~\eqref{eq:r-ideal} is allowed,as shown at point $\rho$ in
+Fig.~\ref{fig:squeezing}. If input beansplitter is balanced, $q=1$
+(Fig.~\ref{fig:Entropy}a), then $r=0$, and the case of projector onto
+coherent state~\eqref{eq:POVM-hetero-ideal} is realized. Otherwise, if
+$q\neq1$, $r \neq 0$ as well, representing projector onto squeezed
+state~\eqref{eq:Pi_G-ideal}. In both cases, the value of
+$S_{\ind{AB}}$ is independent of $\rho$ and determined solely by
+modulation variance $V_{\ind{A}}$ and channel parameters $T$ and
+$\xi$.
+%equal sigma_x^i
+In the symmetrical but nonideal case (red curve in
+Fig.~\ref{fig:Entropy}a), symmetrical interval $[-r_1,r_1]$ arises,
+and joint entropy is maximized by the midpoint $r=0$. In this case,
+choosing the POVM in the form superposition of coherent
+states~\eqref{eq:povm-hetero} is not only allowed, but optimal. If
+input beamplitter is unbalanced (red curve in
+Fig.~\ref{fig:Entropy}b), interval of possible $r$, as well as optimal
+squeezing parameterthat maximazis Holevo information, shift. Moreover,
+if disbalance of input beamsplitter $\left|1-q\right|$ is sufficiently
+high, choice of $r=0$ becomes impossible as it does not lay in the
+interval~\eqref{eq:r1-r2}. Substituing $r\not\in[r_2,r_1]$ results in
+one of eigenvalues being less than $1$, which is
+unphysical. Therefore, the more general representation given by
+Eq.~\eqref{eq:Pi_G-gen-x1x2} must be employed.
+%unequal sigma_x^i
+In asymmetrical case (blue curves) if input beamsplitter is balanced,
+while using $r=0$, i.e. Eq.~\eqref{eq:povm-hetero}, is possible, joint
+entropy is maximized by $r\neq0$. If input beamsplitter is unbalanced,
+similarly to red curve, dependencies of $r$ shift in accordance to
+disbalance ratio.  For calculations, we will optimize $r$ to maximize
+$\chi_{\ind{EB}}$.
+
+The effects of detection asymmetry on mutual information, Holevo
+information, and the asymptotic secret fraction are illustrated in
+Fig.~\ref{fig:homodyne-all} for homodyne detection and
+Fig.~\ref{fig:double-homodyne-all} for double homodyne detection.
+From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry
+in homodyne detection generally degrades performance, the combination
+of an unbalanced beamsplitter and unequal detector efficiencies can be
+beneficial, resulting in maxima of the mutual information and secret
+fraction with given parameters. Correspondingly, the minima of the
+Holevo information exhibit similar
+behavior. % Notably, these functions are symmetric and even with shifting local mininimum (symmetry point).
+Our numerical results for the homodyne case are qualitatively
+consistent with Ref.~\cite{ruiz2023effects}, namely the dependence of
+the asymptotic secret fraction on the beam splitter transmittance
+deviation and balanced detector deviation.  Similar behavior can be
+seen from Fig.~\ref{fig:double-homodyne-all} for double
+homodyne. However, while mutual information in double homodyne is
+generally higher than in homodyne, the significantly greater increase
+in Holevo information leads to a lower secret fraction overall. An
+interesting feature illustrated by the black curves in this figure is
+that, under ideal detection efficiencies, variations in the
+beamsplitter transmission cause reduction in the Holevo
+information. As seen previosly in Fig.~\ref{fig:Entropy}, this is the
+case of joint entropy being constant in $r$ and therefore $C_S^2$ per
+Eq.~\eqref{eq:r-ideal}, so that only dependency of conditional entropy
+on asymmetry remains. Conditional entropy is reduced by asymmetry, see
+%Eq.~\eqref{eq:nu3-dh}.
+
+The dependence of the asymptotic secret fraction on channel length in
+the presence of asymmetrical detection is shown in
+Fig.~\ref{fig:r-of-l-all}. These results indicate that in the
+untrusted noise scenario, asymmetry noise significantly reduces
+maximal channel length. Consistent with previous results, asymmetrical
+double homodyne performs worse than asymmetrical homodyne, due to
+Holevo information being high. The discrepancy in our Holevo
+information calculations leads to results for the asymptotic secret
+fraction dependence under double homodyne detection that differ from
+those in Ref.~\cite{Bartlett:25}, although both works reach the same
+conclusion regarding its degraded performance.
 
 
 
@@ -1759,7 +1898,10 @@ The dependence of the asymptotic secret fraction on channel length in the presen
 \caption[]{Double homodyne detection}
 \label{fig:dhom-r}
 \end{subfigure}
-\caption{Asymptotic secret fraction as a function of channel length computed for (a) homodyne detection and (b) double homodyne detection, shown for various detector efficiencies. Parameters are $V=5,T=0.95,\xi=0.5\cdot10^{-3}, \beta=0.95$. The losses are assumed to be 20 dB per 100 km.}
+\caption{Asymptotic secret fraction as a function of channel length computed for (a) homodyne
+  detection and (b) double homodyne detection, shown for various detector efficiencies. Parameters
+  are $V=5,T=0.95,\xi=10^{-3}, \beta=0.95$. The losses are assumed to be 20 dB per
+  100 km.}
 
 \label{fig:r-of-l-all}
 \end{figure*}
@@ -1768,20 +1910,15 @@ The dependence of the asymptotic secret fraction on channel length in the presen
 \label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this paper,
-we have studied the effects of asymmetry
-introduced by unbalanced beam splitters and different efficiencies of the photodetectors
-in photocount statistics of homodyne and double homodyne detection.
+In this paper, we have studied the effects of asymmetry introduced by unbalanced beam splitters and
+different efficiencies of the photodetectors in photocount statistics of homodyne and double
+homodyne detection.
 %We have performed numerical analysis to explore the applicability range for the Gaussian approximation derived by approximating the Poisson distributions using the probability density functions of normally distrbuted random variables.
-By using the Gaussian approximation,
-we have developed
-the method for constructing POVMs of homodyne-based
-schematics.
-This method is applied to deduce
-the expression for the POVM
-that generalizes the well-known results to the case of the asymmetric homodyne detection.
-This POVM has been found to be well defined across all  parameter settings of the scheme,
-with the excess noise variance modified by the asymmetry. 
+By using the Gaussian approximation, we have developed the method for constructing POVMs of
+homodyne-based schematics.  This method is applied to deduce the expression for the POVM that
+generalizes the well-known results to the case of the asymmetric homodyne detection.  This POVM has
+been found to be well defined across all parameter settings of the scheme, with the excess noise
+variance modified by the asymmetry.
 %and incorporates the effect of asymmetry-induced shift of the mean value.
 %(these effects are illustrated in Fig.~\ref{fig:dist-H}).
 
@@ -1793,10 +1930,10 @@ with the excess noise variance modified by the asymmetry.
 %the distance increases with $|\alpha|$ (see Fig.~\ref{fig:amp_05}) and,
 %in the small-amplitude region with $|\alpha|\le 0.1$,
 %the maximum value of the distance can be estimated at about $0.13$
-%reached when the local oscillator amplitude $|\alpha_L|$ is in
-%the vicinity of unity. At $|\alpha_L|>1$, the distance rapidly drops with
+%reached when the local oscillator amplitude $\left|\alpha_L\right|$ is in
+%the vicinity of unity. At $\left|\alpha_L\right|>1$, the distance rapidly drops with
 %the LO amplitude. For example, at $|\alpha|=0.5$,
-%the distance falls below $0.05$ when the ratio $|\alpha_L|/|\alpha|$ exceeds five
+%the distance falls below $0.05$ when the ratio $\left|\alpha_L\right|/|\alpha|$ exceeds five
 %(see Fig.~\ref{fig:amp_01}).
 
 %We have found that
@@ -1815,16 +1952,26 @@ with the excess noise variance modified by the asymmetry.
 %the degree of asymmetry.
 
 
-Our formalism allows us to easily analyze various homodyne-based schematics. It can be
-extended to describe more complex measurement systems.
-We have demonstrated this by performing an analysis for
-the eight-port asymmetric  double homodyne scheme.
-For this scheme, we have deduced the Gaussian approximation (see Eqs.~\eqref{eq:Gaussian-8p}-\eqref{eq:mu_G-i}) and the corresponding POVM expressed in terms of the incoherent Gaussian superposition of projectors onto coherent states (see Eq.~\eqref{eq:povm-hetero}).
-As shown in Fig.~\ref{fig:dh-statistics}, the asymmetry induces effects such as shifts and anisotropy of the distributions in the photocount difference plane. 
-However, the applicability of double homodyne POVM in the form ~\eqref{eq:povm-hetero} may be broken provided that the beam splitter for the signal mode is unbalanced. 
-To resolve this, an extension to the set of squeezed coherent states is needed (see Eq.~\eqref{eq:Pi_G-gen-x1x2}), leading to explicit dependency of POVM on the squeezing parameter, which lies within the interval~\eqref{eq:r1-r2}, as illustrated in Fig.~\ref{fig:squeezing}. 
-This implies that, in general, there are infinitely many POVMs representing a single set of parameters for the double homodyne scheme. Consequently, the squeezing parameter requires an additional constraint to ensure the POVM is well-defined.
-This inherent non-uniqueness becomes relevant in untrusted noise security analysis. Specifically, while mutual information between Alice and Bob in Gaussian modulated coherent states CV-QKD protocol is calculated with variances of quadrature distribution~\eqref{eq:P_G-x1x2} (see Appendix~\ref{sec:MI-and-EBtoPm} for explicit calculations), joint entropy, and thus Holevo information, is explicitly dependent on the squeezing parameter (see Fig.~\ref{fig:Entropy}). %, due to the need of separating asymmetry noise from perfect measurement. 
+Our formalism allows us to easily analyze various homodyne-based schematics. It can be extended to
+describe more complex measurement systems.  We have demonstrated this by performing an analysis for
+the eight-port asymmetric double homodyne scheme.  For this scheme, we have deduced the Gaussian
+approximation (see Eqs.~\eqref{eq:Gaussian-8p}-\eqref{eq:mu_G-i}) and the corresponding POVM
+expressed in terms of the incoherent Gaussian superposition of projectors onto coherent states (see
+Eq.~\eqref{eq:povm-hetero}).  As shown in Fig.~\ref{fig:dh-statistics}, the asymmetry induces
+effects such as shifts and anisotropy of the distributions in the photocount difference plane.
+However, the applicability of double homodyne POVM in the form ~\eqref{eq:povm-hetero} may be broken
+provided that the beam splitter for the signal mode is unbalanced.  To resolve this, an extension to
+the set of squeezed coherent states is needed (see Eq.~\eqref{eq:Pi_G-gen-x1x2}), leading to
+explicit dependency of POVM on the squeezing parameter, which lies within the
+interval~\eqref{eq:r1-r2}, as illustrated in Fig.~\ref{fig:squeezing}.  This implies that, in
+general, there are infinitely many POVMs representing a single set of parameters for the double
+homodyne scheme. Consequently, the squeezing parameter requires an additional constraint to ensure
+the POVM is well-defined.  This inherent non-uniqueness becomes relevant in untrusted noise security
+analysis. Specifically, while mutual information between Alice and Bob in Gaussian modulated
+coherent states CV-QKD protocol is calculated with variances of quadrature
+distribution~\eqref{eq:P_G-x1x2} (see Appendix~\ref{sec:MI-and-EBtoPm} for explicit calculations),
+joint entropy, and thus Holevo information, is explicitly dependent on the squeezing parameter (see
+Fig.~\ref{fig:Entropy}). %, due to the need of separating asymmetry noise from perfect measurement.
 We optimized the squeezing parameter to maximize Holevo information.
 
 %Note that, according to Appendix~\ref{sec:appendix_comparison},
@@ -1837,8 +1984,17 @@ We optimized the squeezing parameter to maximize Holevo information.
 %The asymmetry effects described in the paper, such as deviations from the ideal 50:50 beam splitter ratio and mismatched detector efficiencies, introduce vulnerabilities into CV-QKD systems. %These flaws not only allow quantum hackers to compromise security but also degrade the system’s performance~\cite{ruiz2023effects}. 
 %These vulnerabilities can be exploited by adversaries through attack strategies such as the wavelength attack \cite{huang2012wavelength, huang2014quantum} and the homodyne detector blinding \cite{qin2018homodyne} and saturation~\cite{qin2016quantum}. The wavelength attack leverages the wavelength-dependent coupling ratio of fiber beam splitters and can be countered by using proper spectral filtering. Blinding and saturation attacks exploit the saturation behavior of homodyne detectors, and their effectiveness is amplified by receiver imbalance. If the splitting ratio deviates from ideal one, an injected bright pulse more easily displaces the detector output, facilitating saturation and biasing excess noise estimation.} 
 
-In this paper we analyzed how measurement asymmetry impacts the performance of CV-QKD system in the untrusted noise scenario, where asymmetry noise is accessible to Eve. In this case even relatively small asymmetry significantly reduces maximum channel length (see Fig.~\ref{fig:r-of-l-all}). In trusted-noise CV-QKD~\cite{usenko2016trusted}, if Alice and Bob are unaware of detector’s arms asymmetry, they may misinterpret the increased variance as channel excess noise rather than trusted detector imperfection. This leads to an overestimation of channel excess noise and an underestimation of trusted detector noise. Similar to blinding attacks~\cite{qin2018homodyne}, this vulnerability can be mitigated by inserting attenuators to balance the detection scheme.
-Despite the existence of countermeasures for the attacks described, implementing analytical corrections based on the formalism developed in this paper would be preferable for accurate security assessment and performance optimization.
+In this paper we analyzed how measurement asymmetry impacts the performance of CV-QKD system in the
+untrusted noise scenario, where asymmetry noise is accessible to Eve. In this case even relatively
+small asymmetry significantly reduces maximum channel length (see Fig.~\ref{fig:r-of-l-all}). In
+trusted-noise CV-QKD~\cite{usenko2016trusted}, if Alice and Bob are unaware of detector’s arms
+asymmetry, they may misinterpret the increased variance as channel excess noise rather than trusted
+detector imperfection. This leads to an overestimation of channel excess noise and an
+underestimation of trusted detector noise. Similar to blinding attacks~\cite{qin2018homodyne}, this
+vulnerability can be mitigated by inserting attenuators to balance the detection scheme.  Despite
+the existence of countermeasures for the attacks described, implementing analytical corrections
+based on the formalism developed in this paper would be preferable for accurate security assessment
+and performance optimization.
 
 % This method relies on approximating the exact statistics with the Gaussian approximation. We applied this method to
 % write POVM for homodyne and double homodyne schemes. For the double homodyne scheme, we have
@@ -1922,7 +2078,7 @@ The work was supported by the Russian Science Foundation (project No. 24-11-0039
   \centering
   \begin{subfigure}{0.49\textwidth}
     \includegraphics[width=.9\linewidth]{pics/homodyne/ED = ED(a)_eta.pdf}
-    \caption{$|\alpha_L|=5$}
+    \caption{$\left|\alpha_L\right|=5$}
     \label{fig:amp_05}
 \end{subfigure}
 \hfill
@@ -1958,7 +2114,7 @@ The work was supported by the Russian Science Foundation (project No. 24-11-0039
   for different values of the beam splitter disbalance angle
   $\delta\theta$ (see eq.~\eqref{eq:delta-theta}).
   The amplitudes are
-  $|\alpha|=1$ and $|\alpha_L|=5$.
+  $|\alpha|=1$ and $\left|\alpha_L\right|=5$.
 }
 \label{fig:delta-eta}
 \end{figure*}
@@ -1974,23 +2130,23 @@ In this Appendix, we study the perfomance of Gaussian approximation for the stat
     \label{eq:App_sigma_G}
     \sigma_G=\eta_1|\alpha_1|^2+\eta_2|\alpha_2|^2
     \approx
-    (\eta_1S^2+\eta_2C^2) |\alpha_L|^2,
+    (\eta_1S^2+\eta_2C^2) \left|\alpha_L\right|^2,
   \\
   &
     \label{eq:App_mu_G}
     \mu_G=\eta_1|\alpha_1|^2-\eta_2|\alpha_2|^2
     \approx
-    (\eta_1S^2-\eta_2C^2) |\alpha_L|^2
+    (\eta_1S^2-\eta_2C^2) \left|\alpha_L\right|^2
     \notag
   \\
   &
-    +CS (\eta_1+\eta_2) |\alpha_L| \avr{\hat{x}_\phi}
+    +CS (\eta_1+\eta_2) \left|\alpha_L\right| \avr{\hat{x}_\phi}
 \end{align}
 by comparing it with the exact statistics of difference events
 governed by the Skellam distribution~\eqref{eq:accurate}:
 \begin{align}
   \label{eq:App_accurate}
-  &\prob(\mu)=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
+  \prob(\mu)&=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
     \Biggl(\frac{\eta_1|\alpha_1|^2}{\eta_2|\alpha_2|^2}\Biggr)^{\mu/2}
     \notag
   \\
@@ -2005,10 +2161,10 @@ that can be computed as half of the $L^1$ distance
 \begin{align}
   &
     \label{eq:stat-dist}
-    D_P\equiv\mathtt{D}(\prob,\prob_{G})\equiv
+    D_P\equiv\mathtt{D}\left(\prob,\prob_{G}\right)\equiv
     \frac{1}{2}
     \sum_{\mu=-\infty}^{\infty}
-    \lvert\prob(\mu) -\prob_G(\mu)\rvert.
+    \left\lvert\prob(\mu) -\prob_G(\mu)\right\rvert.
   \end{align}
   Note that, according to Eq.~\eqref{eq:stat-dist},
   $\mu$ takes integer values and
@@ -2017,7 +2173,7 @@ that can be computed as half of the $L^1$ distance
 the Gaussian function~\eqref{eq:App_Gaussian}
 \begin{align}
     \label{eq:norm-cont}
-  \int_{-\infty}^{\infty}\dd\mu\,
+  \int_{-\infty}^{\infty}\mathop{\dd\mu}
     \prob_G(\mu)
     =1
 \end{align}
@@ -2039,7 +2195,7 @@ is close to unity. The numerical analysis shows that
 $|N_G-1|\le 10^{-4}$ at $ 2\sigma_{G}\ge 1$.
 The latter gives the condition for the LO amplitude
 \begin{equation}
-    |\alpha_L|\geq \frac{1}{\sqrt{2(\eta_1S^2+\eta_2C^2)}}\equiv\alpha_N
+    \left|\alpha_L\right|\geq \frac{1}{\sqrt{2(\eta_1S^2+\eta_2C^2)}}\equiv\alpha_N
     \label{eq:renorm}
   \end{equation}
    which ensures both applicability of the continuum limit
@@ -2047,19 +2203,19 @@ The latter gives the condition for the LO amplitude
   In our calculations,
 the probability $\prob_G$ will be numerically corrected by introducing
 the factor $N_G^{-1}$
-provided that $|\alpha_L|$ is below the "renormalization point" $\alpha_N$.
+provided that $\left|\alpha_L\right|$ is below the "renormalization point" $\alpha_N$.
 
 
   The curves presented in Fig.~\ref{fig:amplitude}
   illustrate how the accuracy of the Gaussian approximation
-  is affected by the signal and LO amplitudes, $|\alpha|$ and $|\alpha_L|$.
+  is affected by the signal and LO amplitudes, $|\alpha|$ and $\left|\alpha_L\right|$.
   More specifically, in
 Fig.~\ref{fig:amp_05} (Fig.~\ref{fig:amp_01}),
   the statistical distance is numerically evaluated as a function
-  of the amplitude $|\alpha|$ ($|\alpha_L|$)
+  of the amplitude $|\alpha|$ ($\left|\alpha_L\right|$)
 at different values of the photodetectors efficiencies
 provided that the value of
-the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
+the other amplitude $\left|\alpha_L\right|$ ($|\alpha|$) is fixed.
 
 \begin{figure*}
     \centering
@@ -2078,7 +2234,7 @@ the other amplitude $|\alpha_L|$ ($|\alpha|$) is fixed.
   Statistical distance $D_P=\mathtt{D}(\prob,\prob_G)$
   as a function of the beam splitter disbalance angle, $\delta\theta$,
 for the signal mode prepared in (a)~the coherent state and
-  in (b)~the single photon Fock state at different efficiencies  with $|\alpha_L|=5$.
+  in (b)~the single photon Fock state at different efficiencies  with $\left|\alpha_L\right|=5$.
     }
     \label{fig:delta-theta}
 \end{figure*}
@@ -2086,10 +2242,10 @@ for the signal mode prepared in (a)~the coherent state and
 
 Referring to Fig.~\ref{fig:amp_05},
 the curves behave as expected:
-given the LO amplitude $|\alpha_L|$,
+given the LO amplitude $\left|\alpha_L\right|$,
 the distance monotonically increases with $|\alpha|$.
 It is shown that,
-at $|\alpha_L|=5$ and $|\alpha|>1$,
+at $\left|\alpha_L\right|=5$ and $|\alpha|>1$,
 the perfectly symmetric homodyne presents the case
 with minimal distance, $D_P$, while in the presence of asymmetry,
 the curves exhibit a rapid growth and
@@ -2103,17 +2259,17 @@ computed at fixed value of $|\alpha|$,
 the above results suggest that the smaller the amplitude $|\alpha|$
 the better the accuracy of the Gaussian approximation.
 We can also expect the distance
-will be small provided that $|\alpha_L|$ is large
-and the strong LO approximation is applicable. 
+will be small provided that $\left|\alpha_L\right|$ is large
+and the strong-LO approximation is applicable. 
 
 
 Referring to Fig.~\ref{fig:amp_01},
 the curves evaluated at $|\alpha|=0.5$
 display a non-monotonic behavior with two local maxima
-in the weak LO range where $|\alpha_L|<1$.
-By contrast, after the second maximum at $|\alpha_L|>1$,
+in the weak LO range where $\left|\alpha_L\right|<1$.
+By contrast, after the second maximum at $\left|\alpha_L\right|>1$,
 the distance falls with the LO amplitude
-and it drops below $0.05$ at $|\alpha_L|>2$.
+and it drops below $0.05$ at $\left|\alpha_L\right|>2$.
 
 Note, that, when $|\alpha|<0.1$
 and the signal mode state is close to the vacuum state,
@@ -2123,14 +2279,14 @@ might be regarded as a reasonable approximation even in the
 weak LO range where
 the probability $\prob_G$ approaches the close neighborhood of
 the singular limit,
-$\lim_{|\alpha_L|\to 0}\prob_G(\mu)=\delta(\mu)$. 
+$\lim_{\left|\alpha_L\right|\to 0}\prob_G(\mu)=\delta(\mu)$. 
 
 
 From Fig.~\ref{fig:amp_01},
 it can also be seen that
 the distance vs LO amplitude dependence
 that can be used as a tool to characterize
-the applicability region of the strong LO approximation
+the applicability region of the strong-LO approximation
 is nearly insensitive to asymmetry.
 In other words, the latter does not produce noticeable effects on
 the accuracy of the approximation.
@@ -2195,13 +2351,13 @@ For convenience, we shall reproduce the expression for
 this distribution here:
 \begin{align}
 \label{eq:Skellam}   
-  &P(\mu)=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
+  P(\mu)&=e^{-\eta_1|\alpha_1|^2}e^{-\eta_2|\alpha_2|^2}
   \left(\frac{\eta_1|\alpha_1|^2}{\eta_2|\alpha_2|^2}\right)^{\frac{\mu}{2}}
   \notag
   \\
   &
   \times
-I_{\mu}(2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2}),
+I_{\mu}\left(2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2}\right),
 \end{align}
 where $I_k(z)$ is the modified Bessel function of the first kind
 and the amplitudes $|\alpha_{1,2}|$ are given by Eq.~\eqref{eq:amplitudes}.
@@ -2238,7 +2394,7 @@ into the normalization factor of the Gaussian approximation).
     \caption{Distances, $D_P=D(\prob,\prob_G)$ and $D_S=D(P,{\prob}_G^{(s)})$, 
       between the Skellam distribution, $\prob$, and
       two Gaussian approximations, $\prob_G$ (see Eq.~\eqref{eq:Gaussian})
-      and  ${\prob}_G^{(s)}$ (see Eq.~\eqref{eq:tPG-mu}), as a function of $|\alpha_L|$
+      and  ${\prob}_G^{(s)}$ (see Eq.~\eqref{eq:tPG-mu}), as a function of $\left|\alpha_L\right|$
       the beam splitter disbalance angle  at $\delta\theta=15^{\circ}$
 $\alpha=1$, and $\eta_1=\eta_2=1$.
       % Note the significant difference (in first decimal places) between the curves, which means that $P_B$
@@ -2248,20 +2404,20 @@ $\alpha=1$, and $\eta_1=\eta_2=1$.
 \end{figure}
 
 
-Assuming that $CS\ne 0$ and $|\alpha_L|$ is sufficiently large,
+Assuming that $CS\ne 0$ and $\left|\alpha_L\right|$ is sufficiently large,
 we can use the approximate relations
 \begin{align}
   &
     \label{eq:z1-A}
     z=2\sqrt{\eta_1\eta_2}|\alpha_1||\alpha_2|
     \approx
-    2CS\sqrt{\eta_1\eta_2}|\alpha_L|^2,
+    2CS\sqrt{\eta_1\eta_2}\left|\alpha_L\right|^2,
   \\
   &
     \label{eq:z2-A}
     \ln \left(\frac{{\eta_1}|\alpha_1|^2}{{\eta_2}|\alpha_2|^2}\right)^{\frac{\mu}{2}}\approx
     \frac{\mu}{2}\left(
-    \ln\frac{\eta_1S^2}{\eta_2C^2}+\frac{\langle\hat{x}_\phi\rangle}{CS|\alpha_L|}\right)
+    \ln\frac{\eta_1S^2}{\eta_2C^2}+\frac{\langle\hat{x}_\phi\rangle}{CS\left|\alpha_L\right|}\right)
     \end{align}
     to obtain the Gaussian approximation for the Skellam distribution~\eqref{eq:Skellam}
     given by
@@ -2273,14 +2429,14 @@ we can use the approximate relations
   &
   \label{eq:tmu_G}
   \tilde{\mu}_G=\sqrt{\eta_1\eta_2}\Bigl[
-  CS |\alpha_L|^2\ln\frac{\eta_1S^2}{\eta_2C^2}+
-  |\alpha_L|\avr{\hat{x}_{\phi}}
+  CS \left|\alpha_L\right|^2\ln\frac{\eta_1S^2}{\eta_2C^2}+
+  \left|\alpha_L\right|\avr{\hat{x}_{\phi}}
   \Bigr],
   \\
   &
       \label{eq:tsgm_G}
     \tilde{\sigma}_G=
-    2CS\sqrt{\eta_1\eta_2}|\alpha_L|^2.
+    2CS\sqrt{\eta_1\eta_2}\left|\alpha_L\right|^2.
 \end{align}
 
 
@@ -2296,8 +2452,8 @@ into the following quadrature form:
   \\
   &
     \label{eq:tld-x}
-    \tilde{x}=\frac{\mu}{{\sqrt{\eta_1\eta_2}|\alpha_L|}}-
-    CS|\alpha_L|\ln\frac{\eta_1S^2}{\eta_2C^2},
+    \tilde{x}=\frac{\mu}{{\sqrt{\eta_1\eta_2}\left|\alpha_L\right|}}-
+    CS\left|\alpha_L\right|\ln\frac{\eta_1S^2}{\eta_2C^2},
     \\
   &
     \label{eq:tsgm_x}
@@ -2307,7 +2463,7 @@ so that we may follow the line of reasoning
 presented in Sec.~\ref{sec:homodyne} to deduce the POVM
 \begin{align}
 \label{eq:tpovm}    
-    &\hat{\Pi}_G^{(s)}=\frac{1}{\sqrt{\eta_1\eta_2}|\alpha_L|}
+    \hat{\Pi}_G^{(s)}&=\frac{1}{\sqrt{\eta_1\eta_2}\left|\alpha_L\right|}
     \notag
   \\
   &
@@ -2351,13 +2507,13 @@ Figure~\ref{fig:PGPGs-aL} demonstrates
 that, at $\delta\theta\ne 0$,
 by contrast to the distance between $P$ and $\prob_G$,
 $D_P=\mathtt{D}(\prob,\prob_G)$ which is a monotonically decreasing function of
-$|\alpha_L|$,
+$\left|\alpha_L\right|$,
 the distance
 between the Skellam distribution and
 the approximate distribution~\eqref{eq:tPG-mu},
 $D_S=\mathtt{D}(\prob,\prob_G^{(s)})$,
 reveals non-monotonic behaviour and
-increases with $|\alpha_L|$ at sufficiently large LO amplitudes.
+increases with $\left|\alpha_L\right|$ at sufficiently large LO amplitudes.
 Referring to Fig.~\ref{fig:PGPGs-dth},
 disbalance of the beam splitter
 has strong detrimental effect on
@@ -2371,154 +2527,286 @@ when $2CS\le \sqrt{\eta_1\eta_2}$.
 The latter breaks applicability of Eq.~\eqref{eq:tpovm}
 giving an ill-posed POVM.
 
-\section{Mutual Information in GG02 protocol and equivalence between Prepare-and-Measure and Entanglement-Based schemes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mutual information and input state
+  of entanglement-based scheme}
 \label{sec:MI-and-EBtoPm}
-In this appendix, we provide detailed derivations of mutual information between Alice and Bob in the GG02 protocol used in the main text. We also show the equivalency between Prepare-and-Measure (PM) and Entanglement-Based (EB) schemes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Alice prepares an ensemble of coherent states $\ket{\alpha=q+ip}$
-with probabilities $p_{\ind{A}}(\alpha)$ distributed according to Gaussian law,
-\begin{align}
-  \label{eq:ensemble}
-    &\rho_{\ind{A}}=\int\dd^2\alpha\, p_{\ind{A}}(\alpha)
-    \ket{\alpha}
-    \bra{\alpha},\notag
-\\
-    %\label{eq:probabilities}
-    &p_{\ind{A}}(\alpha)=\frac{1}{\pi V_{\ind{A}}}\exp\left[
-    -\frac{2|\alpha|^2}{V_{\ind{A}}}
-    \right],
-\end{align}
-where $V_{\ind{A}}$ is the modulation variance.
-After transmission through a Gaussian channel, which attenuates the coherent amplitude by a factor of $\sqrt{T}$, where $T$ is the channel transmission, the state is transformed as $\ket{\alpha}\mapsto\ket{\sqrt{T}\alpha}\equiv\ket{\tilde\alpha=\tilde q +i \tilde p}$.
-If independent channel noise is present, the ensemble reads
-\begin{align}
-\label{eq:rho-tilde}
-    &\tilde\rho_{\ind{A}}=\frac{1}{\pi\xi T}\int\dd^2\tilde\alpha\,p_{\ind{A}}(\tilde\alpha)
-    \int\dd^2\alpha'\,
-    \exp\left[
-    -\frac{2|\alpha'|^2}{\xi}\right]\notag\\&\times\ket{\tilde\alpha-\alpha'}\bra{\tilde\alpha-\alpha'},
-\end{align}
-where $\xi$ is the channel noise variance. Note that variance of $p_{\ind{A}}(\tilde\alpha)$ is $TV_{\ind{A}}/4$.
+In this appendix,
+we begin with derivation of
+the expressions
+for the mutual information
+between Alice and Bob
+in the Gaussian-modulated coherent-state
+CV-QKD protocol discussed in Sec.~\ref{sec:protocol}.
+These expressions are given by Eqs.~\eqref{eq:I_H_res}
+and~\eqref{eq:I_DH_res}.
 
-Then, Bob performs a measurement described by POVM $\{\hat{\Pi}_x\}$, where the index $x$ corresponds to the measurement outcomes (e.g., quadrature values $q$ and $p$ in homodyne detection). The probability that Bob obtains measurement outcome $x$ is given by the Born rule:
+The important point greatly simplifying calculations
+is that both the channel~\eqref{eq:AB-channel}
+and the measurements are Gaussian.
+As a result, the random variables
+that determine the mutual information
+appear to be normally distributed,
+so that we can use the well-known
+analytical result that
+expresses the mutual information of the
+Gaussian random variables
+in terms of the determinats of
+the suitably defined covariance matrices
+(see, e.g., calculations detailed in online book~\cite{SochEtAl2024_StatProofBook}).
+
+Specifically,
+transformations that
+a coherent state undergoes under the action
+of the channel
+$\mathcal{E}_{A\to B}$
+can be explicitly represented as follows
+\begin{align}
+  &
+  \label{eq:A-to-B-channel}
+  \ket{\alpha}\bra{\alpha}\xrightarrow{\mathcal{E}_T}
+  \ket{\sqrt{T}\alpha}\bra{\sqrt{T}\alpha}
+    \xrightarrow{\Phi_{\xi}}
+    N_{\xi}\int\dd^2\beta
+    \exp\Bigl\{
+    -\frac{2|\beta|^2}{\xi}\Bigr\}
+    \notag
+  \\
+  &
+    \times\ket{\sqrt{T}\alpha+\beta}\bra{\sqrt{T}\alpha+\beta},
+\end{align}
+where $N_\xi=2/(\pi\xi)$.
+When Bob performs a Gaussian measurement described by the POVM
+$\{\hat{\Pi}_G^{(\gamma)}(x)\}_x$,
+where the value of $x$ labels the measurement outcomes
+(e.g., for homodyne detection, $x$ is the quadrature variable
+given by Eq.~\eqref{eq:x-def}),
+the joint probability density can be computed as follows
+\begin{subequations}
+  \label{eq:P_x-alpha}
 \begin{align}
 \label{eq:pB(xA)}
-    &p_{\ind{B}}(x,\tilde\alpha) \sim
-    p_{\ind{A}}(\tilde\alpha)\int\dd^2\alpha'\,\exp\left[
-    -\frac{2|\alpha'|^2}{\xi}\right]Q_x^{(\gamma)}(\tilde \alpha-\alpha'),
+  p_{\ind{B}}^{(\gamma)}(x,\alpha) & = p_B^{(\gamma)}(x|\alpha) p_A(\alpha),\quad
+                                     \gamma\in\{\ind{H},\ind{DH}\}
+  \\
+    \label{eq:p_B-cond}
+    p_B^{(\gamma)}(x|\alpha)& =\Tr\{\mathcal{E}_{A\to B}(\ket{\alpha}\bra{\alpha})\hat{\Pi}_G^{(\gamma)}(x)\}
+    \notag
+  \\
+  &
+    =\Tr\{\mathcal{E}_{T}(\ket{\alpha}\bra{\alpha})\cnj{\Phi}_{\xi}(\hat{\Pi}_G^{(\gamma)}(x))\}
+    \notag
+  \\
+  &
+=
+    \bra{\sqrt{T}\alpha}\Phi_{\xi}(\hat{\Pi}_G^{(\gamma)}(x))\ket{\sqrt{T}\alpha},
 \end{align}
-where $Q_x(\tilde \alpha)^{(\gamma)}$ is the $Q$-function of POVM used.
+\end{subequations}
+where we have used the fact that the additive noise channel $\hat{\Phi}_{\xi}$ is self-dual:
+$\cnj{\hat{\Phi}}_{\xi}=\hat{\Phi}_{\xi}$.
 
-For homodyne detection, Eq.~\eqref{eq:pB(xA)} takes the form given by  Eq.~\eqref{eq:Pgood-w-def}
+
+For homodyne detection,
+we can combine Eq.~\eqref{eq:P_x-alpha}
+and the expression for the $Q$-symbol
+of POVM given by Eq.~\eqref{eq:Pgood-w-def}
+to deduce the joint probability density 
 \begin{align}
-\label{eq:pxa}
-   p_{\ind{B}}^{(\ind{H})}(x,\tilde \alpha) 
-  \sim
+  &
+\label{eq:P-H-xa}
+   p_{\ind{B}}^{(\ind{H})}(x,\tilde\alpha_1) 
+  \propto
     \exp\left[
-    -\frac{(x-2\tilde q)^2}{2(\sigma_x+\xi)}-\frac{2\tilde q^2}{TV_{\ind{A}}}
-    \right].
-\end{align}
-Rewriting exponential's power in Eq.\eqref{eq:pxa} in quadratic form results in
-\begin{align}
-    \label{eq:sigma-hom-def}
-    &-\frac{1}{2}
+    -\frac{(x-2\tilde\alpha_1)^2}{2(\sigma_x+\xi)}-\frac{2\tilde\alpha_1^2}{TV_{\ind{A}}}
+  \right]
+  \notag
+  \\
+  &
+  =\exp\Bigl\{
+  -\frac{1}{2}
     \begin{pmatrix}
-        \tilde q&x
+        \tilde\alpha_1&x
+    \end{pmatrix} (\Sigma_{\ind{H}})^{-1}
+    \begin{pmatrix}
+        \tilde\alpha_1\\x
     \end{pmatrix}
-    \begin{pmatrix}
-        \frac{TV_{\ind{A}}}4&\frac{TV_{\ind{A}}}2\\
-        \frac{TV_{\ind{A}}}2&TV_{\ind{A}}+\sigma_x+\xi
-    \end{pmatrix}^{-1}
-    \begin{pmatrix}
-        \tilde q\\x
-    \end{pmatrix}\notag\\&\equiv 
-    -\frac{1}{2}
-    \begin{pmatrix}
-        \tilde q&x
-    \end{pmatrix}{\Sigma^{(\ind{H})}}^{-1}
-    \begin{pmatrix}
-        \tilde q\\x
-    \end{pmatrix},
-\end{align}
-and with covariance matrix $\Sigma^{(\ind{H})}$, mutual information between Alice and Bob can be calculated as follows~\cite{SochEtAl2024_StatProofBook}
-\begin{align}
-\label{eq:IABPM}
-    I_{\ind{AB}}^{(\ind{H})}=\frac{1}{2}\log \frac{\Sigma^{(\ind{H})}_{11}\Sigma^{(\ind{H})}_{22}}
-    {\det\Sigma^{(\ind{H})}}
-    %\frac{1}{2}\log \frac{4TV_{\ind{A}}+\sigma_x+2\xi}{\sigma_x+2\xi}
-    =\frac{1}{2}\log\left[1+\frac{TV_{\ind{A}}}{\sigma_x+\xi}\right],
-\end{align}
-where $\Sigma^{(\ind{H})}_{ii}$ are diagonal elements of $\Sigma^{(\ind{H})}$, and all logarithms are base 2.
-
-If double homodyne detection is used, from Eq.~\eqref{eq:pB(xA)} we have (see Eq.~\eqref{eq:P_G-x1x2}):
-\begin{align}
-  \label{eq:dh-exp}
-    &p_{\ind{B}}^{(\ind{DH})}(x,\tilde \alpha) \sim
-    \exp\Biggl[-\frac{(x_1-\tilde q)^2}{2\left(\frac{\sigma_1}2+\frac\xi4\right)}-\frac{2\tilde q^2}{TV_{\ind{A}}}\notag\\
-    &-\frac{(x_2-\tilde p)^2}{2\left(\frac{\sigma_2}2+\frac\xi4\right)}-\frac{2\tilde p^2}{TV_{\ind{A}}}
-    \Biggr].
-\end{align}
-Analogously to Eq.~\eqref{eq:sigma-hom-def}, we obtain covariance matrices as follows:
-\begin{align}
-  \label{eq:Sigma-DH}
-    &\Sigma^{(\ind{DH})^{(i)}}=\begin{pmatrix}
-        \frac{TV_{\ind{A}}}4&\frac{TV_{\ind{A}}}4\\
-        \frac{TV_{\ind{A}}}4&\frac{TV_{\ind{A}}}4+\frac{\sigma_i}{2}+\frac\xi4
-    \end{pmatrix}, \quad i = 1,2,
-\end{align}
-from which we obtain mutual information as
-\begin{align}
-  \label{eq:I_dh}
-    &I_{\ind{AB}}^{(\ind{DH})}=\frac{1}{2}\sum_{i=1,2}\log \frac{\Sigma^{(\ind{DH})^{(i)}}_{11}\Sigma^{(\ind{DH})^{(i)}}_{22}}
-    {\det\Sigma^{(\ind{DH})^{(i)}}}\notag\\
-    &=\frac{1}{2}\sum_i\log\left[1+\frac{TV_{\ind{A}}}
-    {2\sigma_i+\xi}\right].
-\end{align}
-Note that the resulting formulas for mutual information in ideal case ($\sigma_x=1$ and $\sigma_i=1$ for homodyne and double homodyne, respectively) coincide with those in Ref.~\cite{laudenbach2018continuous}.
-
-Now we move on to the equivalency between Prepare-and-Measure (PM) and Entanglement-Based (EB) schemes.
-Consider two mode squeezed vacuum state (TMSVS), in ket notation written as{~\cite{Weed:rmp:2012}}
-\begin{align}
-  \label{eq:psi_AB}
-  \ket{\Psi}_{\ind{AB}}=\sqrt{1-\lambda^2}\sum_{n=0}^{\infty}\lambda^n\ket{n,n}_{\ind{AB}},
-\end{align}
-where $\lambda=\tanh r,\ r$ is the squeezing parameter. Let Alice hold the state $\varsigma_{\ind{AB}}=\ket{\Psi}_{\ind{AB}}\bra{\Psi}_{\ind{AB}}$. In the EB protocol, Alice measures one mode using a double measurement, which corresponds to a POVM of coherent state projectors $\left\{\hat\Pi_\beta=\frac{\ket{\beta}\bra{\beta}}\pi\right\}$, and sends the second mode to Bob. The probability that Alice observes double homodyne outcome $\beta$ is given by the Born rule:
-\begin{align}
-  \label{eq:p_A_EB}
-  p_{\ind{A}}^{\ind{EB}}(\beta)=\Tr \hat{\Pi}_\beta \varsigma_{\ind{A}},
+  \Bigr\},
 \end{align}
 where
 \begin{align}
-  \label{eq:vars_A}
-  \varsigma_{\ind{A}}=\Tr_{\ind{B}}\varsigma_{\ind{AB}}=(1-\lambda^2)\sum_{n}\lambda^{2n}\ket{n}\bra{n}.
+  \label{eq:talpha}
+  \tilde{\alpha}_1=\sqrt{T}\Re\alpha e^{-i\phi},\quad
+  \tilde{\alpha}_2=\sqrt{T}\Im\alpha e^{-i\phi}.
 \end{align}
-is the reduced density matrix of Alice's mode.
-Substituing Eq.~\eqref{eq:vars_A} into into Eq.~\eqref{eq:p_A_EB} yields
+The covariance matrix of the normal distribution~\eqref{eq:P-H-xa}
 \begin{align}
-  \label{eq:p_A_EB-final}
-  p_{\ind{A}}^{\ind{EB}}(\beta)=\frac{1-\lambda^2}{\pi}\exp[(\lambda^2-1)|\beta|^2].
+    \label{eq:sigma-hom-def}
+  &
+    \Sigma_{\ind{H}}=
+    \begin{pmatrix}
+        \frac{TV_{\ind{A}}}4&\frac{TV_{\ind{A}}}2\\
+        \frac{TV_{\ind{A}}}2&TV_{\ind{A}}+\sigma_x+\xi
+    \end{pmatrix}
+\end{align}
+gives  the mutual information
+between Alice and Bob that can be computed
+from the formula~\cite{SochEtAl2024_StatProofBook}
+\begin{align}
+\label{eq:IABPM}
+    I_{\ind{AB}}^{(\ind{H})}=\frac{1}{2}\log \frac{\Sigma^{\ind{H}}_{11}\Sigma^{\ind{H}}_{22}}
+    {\det\Sigma_{\ind{H}}}
+    %\frac{1}{2}\log \frac{TV_{\ind{A}}+\sigma_x+2\xi}{\sigma_x+2\xi}
+    =\frac{1}{2}\log\left[1+\frac{TV_{\ind{A}}}{\sigma_x+\xi}\right],
+\end{align}
+where $\Sigma^{\ind{H}}_{ii}$ are the diagonal elements of $\Sigma_{\ind{H}}$
+and all logarithms are base 2.
+
+Similarly, for double homodyne detection,
+from Eqs.~\eqref{eq:P_x-alpha} and~\eqref{eq:P_G-x1x2}
+we have
+\begin{align}
+  \label{eq:dh-exp}
+  &
+  p_{\ind{B}}^{(\ind{DH})}(x,\tilde \alpha)
+    \propto
+\prod_{i=1}^2
+    \exp\Biggl[
+    -\frac{(x_i-\tilde\alpha_i)^2}{\sigma_i+\xi/2}-\frac{2\tilde\alpha_i^2}{TV_{\ind{A}}}
+    \Biggr]
+                                                \notag
+  \\
+  &
+    =\prod_{i=1}^2
+    \exp\Bigl\{
+  -\frac{1}{2}
+    \begin{pmatrix}
+        \tilde\alpha_i&x_i
+    \end{pmatrix} (\Sigma_{\ind{DH}}^{(i)})^{-1}
+    \begin{pmatrix}
+        \tilde\alpha_i\\x_i
+    \end{pmatrix}
+  \Bigr\}.
+\end{align}
+Analogously to Eq.~\eqref{eq:sigma-hom-def},
+we obtain the diagonal blocks of the covariance matrix
+$\Sigma_{\ind{DH}}$
+given by
+\begin{align}
+  \label{eq:Sigma-DH}
+  &
+    \Sigma_{\ind{DH}}^{(i)}=
+    \begin{pmatrix}
+        \frac{TV_{\ind{A}}}4&\frac{TV_{\ind{A}}}4\\
+        \frac{TV_{\ind{A}}}4&({TV_{\ind{A}}}+2 \sigma_i+\xi)/4
+    \end{pmatrix}, \quad i\in \{1,2\}.
 \end{align}
 
-After Alice obtains outcome $\beta$, second mode before channel transmission reads
+Since
+$p_{\ind{B}}^{(\ind{DH})}(x,\tilde\alpha)
+=p_{\ind{B}}^{(\ind{DH})}(x_1,\tilde\alpha_1)p_{\ind{B}}^{(\ind{DH})}(x_2,\tilde\alpha_2)
+$,
+the mutual information can be evaluated as a sum of two terms,
+determined by the above formula~\eqref{eq:IABPM}
+with $\Sigma_{\ind{H}}$ replaced by $\Sigma_{\ind{DH}}^{(i)}$.
+The result reads
 \begin{align}
-  \label{eq:vars_B_beta}
-    \varsigma_{\ind{B}}^\beta=
-    \ket{-\lambda\beta^*}\bra{-\lambda\beta^*}
+  \label{eq:I_dh}
+    I_{\ind{AB}}^{(\ind{DH})}&=\frac{1}{2}\sum_{i=1,2}\log \frac{[\Sigma_{\ind{DH}}^{(i)}]_{11}[\Sigma_{\ind{DH}}^{(i)}]_{22}}
+    {\det\Sigma_{\ind{DH}}^{(i)}}\notag\\
+    &=\frac{1}{2}\sum_i\log\left[1+\frac{TV_{\ind{A}}}
+    {2\sigma_i+\xi}\right].
 \end{align}
-and the ensemble reads
+
+
+In conclusion of this appendix, we briefly discuss
+equivalence relation between the
+prepare-and-measure (PM) and the entanglement-based (EB) schemes.
+To this end,
+we consider the two mode squeezed vacuum (TMSV) state
+given by~\cite{Weed:rmp:2012}
 \begin{align}
-  \label{eq:EB-ensemble}
-    \varsigma_{\ind{B}}=\int\dd^2\beta \,
-    p_{\ind{A}}^{\ind{EB}}(\beta)
-    \ket{-\lambda\beta^*}\bra{-\lambda\beta^*},
+  \label{eq:psi_AB}
+  \ket{\Psi_{\ind{AB}}}=\frac{1}{\cosh r}\sum_{n=0}^{\infty}(\tanh r)^n\ket{n,n}_{\ind{AB}},
 \end{align}
-exactly the same as Eq.~\eqref{eq:ensemble} after substituting
+where $r$ is the real-valued squeezing parameter,
+with the covariance matrix~\cite{Serafini:bk:2017}
 \begin{align}
-  \label{eq:EB_subs}
-    \alpha=-{\lambda}{\beta^*}, \quad
-    \frac{1-\lambda^2}{\lambda^2}=\frac{2}{V_{\ind{A}}}.
+  \label{eq:cov_TMSV}
+  &\quad
+    \Sigma_{\ind{TMSV}}
+  =
+  \begin{pmatrix}
+        \cosh(2r)\mathbbm{1}&\sinh(2r)\sigma_z\\
+        \sinh(2r)\sigma_z&\cosh(2r)\mathbbm{1}
+    \end{pmatrix}.
 \end{align}
-It follows that covariance matrix of TMSVS can be used to calculate Holevo information in the PM protocol.
+
+
+
+In
+the EB protocol,
+Alice is assumed to hold the state
+$\hat{\rho}_{\ind{AB}}=\ket{\Psi_{\ind{AB}}}\bra{\Psi_{\ind{AB}}}$.
+Then Alice measures one mode using a noiseless double homodyne measurement,
+which corresponds to the coherent-state POVM (see Eq.~\eqref{eq:POVM-hetero-ideal})
+$\{\hat\Pi_{CS}(\beta)=\pi^{-1}\ket{\beta}\bra{\beta}\}_{\beta}$,
+and sends the second mode to Bob.
+Unconditional state on the  Bob's side
+prepared by such a measurement 
+is
+% The probability that Alice observes
+% the double homodyne outcome $\beta$ is given by the Born rule:
+% \begin{align}
+%   \label{eq:p_A_EB}
+%   p_{\ind{A}}^{\ind{EB}}(\beta)=\bra{\Psi_{\ind{AB}}} \hat{\Pi}_{CS}(\beta)\otimes\hat{I}_B \ket{\Psi_{\ind{AB}}}
+% \end{align}
+
+\begin{align}
+  \label{eq:rho_B_EB-1}
+  \hat{\rho}_{\ind{B}}^{\ind{EB}}=\int\dd^2\beta \Tr_A \bigl\{(\hat{\Pi}_{CS}(\beta)\otimes\hat{I}_B) \hat{\rho}_{AB}\bigr\}.
+\end{align}
+By using the relation
+\begin{align}
+  \label{eq:beta-psi_AB}
+  \cosh r \avr{\beta|\Psi_{\ind{AB}}}=
+  \exp\Bigl\{-\frac{|\beta|^2}{2\cosh^2r}\Bigr\} \ket{\tilde{\beta}},
+\end{align}
+where $\tilde\beta=(\tanh r)\cnj{\beta}$,
+the above density matrix~\eqref{eq:rho_B_EB-1}
+can be recast into the form
+\begin{align}
+  \label{eq:rho_B_EB-2}
+  \hat{\rho}_{\ind{B}}^{\ind{EB}}=
+\frac{1}{\pi \sinh^2 r}
+  \int\dd^2\tilde{\beta}
+  \exp\Bigl\{-\frac{|\tilde{\beta}|^2}{\sinh^2 r}\Bigr\}
+  \ket{\tilde{\beta}}\bra{\tilde{\beta}}.
+\end{align}
+When
+\begin{align}
+  \label{eq:var-equiv}
+  \sinh^2 r = \frac{V_A}2
+\end{align}
+and $\tilde\beta$ is changed to $\alpha$,
+the expressions for
+the input density matrix
+in the PM picture~\eqref{eq:ensemble}
+and
+for the density matrix after Alice's measurement
+in the EB picture~\eqref{eq:rho_B_EB-2}
+become identical.
+Since relation
+$\cosh(2r)=1+V_A\equiv V$ immediately follows from Eq.~\eqref{eq:var-equiv},
+the covariance matrix~\eqref{eq:cov_TMSV}
+equals
+the matrix $\Sigma_{\ind{TMSV}}$
+that enters Eq.~\eqref{eq:TMSVS-to-AB}.
+This results justify using
+the covariance matrix of TMSV
+for calculation of the Holevo information in the PM protocol.
 
 
 % This implies that $\sigma$ can be negative for certain combinations of $\eta_{1,2}$ and $\theta$,
@@ -2549,7 +2837,7 @@ It follows that covariance matrix of TMSVS can be used to calculate Holevo infor
 %   &
 %     \times
 %     \frac{\left(\frac{{\eta_1}|\alpha_1|^2}{{\eta_2}|\alpha_2|^2}\right)^{\frac{\mu}{2}}}{\exp\left[\frac{\mu}{2}\left(
-%     \ln\frac{\eta_1S^2}{\eta_2C^2}+\frac{\avr{\hat{x}_{\phi}}}{CS|\alpha_L|}\right)
+%     \ln\frac{\eta_1S^2}{\eta_2C^2}+\frac{\avr{\hat{x}_{\phi}}}{CS\left|\alpha_L\right|}\right)
 %     \right]},
 % \end{align}
 % where $z\equiv2\sqrt{\eta_1\eta_2|\alpha_1|^2|\alpha_2|^2}$,
@@ -2561,7 +2849,7 @@ It follows that covariance matrix of TMSVS can be used to calculate Holevo infor
 %     \centering
 %     \includegraphics[width=0.75\linewidth]{pics/appendix/relation.pdf}
 %     \caption{Ratio given by Eq.~\eqref{eq:ratio} plotted against $\mu$
-%       for different values of $\delta\theta$ at $|\alpha_L|=5$,
+%       for different values of $\delta\theta$ at $\left|\alpha_L\right|=5$,
 %       $|\alpha|=0.1$, and $\eta_1=\eta_2=1$.
 %       \textbf{Where is the curve with $\delta\theta=0$?}
 %       % Significant deviation from unity represents incorrectness of approximations
