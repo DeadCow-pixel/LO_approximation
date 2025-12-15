@@ -254,18 +254,6 @@ INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
 INPUT .\tikz_article.pdf
-INPUT .\pics\S_AB_q1.pdf
-INPUT .\pics\S_AB_q1.pdf
-INPUT .\pics\S_AB_q1.pdf
-INPUT .\pics\S_AB_q1.pdf
-INPUT .\pics\S_AB_q1.pdf
-INPUT .\pics\S_AB_q1.pdf
-INPUT .\pics\S_AB_qge1.pdf
-INPUT .\pics\S_AB_qge1.pdf
-INPUT .\pics\S_AB_qge1.pdf
-INPUT .\pics\S_AB_qge1.pdf
-INPUT .\pics\S_AB_qge1.pdf
-INPUT .\pics\S_AB_qge1.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
 INPUT .\pics\untrust\hom\IAB.pdf
@@ -284,6 +272,18 @@ INPUT .\pics\untrust\hom\r.pdf
 INPUT .\pics\untrust\hom\r.pdf
 INPUT .\pics\untrust\hom\r.pdf
 INPUT .\pics\untrust\hom\r.pdf
+INPUT .\pics\S_AB_q1.pdf
+INPUT .\pics\S_AB_q1.pdf
+INPUT .\pics\S_AB_q1.pdf
+INPUT .\pics\S_AB_q1.pdf
+INPUT .\pics\S_AB_q1.pdf
+INPUT .\pics\S_AB_q1.pdf
+INPUT .\pics\S_AB_qge1.pdf
+INPUT .\pics\S_AB_qge1.pdf
+INPUT .\pics\S_AB_qge1.pdf
+INPUT .\pics\S_AB_qge1.pdf
+INPUT .\pics\S_AB_qge1.pdf
+INPUT .\pics\S_AB_qge1.pdf
 INPUT .\pics\untrust\dhom\IAB.pdf
 INPUT .\pics\untrust\dhom\IAB.pdf
 INPUT .\pics\untrust\dhom\IAB.pdf
@@ -314,6 +314,7 @@ INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
@@ -355,7 +356,6 @@ INPUT .\pics\homodyne\full_fock.pdf
 INPUT .\pics\homodyne\full_fock.pdf
 INPUT .\pics\homodyne\full_fock.pdf
 INPUT .\pics\homodyne\full_fock.pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT .\pics\appendix\app_1.pdf
 INPUT .\pics\appendix\app_1.pdf
 INPUT .\pics\appendix\app_1.pdf
