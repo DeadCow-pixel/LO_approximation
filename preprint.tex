@@ -150,57 +150,32 @@ superscriptaddress,
 \section{Introduction}
 \label{sec:intro}
 %%%%%%%%%%%%%%
-Homodyne and double homodyne detection are important measurement methods in quantum optics, widely used in continuous-variable quantum key distribution (CV-QKD) protocols. These techniques measure quadratures of light, enabling the receiver to retrieve the information encoded in the transmitted signals, which is essential for secure secret key generation in CV-QKD protocols~\cite{PhysRevLett.93.170504,e17096072,opt3040030,Zhang:apr:2024}.
-Homodyne detection measures one quadrature by mixing a weak quantum signal with a strong local oscillator (LO) at a beam splitter, while double homodyne detection measures both conjugate quadratures at once, giving a fuller picture of the quantum state~\cite{Richter:98,PhysRevLett.118.200501}.
+Coherent detection methods --  homodyne and double homodyne detection -- are important measurement techniques in quantum optics, widely used in continuous-variable quantum information protocols including quantum key distribution (CV-QKD)~\cite{e17096072,opt3040030,Zhang:apr:2024}, quantum teleportation~\cite{doi:10.1126/science.282.5389.706}, and state tomography~\cite{Lvovsky:rmp:2009}. These measurements extract quadratures from transmitted quantum states, enabling information decoding essential for secure communication, teleportation fidelity, and complete state reconstruction. Their Gaussian nature aligns perfectly with CV-QKD's Gaussian modulation and channel models, enabling analytical security analysis via covariance matrices and symplectic eigenvalues~\cite{Weed:rmp:2012}.
 
-In a typical homodyne setup, the quantum signal and classical LO combine at a beam splitter, and two photodiodes record the outputs. The difference in their photocurrents reveals the quadrature information~\cite{Vogel:pra:1993,Kelley:pr:1964}. Most theoretical treatments assume the LO is much stronger than the signal, which simplifies calculations~\cite{Vogel:bk:2006}. However, this can hide some quantum effects and increase classical noise. When LO and signal have similar strength, phase-sensitive quantum features become clearer, but this requires highly efficient, stable detectors~\cite{PhysRevA.51.4160,Schumaker:84}. Other measurement setups use intensity correlations or unbalanced beam splitters to help when detection efficiency is low~\cite{PhysRevA.51.4160}.
+In homodyne detection, a weak quantum signal mixes with a strong local oscillator (LO) at a beam splitter, with balanced photodetectors measuring the output-port photocount difference to reconstruct one quadrature. Double homodyne (heterodyne in QKD literature~\cite{Richter:98,PhysRevLett.118.200501}) extends this to simultaneous measurement of both conjugate quadratures via an additional LO split by a 90$^\circ$ phase shifter, providing complete complex-amplitude information
+(both quadratures), essential for composable security proofs~\cite{pirandola2024improvedcomposablekeyrates}.
 
-Double homodyne (eight-port) detection measures both quadratures simultaneously, allowing direct reconstruction of the Husimi $Q$-function. This setup works well at various LO intensities, bridging classical and quantum regimes~\cite{Richter:98,PhysRevA.101.031801,Cives_Esclop_2000}. In CV-QKD, it helps symmetrize measurements by keeping full quadrature data~\cite{PhysRevLett.118.200501}.
+\hrule
 
-Both homodyne and double homodyne detection are examples of Gaussian measurements. Their Gaussian nature is beneficial for analyzing and processing quantum signals in CV-QKD using well-established mathematical tools. In contrast, other approaches such as unbalanced homodyne detection, which measures only one output port of the beam splitter, realize non-Gaussian measurements based on positive operator-valued measures (POVMs) associated with $s$-parametrized quasiprobability distributions ($s<1$)~\cite{PhysRevA.53.4528}. These schemes suffer from higher noise sensitivity and current limitations in photon-number resolution, although detector arrays have been proposed to mitigate these drawbacks~\cite{PhysRevA.101.031801,PhysRevA.85.023820,PhysRevA.92.053835}, making their analysis more complex compared to Gaussian homodyne measurements.
+Practical implementations of homodyne-based measurements inevitably suffer nonideal components including unbalanced beam splitters, unequal detector efficiencies, limited photon-number resolution, and detector dead times. These imperfections introduce structured excess noise that degrades measurement fidelity and compromises CV-QKD security~\cite{PhysRevA.53.4528,len2022realistic,yeremenko2024realistic,reutov2021photon,hajomer2025finite,ruiz2023effects,Wang:23}.
 
-Practical implementations of homodyne-based measurements are inevitably affected by nonideal components and asymmetries. Imperfections such as unbalanced beam splitters, unequal detector efficiencies, limited photon-number resolution, and detector dead times introduce structured excess noise that degrades the fidelity of measurements and compromises the security of CV-QKD systems~\cite{PhysRevA.53.4528,len2022realistic,yeremenko2024realistic,reutov2021photon,hajomer2025finite,ruiz2023effects,Wang:23}. While the ideal POVMs associated with projections onto quadrature or coherent states have been thoroughly studied~\cite{Vogel:bk:2006,Richter:98}, a comprehensive quantum-optical framework explicitly incorporating beam splitter imbalance and detector-efficiency mismatch into the measurement operators remains absent~\cite{PhysRevA.85.023820,PhysRevA.92.053835}.  Existing complementary studies, such as Ref.~\cite{Bartlett:25}, have investigated the practical influence of detection imbalance on phase-reference estimation and key-rate performance in CV-QKD systems and illustrated its impact experimentally using Wigner-function reconstructions. However, these analyses remain semi-classical and do not address the modification of the measurement process itself within the quantum-optical formalism.
-In practice, these imperfections are often modeled as additive technical noise (electronic noise, dark counts, finite bandwidth), but asymmetry introduces structured excess noise that must be accounted for to produce reliable security estimates~\cite{Wang:23,ruiz2023effects,usenko2016trusted,Bartlett:25}. Such imperfections may also open side channels exploitable by an adversary (e.g., wavelength-dependent or detector-blinding attacks), so countermeasures such as spectral filtering, detector balancing, and careful calibration are
-essential~\cite{huang2012wavelength,huang2014quantum,qin2018homodyne,qin2016quantum,Wang:23}.
+While ideal POVMs for quadrature and coherent-state projections are well-studied~\cite{Vogel:bk:2006,Richter:98}, the quantum-optical treatment of combined beam-splitter imbalance and detector asymmetry requires further development. Ref.~\cite{Bartlett:25} experimentally demonstrates detection imbalance via Wigner-function reconstruction and others model it as classical additive noise~\cite{usenko2016trusted,Wang:23}. However, these semi-classical approaches do not derive modified POVMs, missing quantum-level consequences---particularly in the untrusted-noise scenario where Eve controls measurement imperfections~\cite{usenko2016trusted}.
 
+Such imperfections also enable side-channel attacks (wavelength-dependent, detector blinding), requiring countermeasures like detector balancing and calibration~\cite{huang2012wavelength,qin2018homodyne,Wang:23}. This gap motivates our derivation of asymmetry-aware POVMs for rigorous CV-QKD security analysis.
+
+\hrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this work, we focus on these
-imperfections at the level of the quantum measurement and refer to
-them collectively as asymmetry effects.
-Specifically, our analysis focuses on an asymmetrical detection scenario: an
-unbalanced beam splitter combined with unequal quantum
-efficiencies of the photodetectors, in contrast to the conventional
-symmetrical case of a balanced beam splitter and identical detector
-efficiencies. To derive tractable expressions, we model the photocount
-statistics by approximating Poisson distributions with Gaussian ones
-(the Gaussian approximation) and further simplify using the strong LO
-approximation. From these approximations, we construct the
-corresponding POVMs.% and numerically assess the accuracy of the resulting expressions.
-We then apply the developed formalism to a homodyne-based
-two-quadrature scheme (double homodyne, often referred to as
-heterodyne in the QKD
-literature~\cite{Pirandola:20,opt3040030,Zhang:apr:2024}) to
-demonstrate applicability beyond single-quadrature detection. We find
-that the asymmetrical double-homodyne POVM requires an extension to
-the set of squeezed coherent states.
-Interpreting those POVMs as classical mixing channels~\cite{Serafini:bk:2017} in control of adversary (untrusted noise scenario~\cite{usenko2016trusted}), we utilize them to compute Holevo information in the Gaussian-modulated coherent-state (GMCS or GG02) protocol~\cite{PhysRevLett.88.057902}. Then, after calculating mutual information, we are able to determine asymptotic secret fraction, thereby quantifying the impact of measurement asymmetry on protocol
-security.
+In this work, we focus on quantum measurement imperfections -- collectively referred to as \emph{asymmetry effects} -- arising from unbalanced beam splitters combined with unequal photodetector efficiencies, in contrast to conventional symmetrical setups with balanced beam splitters and identical detector efficiencies. The paper is organized as follows.
 
-% We also show that the commonly used Skellam-distribution approximation, based on the asymptotic expansion of the modified Bessel function of the first kind, is not valid in the asymmetrical regime.
+In Sec.~\ref{sec:homodyne}, we derive Gaussian-approximated photocount difference statistics and the corresponding POVM (including ideal measurement and excess noise covariance matrices) for homodyne detection.
+In Sec.~\ref{sec:double-homodyne}, we extend the analysis to double homodyne, first showing the inadequacy of coherent state representation for ideal measurement, and then deriving the necessary squeezed coherent state POVM with explicit squeezing parameter dependence governed by measurement asymmetries.%. We find that the squeezing parameter governing the POVM lies within a well-defined interval determined by measurement asymmetries.
 
-The paper is organized as follows. In Sec.~\ref{sec:homodyne}, we
-derive the statistical distribution of difference photon counts in the
-Gaussian approximation, from which we obtain the respective POVM. In
-Sec.~\ref{sec:double-homodyne}, we analyze the double-homodyne scheme
-analogously to the previous section and show that the resulting POVM
-is not well defined for all asymmetry parameters, requiring
-generalization. In Sec.~\ref{subsec:gen-POVM}, we generalize the
-double-homodyne POVM to the set of squeezed coherent states. In
-Sec.~\ref{sec:protocol}, we apply our results for homodyne and
-double-homodyne detection to calculate the asymptotic secret fraction
-for the GG02 CV-QKD protocol. Finally, in Sec.~\ref{sec:conclusion},
-we summarize the main results and outline directions for future
-research.
+In Sec.~\ref{sec:protocol}, we apply the POVMs derived in previous sections to the prepare-and-measure Gaussian-modulated coherent-state (GG02) protocol~\cite{PhysRevLett.88.057902} under the untrusted-noise scenario~\cite{usenko2016trusted}. Interpreting these POVMs as adversary-controlled classical mixing channels~\cite{Serafini:bk:2017}, we compute Holevo information and asymptotic secret fractions to quantify the security impact of measurement asymmetries.
+
+Finally, in Sec.~\ref{sec:conclusion}, we summarize the main results and outline directions for future research. 
+Appendix~\ref{sec:appendix_numerical} presents a numerical analysis of Gaussian approximation accuracy against exact Skellam distributions.
+In Appendix~\ref{sec:appendix_comparison}, we examine an alternative approximation using the Bessel-function asymptotics of the Skellam distribution, which fails to produce valid POVMs under asymmetry due to negative noise variances.
+In Appendix~\ref{sec:MI-and-EBtoPm}, we derive analytical expressions for the mutual information in the GG02 protocol when the receiver employs asymmetrical coherent detection, and prove the equivalence between prepare-and-measure and entanglement-based protocol representations.
 
 \begin{figure}
     \centering
@@ -601,7 +576,7 @@ where $R_\phi$ is the rotation matrix given by
 \end{align}
 
 In a more general asymmetric case with $\eta_1\ne \eta_2$
-and $C\ne S$, from the Q symbol~\eqref{eq:Pgood-w-def}
+and $C\ne S$, from the $Q$-symbol~\eqref{eq:Pgood-w-def}
 we deduce the following expression for the covariance matrix of
 noisy homodyne measurements
 \begin{align}
@@ -668,7 +643,7 @@ that leads to the relation
   \label{eq:theform}
   \prob_G^{(\ind{H})}(x)=\sqrt{\frac{\sigma_x}{\sigma_G}} \int \mathop{\dd x'} G(x-x';\sigma_N) Q_{x',\phi}(\alpha)  
 \end{align}
-linking the Q symbols of
+linking the $Q$-symbols of
 the projectors $\ket{x',\phi}\bra{x',\phi}$
 and the POVM $\hat{\Pi}_G^{(\ind{H})}$.
 
@@ -726,7 +701,7 @@ using the relations
   &
     \prob_G(x;\ket{\psi})=\bra{\psi}\hat{\Pi}_G\ket{\psi},
 \end{align}
-where $P_{\ket{\psi}}(\alpha)$ is the Glauber $P$ function of the quantum state
+where $P_{\ket{\psi}}(\alpha)$ is the Glauber $P$-function of the quantum state
 $\ket{\psi}$.
 In Fig.~\ref{fig:dist-H},
 we show the results computed for the single-photon Fock state

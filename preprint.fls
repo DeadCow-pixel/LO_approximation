@@ -185,6 +185,7 @@ INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Ася\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0900.tfm
+INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 OUTPUT preprint.pdf
 INPUT C:\Users\Ася\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\cm-super\cm-super-t1.enc
@@ -314,7 +315,6 @@ INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
 INPUT .\pics\untrust\dhom\r(l).pdf
-INPUT C:\Users\Ася\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
 INPUT .\pics\homodyne\ED = ED(a)_eta.pdf
