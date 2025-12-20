@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{37}%
+\begin{thebibliography}{41}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -83,9 +83,10 @@
   protocol},\ }\href {https://doi.org/10.3390/opt3040030} {\bibfield  {journal}
   {\bibinfo  {journal} {Optics}\ }\textbf {\bibinfo {volume} {3}},\ \bibinfo
   {pages} {338} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zhang}\ \emph {et~al.}(2024)\citenamefont {Zhang},
-  \citenamefont {Bian}, \citenamefont {Li}, \citenamefont {Yu},\ and\
-  \citenamefont {Guo}}]{Zhang:apr:2024}%
+\bibitem [{\citenamefont {Zhang}\ \emph
+  {et~al.}(2024{\natexlab{a}})\citenamefont {Zhang}, \citenamefont {Bian},
+  \citenamefont {Li}, \citenamefont {Yu},\ and\ \citenamefont
+  {Guo}}]{Zhang:apr:2024}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
   {Zhang}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Bian}},
@@ -96,7 +97,8 @@
   distribution system: {P}ast, present, and future}},\ }\href
   {https://doi.org/10.1063/5.0179566} {\bibfield  {journal} {\bibinfo
   {journal} {Applied Physics Reviews}\ }\textbf {\bibinfo {volume} {11}},\
-  \bibinfo {pages} {011318} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+  \bibinfo {pages} {011318} (\bibinfo {year} {2024}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Furusawa}\ \emph {et~al.}(1998)\citenamefont
   {Furusawa}, \citenamefont {Sørensen}, \citenamefont {Braunstein},
   \citenamefont {Fuchs}, \citenamefont {Kimble},\ and\ \citenamefont
@@ -476,6 +478,58 @@
   {https://doi.org/10.1103/PhysRevLett.97.190503} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {97}},\
   \bibinfo {pages} {190503} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Laudenbach}\ and\ \citenamefont
+  {Pacher}(2019)}]{laudenbach2019analysis}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Laudenbach}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Pacher}},\ }\bibfield  {title} {\bibinfo {title} {Analysis of the
+  trusted-device scenario in continuous-variable quantum key distribution},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Advanced Quantum
+  Technologies}\ }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {1900055}
+  (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph
+  {et~al.}(2024{\natexlab{b}})\citenamefont {Zhang}, \citenamefont {Bian},
+  \citenamefont {Li}, \citenamefont {Yu},\ and\ \citenamefont
+  {Guo}}]{zhang2024continuous}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Bian}},
+  \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Li}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Yu}},\ and\ \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Guo}},\ }\bibfield  {title} {\bibinfo
+  {title} {Continuous-variable quantum key distribution system: Past, present,
+  and future},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Applied Physics Reviews}\ }\textbf {\bibinfo {volume} {11}} (\bibinfo {year}
+  {2024}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huang}\ \emph {et~al.}(2014)\citenamefont {Huang},
+  \citenamefont {Kunz-Jacques}, \citenamefont {Jouguet}, \citenamefont
+  {Weedbrook}, \citenamefont {Yin}, \citenamefont {Wang}, \citenamefont {Chen},
+  \citenamefont {Guo},\ and\ \citenamefont {Han}}]{huang2014quantum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-Z.}\ \bibnamefont
+  {Huang}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Kunz-Jacques}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Jouguet}}, \bibinfo
+  {author} {\bibfnamefont {C.}~\bibnamefont {Weedbrook}}, \bibinfo {author}
+  {\bibfnamefont {Z.-Q.}\ \bibnamefont {Yin}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Wang}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {G.-C.}\ \bibnamefont {Guo}},\ and\
+  \bibinfo {author} {\bibfnamefont {Z.-F.}\ \bibnamefont {Han}},\ }\bibfield
+  {title} {\bibinfo {title} {Quantum hacking on quantum key distribution using
+  homodyne detection},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {89}},\ \bibinfo
+  {pages} {032304} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Qin}\ \emph {et~al.}(2016)\citenamefont {Qin},
+  \citenamefont {Kumar},\ and\ \citenamefont {All{\'e}aume}}]{qin2016quantum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Qin}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kumar}},\ and\
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {All{\'e}aume}},\
+  }\bibfield  {title} {\bibinfo {title} {Quantum hacking: Saturation attack on
+  practical continuous-variable quantum key distribution},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physical Review A}\ }\textbf
+  {\bibinfo {volume} {94}},\ \bibinfo {pages} {012325} (\bibinfo {year}
+  {2016})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Freyberger}\ \emph {et~al.}(1993)\citenamefont
   {Freyberger}, \citenamefont {Vogel},\ and\ \citenamefont
   {Schleich}}]{freyberger1993photon}%
