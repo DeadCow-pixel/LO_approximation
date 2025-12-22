@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{41}%
+\begin{thebibliography}{39}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -127,93 +127,6 @@
   {https://doi.org/10.1103/RevModPhys.81.299} {\bibfield  {journal} {\bibinfo
   {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo
   {pages} {299} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Weedbrook}\ \emph {et~al.}(2012)\citenamefont
-  {Weedbrook}, \citenamefont {Pirandola}, \citenamefont {Garc\'{\i}a-Patr\'on},
-  \citenamefont {Cerf}, \citenamefont {Ralph}, \citenamefont {Shapiro},\ and\
-  \citenamefont {Lloyd}}]{Weed:rmp:2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Weedbrook}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Pirandola}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Garc\'{\i}a-Patr\'on}}, \bibinfo {author} {\bibfnamefont {N.~J.}\
-  \bibnamefont {Cerf}}, \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
-  {Ralph}}, \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Shapiro}},\
-  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lloyd}},\ }\bibfield
-   {title} {{\selectlanguage {english}\bibinfo {title} {Gaussian quantum
-  information}},\ }\href {https://doi.org/10.1103/RevModPhys.84.621} {\bibfield
-   {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo
-  {volume} {84}},\ \bibinfo {pages} {621} (\bibinfo {year} {2012})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Richter}(1998)}]{Richter:98}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Richter}},\ }\bibfield  {title} {\bibinfo {title} {Double homodyne detection
-  and quantum state determination},\ }in\ \href
-  {https://opg.optica.org/abstract.cfm?URI=EQEC-1998-QTuG38} {\emph {\bibinfo
-  {booktitle} {European Quantum Electronics Conference}}}\ (\bibinfo
-  {publisher} {Optica Publishing Group},\ \bibinfo {year} {1998})\ p.\ \bibinfo
-  {pages} {QTuG38}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Leverrier}(2017)}]{PhysRevLett.118.200501}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Leverrier}},\ }\bibfield  {title} {\bibinfo {title} {Security of
-  continuous-variable quantum key distribution via a gaussian de finetti
-  reduction},\ }\href {https://doi.org/10.1103/PhysRevLett.118.200501}
-  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
-  {\bibinfo {volume} {118}},\ \bibinfo {pages} {200501} (\bibinfo {year}
-  {2017})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Pirandola}\ and\ \citenamefont
-  {Papanastasiou}(2024)}]{pirandola2024improvedcomposablekeyrates}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Pirandola}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Papanastasiou}},\ }\href {https://arxiv.org/abs/2301.10270} {\bibinfo
-  {title} {Improved composable key rates for cv-qkd}} (\bibinfo {year}
-  {2024}),\ \Eprint {https://arxiv.org/abs/2301.10270} {arXiv:2301.10270
-  [quant-ph]} \BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wallentowitz}\ and\ \citenamefont
-  {Vogel}(1996)}]{PhysRevA.53.4528}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Wallentowitz}}\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
-  {Vogel}},\ }\bibfield  {title} {\bibinfo {title} {Unbalanced homodyning for
-  quantum state measurements},\ }\href
-  {https://doi.org/10.1103/PhysRevA.53.4528} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {53}},\ \bibinfo
-  {pages} {4528} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Len}\ \emph {et~al.}(2022)\citenamefont {Len},
-  \citenamefont {Byelova}, \citenamefont {Uzunova},\ and\ \citenamefont
-  {Semenov}}]{len2022realistic}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~Y.}\ \bibnamefont
-  {Len}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Byelova}},
-  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Uzunova}},\ and\ \bibinfo
-  {author} {\bibfnamefont {A.}~\bibnamefont {Semenov}},\ }\bibfield  {title}
-  {\bibinfo {title} {Realistic photon-number resolution in generalized
-  hong-ou-mandel experiment},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
-  {journal} {Physica Scripta}\ }\textbf {\bibinfo {volume} {97}},\ \bibinfo
-  {pages} {105102} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Yeremenko}\ \emph {et~al.}(2024)\citenamefont
-  {Yeremenko}, \citenamefont {Dmytruk},\ and\ \citenamefont
-  {Semenov}}]{yeremenko2024realistic}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
-  {Yeremenko}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Dmytruk}},\
-  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Semenov}},\
-  }\bibfield  {title} {\bibinfo {title} {Realistic photon-number resolution in
-  gaussian boson sampling},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
-  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo
-  {pages} {043715} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Reutov}\ and\ \citenamefont
-  {Sych}(2021)}]{reutov2021photon}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Reutov}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Sych}},\
-  }\bibfield  {title} {\bibinfo {title} {Photon counting statistics with
-  imperfect detectors},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
-  {Journal of Physics: Conference Series}}},\ Vol.\ \bibinfo {volume} {2086}\
-  (\bibinfo {organization} {IOP Publishing},\ \bibinfo {year} {2021})\ p.\
-  \bibinfo {pages} {012096}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hajomer}\ \emph {et~al.}(2025)\citenamefont
   {Hajomer}, \citenamefont {Oruganti}, \citenamefont {Derkach}, \citenamefont
   {Andersen}, \citenamefont {Usenko},\ and\ \citenamefont
@@ -241,23 +154,6 @@
   security of continuous-variable quantum key distribution},\ }\href@noop {}
   {\bibfield  {journal} {\bibinfo  {journal} {Heliyon}\ }\textbf {\bibinfo
   {volume} {9}} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wang}\ \emph {et~al.}(2023)\citenamefont {Wang},
-  \citenamefont {Guo}, \citenamefont {Jia}, \citenamefont {Zhang},
-  \citenamefont {Lu}, \citenamefont {Liu},\ and\ \citenamefont {Li}}]{Wang:23}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.-Y.}\ \bibnamefont
-  {Wang}}, \bibinfo {author} {\bibfnamefont {X.-B.}\ \bibnamefont {Guo}},
-  \bibinfo {author} {\bibfnamefont {Y.-X.}\ \bibnamefont {Jia}}, \bibinfo
-  {author} {\bibfnamefont {Y.}~\bibnamefont {Zhang}}, \bibinfo {author}
-  {\bibfnamefont {Z.-G.}\ \bibnamefont {Lu}}, \bibinfo {author} {\bibfnamefont
-  {J.-Q.}\ \bibnamefont {Liu}},\ and\ \bibinfo {author} {\bibfnamefont {Y.-M.}\
-  \bibnamefont {Li}},\ }\bibfield  {title} {\bibinfo {title} {Accurate
-  shot-noise-limited calibration of a time-domain balanced homodyne detector
-  for continuous-variable quantum key distribution},\ }\href
-  {https://opg.optica.org/jlt/abstract.cfm?URI=jlt-41-17-5518} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Lightwave Technol.}\ }\textbf {\bibinfo
-  {volume} {41}},\ \bibinfo {pages} {5518} (\bibinfo {year}
-  {2023})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Vogel}\ and\ \citenamefont
   {Welsch}(2006)}]{Vogel:bk:2006}%
   \BibitemOpen
@@ -267,6 +163,55 @@
   {Quantum Optics}}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo  {publisher}
   {Wiley-VCH},\ \bibinfo {address} {Berlin},\ \bibinfo {year} {2006})\ p.\
   \bibinfo {pages} {508}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Richter}(1998)}]{Richter:98}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Richter}},\ }\bibfield  {title} {\bibinfo {title} {Double homodyne detection
+  and quantum state determination},\ }in\ \href
+  {https://opg.optica.org/abstract.cfm?URI=EQEC-1998-QTuG38} {\emph {\bibinfo
+  {booktitle} {European Quantum Electronics Conference}}}\ (\bibinfo
+  {publisher} {Optica Publishing Group},\ \bibinfo {year} {1998})\ p.\ \bibinfo
+  {pages} {QTuG38}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Almeida}\ \emph {et~al.}(2020)\citenamefont
+  {Almeida}, \citenamefont {Pereira}, \citenamefont {Fac{\~a}o}, \citenamefont
+  {Pinto},\ and\ \citenamefont {Silva}}]{Almeida2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Almeida}}, \bibinfo {author} {\bibfnamefont {D.~F.}\ \bibnamefont
+  {Pereira}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Fac{\~a}o}},
+  \bibinfo {author} {\bibfnamefont {A.~N.}\ \bibnamefont {Pinto}},\ and\
+  \bibinfo {author} {\bibfnamefont {N.~A.}\ \bibnamefont {Silva}},\ }\bibfield
+  {title} {\bibinfo {title} {Impact of imperfect homodyne detection on
+  measurements of vacuum states shot noise},\ }\href
+  {https://api.semanticscholar.org/CorpusID:228926883} {\bibfield  {journal}
+  {\bibinfo  {journal} {Optical and Quantum Electronics}\ }\textbf {\bibinfo
+  {volume} {52}} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pereira}\ \emph {et~al.}(2021)\citenamefont
+  {Pereira}, \citenamefont {Almeida}, \citenamefont {Facão}, \citenamefont
+  {Pinto},\ and\ \citenamefont {Silva}}]{Pereira2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Pereira}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Almeida}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Facão}}, \bibinfo
+  {author} {\bibfnamefont {A.~N.}\ \bibnamefont {Pinto}},\ and\ \bibinfo
+  {author} {\bibfnamefont {N.~A.}\ \bibnamefont {Silva}},\ }\bibfield  {title}
+  {\bibinfo {title} {Impact of receiver imbalances on the security of
+  continuous variables quantum key distribution},\ }\bibfield  {journal}
+  {\bibinfo  {journal} {EPJ Quantum Technology}\ }\textbf {\bibinfo {volume}
+  {8}},\ \href {https://doi.org/10.1140/epjqt/s40507-021-00112-z}
+  {10.1140/epjqt/s40507-021-00112-z} (\bibinfo {year} {2021})\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Barchielli}\ and\ \citenamefont
+  {Santamato}(2022)}]{Barchielli_2022}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Barchielli}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Santamato}},\ }\bibfield  {title} {\bibinfo {title} {Eight-port homodyne
+  detector: The effect of imperfections on quantum random-number generation and
+  on detection of quadratures},\ }\bibfield  {journal} {\bibinfo  {journal}
+  {Physical Review A}\ }\textbf {\bibinfo {volume} {106}},\ \href
+  {https://doi.org/10.1103/physreva.106.022620} {10.1103/physreva.106.022620}
+  (\bibinfo {year} {2022})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bartlett}\ \emph {et~al.}(2025)\citenamefont
   {Bartlett}, \citenamefont {Wilson}, \citenamefont {Chunnilall},\ and\
   \citenamefont {Kumar}}]{Bartlett:25}%
@@ -280,6 +225,28 @@
   {https://arxiv.org/abs/2510.17419} {\bibfield  {journal} {\bibinfo  {journal}
   {arXiv preprint arXiv:2510.17419}\ } (\bibinfo {year} {2025})}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Zou}\ \emph {et~al.}(2022)\citenamefont {Zou},
+  \citenamefont {Mao},\ and\ \citenamefont {Chen}}]{Zou:22}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Zou}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Mao}},\ and\
+  \bibinfo {author} {\bibfnamefont {T.-Y.}\ \bibnamefont {Chen}},\ }\bibfield
+  {title} {\bibinfo {title} {Rigorous calibration of homodyne detection
+  efficiency for continuous-variable quantum key distribution},\ }\href
+  {https://doi.org/10.1364/OE.461680} {\bibfield  {journal} {\bibinfo
+  {journal} {Opt. Express}\ }\textbf {\bibinfo {volume} {30}},\ \bibinfo
+  {pages} {22788} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pan}\ \emph {et~al.}(2025)\citenamefont {Pan},
+  \citenamefont {Monokandylos},\ and\ \citenamefont {Qi}}]{Pan_2025}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Pan}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Monokandylos}},\
+  and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Qi}},\ }\bibfield
+  {title} {\bibinfo {title} {Detector noise in continuous-variable quantum key
+  distribution},\ }\bibfield  {journal} {\bibinfo  {journal} {Physical Review
+  A}\ }\textbf {\bibinfo {volume} {112}},\ \href
+  {https://doi.org/10.1103/4h84-5tsg} {10.1103/4h84-5tsg} (\bibinfo {year}
+  {2025})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Usenko}\ and\ \citenamefont
   {Filip}(2016)}]{usenko2016trusted}%
   \BibitemOpen
@@ -289,34 +256,6 @@
   quantum key distribution: a threat and a defense},\ }\href@noop {} {\bibfield
    {journal} {\bibinfo  {journal} {Entropy}\ }\textbf {\bibinfo {volume}
   {18}},\ \bibinfo {pages} {20} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Huang}\ \emph {et~al.}(2012)\citenamefont {Huang},
-  \citenamefont {Yin}, \citenamefont {Wang}, \citenamefont {Li}, \citenamefont
-  {Chen}, \citenamefont {Guo},\ and\ \citenamefont
-  {Han}}]{huang2012wavelength}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-Z.}\ \bibnamefont
-  {Huang}}, \bibinfo {author} {\bibfnamefont {Z.-Q.}\ \bibnamefont {Yin}},
-  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Wang}}, \bibinfo {author}
-  {\bibfnamefont {H.-W.}\ \bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont
-  {W.}~\bibnamefont {Chen}}, \bibinfo {author} {\bibfnamefont {G.-C.}\
-  \bibnamefont {Guo}},\ and\ \bibinfo {author} {\bibfnamefont {Z.-F.}\
-  \bibnamefont {Han}},\ }\bibfield  {title} {\bibinfo {title} {Wavelength
-  attack scheme on continuous-variable quantum key distribution system using
-  heterodyne detection protocol},\ }\href@noop {} {\bibfield  {journal}
-  {\bibinfo  {journal} {arXiv preprint arXiv:1206.6550}\ } (\bibinfo {year}
-  {2012})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Qin}\ \emph {et~al.}(2018)\citenamefont {Qin},
-  \citenamefont {Kumar}, \citenamefont {Makarov},\ and\ \citenamefont
-  {All{\'e}aume}}]{qin2018homodyne}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Qin}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kumar}}, \bibinfo
-  {author} {\bibfnamefont {V.}~\bibnamefont {Makarov}},\ and\ \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {All{\'e}aume}},\ }\bibfield  {title}
-  {\bibinfo {title} {Homodyne-detector-blinding attack in continuous-variable
-  quantum key distribution},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
-  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {98}},\ \bibinfo
-  {pages} {012312} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Grosshans}\ and\ \citenamefont
   {Grangier}(2002)}]{PhysRevLett.88.057902}%
   \BibitemOpen
@@ -327,14 +266,6 @@
   {https://doi.org/10.1103/PhysRevLett.88.057902} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {88}},\
   \bibinfo {pages} {057902} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Serafini}(2017)}]{Serafini:bk:2017}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Serafini}},\ }\href@noop {} {{\selectlanguage {english}\emph {\bibinfo
-  {title} {Quantum Continuous Variables: A Primer of Theoretical Methods}}}}\
-  (\bibinfo  {publisher} {CRC Press, Taylor \& Francis Group},\ \bibinfo
-  {address} {Boca Raton},\ \bibinfo {year} {2017})\ p.\ \bibinfo {pages}
-  {350}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kelley}\ and\ \citenamefont
   {Kleiner}(1964)}]{Kelley:pr:1964}%
   \BibitemOpen
@@ -412,6 +343,15 @@
   {https://doi.org/10.1103/PhysRevLett.93.170504} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {93}},\
   \bibinfo {pages} {170504} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Leverrier}(2017)}]{PhysRevLett.118.200501}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Leverrier}},\ }\bibfield  {title} {\bibinfo {title} {Security of
+  continuous-variable quantum key distribution via a gaussian de finetti
+  reduction},\ }\href {https://doi.org/10.1103/PhysRevLett.118.200501}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {118}},\ \bibinfo {pages} {200501} (\bibinfo {year}
+  {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Genoni}\ \emph {et~al.}(2014)\citenamefont {Genoni},
   \citenamefont {Mancini},\ and\ \citenamefont {Serafini}}]{genoni2014general}%
   \BibitemOpen
@@ -502,6 +442,22 @@
   and future},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Applied Physics Reviews}\ }\textbf {\bibinfo {volume} {11}} (\bibinfo {year}
   {2024}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huang}\ \emph {et~al.}(2012)\citenamefont {Huang},
+  \citenamefont {Yin}, \citenamefont {Wang}, \citenamefont {Li}, \citenamefont
+  {Chen}, \citenamefont {Guo},\ and\ \citenamefont
+  {Han}}]{huang2012wavelength}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-Z.}\ \bibnamefont
+  {Huang}}, \bibinfo {author} {\bibfnamefont {Z.-Q.}\ \bibnamefont {Yin}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Wang}}, \bibinfo {author}
+  {\bibfnamefont {H.-W.}\ \bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont
+  {W.}~\bibnamefont {Chen}}, \bibinfo {author} {\bibfnamefont {G.-C.}\
+  \bibnamefont {Guo}},\ and\ \bibinfo {author} {\bibfnamefont {Z.-F.}\
+  \bibnamefont {Han}},\ }\bibfield  {title} {\bibinfo {title} {Wavelength
+  attack scheme on continuous-variable quantum key distribution system using
+  heterodyne detection protocol},\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {arXiv preprint arXiv:1206.6550}\ } (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Huang}\ \emph {et~al.}(2014)\citenamefont {Huang},
   \citenamefont {Kunz-Jacques}, \citenamefont {Jouguet}, \citenamefont
   {Weedbrook}, \citenamefont {Yin}, \citenamefont {Wang}, \citenamefont {Chen},
@@ -519,6 +475,18 @@
   homodyne detection},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
   {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {89}},\ \bibinfo
   {pages} {032304} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Qin}\ \emph {et~al.}(2018)\citenamefont {Qin},
+  \citenamefont {Kumar}, \citenamefont {Makarov},\ and\ \citenamefont
+  {All{\'e}aume}}]{qin2018homodyne}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Qin}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kumar}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Makarov}},\ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {All{\'e}aume}},\ }\bibfield  {title}
+  {\bibinfo {title} {Homodyne-detector-blinding attack in continuous-variable
+  quantum key distribution},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {98}},\ \bibinfo
+  {pages} {012312} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Qin}\ \emph {et~al.}(2016)\citenamefont {Qin},
   \citenamefont {Kumar},\ and\ \citenamefont {All{\'e}aume}}]{qin2016quantum}%
   \BibitemOpen
@@ -550,4 +518,21 @@
   (version 2023)}},\ \bibinfo {howpublished}
   {\url{https://doi.org/10.5281/zenodo.4305949}} (\bibinfo {year} {2024}),\
   \bibinfo {note} {accessed: 2025-07-15}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Weedbrook}\ \emph {et~al.}(2012)\citenamefont
+  {Weedbrook}, \citenamefont {Pirandola}, \citenamefont {Garc\'{\i}a-Patr\'on},
+  \citenamefont {Cerf}, \citenamefont {Ralph}, \citenamefont {Shapiro},\ and\
+  \citenamefont {Lloyd}}]{Weed:rmp:2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Weedbrook}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Pirandola}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Garc\'{\i}a-Patr\'on}}, \bibinfo {author} {\bibfnamefont {N.~J.}\
+  \bibnamefont {Cerf}}, \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Ralph}}, \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Shapiro}},\
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lloyd}},\ }\bibfield
+   {title} {{\selectlanguage {english}\bibinfo {title} {Gaussian quantum
+  information}},\ }\href {https://doi.org/10.1103/RevModPhys.84.621} {\bibfield
+   {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo
+  {volume} {84}},\ \bibinfo {pages} {621} (\bibinfo {year} {2012})}\BibitemShut
+  {NoStop}%
 \end{thebibliography}%
