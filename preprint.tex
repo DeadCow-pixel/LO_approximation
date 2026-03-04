@@ -1819,7 +1819,7 @@ of the receiver and the eavesdropper (Eve).
 \includegraphics[width=\linewidth]{pics/untrust/hom/KvsL_homodyne.pdf}
         \caption{
           Asymptotic
-        secret fraction $K^{(\ind{H})}$ versus channel length $l$, computed for various quadrature variances $\sigma_x$ (see Eq.~\eqref{eq:sigma-x}) and channel noise variance $\xi$ (as indicated in each panel title). The losses are assumed to be $20$ dB per $100$ km.
+        secret fraction $K^{(\ind{H})}$ versus channel length $l$, computed for various quadrature variances $\sigma_x$ (see Eq.~\eqref{eq:sigma-x}) and excess noise $\xi$ (as indicated in each panel title). The losses are assumed to be $20$ dB per $100$ km.
         The parameters are:
         $V=5$ and
         $\beta=0.95$.
@@ -1890,17 +1890,17 @@ $\Sigma_{\ind{AB}}$ are given by
 \hfill
 \begin{subfigure}[c]{.45\textwidth}
  \includegraphics[width=\linewidth, ]{pics/S_AB_qge1.pdf}
- \caption[]{$q>1$}
+ \caption[]{$q=1.25$}
 \label{subfig:Entropy-b}
 \end{subfigure}
   \caption{Joint entropy, $S_{\ind{AB}}^{(\ind{DH})}$, as a function
     of the squeezing parameter $r$ (see Eq.~\eqref{eq:r1-r2}) at
     different values of the quadrature variances
-    $\sigma_x^{(i)}$~\eqref{eq:sigm-x-i}
+    $\sigma_x^{(1,2)}$~\eqref{eq:sigm-x-i}
     for (a)~the balanced input beam splitter with
     the imbalance ratio~\eqref{eq:q-param}, $q$, equal to unity
     and
-    (b)~the unbalanced input beam splitter with $q=1.5$. All other beam splitters are assumed to be balanced.
+    (b)~the unbalanced input beam splitter with $q=1.25$. Values of $\sigma_x^{(1,2)}$ are: $\sigma_x^{(1,2)}=1$ for black dot, $\sigma_x^{(1,2)}=1.11$ for red dashed line, and $\sigma_x^{(1)}=1.33, \sigma_x^{(2)}=1.11$ for blue dashdotted line.
     The channel parameters are: $V=5$; $T=0.95$; and
     $\xi=10^{-2}$.
   }
@@ -2044,43 +2044,6 @@ the result is
 \end{align}
 where $\delta_i=2\sigma_i-1$ is given by Eq.~\eqref{eq:delta_12}.
 
-
-\begin{figure}[b]
-    \centering
-\includegraphics[width=.7\linewidth]{pics/untrust/dhom/KvsL_DH.pdf}
-        \caption{Asymptotic
-        secret fraction $K^{(\ind{DH})}$ versus channel length $l$, computed for various equal quadrature variances $\sigma_i$ (see Eq.~\eqref{eq:sigm-i}) and squeezing parameter~\eqref{eq:r1-r2} taken as $r=0$ and $r=r_2$. The losses are $20$ dB per $100$ km.
-        The parameters are:
-        $V=5$; $\beta=0.95$; $\xi=10^{-2}$.}
-      \label{fig:K-DH-r}
-      \end{figure}
-
-\begin{figure*}
-    \centering
-        \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth]{pics/untrust/dhom/KvsL_DH_1.0.pdf}
-\caption[]{$q=1$}
-\label{subfig:K-vs-L-q-a}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth]{pics/untrust/dhom/KvsL_DH_1.5.pdf}
-\caption[]{$q=1.5$}
-\label{subfig:K-vs-L-q-b}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[c]{.3\linewidth}
-\includegraphics[width=\linewidth]{pics/untrust/dhom/KvsL_DH_2.0.pdf}
-\caption[]{$q=2$}
-\label{subfig:K-vs-L-q-c}
-        \end{subfigure}
-        \caption{Asymptotic
-        secret fraction $K^{(\ind{DH})}$ versus channel length $l$, computed for fixed $\sigma_i^{(x)}=1.05$ (see Eq.\eqref{eq:sigm-x-i}) and various imbalance ratios $q$~\eqref{eq:q-param}. Black dashed lines show results with fixed squeezing parameter $r= \frac{r_2+r_1}{2}\equiv r_0$, while green shaded areas indicate computed bounds for $K^{(\ind{DH})}$. The losses are $20$ dB per $100$ km.
-        The parameters are:
-        $V=5$; $\beta=0.95$; $\xi=10^{-2}$.}
-        \label{fig:K-vs-L-q}
-\end{figure*}
-
 \begin{figure*}
     \centering
     \begin{subfigure}[c]{.3\linewidth}
@@ -2120,6 +2083,38 @@ and efficiencies not specified in the legend are taken to be unity.
 \label{fig:double-homodyne-all}
 \end{figure*}
 
+\begin{figure}[b]
+    \centering
+\includegraphics[width=.7\linewidth]{pics/untrust/dhom/KvsL_DH.pdf}
+        \caption{Asymptotic
+        secret fraction $K^{(\ind{DH})}$ versus channel length $l$, computed for various equal quadrature variances $\sigma_{1,2}$ (see Eq.~\eqref{eq:sigm-i}) and squeezing parameter~\eqref{eq:r1-r2} taken as $r=0$ and $r=r_2$. The losses are $20$ dB per $100$ km.
+        The parameters are:
+        $V=5$; $\beta=0.95$; $\xi=10^{-2}$.}
+      \label{fig:K-DH-r}
+      \end{figure}
+
+\begin{figure*}
+    \centering
+        \begin{subfigure}[c]{.45\linewidth}
+\includegraphics[width=\linewidth]{pics/untrust/dhom/KvsL_DH_1.0.pdf}
+\caption[]{$q=1$}
+\label{subfig:K-vs-L-q-a}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[c]{.45\linewidth}
+\includegraphics[width=\linewidth]{pics/untrust/dhom/KvsL_DH_1.25.pdf}
+\caption[]{$q=1.25$}
+\label{subfig:K-vs-L-q-b}
+        \end{subfigure}
+        \caption{Asymptotic
+        secret fraction $K^{(\ind{DH})}$ versus channel length $l$, computed for fixed $\sigma_x^{(1,2)}=1.01$ (see Eq.\eqref{eq:sigm-x-i}) for (a)~the balanced input beam splitter with the imbalance ratio~\eqref{eq:q-param}, $q$, equal to unity and (b)~the unbalanced input beam splitter with $q = 1.25$. Black solid lines and red dashed lines show computed bounds for $K^{(\ind{DH})}$, $K^{(\ind{DH})}_{\ind{UB}}$ and $K^{(\ind{DH})}_{\ind{LB}}$ for upper and lower bounds, respectively, while blue shaded area indicates possible values of $K^{(\ind{DH})}$. The losses are $20$ dB per $100$ km.
+        The parameters are:
+        $V=5$; $\beta=0.95$; $\xi=10^{-2}$.}
+        \label{fig:K-vs-L-q}
+\end{figure*}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Numerical results}
@@ -2148,14 +2143,11 @@ both the mutual information and secret
 fraction can be maximized by introducing
 a suitably unbalanced beam splitter.
 Similar remark applies to minimization of the Holevo information.
-\textcolor{red}{Fig.~\ref{fig:K-homodyne} illustrates how imperfect homodyne detection degrades performance in the untrusted-noise scenario. It plots the asymptotic secret key fraction versus channel length for different quadrature and channel-noise variances. As the quadrature variance increases, the maximum transmission length at which a positive key rate is obtained decreases substantially, mirroring the effect of increased channel noise.}
 Qualitatively, behavior of the curves presented
-in Fig.~\ref{fig:homodyne-all} and Fig.~\ref{fig:K-homodyne} are in agreement with
-the corresponding results reported in Ref.~\cite{ruiz2023effects}
-such as dependence of
-the asymptotic secret fraction on the beam splitter transmittance
-deviation and balanced detector deviation.
+in Fig.~\ref{{subfig:hom-c}} is in agreement with
+the corresponding results reported in Ref.~\cite{ruiz2023effects} (see Fig. 6c in Ref.).
 
+\textcolor{red}{Fig.~\ref{fig:K-homodyne} illustrates how imperfect homodyne detection degrades performance in the untrusted-noise scenario. It shows the asymptotic secret key fraction versus channel length for various quadrature variances $\sigma_x$~\eqref{eq:sigma-x} and excess noise $\xi$. Values of $\sigma_x$ correspond to detection efficiencies of both detectors equal $0.99$ and $0.95$ for $1.01$ and $1.05$, respectively. The values of $\xi$ are taken from Ref.~\cite{laudenbach2018continuous}. As excess noise increases, reach (maximum transmission length at which a positive key rate is obtained) decreases, aligning with known results (see Fig.~3 in Ref.~\cite{laudenbach2018continuous}). Similarly, as the quadrature variance increases, reach decreases.}
 
 By contrast to homodyne detection,
 the channel representation
@@ -2248,15 +2240,7 @@ due to the presence of symplectic eigenvalues that are smaller than unity.
 % similarly to red curve, dependencies of $r$ shift in accordance to
 % disbalance ratio.
 
- \textcolor{red}{Quantitatively, for typical parameters of measurement imperfection, dependence of joint entropy on squeezing parameter can result in $0.5-2$ km change in the maximum secure range, as illustrated by Fig.~\ref{fig:K-DH-r}, where asymptotic secret fraction is plotted against channel length for values of $\sigma_i$ that correspond to detection efficiencies of $0.99$ and $0.95$ with all beam splitters being balanced, $1.01$ and $1.05$, respectively. As seen from Fig.~\ref{fig:Entropy}, $r=0$ in case of equal quadrature variances maximizes Holevo information, while $r=r_2$ (equivalently, $r=r_1$) minimizes it.}
-\textcolor{red}{This effect becomes more pronounced in cases of higher asymmetry, which can be achieved by changing imbalance ratio of the input beam splitter $q$. Fig.~\ref{fig:K-vs-L-q} shows the dependence of asymptotic secret fraction on channel length, with dashed line corresponding to fixed $r=\frac{r_1+r_2}{2}\equiv r_0$, which is the middle of the $[r_2, r_1]$~\eqref{eq:r1-r2}, as well as upper and lower bounds that arise from squeezing dependence of joint entropy. In this figure, quadrature variances are fixed, $\sigma_x^{(i)}=1.01$, which corresponds to detection efficiencies of $0.99$ and a balanced beam splitter, and the asymmetry is changed by varying $q$. As was already clear in Fig.~\ref{fig:K-DH-r}, for low asymmetries, the effect in negligible (less than $0.5$ km difference), as seen from inset plot in Fig~\ref{subfig:K-vs-L-q-a}. In this case the middle of the interval is $0$, and it also maximizes Holevo information per Fig.~\ref{fig:Entropy}.  As the asymmetry increases, corresponding to the increase of the length of the $r$-interval, range of possible values for maximal channel increases as well, as illustrated by Fig~\ref{subfig:K-vs-L-q-b} and Fig~\ref{subfig:K-vs-L-q-c}. It follows that, even with high detection efficiencies, ambigiuty of the squeezing parameter can cause maximal channel length range to be as long as $20$ km. While the least optimal for Eve $r$ is either $r=r_1$ or $r=r_2$ for $q<1$ and $q>1$ respectively, the most optimal value in asymmetrical case is to be found numerically.}
-\textcolor{red}{The degradation of the perfomance in asymmetrical homodyne is in a qualitative agreement with
-the results recenly reported in
-Ref.~\cite{Bartlett:25} for different scenario.}
-%For further calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
-
-The graphs presented in Fig.~\ref{fig:double-homodyne-all},
-similar to Fig.~\ref{fig:Entropy},
+The graphs presented in Fig.~\ref{fig:double-homodyne-all}
 show the mutual information, the Holevo information
 and the secret key fraction
 computed as a function
@@ -2266,22 +2250,6 @@ In these calculations,
 the value of the squeezing parameter is taken to be optimal
 so that the Holevo information is maximized at
 $r=r_{\ind{opt}}=\argmax_r\chi_{\ind{EB}}^{(\ind{DH})}(r)$. 
-
-% The effects of detection asymmetry on mutual information, Holevo
-% information, and the asymptotic secret fraction are illustrated in
-%  for double homodyne detection.
-
-% From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry
-% in homodyne detection generally degrades performance, the combination
-% of an unbalanced beam splitter and unequal detector efficiencies can be
-% beneficial, resulting in maxima of the mutual information and secret
-% fraction with given parameters. Correspondingly, the minima of the
-% Holevo information exhibit similar
-% behavior. % Notably, these functions are symmetric and even with shifting local mininimum (symmetry point).
-% Our numerical results for the homodyne case are qualitatively
-% consistent with Ref.~\cite{ruiz2023effects}, namely the dependence of
-% the asymptotic secret fraction on the beam splitter transmittance
-% deviation and balanced detector deviation.
 
 Qualitatively,
 the curves plotted in Fig.~\ref{fig:double-homodyne-all}
@@ -2327,18 +2295,44 @@ the double-homodyne secret fraction $K^{(\ind{DH})}$
 is lower than $K^{(\ind{H})}$
 (see Figs.~\ref{subfig:hom-c} and~\ref{subfig:dhom-c}).
 
+ \textcolor{red}{Fig.~\ref{fig:K-DH-r} illustrates how the dependence of joint entropy on squeezing parameter can affect reach. On fig.~\ref{fig:K-DH-r} asymptotic secret fraction is plotted against channel length for values of $\sigma_{1,2}$ that correspond to detection efficiencies of $0.99$ and $0.95$ with all beam splitters being balanced, $1.01$ and $1.05$, respectively, for squeezing parameter $r$ being equal to $0$ and to $r_2$. As seen from Fig.~\ref{fig:Entropy}, $r=0$ in case of equal quadrature variances maximizes Holevo information, while $r=r_2$ (equivalently, $r=r_1$) minimizes it. As quadrature variance increases, the difference in reach for different $r$ becomes more pronounced.}
+
+\textcolor{red}{Fig.~\ref{fig:K-vs-L-q} shows the dependence of asymptotic secret fraction on channel length, as well as upper and lower bounds that arise from squeezing dependence of joint entropy. In this figure, quadrature variances are fixed, $\sigma_x^{(i)}=1.01$, and the asymmetry is changed by varying the imbalance ratio $q$~\eqref{eq:q-param}. For low asymmetries, the effect in negligible (less than $0.5$ km difference), as seen from Fig~\ref{subfig:K-vs-L-q-a}. As the asymmetry increases, corresponding to the increase of the length of the $r$-interval, range of possible values of reach increases as well, as illustrated by Fig~\ref{subfig:K-vs-L-q-b}. In this case, the dependence of joint entropy on squeezing parameter~\eqref{eq:r1-r2} becomes non-negligible.}
+\textcolor{red}{The degradation of the perfomance in asymmetrical homodyne is in a qualitative agreement with
+the results recenly reported in
+Ref.~\cite{Bartlett:25} (see Fig.~7).}
+%For further calculations, we will optimize $r$ to maximize $\chi_{\ind{EB}}$.
+
+% The effects of detection asymmetry on mutual information, Holevo
+% information, and the asymptotic secret fraction are illustrated in
+%  for double homodyne detection.
+
+% From Fig.~\ref{fig:homodyne-all}, it is evident that while asymmetry
+% in homodyne detection generally degrades performance, the combination
+% of an unbalanced beam splitter and unequal detector efficiencies can be
+% beneficial, resulting in maxima of the mutual information and secret
+% fraction with given parameters. Correspondingly, the minima of the
+% Holevo information exhibit similar
+% behavior. % Notably, these functions are symmetric and even with shifting local mininimum (symmetry point).
+% Our numerical results for the homodyne case are qualitatively
+% consistent with Ref.~\cite{ruiz2023effects}, namely the dependence of
+% the asymptotic secret fraction on the beam splitter transmittance
+% deviation and balanced detector deviation.
+
+
+
 \begin{figure}
     \centering
 \includegraphics[width=\linewidth]{pics/untrust/KvsL_both.pdf}
         \caption{Asymptotic
         secret fraction $K^{(\gamma)}$ versus channel length $l$, computed for homodyne and double homodyne detection. Quadrature variances of both schemes are assumed to be equal, with value being indicated in panel title. The losses are assumed to be $20$ dB per $100$ km.
         The parameters are:
-        $V=5$; $\beta=0.95$; $\xi=10^{-2}$. For double homodyne, $r=0$ (see main text). }
+        $V=5$; $\beta=0.95$; $\xi=0.5*10^{-3}$. For double homodyne, $r=0$ (see main text). }
       \label{fig:K-comparison}
       \end{figure}
 
 \textcolor{red}{
-  A direct comparison between asymmetrical homodyne and double homodyne detection is shown in Fig.~\ref{fig:K-comparison}, which plots the asymptotic secret key fraction versus channel length for both cases. To compare the schemes, quadrature variances per Eq.~\eqref{eq:sigma-x} and \eqref{eq:sigm-i} are taken to be equal for both detection schemes,  i.e. $\sigma_x=\sigma_i\equiv\sigma$. Even in the case of ideal measurements, while at high channel transmission double homodyne has better asymptotic secret fraction, since it is more sensitive to the channel noise, its performance is worse, regardless of higher mutual information. As asymmetry increases, double homodyne underperforms homodyne even at high transmission. Since the reduction in maximal channel is also stronger in double homodyne detection, asymmetrical homodyne scheme becomes preferable.}
+  A comparison between imperfect homodyne and double homodyne detection is shown in Fig.~\ref{fig:K-comparison}, which shows the asymptotic secret key fraction versus channel length for both cases. To compare the schemes, quadrature variances per Eq.~\eqref{eq:sigma-x} and \eqref{eq:sigm-i} are taken to be equal for both detection schemes,  i.e. $\sigma_x=\sigma_{1,2}\equiv\sigma$. In the case of ideal measurements, $\sigma=1$, double homodyne has better asymptotic secret fraction, as confirmed by results of Ref.~\cite{laudenbach2018continuous}. This is due to higher mutual information in double homodyne detection, as well as relatively low excess noise variance. When the schemes are imperfect, $\sigma>1$, while double homodyne has higher asymptotic secret key fraction at low distances, it is outperformed by homodyne detection at high distances, with reach being higher for imperfect homodyne detection.}
 
 
 % The discrepancy in our

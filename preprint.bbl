@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{81}%
+\begin{thebibliography}{82}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -960,11 +960,11 @@
   {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {88}},\
   \bibinfo {pages} {057902} (\bibinfo {year} {2002}{\natexlab{b}})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Laudenbach}\ \emph {et~al.}(2018)\citenamefont
-  {Laudenbach}, \citenamefont {Pacher}, \citenamefont {Fung}, \citenamefont
-  {Poppe}, \citenamefont {Peev}, \citenamefont {Schrenk}, \citenamefont
-  {Hentschel}, \citenamefont {Walther},\ and\ \citenamefont
-  {H\"ubel}}]{Laudenbach:aqt:2018}%
+\bibitem [{\citenamefont {Laudenbach}\ \emph
+  {et~al.}(2018{\natexlab{a}})\citenamefont {Laudenbach}, \citenamefont
+  {Pacher}, \citenamefont {Fung}, \citenamefont {Poppe}, \citenamefont {Peev},
+  \citenamefont {Schrenk}, \citenamefont {Hentschel}, \citenamefont {Walther},\
+  and\ \citenamefont {H\"ubel}}]{Laudenbach:aqt:2018}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
   {Laudenbach}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Pacher}},
@@ -979,7 +979,8 @@
   {G}aussian modulation—the theory of practical implementations}},\ }\href
   {https://doi.org/10.1002/qute.201800011} {\bibfield  {journal} {\bibinfo
   {journal} {Advanced Quantum Technologies}\ }\textbf {\bibinfo {volume} {1}},\
-  \bibinfo {pages} {1800011} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+  \bibinfo {pages} {1800011} (\bibinfo {year}
+  {2018}{\natexlab{a}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Devetak}\ and\ \citenamefont
   {Winter}(2005)}]{Devetak:prsa:2005}%
   \BibitemOpen
@@ -1028,6 +1029,26 @@
   security of continuous-variable quantum key distribution},\ }\href@noop {}
   {\bibfield  {journal} {\bibinfo  {journal} {Heliyon}\ }\textbf {\bibinfo
   {volume} {9}} (\bibinfo {year} {2023}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Laudenbach}\ \emph
+  {et~al.}(2018{\natexlab{b}})\citenamefont {Laudenbach}, \citenamefont
+  {Pacher}, \citenamefont {Fung}, \citenamefont {Poppe}, \citenamefont {Peev},
+  \citenamefont {Schrenk}, \citenamefont {Hentschel}, \citenamefont {Walther},\
+  and\ \citenamefont {H{\"u}bel}}]{laudenbach2018continuous}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Laudenbach}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Pacher}},
+  \bibinfo {author} {\bibfnamefont {C.-H.~F.}\ \bibnamefont {Fung}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Poppe}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Peev}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Schrenk}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Hentschel}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Walther}},\ and\ \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {H{\"u}bel}},\ }\bibfield  {title} {\bibinfo {title}
+  {Continuous-variable quantum key distribution with gaussian modulation—the
+  theory of practical implementations},\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {Advanced Quantum Technologies}\ }\textbf {\bibinfo
+  {volume} {1}},\ \bibinfo {pages} {1800011} (\bibinfo {year}
+  {2018}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Lodewyck}\ \emph {et~al.}(2007)\citenamefont
   {Lodewyck}, \citenamefont {Bloch}, \citenamefont {Garc\'{\i}a-Patr\'on},
   \citenamefont {Fossier}, \citenamefont {Karpov}, \citenamefont {Diamanti},
